@@ -15,6 +15,7 @@ public class HexcraftEventBusEvents {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(HexcraftEntityTypes.LILITH.get(), LilithEntity.setAttributes());
         event.put(HexcraftEntityTypes.WENDIGO.get(), WendigoEntity.setAttributes());
+        event.put(HexcraftEntityTypes.FAIRY.get(), WendigoEntity.setAttributes());
 
     }
 }

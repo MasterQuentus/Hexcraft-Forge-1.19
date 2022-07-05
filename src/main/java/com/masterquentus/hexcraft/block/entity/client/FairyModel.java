@@ -18,6 +18,6 @@ public class FairyModel extends AnimatedGeoModel<FairyEntity> {
 
     @Override
     public ResourceLocation getAnimationResource(FairyEntity animatable) {
-        return new ResourceLocation(Hexcraft.MOD_ID, "animations/fairies/fairy.animation.json");
+        return new ResourceLocation(Hexcraft.MOD_ID, "animations/fairy.animation.json");
     }
 }

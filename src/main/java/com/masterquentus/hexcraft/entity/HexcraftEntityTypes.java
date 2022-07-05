@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.entity;
 
 import com.masterquentus.hexcraft.Hexcraft;
+import com.masterquentus.hexcraft.entity.custom.FairyEntity;
 import com.masterquentus.hexcraft.entity.custom.LilithEntity;
 import com.masterquentus.hexcraft.entity.custom.WendigoEntity;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +20,7 @@ public class HexcraftEntityTypes {
     public static final RegistryObject<EntityType<LilithEntity>> LILITH =
             ENTITY_TYPES.register("lilith",
                     () -> EntityType.Builder.of(LilithEntity::new, MobCategory.MONSTER)
-                            .sized(0.8F, 2.0F)
+                            .sized(0.8F, 1.9F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "lilith").toString()));
 
     public static final RegistryObject<EntityType<WendigoEntity>> WENDIGO =
@@ -28,10 +29,10 @@ public class HexcraftEntityTypes {
                             .sized(0.8F, 2.0F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "wendigo").toString()));
 
-    public static final RegistryObject<EntityType<WendigoEntity>> FAIRY =
+    public static final RegistryObject<EntityType<FairyEntity>> FAIRY =
             ENTITY_TYPES.register("fairy",
-                    () -> EntityType.Builder.of(WendigoEntity::new, MobCategory.CREATURE)
-                            .sized(0.8F, 0.2F)
+                    () -> EntityType.Builder.of(FairyEntity::new, MobCategory.CREATURE)
+                            .sized(0.8F, 0.80F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "fairy").toString()));
 
 
