@@ -28,6 +28,12 @@ public class HexcraftEntityTypes {
                             .sized(0.8F, 2.0F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "wendigo").toString()));
 
+    public static final RegistryObject<EntityType<WendigoEntity>> FAIRY =
+            ENTITY_TYPES.register("fairy",
+                    () -> EntityType.Builder.of(WendigoEntity::new, MobCategory.CREATURE)
+                            .sized(0.8F, 0.2F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "fairy").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

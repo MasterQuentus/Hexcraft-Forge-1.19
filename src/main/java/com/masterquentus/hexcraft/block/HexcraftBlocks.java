@@ -125,17 +125,19 @@ public class HexcraftBlocks {
                     .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
-            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
-            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> CRIMSON_GLASS = registerBlock("crimson_glass",
             () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
-                    .strength(0.3F).sound(SoundType.GLASS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> CRIMSON_GLASS_PANE = registerBlock("crimson_glass_pane",
             () -> new StainedGlassPaneBlock(DyeColor.RED, BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
-                    .strength(0.3F).sound(SoundType.GLASS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> CRIMSON_ICE = registerBlock("crimson_ice",
             () -> new IceBlock(BlockBehaviour.Properties.of(Material.ICE).friction(0.98F).randomTicks().strength(0.5F)
@@ -230,7 +232,7 @@ public class HexcraftBlocks {
             () -> new StairBlock(() -> HexcraftBlocks.UNDER_WORLD_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> SMOOTH_CRIMSON_SAND_STONE_STAIRS = registerBlock("smooth_crimson_stone_stairs",
+    public static final RegistryObject<Block> SMOOTH_CRIMSON_SAND_STONE_STAIRS = registerBlock("smooth_crimson_sand_stone_stairs",
             () -> new StairBlock(() -> HexcraftBlocks.UNDER_WORLD_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -243,6 +245,10 @@ public class HexcraftBlocks {
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> HELL_BARK_STAIRS = registerBlock("hell_bark_stairs",
+            () -> new StairBlock(() -> HexcraftBlocks.HELL_BARK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD)
+            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_STAIRS = registerBlock("white_oak_stairs",
             () -> new StairBlock(() -> HexcraftBlocks.HELL_BARK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -312,11 +318,15 @@ public class HexcraftBlocks {
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> BLOOD_OAK_SLAB = registerBlock("blood_oak_slab",
-            () -> new SlabBlock (BlockBehaviour.Properties.of(Material.STONE)
+            () -> new SlabBlock (BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> HELL_BARK_SLAB = registerBlock("hell_bark_slab",
-            () -> new SlabBlock (BlockBehaviour.Properties.of(Material.STONE)
+            () -> new SlabBlock (BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_SLAB = registerBlock("white_oak_slab",
+            () -> new SlabBlock (BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Walls
@@ -398,6 +408,10 @@ public class HexcraftBlocks {
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> STRIPPED_WHITE_OAK_WOOD = registerBlock("stripped_white_oak_wood",
+            () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
+            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Stripped Log
     public static final RegistryObject<Block> STRIPPED_EBONY_LOG = registerBlock("stripped_ebony_log",
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
@@ -408,6 +422,10 @@ public class HexcraftBlocks {
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> STRIPPED_HELL_BARK_LOG = registerBlock("stripped_hell_bark_log",
+            () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
+            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> STRIPPED_WHITE_OAK_LOG = registerBlock("stripped_white_oak_log",
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -424,9 +442,17 @@ public class HexcraftBlocks {
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> WHITE_OAK_WOOD = registerBlock("white_oak_wood",
+            () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
 
     //Log
     public static final RegistryObject<Block> EBONY_LOG = registerBlock("ebony_log",
+            () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
+            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> BLOOD_OAK_LOG = registerBlock("blood_oak_log",
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -434,7 +460,7 @@ public class HexcraftBlocks {
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> BLOOD_OAK_LOG = registerBlock("blood_oak_log",
+    public static final RegistryObject<Block> WHITE_OAK_LOG = registerBlock("white_oak_log",
             () -> new HexcraftFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -476,6 +502,24 @@ public class HexcraftBlocks {
             }, HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> HELL_BARK_PLANKS = registerBlock("hell_bark_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return false;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_PLANKS = registerBlock("white_oak_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
@@ -562,6 +606,28 @@ public class HexcraftBlocks {
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.1F)
                     .sound(SoundType.GRASS).noLootTable().noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> WHITE_OAK_LEAVES = registerBlock("white_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return false;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> WHITE_OAK_LEAVES_PILE = registerBlock("white_oak_leaves_pile",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.1F)
+                    .sound(SoundType.GRASS).noLootTable().noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Doors
     public static final RegistryObject<Block> EBONY_DOOR = registerBlock("ebony_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -574,6 +640,11 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_DOOR = registerBlock("hell_bark_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_DOOR = registerBlock("white_oak_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Trapdoors
     public static final RegistryObject<Block> EBONY_TRAPDOOR = registerBlock("ebony_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -587,6 +658,10 @@ public class HexcraftBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> WHITE_OAK_TRAPDOOR = registerBlock("white_oak_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Pressure Plates
     public static final RegistryObject<Block> EBONY_PRESSURE_PLATE = registerBlock("ebony_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
@@ -597,6 +672,10 @@ public class HexcraftBlocks {
                     .strength(0.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> HELL_BARK_PRESSURE_PLATE = registerBlock("hell_bark_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_PRESSURE_PLATE = registerBlock("white_oak_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -624,6 +703,11 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_BUTTON = registerBlock("hell_bark_button",
             () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F).noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_BUTTON = registerBlock("white_oak_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F).noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Fences
     public static final RegistryObject<Block> EBONY_FENCE = registerBlock("ebony_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -637,6 +721,10 @@ public class HexcraftBlocks {
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> WHITE_OAK_FENCE = registerBlock("white_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Fence Gates
     public static final RegistryObject<Block> EBONY_FENCE_GATE = registerBlock("ebony_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
@@ -647,6 +735,10 @@ public class HexcraftBlocks {
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> HELL_BARK_FENCE_GATE = registerBlock("hell_bark_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_FENCE_GATE = registerBlock("white_oak_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -669,6 +761,12 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_SIGN = registerBlockWithoutBlockItem("hell_bark_sign",
             () -> new HexcraftStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), HexcraftWoodTypes.HELL_BARK));
 
+    public static final RegistryObject<Block> WHITE_OAK_WALL_SIGN = registerBlockWithoutBlockItem("white_oak_wall_sign",
+            () -> new HexcraftWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), HexcraftWoodTypes.WHITE_OAK));
+
+    public static final RegistryObject<Block> WHITE_OAK_SIGN = registerBlockWithoutBlockItem("white_oak_sign",
+            () -> new HexcraftStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), HexcraftWoodTypes.WHITE_OAK));
+
     //Portal Blocks
     //public static final RegistryObject<Block> UNDERWORLD_PORTAL = registerBlockWithoutBlockItem("underworld_portal",
             //UnderworldPortalBlock::new);
@@ -685,6 +783,16 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_BOOKSHELF = registerBlock("hell_bark_bookshelf",
             () -> new HexcraftBookshelf(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> WHITE_OAK_BOOKSHELF = registerBlock("white_oak_bookshelf",
+            () -> new HexcraftBookshelf(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //Lanterns
+    public static final RegistryObject<Block> FAIRY_LANTERN = registerBlock("fairy_lantern",
+            () -> new FairyLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
+                    .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Plants
     public static final RegistryObject<Block> BLOODY_ROSE = registerBlock("bloody_rose",
