@@ -8,7 +8,11 @@ import com.masterquentus.hexcraft.block.entity.client.LilithRenderer;
 import com.masterquentus.hexcraft.block.entity.client.WendigoRenderer;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.item.HexcraftItems;
+import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
+import com.masterquentus.hexcraft.villager.HexcraftVillagers;
+import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
+import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -41,7 +45,11 @@ public class Hexcraft {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         HexcraftItems.register(modEventBus);
         HexcraftBlocks.register(modEventBus);
+        HexcraftVillagers.register(modEventBus);
+        HexcraftPaintings.register(modEventBus);
 
+        HexcraftConfiguredFeatures.register(modEventBus);
+        HexcraftPlacedFeatures.register(modEventBus);
         HexcraftSounds.register(modEventBus);
 
         HexcraftBlockEntities.register(modEventBus);
@@ -67,6 +75,9 @@ public class Hexcraft {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            HexcraftVillagers.registerPOIs();
+        });
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());

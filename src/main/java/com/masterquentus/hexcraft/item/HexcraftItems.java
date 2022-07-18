@@ -7,10 +7,8 @@ import com.masterquentus.hexcraft.item.custom.BloodBottleItem;
 import com.masterquentus.hexcraft.item.custom.HexcraftCreativeModeTab;
 import com.masterquentus.hexcraft.item.custom.WitchesArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -116,6 +114,20 @@ public class HexcraftItems {
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    //Crates
+    //public static final RegistryObject<Item> CRATE_EBONY = block(HexcraftBlocks.CRATE_EBONY,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_BLOOD_OAK = block(HexcraftBlocks.CRATE_BLOOD_OAK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_HELLBARK = block(HexcraftBlocks.CRATE_HELLBARK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_WHITE_OAK = block(HexcraftBlocks.CRATE_WHITE_OAK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+
     //Brooms
     //public static final RegistryObject<Item> EBONY_BROOM = ITEMS.register("ebony_broom",
     //() -> new BroomItem(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
@@ -123,6 +135,9 @@ public class HexcraftItems {
     //public static final RegistryObject<Item> BLOOD_OAK_BROOM = ITEMS.register("blood_oak_broom",
     //() -> new BroomItem(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
+    private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
+        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

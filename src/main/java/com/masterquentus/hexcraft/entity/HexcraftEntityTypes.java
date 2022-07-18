@@ -15,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class HexcraftEntityTypes {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITIES, Hexcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Hexcraft.MOD_ID);
 
     public static final RegistryObject<EntityType<LilithEntity>> LILITH =
             ENTITY_TYPES.register("lilith",
@@ -34,6 +34,8 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.of(FairyEntity::new, MobCategory.CREATURE)
                             .sized(0.8F, 0.80F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "fairy").toString()));
+
+
 
 
     public static void register(IEventBus eventBus) {

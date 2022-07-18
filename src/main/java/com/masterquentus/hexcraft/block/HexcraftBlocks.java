@@ -7,6 +7,7 @@ import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.item.custom.HexcraftCreativeModeTab;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -53,8 +54,9 @@ public class HexcraftBlocks {
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> CRIMSON_STONE = registerBlock("crimson_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5F, 6.0F).requiresCorrectToolForDrops(),
+                    UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> CRIMSON_COBBLESTONE = registerBlock("crimson_cobblestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
@@ -788,6 +790,17 @@ public class HexcraftBlocks {
             () -> new HexcraftBookshelf(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    //Crates
+    //    public static final RegistryObject<Block> CRATE_EBONY = REGISTRY.register("crate_ebony", () -> new CrateEbonyBlock());
+
+    public static final RegistryObject<Block> CRATE_BLOOD_OAK = BLOCKS.register("crate_blood_oak", () -> new Crate_BloodOakBlock());
+
+    public static final RegistryObject<Block> CRATE_HELLBARK = BLOCKS.register("crate_hellbark", () -> new Crate_HellbarkBlock());
+
+    public static final RegistryObject<Block> CRATE_WHITE_OAK = BLOCKS.register("crate_white_oak", () -> new Crate_WhiteOakBlock());
+
+
+
     //Lanterns
     public static final RegistryObject<Block> FAIRY_LANTERN = registerBlock("fairy_lantern",
             () -> new FairyLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
@@ -836,6 +849,7 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> BLOOD_MUSHROOM_STEM = registerBlock("blood_mushroom_stem",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.2F, 0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
