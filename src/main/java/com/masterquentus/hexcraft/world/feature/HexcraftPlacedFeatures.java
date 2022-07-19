@@ -20,6 +20,7 @@ public class HexcraftPlacedFeatures {
                     commonOrePlacement(7, // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
+
     public static final RegistryObject<PlacedFeature> CRIMSON_STONE_PLACED = PLACED_FEATURES.register("crimson_stone_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.CRIMSON_STONE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
