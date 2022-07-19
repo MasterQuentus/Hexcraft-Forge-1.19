@@ -1,10 +1,13 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
@@ -30,6 +33,10 @@ public class WitchesLadderBlock extends GrowingPlantHeadBlock implements Bonemea
         return NetherVines.getBlocksToGrowWhenBonemealed((RandomSource) p_154968_);
     }
 
+    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
+        return new ItemStack(HexcraftItems.WITCHES_LADDER_ITEM.get());
+    }
+
     @Override
     public boolean isLadder(BlockState state, LevelReader level, BlockPos pos, LivingEntity entity) {
         return true;
@@ -39,11 +46,9 @@ public class WitchesLadderBlock extends GrowingPlantHeadBlock implements Bonemea
         return HexcraftBlocks.WITCHES_LADDER_PLANT.get();
     }
 
-    @Override
-    protected int getBlocksToGrowWhenBonemealed(RandomSource p_221341_) {
-        return 0;
+    protected int getBlocksToGrowWhenBonemealed(RandomSource p_222680_) {
+        return NetherVines.getBlocksToGrowWhenBonemealed(p_222680_);
     }
-
     protected boolean canGrowInto(BlockState p_154971_) {
         return NetherVines.isValidGrowthState(p_154971_);
     }

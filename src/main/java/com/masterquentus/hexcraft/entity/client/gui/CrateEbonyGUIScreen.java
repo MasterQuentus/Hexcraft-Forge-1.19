@@ -1,26 +1,25 @@
 package com.masterquentus.hexcraft.entity.client.gui;
 
-import com.masterquentus.hexcraft.world.inventory.Crate_HellbarkGUIMenu;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import com.masterquentus.hexcraft.world.inventory.CrateEbonyGUIMenu;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
-public class Crate_HellbarkGUIScreen extends AbstractContainerScreen<Crate_HellbarkGUIMenu> {
-    private final static HashMap<String, Object> guistate = Crate_HellbarkGUIMenu.guistate;
+public class CrateEbonyGUIScreen extends AbstractContainerScreen<CrateEbonyGUIMenu> {
+    private final static HashMap<String, Object> guistate = CrateEbonyGUIMenu.guistate;
     private final Level world;
     private final int x, y, z;
     private final Player entity;
 
-    public Crate_HellbarkGUIScreen(Crate_HellbarkGUIMenu container, Inventory inventory, Component text) {
+    public CrateEbonyGUIScreen(CrateEbonyGUIMenu container, Inventory inventory, Component text) {
         super(container, inventory, text);
         this.world = container.world;
         this.x = container.x;
@@ -31,7 +30,7 @@ public class Crate_HellbarkGUIScreen extends AbstractContainerScreen<Crate_Hellb
         this.imageHeight = 166;
     }
 
-    private static final ResourceLocation texture = new ResourceLocation("cratesmod:textures/hellbark_crate_gui.png");
+    private static final ResourceLocation texture = new ResourceLocation("hexcraft:textures/gui/ebony_crate_gui.png");
 
     @Override
     public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -67,7 +66,7 @@ public class Crate_HellbarkGUIScreen extends AbstractContainerScreen<Crate_Hellb
     @Override
     protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
         this.font.draw(poseStack, "Inventory", 7, 72, -12829636);
-        this.font.draw(poseStack, "Hellbark Crate", 7, 6, -12829636);
+        this.font.draw(poseStack, "Ebony Crate", 7, 5, -12829636);
     }
 
     @Override
@@ -82,4 +81,3 @@ public class Crate_HellbarkGUIScreen extends AbstractContainerScreen<Crate_Hellb
         this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
     }
 }
-

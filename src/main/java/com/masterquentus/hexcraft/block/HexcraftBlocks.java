@@ -29,6 +29,17 @@ public class HexcraftBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Hexcraft.MOD_ID);
     //Blocks
+    public static final RegistryObject <Block> BLACK_OBSIDIAN = registerBlock("black_obsidian",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
+            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> PEARL_STONE = registerBlock("pearl_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -121,18 +132,6 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> CUT_CRIMSON_SAND_STONE = registerBlock("cut_crimson_sand_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    public static final RegistryObject <Block> BLACK_OBSIDIAN = registerBlock("black_obsidian",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
-            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
-            HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
-            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
-            HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> CRIMSON_GLASS = registerBlock("crimson_glass",
             () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
                     .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -791,14 +790,16 @@ public class HexcraftBlocks {
                     .strength(1.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Crates
-    //    public static final RegistryObject<Block> CRATE_EBONY = REGISTRY.register("crate_ebony", () -> new CrateEbonyBlock());
+    public static final RegistryObject<Block> CRATE_EBONY = BLOCKS.register("crate_ebony", () -> new CrateEbonyBlock());
+    public static final RegistryObject<Block> CRATE_BLOOD_OAK = BLOCKS.register("crate_blood_oak", () -> new CrateBloodOakBlock());
+    public static final RegistryObject<Block> CRATE_HELLBARK = BLOCKS.register("crate_hellbark", () -> new CrateHellbarkBlock());
+    public static final RegistryObject<Block> CRATE_WHITE_OAK = BLOCKS.register("crate_white_oak", () -> new CrateWhiteOakBlock());
 
-    public static final RegistryObject<Block> CRATE_BLOOD_OAK = BLOCKS.register("crate_blood_oak", () -> new Crate_BloodOakBlock());
 
-    public static final RegistryObject<Block> CRATE_HELLBARK = BLOCKS.register("crate_hellbark", () -> new Crate_HellbarkBlock());
+    //Chest
 
-    public static final RegistryObject<Block> CRATE_WHITE_OAK = BLOCKS.register("crate_white_oak", () -> new Crate_WhiteOakBlock());
 
+    //Boats
 
 
     //Lanterns
@@ -811,36 +812,31 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> BLOODY_ROSE = registerBlock("bloody_rose",
             () -> new FlowerBlock(MobEffects.ABSORPTION, 4, BlockBehaviour.Properties.copy(Blocks.POPPY)
                     .instabreak().noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_BLOODY_ROSE = registerBlockWithoutItem("potted_bloody_rose",
             () -> new FlowerPotBlock(null, HexcraftBlocks.BLOODY_ROSE,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
-
     public static final RegistryObject<Block> WITCHES_LADDER = BLOCKS.register("witches_ladder",
             () -> new WitchesLadderBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion().randomTicks()));
-
     public static final RegistryObject<Block> WITCHES_LADDER_PLANT = BLOCKS.register("witches_ladder_plant",
             () -> new WitchesLadderPlant(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion()));
-
     public static final RegistryObject<Block> LIVING_KELP = BLOCKS.register("living_kelp",
             () -> new LivingKelpBlock(BlockBehaviour.Properties.copy(Blocks.KELP)
                     .noCollission().randomTicks().instabreak().sound(SoundType.WET_GRASS)
                     .lightLevel((state) -> 15)));
-
     public static final RegistryObject<Block> LIVING_KELP_PLANT = BLOCKS.register("living_kelp_plant",
             () -> new LivingkelpPlant(BlockBehaviour.Properties.copy(Blocks.KELP_PLANT)
                     .instabreak().lightLevel((state) -> 15).noOcclusion()));
 
-
     public static final RegistryObject<Block> LIVING_KELP_BLOCK = registerBlock("living_kelp_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.WATER_PLANT).sound(SoundType.GRASS)
                     .strength(0.5F, 2.5F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> MANDRAKE_FLOWER = registerBlockWithoutBlockItem("mandrake_flower",
             () -> new MandrakePlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+    public static final RegistryObject<Block> CINDER_PLANT = registerBlockWithoutBlockItem("cinder_plant",
+            () -> new CinderBerryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion()));
 
     public static final RegistryObject<Block> BLOOD_MUSHROOM_BLOCK = registerBlock("blood_mushroom_block",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.of(Material.WOOD)

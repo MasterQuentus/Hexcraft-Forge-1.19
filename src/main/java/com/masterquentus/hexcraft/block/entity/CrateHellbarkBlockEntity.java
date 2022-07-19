@@ -1,7 +1,6 @@
 package com.masterquentus.hexcraft.block.entity;
 
-import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
-import com.masterquentus.hexcraft.world.inventory.Crate_HellbarkGUIMenu;
+import com.masterquentus.hexcraft.world.inventory.CrateHellbarkGUIMenu;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -29,28 +28,33 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class Crate_HellbarkBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class CrateHellbarkBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 
     private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(27, ItemStack.EMPTY);
     private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-    public Crate_HellbarkBlockEntity(BlockPos position, BlockState state) {
+    public CrateHellbarkBlockEntity(BlockPos position, BlockState state) {
         super(HexcraftBlockEntities.CRATE_HELLBARK.get(), position, state);
     }
 
     @Override
     public void load(CompoundTag compound) {
         super.load(compound);
-        if (!this.tryLoadLootTable(compound))
-            this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        ContainerHelper.loadAllItems(compound, this.stacks);
+        this.loadFromTag(compound);
+    }
+
+    public void loadFromTag(CompoundTag compound) {
+        this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if (!this.tryLoadLootTable(compound) && compound.contains("Items", 9)) {
+            ContainerHelper.loadAllItems(compound, this.stacks);
+        }
     }
 
     @Override
     public void saveAdditional(CompoundTag compound) {
         super.saveAdditional(compound);
         if (!this.trySaveLootTable(compound)) {
-            ContainerHelper.saveAllItems(compound, this.stacks);
+            ContainerHelper.saveAllItems(compound, this.stacks, false);
         }
     }
 
@@ -89,7 +93,7 @@ public class Crate_HellbarkBlockEntity extends RandomizableContainerBlockEntity 
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-        return new Crate_HellbarkGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+        return new CrateHellbarkGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
     }
 
     @Override

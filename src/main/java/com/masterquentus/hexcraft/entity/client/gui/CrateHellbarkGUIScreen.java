@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.entity.client.gui;
 
-import com.masterquentus.hexcraft.world.inventory.Crate_BloodOakGUIMenu;
+import com.masterquentus.hexcraft.world.inventory.CrateHellbarkGUIMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -14,13 +14,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class Crate_BloodOakGUIScreen extends AbstractContainerScreen<Crate_BloodOakGUIMenu> {
-    private final static HashMap<String, Object> guistate = Crate_BloodOakGUIMenu.guistate;
+public class CrateHellbarkGUIScreen extends AbstractContainerScreen<CrateHellbarkGUIMenu> {
+    private final static HashMap<String, Object> guistate = CrateHellbarkGUIMenu.guistate;
     private final Level world;
     private final int x, y, z;
     private final Player entity;
 
-    public Crate_BloodOakGUIScreen(Crate_BloodOakGUIMenu container, Inventory inventory, Component text) {
+    public CrateHellbarkGUIScreen(CrateHellbarkGUIMenu container, Inventory inventory, Component text) {
         super(container, inventory, text);
         this.world = container.world;
         this.x = container.x;
@@ -31,7 +31,7 @@ public class Crate_BloodOakGUIScreen extends AbstractContainerScreen<Crate_Blood
         this.imageHeight = 166;
     }
 
-    private static final ResourceLocation texture = new ResourceLocation("cratesmod:textures/blood_oak_crate_gui.png");
+    private static final ResourceLocation texture = new ResourceLocation("hexcraft:textures/gui/hellbark_crate_gui.png");
 
     @Override
     public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -67,7 +67,7 @@ public class Crate_BloodOakGUIScreen extends AbstractContainerScreen<Crate_Blood
     @Override
     protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
         this.font.draw(poseStack, "Inventory", 7, 72, -12829636);
-        this.font.draw(poseStack, "Blood Oak Crate", 7, 5, -12829636);
+        this.font.draw(poseStack, "Hellbark Crate", 7, 6, -12829636);
     }
 
     @Override

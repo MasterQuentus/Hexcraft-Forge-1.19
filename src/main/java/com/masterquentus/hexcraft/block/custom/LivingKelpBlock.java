@@ -1,10 +1,12 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
@@ -55,17 +57,19 @@ public class LivingKelpBlock extends GrowingPlantHeadBlock implements LiquidBloc
         return false;
     }
 
-    /**
-     * Used to determine how much to grow the plant when using bonemeal.
-     */
-    protected int getBlocksToGrowWhenBonemealed(Random pRandom) {
-        return 1;
-    }
+
 
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         FluidState fluidstate = pContext.getLevel().getFluidState(pContext.getClickedPos());
         return fluidstate.is(FluidTags.WATER) && fluidstate.getAmount() == 8 ? super.getStateForPlacement(pContext) : null;
+    }
+    protected GrowingPlantHeadBlock getHeadBlock() {
+        return (GrowingPlantHeadBlock) HexcraftBlocks.LIVING_KELP_PLANT.get();
+    }
+
+    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
+        return new ItemStack(HexcraftItems.LIVING_KELP_ITEM.get());
     }
 
     public FluidState getFluidState(BlockState pState) {

@@ -13,6 +13,10 @@ import java.util.function.Supplier;
 public enum HexcraftArmorMaterials implements ArmorMaterial {
     WITCH("witch", 9, new int[]{1, 3, 4, 2}, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.of(HexcraftItems.INFUSED_FABRIC.get());
+    }),
+
+    GOOGLES("googles", 4, new int[]{1, 2, 3, 2}, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.of(HexcraftItems.INFUSED_FABRIC.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

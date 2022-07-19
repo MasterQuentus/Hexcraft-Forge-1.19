@@ -1,13 +1,15 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.GrowingPlantBodyBlock;
-import net.minecraft.world.level.block.GrowingPlantHeadBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -26,5 +28,12 @@ public class WitchesLadderPlant extends GrowingPlantBodyBlock {
 
     protected GrowingPlantHeadBlock getHeadBlock() {
         return (GrowingPlantHeadBlock) HexcraftBlocks.WITCHES_LADDER.get();
+    }
+
+    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
+        return new ItemStack(HexcraftItems.WITCHES_LADDER_ITEM.get());
+    }
+    protected int getBlocksToGrowWhenBonemealed(RandomSource p_222680_) {
+        return NetherVines.getBlocksToGrowWhenBonemealed(p_222680_);
     }
 }

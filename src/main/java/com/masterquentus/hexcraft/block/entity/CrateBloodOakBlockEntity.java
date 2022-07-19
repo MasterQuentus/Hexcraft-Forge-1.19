@@ -1,7 +1,6 @@
 package com.masterquentus.hexcraft.block.entity;
 
-import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
-import com.masterquentus.hexcraft.world.inventory.Crate_BloodOakGUIMenu;
+import com.masterquentus.hexcraft.world.inventory.CrateBloodOakGUIMenu;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -29,28 +28,33 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class Crate_BloodOakBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class CrateBloodOakBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 
     private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(27, ItemStack.EMPTY);
     private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-    public Crate_BloodOakBlockEntity(BlockPos position, BlockState state) {
+    public CrateBloodOakBlockEntity(BlockPos position, BlockState state) {
         super(HexcraftBlockEntities.CRATE_BLOOD_OAK.get(), position, state);
     }
 
     @Override
     public void load(CompoundTag compound) {
         super.load(compound);
-        if (!this.tryLoadLootTable(compound))
-            this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        ContainerHelper.loadAllItems(compound, this.stacks);
+        this.loadFromTag(compound);
+    }
+
+    public void loadFromTag(CompoundTag compound) {
+        this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if (!this.tryLoadLootTable(compound) && compound.contains("Items", 9)) {
+            ContainerHelper.loadAllItems(compound, this.stacks);
+        }
     }
 
     @Override
     public void saveAdditional(CompoundTag compound) {
         super.saveAdditional(compound);
         if (!this.trySaveLootTable(compound)) {
-            ContainerHelper.saveAllItems(compound, this.stacks);
+            ContainerHelper.saveAllItems(compound, this.stacks, false);
         }
     }
 
@@ -89,7 +93,7 @@ public class Crate_BloodOakBlockEntity extends RandomizableContainerBlockEntity 
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-        return new Crate_BloodOakGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+        return new CrateBloodOakGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
     }
 
     @Override

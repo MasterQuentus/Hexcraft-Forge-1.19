@@ -1,4 +1,5 @@
 package com.masterquentus.hexcraft.world.inventory;
+
 import com.masterquentus.hexcraft.world.HexcraftMenus;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -21,7 +22,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class Crate_HellbarkGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class CrateWhiteOakGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
     public final static HashMap<String, Object> guistate = new HashMap<>();
     public final Level world;
     public final Player entity;
@@ -30,8 +31,8 @@ public class Crate_HellbarkGUIMenu extends AbstractContainerMenu implements Supp
     private final Map<Integer, Slot> customSlots = new HashMap<>();
     private boolean bound = false;
 
-    public Crate_HellbarkGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        super(HexcraftMenus.HELLBARK_CRATE_GUI.get(), id);
+    public CrateWhiteOakGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+        super(HexcraftMenus.WHITE_OAK_CRATE_GUI.get(), id);
         this.entity = inv.player;
         this.world = inv.player.level;
         this.internal = new ItemStackHandler(27);
@@ -106,7 +107,7 @@ public class Crate_HellbarkGUIMenu extends AbstractContainerMenu implements Supp
         }));
         this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 35) {
         }));
-        this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 152, 35) {
+        this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 35) {
         }));
         this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 7, 53) {
         }));
@@ -271,4 +272,3 @@ public class Crate_HellbarkGUIMenu extends AbstractContainerMenu implements Supp
         return customSlots;
     }
 }
-

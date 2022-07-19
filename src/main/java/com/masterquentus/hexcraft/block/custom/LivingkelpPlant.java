@@ -1,8 +1,10 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.GrowingPlantBodyBlock;
@@ -39,5 +41,9 @@ public class LivingkelpPlant extends GrowingPlantBodyBlock implements LiquidBloc
 
     public boolean placeLiquid(LevelAccessor pLevel, BlockPos pPos, BlockState pState, FluidState pFluidState) {
         return false;
+    }
+
+    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
+        return new ItemStack(HexcraftItems.LIVING_KELP_ITEM.get());
     }
 }

@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class Crate_BloodOakGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class CrateBloodOakGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
     public final static HashMap<String, Object> guistate = new HashMap<>();
     public final Level world;
     public final Player entity;
@@ -31,7 +31,7 @@ public class Crate_BloodOakGUIMenu extends AbstractContainerMenu implements Supp
     private final Map<Integer, Slot> customSlots = new HashMap<>();
     private boolean bound = false;
 
-    public Crate_BloodOakGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+    public CrateBloodOakGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
         super(HexcraftMenus.BLOOD_OAK_CRATE_GUI.get(), id);
         this.entity = inv.player;
         this.world = inv.player.level;

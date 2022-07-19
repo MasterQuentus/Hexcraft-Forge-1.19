@@ -26,12 +26,17 @@ public class HexcraftBlockEntities {
                             HexcraftBlocks.WHITE_OAK_SIGN.get(),
                             HexcraftBlocks.WHITE_OAK_WALL_SIGN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<?>> CRATE_WHITE_OAK = register("crate_white_oak", HexcraftBlocks.CRATE_WHITE_OAK,
-            Crate_WhiteOakBlockEntity::new);
-    public static final RegistryObject<BlockEntityType<?>> CRATE_HELLBARK = register("crate_hellbark", HexcraftBlocks.CRATE_HELLBARK,
-            Crate_HellbarkBlockEntity::new);
+    //Crates
+    public static final RegistryObject<BlockEntityType<?>> CRATE_EBONY = register("crate_ebony", HexcraftBlocks.CRATE_EBONY,
+            CrateEbonyBlockEntity::new);
     public static final RegistryObject<BlockEntityType<?>> CRATE_BLOOD_OAK = register("crate_blood_oak", HexcraftBlocks.CRATE_BLOOD_OAK,
-            Crate_BloodOakBlockEntity::new);
+            CrateBloodOakBlockEntity::new);
+    public static final RegistryObject<BlockEntityType<?>> CRATE_HELLBARK = register("crate_hellbark", HexcraftBlocks.CRATE_HELLBARK,
+            CrateHellbarkBlockEntity::new);
+    public static final RegistryObject<BlockEntityType<?>> CRATE_WHITE_OAK = register("crate_white_oak", HexcraftBlocks.CRATE_WHITE_OAK,
+            CrateWhiteOakBlockEntity::new);
+
+    //Boats
 
     private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
                                                                BlockEntityType.BlockEntitySupplier<?> supplier) {

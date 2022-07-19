@@ -11,6 +11,7 @@ import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import com.masterquentus.hexcraft.villager.HexcraftVillagers;
+import com.masterquentus.hexcraft.world.HexcraftMenus;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import com.mojang.logging.LogUtils;
@@ -57,6 +58,7 @@ public class Hexcraft {
         //HexcraftFluids.register(eventBus);
 
         HexcraftEntityTypes.register(modEventBus);
+        HexcraftMenus.register(modEventBus);
 
         //UnderworldDimension.register();
 
@@ -111,6 +113,8 @@ public class Hexcraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LIVING_KELP_PLANT.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CINDER_PLANT.get(), RenderType.cutout());
 
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_BLOCK.get(), RenderType.translucent());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());

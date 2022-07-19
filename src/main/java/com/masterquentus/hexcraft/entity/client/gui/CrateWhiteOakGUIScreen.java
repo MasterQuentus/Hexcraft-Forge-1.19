@@ -1,6 +1,6 @@
 package com.masterquentus.hexcraft.entity.client.gui;
 
-import com.masterquentus.hexcraft.world.inventory.Crate_WhiteOakGUIMenu;
+import com.masterquentus.hexcraft.world.inventory.CrateWhiteOakGUIMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -14,13 +14,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class Crate_WhiteOakGUIScreen  extends AbstractContainerScreen<Crate_WhiteOakGUIMenu> {
-    private final static HashMap<String, Object> guistate = Crate_WhiteOakGUIMenu.guistate;
+public class CrateWhiteOakGUIScreen extends AbstractContainerScreen<CrateWhiteOakGUIMenu> {
+    private final static HashMap<String, Object> guistate = CrateWhiteOakGUIMenu.guistate;
     private final Level world;
     private final int x, y, z;
     private final Player entity;
 
-    public Crate_WhiteOakGUIScreen(Crate_WhiteOakGUIMenu container, Inventory inventory, Component text) {
+    public CrateWhiteOakGUIScreen(CrateWhiteOakGUIMenu container, Inventory inventory, Component text) {
         super(container, inventory, text);
         this.world = container.world;
         this.x = container.x;
@@ -31,7 +31,7 @@ public class Crate_WhiteOakGUIScreen  extends AbstractContainerScreen<Crate_Whit
         this.imageHeight = 166;
     }
 
-    private static final ResourceLocation texture = new ResourceLocation("cratesmod:textures/white_oak_crate_gui.png");
+    private static final ResourceLocation texture = new ResourceLocation("hexcraft:textures/gui/white_oak_crate_gui.png");
 
     @Override
     public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
