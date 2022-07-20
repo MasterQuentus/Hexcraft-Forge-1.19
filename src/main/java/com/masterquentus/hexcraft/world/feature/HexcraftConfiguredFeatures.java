@@ -30,11 +30,11 @@ public class HexcraftConfiguredFeatures {
 
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_PEARLSTONE.get(),10)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_PEARLSTONE.get(),40)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> CRIMSON_STONE = CONFIGURED_FEATURES.register("crimson_stone",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_CRIMSON_STONE.get(), 13)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_CRIMSON_STONE.get(), 40)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> BLACK_OBSIDIAN = CONFIGURED_FEATURES.register("black_obsidian",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_BLACK_OBSIDIAN.get(), 9)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_BLACK_OBSIDIAN.get(), 14)));
 
 
     public static void register(IEventBus eventBus) {
