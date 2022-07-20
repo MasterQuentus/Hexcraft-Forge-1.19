@@ -18,12 +18,17 @@ public class HexcraftPlacedFeatures {
     public static final RegistryObject<PlacedFeature> PEARL_STONE_PLACED = PLACED_FEATURES.register("pearl_stone_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.PEARL_STONE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(100)))));
 
     public static final RegistryObject<PlacedFeature> CRIMSON_STONE_PLACED = PLACED_FEATURES.register("crimson_stone_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.CRIMSON_STONE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(100)))));
+
+    public static final RegistryObject<PlacedFeature> BLACK_OBSIDIAN_PLACED = PLACED_FEATURES.register("black_obsidian_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.BLACK_OBSIDIAN.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
 
 
 
