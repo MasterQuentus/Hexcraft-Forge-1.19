@@ -106,7 +106,7 @@ public class CrateWitchHazelGUIMenu extends AbstractContainerMenu implements Sup
         }));
         this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 35) {
         }));
-        this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 35) {
+        this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 152, 35) {
         }));
         this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 7, 53) {
         }));

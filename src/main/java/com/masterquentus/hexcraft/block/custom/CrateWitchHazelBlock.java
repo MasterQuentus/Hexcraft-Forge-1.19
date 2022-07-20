@@ -67,11 +67,11 @@ public class CrateWitchHazelBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void setPlacedBy(Level p_56206_, BlockPos p_56207_, BlockState p_56208_, LivingEntity p_56209_, ItemStack p_56210_) {
-        if (p_56210_.hasCustomHoverName()) {
-            BlockEntity blockentity = p_56206_.getBlockEntity(p_56207_);
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
+        if (stack.hasCustomHoverName()) {
+            BlockEntity blockentity = level.getBlockEntity(pos);
             if (blockentity instanceof ShulkerBoxBlockEntity) {
-                ((ShulkerBoxBlockEntity)blockentity).setCustomName(p_56210_.getHoverName());
+                ((ShulkerBoxBlockEntity)blockentity).setCustomName(stack.getHoverName());
             }
         }
     }
@@ -111,34 +111,34 @@ public class CrateWitchHazelBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter p_56202_, BlockPos p_56203_, BlockState p_56204_) {
-        ItemStack itemstack = super.getCloneItemStack(p_56202_, p_56203_, p_56204_);
-        p_56202_.getBlockEntity(p_56203_, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
+    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
+        ItemStack itemstack = super.getCloneItemStack(getter, pos, state);
+        getter.getBlockEntity(pos, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
             p_187446_.saveToItem(itemstack);
         });
         return itemstack;
     }
 
     @Override
-    public void playerWillDestroy(Level p_49852_, BlockPos p_49853_, BlockState p_49854_, Player p_49855_) {
-        BlockEntity blockentity = p_49852_.getBlockEntity(p_49853_);
+    public void playerWillDestroy(Level entity, BlockPos pos, BlockState state, Player player) {
+        BlockEntity blockentity = entity.getBlockEntity(pos);
         if (blockentity instanceof CrateWitchHazelBlockEntity shulkerboxblockentity) {
-            if (!p_49852_.isClientSide && p_49855_.isCreative() && !shulkerboxblockentity.isEmpty()) {
+            if (!entity.isClientSide && player.isCreative() && !shulkerboxblockentity.isEmpty()) {
                 ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_WITCH_HAZEL.get());
                 blockentity.saveToItem(itemstack);
                 if (shulkerboxblockentity.hasCustomName()) {
                     itemstack.setHoverName(shulkerboxblockentity.getCustomName());
                 }
 
-                ItemEntity itementity = new ItemEntity(p_49852_, (double)p_49853_.getX() + 0.5D, (double)p_49853_.getY() + 0.5D, (double)p_49853_.getZ() + 0.5D, itemstack);
+                ItemEntity itementity = new ItemEntity(entity, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, itemstack);
                 itementity.setDefaultPickUpDelay();
-                p_49852_.addFreshEntity(itementity);
+                entity.addFreshEntity(itementity);
             } else {
-                shulkerboxblockentity.unpackLootTable(p_49855_);
+                shulkerboxblockentity.unpackLootTable(player);
             }
         }
 
-        super.playerWillDestroy(p_49852_, p_49853_, p_49854_, p_49855_);
+        super.playerWillDestroy(entity, pos, state, player);
     }
 
     @Override
@@ -173,5 +173,4 @@ public class CrateWitchHazelBlock extends Block implements EntityBlock {
         else
             return 0;
     }
-
 }
