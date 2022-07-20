@@ -1,10 +1,7 @@
 package com.masterquentus.hexcraft.world;
 
 import com.masterquentus.hexcraft.Hexcraft;
-import com.masterquentus.hexcraft.world.inventory.CrateBloodOakGUIMenu;
-import com.masterquentus.hexcraft.world.inventory.CrateEbonyGUIMenu;
-import com.masterquentus.hexcraft.world.inventory.CrateHellbarkGUIMenu;
-import com.masterquentus.hexcraft.world.inventory.CrateWhiteOakGUIMenu;
+import com.masterquentus.hexcraft.world.inventory.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraft.world.inventory.MenuType;
@@ -27,6 +24,9 @@ public class HexcraftMenus {
 
     public static final RegistryObject<MenuType<CrateWhiteOakGUIMenu>> WHITE_OAK_CRATE_GUI = REGISTRY.register("white_oak_crate_gui",
             () -> new MenuType<>((id, inv) -> new CrateWhiteOakGUIMenu(id, inv, null)));
+
+    public static final RegistryObject<MenuType<CrateAlderGUIMenu>> ALDER_CRATE_GUI = REGISTRY.register("alder_crate_gui",
+            () -> new MenuType<>((id, inv) -> new CrateAlderGUIMenu(id, inv, null)));
 
 
     public static void register(IEventBus eventBus) {

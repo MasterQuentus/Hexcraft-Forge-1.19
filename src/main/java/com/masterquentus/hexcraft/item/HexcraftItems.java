@@ -36,6 +36,12 @@ public class HexcraftItems {
     public static final RegistryObject<Item> MAGIC_CRYSTAL = ITEMS.register("magic_crystal",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> FAIRY_DUST = ITEMS.register("fairy_dust",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> ROPE = ITEMS.register("rope",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     //public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire", FlintAndHellFire::new);
 
 
@@ -57,7 +63,6 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCHES_LADDER_ITEM = ITEMS.register("witches_ladder_item",
             () -> new BlockItem(HexcraftBlocks.WITCHES_LADDER.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> LIVING_KELP_ITEM = ITEMS.register("living_kelp_item",
             () -> new BlockItem(HexcraftBlocks.LIVING_KELP_PLANT.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -91,6 +96,10 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WHITE_OAK_SIGN = ITEMS.register("white_oak_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WHITE_OAK_SIGN.get(), HexcraftBlocks.WHITE_OAK_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> ALDER_SIGN = ITEMS.register("alder_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.ALDER_SIGN.get(), HexcraftBlocks.ALDER_WALL_SIGN.get()));
 
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
@@ -143,6 +152,9 @@ public class HexcraftItems {
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Item> CRATE_WHITE_OAK = block(HexcraftBlocks.CRATE_WHITE_OAK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_ALDER = block(HexcraftBlocks.CRATE_ALDER,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Chest
