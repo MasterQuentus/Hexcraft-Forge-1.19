@@ -51,6 +51,38 @@ public class HexcraftFlammableRotatedPillarBlock extends RotatedPillarBlock {
                 return HexcraftBlocks.STRIPPED_BLOOD_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
+            if(state.is(HexcraftBlocks.HELL_BARK_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_HELL_BARK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.HELL_BARK_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_HELL_BARK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.WHITE_OAK_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_WHITE_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.WHITE_OAK_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_WHITE_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.ALDER_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_ALDER_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.ALDER_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_ALDER_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.WITCH_HAZEL_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_WITCH_HAZEL_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.WITCH_HAZEL_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_WITCH_HAZEL_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);
