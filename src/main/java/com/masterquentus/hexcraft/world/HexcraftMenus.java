@@ -31,6 +31,9 @@ public class HexcraftMenus {
     public static final RegistryObject<MenuType<CrateWitchHazelGUIMenu>> WITCH_HAZEL_CRATE_GUI = REGISTRY.register("witch_hazel_crate_gui",
             () -> new MenuType<>((id, inv) -> new CrateWitchHazelGUIMenu(id, inv, null)));
 
+    public static final RegistryObject<MenuType<CrateWillowGUIMenu>> WILLOW_CRATE_GUI = REGISTRY.register("willow_crate_gui",
+            () -> new MenuType<>((id, inv) -> new CrateWillowGUIMenu(id, inv, null)));
+
 
     public static void register(IEventBus eventBus) {
         REGISTRY.register(eventBus);

@@ -155,6 +155,7 @@ public class Hexcraft {
         WoodType.register(HexcraftWoodTypes.WHITE_OAK);
         WoodType.register(HexcraftWoodTypes.ALDER);
         WoodType.register(HexcraftWoodTypes.WITCH_HAZEL);
+        WoodType.register(HexcraftWoodTypes.WILLOW);
 
         EntityRenderers.register(HexcraftEntityTypes.LILITH.get(), LilithRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.WENDIGO.get(), WendigoRenderer::new);
@@ -174,6 +175,7 @@ public class Hexcraft {
                 Sheets.addWoodType(HexcraftWoodTypes.WHITE_OAK);
                 Sheets.addWoodType(HexcraftWoodTypes.ALDER);
                 Sheets.addWoodType(HexcraftWoodTypes.WITCH_HAZEL);
+                Sheets.addWoodType(HexcraftWoodTypes.WILLOW);
 
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,

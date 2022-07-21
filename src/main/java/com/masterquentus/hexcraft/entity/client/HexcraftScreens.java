@@ -25,6 +25,8 @@ public class HexcraftScreens {
             MenuScreens.register(HexcraftMenus.ALDER_CRATE_GUI.get(), CrateAlderGUIScreen::new);
 
             MenuScreens.register(HexcraftMenus.WITCH_HAZEL_CRATE_GUI.get(), CrateWitchHazelGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.WILLOW_CRATE_GUI.get(), CrateWillowGUIScreen::new);
         });
     }
 }

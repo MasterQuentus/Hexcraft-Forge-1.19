@@ -164,6 +164,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> CRATE_WITCH_HAZEL = block(HexcraftBlocks.CRATE_WITCH_HAZEL,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Item> CRATE_WILLOW = block(HexcraftBlocks.CRATE_WILLOW,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Chest
 
 
