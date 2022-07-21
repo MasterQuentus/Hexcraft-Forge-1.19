@@ -53,6 +53,7 @@ public class HexcraftBlockEntities {
     public static final RegistryObject<BlockEntityType<?>> CRATE_HAWTHORN = register("crate_hawthorn", HexcraftBlocks.CRATE_HAWTHORN,
             CrateHawthornBlockEntity::new);
 
+
     //Boats
 
     private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,

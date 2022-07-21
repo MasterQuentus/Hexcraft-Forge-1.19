@@ -73,6 +73,9 @@ public class HexcraftItems {
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> MANDRAKE_ROOT = ITEMS.register("mandrake_root",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
+            () -> new ItemNameBlockItem(HexcraftBlocks.GARLIC_PLANT.get(),
+                    new Item.Properties().food(Foods.CARROT).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CINDER_BERRY = ITEMS.register("cinder_berry",
             () -> new ItemNameBlockItem(HexcraftBlocks.CINDER_PLANT.get(),
                     new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
