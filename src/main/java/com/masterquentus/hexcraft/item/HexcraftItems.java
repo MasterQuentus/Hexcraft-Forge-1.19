@@ -109,6 +109,10 @@ public class HexcraftItems {
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WILLOW_SIGN.get(), HexcraftBlocks.WILLOW_WALL_SIGN.get()));
 
+    public static final RegistryObject<Item> HAWTHORN_SIGN = ITEMS.register("hawthorn_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.HAWTHORN_SIGN.get(), HexcraftBlocks.HAWTHORN_WALL_SIGN.get()));
+
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -169,6 +173,9 @@ public class HexcraftItems {
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Item> CRATE_WILLOW = block(HexcraftBlocks.CRATE_WILLOW,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_HAWTHORN = block(HexcraftBlocks.CRATE_HAWTHORN,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Chest

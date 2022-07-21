@@ -30,7 +30,9 @@ public class HexcraftBlockEntities {
                             HexcraftBlocks.WITCH_HAZEL_WALL_SIGN.get(),
                             HexcraftBlocks.WITCH_HAZEL_SIGN.get(),
                             HexcraftBlocks.WILLOW_WALL_SIGN.get(),
-                            HexcraftBlocks.WILLOW_SIGN.get()).build(null));
+                            HexcraftBlocks.WILLOW_SIGN.get(),
+                            HexcraftBlocks.HAWTHORN_WALL_SIGN.get(),
+                            HexcraftBlocks.HAWTHORN_SIGN.get()).build(null));
 
     //Crates
     public static final RegistryObject<BlockEntityType<?>> CRATE_EBONY = register("crate_ebony", HexcraftBlocks.CRATE_EBONY,
@@ -47,6 +49,9 @@ public class HexcraftBlockEntities {
             CrateWitchHazelBlockEntity::new);
     public static final RegistryObject<BlockEntityType<?>> CRATE_WILLOW = register("crate_willow", HexcraftBlocks.CRATE_WILLOW,
             CrateWillowBlockEntity::new);
+
+    public static final RegistryObject<BlockEntityType<?>> CRATE_HAWTHORN = register("crate_hawthorn", HexcraftBlocks.CRATE_HAWTHORN,
+            CrateHawthornBlockEntity::new);
 
     //Boats
 
