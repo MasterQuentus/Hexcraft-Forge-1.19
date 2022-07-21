@@ -163,6 +163,11 @@ public class HexcraftBlocks {
                     .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST).lightLevel((state) -> 1)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> AMETHYST_CHIMES = registerBlock("amethyst_chimes",
+            () -> new AmethysChimesBlock(BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
+                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
 
     //Stairs
     public static final RegistryObject<Block> PEARL_STONE_STAIRS = registerBlock("pearl_stone_stairs",
@@ -1187,6 +1192,10 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> BLOOD_MUSHROOM_STEM = registerBlock("blood_mushroom_stem",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.2F, 0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> HELL_FIRE = BLOCKS.register("hell_fire",
+            () -> new HellFireBlock(BlockBehaviour.Properties.of(Material.FIRE)
+                    .instabreak().noOcclusion().randomTicks()));
 
 
 
