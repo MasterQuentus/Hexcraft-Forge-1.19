@@ -139,7 +139,11 @@ public class Hexcraft {
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CINDER_PLANT.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELLFIRE_CAMP.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.FAIRY_LANTERN.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.AMETHYST_CHIMES.get(), RenderType.cutout());
 
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_BLOCK.get(), RenderType.translucent());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());

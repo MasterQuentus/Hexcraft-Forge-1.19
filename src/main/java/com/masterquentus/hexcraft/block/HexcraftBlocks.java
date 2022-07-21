@@ -1195,7 +1195,11 @@ public class HexcraftBlocks {
 
     public static final RegistryObject<Block> HELL_FIRE = BLOCKS.register("hell_fire",
             () -> new HellFireBlock(BlockBehaviour.Properties.of(Material.FIRE)
-                    .instabreak().noOcclusion().randomTicks()));
+                    .instabreak().noOcclusion().randomTicks().lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> HELLFIRE_CAMP = registerBlock("hellfire_camp",
+            () -> new HellfireCampfireBlock(true, 1, BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.0F).sound(SoundType.WOOD).noOcclusion().lightLevel((state) -> 15)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
 
 
