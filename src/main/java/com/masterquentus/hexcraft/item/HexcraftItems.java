@@ -90,6 +90,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> BLOOD_APPLE = ITEMS.register("blood_apple",
             () -> new BloodAppleItem(new Item.Properties().food(Foods.APPLE).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berry",
+            () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
 
     //Signs
     public static final RegistryObject<Item> EBONY_SIGN = ITEMS.register("ebony_sign",
@@ -127,6 +130,30 @@ public class HexcraftItems {
     public static final RegistryObject<Item> CEDAR_SIGN = ITEMS.register("cedar_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.CEDAR_SIGN.get(), HexcraftBlocks.CEDAR_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> DISTORTED_SIGN = ITEMS.register("distorted_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.DISTORTED_SIGN.get(), HexcraftBlocks.DISTORTED_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.ELDER_SIGN.get(), HexcraftBlocks.ELDER_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> JUNIPER_SIGN = ITEMS.register("juniper_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.JUNIPER_SIGN.get(), HexcraftBlocks.JUNIPER_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> ROWAN_SIGN = ITEMS.register("rowan_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.ROWAN_SIGN.get(), HexcraftBlocks.ROWAN_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> TWISTED_SIGN = ITEMS.register("twisted_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.TWISTED_SIGN.get(), HexcraftBlocks.TWISTED_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> WITCH_WOOD_SIGN = ITEMS.register("witch_wood_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.WITCH_WOOD_SIGN.get(), HexcraftBlocks.WITCH_WOOD_WALL_SIGN.get()));
 
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
@@ -194,6 +221,51 @@ public class HexcraftItems {
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Item> CRATE_CEDAR = block(HexcraftBlocks.CRATE_CEDAR,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_DISTORTED = block(HexcraftBlocks.CRATE_DISTORTED,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_ELDER = block(HexcraftBlocks.CRATE_ELDER,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_JUNIPER = block(HexcraftBlocks.CRATE_JUNIPER,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_ROWAN = block(HexcraftBlocks.CRATE_ROWAN,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_TWISTED = block(HexcraftBlocks.CRATE_TWISTED,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_WITCH_WOOD = block(HexcraftBlocks.CRATE_WITCH_WOOD,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_OAK = block(HexcraftBlocks.CRATE_OAK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_SPRUCE = block(HexcraftBlocks.CRATE_SPRUCE,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_BIRCH = block(HexcraftBlocks.CRATE_BIRCH,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_JUNGLE  = block(HexcraftBlocks.CRATE_JUNGLE ,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_ACACIA = block(HexcraftBlocks.CRATE_ACACIA,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_DARK_OAK = block(HexcraftBlocks.CRATE_DARK_OAK,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_CRIMSON = block(HexcraftBlocks.CRATE_CRIMSON,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_WARPED = block(HexcraftBlocks.CRATE_WARPED,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_MANGROVE = block(HexcraftBlocks.CRATE_MANGROVE,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Chest

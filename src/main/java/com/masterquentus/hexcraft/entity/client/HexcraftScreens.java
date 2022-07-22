@@ -31,6 +31,36 @@ public class HexcraftScreens {
             MenuScreens.register(HexcraftMenus.HAWTHORN_CRATE_GUI.get(), CrateHawthornGUIScreen::new);
 
             MenuScreens.register(HexcraftMenus.CEDAR_CRATE_GUI.get(), CrateCedarGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.DISTORTED_CRATE_GUI.get(), CrateDistortedGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.ELDER_CRATE_GUI.get(), CrateElderGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.JUNIPER_CRATE_GUI.get(), CrateJuniperGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.ROWAN_CRATE_GUI.get(), CrateRowanGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.TWISTED_CRATE_GUI.get(), CrateTwistedGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.WITCH_WOOD_CRATE_GUI.get(), CrateWitchWoodGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.OAK_CRATE_GUI.get(), CrateOakGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.SPRUCE_CRATE_GUI.get(), CrateSpruceGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.BIRCH_CRATE_GUI.get(), CrateBirchGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.JUNGLE_CRATE_GUI.get(), CrateJungleGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.ACACIA_CRATE_GUI.get(), CrateAcaciaGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.DARK_OAK_CRATE_GUI.get(), CrateDarkOakGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.CRIMSON_CRATE_GUI.get(), CrateCrimsonGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.WARPED_CRATE_GUI.get(), CrateWarpedGUIScreen::new);
+
+            MenuScreens.register(HexcraftMenus.MANGROVE_CRATE_GUI.get(), CrateMangroveGUIScreen::new);
         });
     }
 }

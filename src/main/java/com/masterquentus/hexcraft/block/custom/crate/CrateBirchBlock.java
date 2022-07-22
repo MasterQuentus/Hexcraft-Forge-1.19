@@ -1,7 +1,7 @@
-package com.masterquentus.hexcraft.block.custom;
+package com.masterquentus.hexcraft.block.custom.crate;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
-import com.masterquentus.hexcraft.block.entity.CrateHawthornBlockEntity;
+import com.masterquentus.hexcraft.block.entity.CrateBirchBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;
@@ -32,11 +32,11 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.List;
 
-public class CrateHawthornBlock extends Block implements EntityBlock {
+public class CrateBirchBlock extends Block implements EntityBlock {
 
     public static final ResourceLocation CONTENTS = new ResourceLocation("contents");
 
-    public CrateHawthornBlock() {
+    public CrateBirchBlock() {
         super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(2.5f, 12.5f).requiresCorrectToolForDrops());
     }
 
@@ -55,7 +55,7 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
     @Override
     public List<ItemStack> getDrops(BlockState p_56246_, LootContext.Builder p_56247_) {
         BlockEntity blockentity = p_56247_.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
-        if (blockentity instanceof CrateHawthornBlockEntity shulkerboxblockentity) {
+        if (blockentity instanceof CrateBirchBlockEntity shulkerboxblockentity) {
             p_56247_ = p_56247_.withDynamicDrop(CONTENTS, (p_56218_, p_56219_) -> {
                 for(int i = 0; i < shulkerboxblockentity.getContainerSize(); ++i) {
                     p_56219_.accept(shulkerboxblockentity.getItem(i));
@@ -84,8 +84,8 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
             return InteractionResult.CONSUME;
         } else {
             BlockEntity blockentity = world.getBlockEntity(pos);
-            if (blockentity instanceof CrateHawthornBlockEntity) {
-                CrateHawthornBlockEntity shulkerboxblockentity = (CrateHawthornBlockEntity)blockentity;
+            if (blockentity instanceof CrateBirchBlockEntity) {
+                CrateBirchBlockEntity shulkerboxblockentity = (CrateBirchBlockEntity)blockentity;
 //                if (canOpen(blockstate, world, pos, shulkerboxblockentity)) {
                 entity.openMenu(shulkerboxblockentity);
                 entity.awardStat(Stats.OPEN_SHULKER_BOX);
@@ -107,7 +107,7 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CrateHawthornBlockEntity(pos, state);
+        return new CrateBirchBlockEntity(pos, state);
     }
 
     @Override
@@ -122,9 +122,9 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
     @Override
     public void playerWillDestroy(Level p_49852_, BlockPos p_49853_, BlockState p_49854_, Player p_49855_) {
         BlockEntity blockentity = p_49852_.getBlockEntity(p_49853_);
-        if (blockentity instanceof CrateHawthornBlockEntity shulkerboxblockentity) {
+        if (blockentity instanceof CrateBirchBlockEntity shulkerboxblockentity) {
             if (!p_49852_.isClientSide && p_49855_.isCreative() && !shulkerboxblockentity.isEmpty()) {
-                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_HAWTHORN.get());
+                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_BIRCH.get());
                 blockentity.saveToItem(itemstack);
                 if (shulkerboxblockentity.hasCustomName()) {
                     itemstack.setHoverName(shulkerboxblockentity.getCustomName());
@@ -152,7 +152,7 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
     public void onRemove(BlockState p_56234_, Level p_56235_, BlockPos p_56236_, BlockState p_56237_, boolean p_56238_) {
         if (!p_56234_.is(p_56237_.getBlock())) {
             BlockEntity blockentity = p_56235_.getBlockEntity(p_56236_);
-            if (blockentity instanceof CrateHawthornBlockEntity) {
+            if (blockentity instanceof CrateBirchBlockEntity) {
                 p_56235_.updateNeighbourForOutputSignal(p_56236_, p_56234_.getBlock());
             }
 
@@ -168,7 +168,7 @@ public class CrateHawthornBlock extends Block implements EntityBlock {
     @Override
     public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
         BlockEntity tileentity = world.getBlockEntity(pos);
-        if (tileentity instanceof CrateHawthornBlockEntity be)
+        if (tileentity instanceof CrateBirchBlockEntity be)
             return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
         else
             return 0;

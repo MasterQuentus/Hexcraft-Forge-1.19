@@ -1,7 +1,7 @@
-package com.masterquentus.hexcraft.block.custom;
+package com.masterquentus.hexcraft.block.custom.crate;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
-import com.masterquentus.hexcraft.block.entity.CrateWillowBlockEntity;
+import com.masterquentus.hexcraft.block.entity.CrateSpruceBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;
@@ -32,11 +32,11 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.List;
 
-public class CrateWillowBlock extends Block implements EntityBlock {
+public class CrateSpruceBlock extends Block implements EntityBlock {
 
     public static final ResourceLocation CONTENTS = new ResourceLocation("contents");
 
-    public CrateWillowBlock() {
+    public CrateSpruceBlock() {
         super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(2.5f, 12.5f).requiresCorrectToolForDrops());
     }
 
@@ -55,7 +55,7 @@ public class CrateWillowBlock extends Block implements EntityBlock {
     @Override
     public List<ItemStack> getDrops(BlockState p_56246_, LootContext.Builder p_56247_) {
         BlockEntity blockentity = p_56247_.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
-        if (blockentity instanceof CrateWillowBlockEntity shulkerboxblockentity) {
+        if (blockentity instanceof CrateSpruceBlockEntity shulkerboxblockentity) {
             p_56247_ = p_56247_.withDynamicDrop(CONTENTS, (p_56218_, p_56219_) -> {
                 for(int i = 0; i < shulkerboxblockentity.getContainerSize(); ++i) {
                     p_56219_.accept(shulkerboxblockentity.getItem(i));
@@ -67,11 +67,11 @@ public class CrateWillowBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
-        if (stack.hasCustomHoverName()) {
-            BlockEntity blockentity = level.getBlockEntity(pos);
+    public void setPlacedBy(Level p_56206_, BlockPos p_56207_, BlockState p_56208_, LivingEntity p_56209_, ItemStack p_56210_) {
+        if (p_56210_.hasCustomHoverName()) {
+            BlockEntity blockentity = p_56206_.getBlockEntity(p_56207_);
             if (blockentity instanceof ShulkerBoxBlockEntity) {
-                ((ShulkerBoxBlockEntity)blockentity).setCustomName(stack.getHoverName());
+                ((ShulkerBoxBlockEntity)blockentity).setCustomName(p_56210_.getHoverName());
             }
         }
     }
@@ -84,8 +84,8 @@ public class CrateWillowBlock extends Block implements EntityBlock {
             return InteractionResult.CONSUME;
         } else {
             BlockEntity blockentity = world.getBlockEntity(pos);
-            if (blockentity instanceof CrateWillowBlockEntity) {
-                CrateWillowBlockEntity shulkerboxblockentity = (CrateWillowBlockEntity)blockentity;
+            if (blockentity instanceof CrateSpruceBlockEntity) {
+                CrateSpruceBlockEntity shulkerboxblockentity = (CrateSpruceBlockEntity)blockentity;
 //                if (canOpen(blockstate, world, pos, shulkerboxblockentity)) {
                 entity.openMenu(shulkerboxblockentity);
                 entity.awardStat(Stats.OPEN_SHULKER_BOX);
@@ -107,38 +107,38 @@ public class CrateWillowBlock extends Block implements EntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CrateWillowBlockEntity(pos, state);
+        return new CrateSpruceBlockEntity(pos, state);
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
-        ItemStack itemstack = super.getCloneItemStack(getter, pos, state);
-        getter.getBlockEntity(pos, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
+    public ItemStack getCloneItemStack(BlockGetter p_56202_, BlockPos p_56203_, BlockState p_56204_) {
+        ItemStack itemstack = super.getCloneItemStack(p_56202_, p_56203_, p_56204_);
+        p_56202_.getBlockEntity(p_56203_, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
             p_187446_.saveToItem(itemstack);
         });
         return itemstack;
     }
 
     @Override
-    public void playerWillDestroy(Level entity, BlockPos pos, BlockState state, Player player) {
-        BlockEntity blockentity = entity.getBlockEntity(pos);
-        if (blockentity instanceof CrateWillowBlockEntity shulkerboxblockentity) {
-            if (!entity.isClientSide && player.isCreative() && !shulkerboxblockentity.isEmpty()) {
-                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_WILLOW.get());
+    public void playerWillDestroy(Level p_49852_, BlockPos p_49853_, BlockState p_49854_, Player p_49855_) {
+        BlockEntity blockentity = p_49852_.getBlockEntity(p_49853_);
+        if (blockentity instanceof CrateSpruceBlockEntity shulkerboxblockentity) {
+            if (!p_49852_.isClientSide && p_49855_.isCreative() && !shulkerboxblockentity.isEmpty()) {
+                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_SPRUCE.get());
                 blockentity.saveToItem(itemstack);
                 if (shulkerboxblockentity.hasCustomName()) {
                     itemstack.setHoverName(shulkerboxblockentity.getCustomName());
                 }
 
-                ItemEntity itementity = new ItemEntity(entity, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, itemstack);
+                ItemEntity itementity = new ItemEntity(p_49852_, (double)p_49853_.getX() + 0.5D, (double)p_49853_.getY() + 0.5D, (double)p_49853_.getZ() + 0.5D, itemstack);
                 itementity.setDefaultPickUpDelay();
-                entity.addFreshEntity(itementity);
+                p_49852_.addFreshEntity(itementity);
             } else {
-                shulkerboxblockentity.unpackLootTable(player);
+                shulkerboxblockentity.unpackLootTable(p_49855_);
             }
         }
 
-        super.playerWillDestroy(entity, pos, state, player);
+        super.playerWillDestroy(p_49852_, p_49853_, p_49854_, p_49855_);
     }
 
     @Override
@@ -152,7 +152,7 @@ public class CrateWillowBlock extends Block implements EntityBlock {
     public void onRemove(BlockState p_56234_, Level p_56235_, BlockPos p_56236_, BlockState p_56237_, boolean p_56238_) {
         if (!p_56234_.is(p_56237_.getBlock())) {
             BlockEntity blockentity = p_56235_.getBlockEntity(p_56236_);
-            if (blockentity instanceof CrateWillowBlockEntity) {
+            if (blockentity instanceof CrateSpruceBlockEntity) {
                 p_56235_.updateNeighbourForOutputSignal(p_56236_, p_56234_.getBlock());
             }
 
@@ -168,9 +168,10 @@ public class CrateWillowBlock extends Block implements EntityBlock {
     @Override
     public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
         BlockEntity tileentity = world.getBlockEntity(pos);
-        if (tileentity instanceof CrateWillowBlockEntity be)
+        if (tileentity instanceof CrateSpruceBlockEntity be)
             return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
         else
             return 0;
     }
+
 }

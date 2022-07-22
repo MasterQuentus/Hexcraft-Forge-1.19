@@ -1,16 +1,24 @@
-package com.masterquentus.hexcraft.block.custom;
+package com.masterquentus.hexcraft.block.custom.crate;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
-import com.masterquentus.hexcraft.block.entity.CrateAlderBlockEntity;
+import com.masterquentus.hexcraft.block.entity.CrateEbonyBlockEntity;
+import com.masterquentus.hexcraft.block.entity.CrateHellbarkBlockEntity;
+import com.masterquentus.hexcraft.world.inventory.CrateEbonyGUIMenu;
+import io.netty.buffer.Unpooled;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
@@ -29,14 +37,18 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.network.NetworkHooks;
 
+import java.util.Collections;
 import java.util.List;
 
-public class CrateAlderBlock extends Block implements EntityBlock {
+import static net.minecraft.world.level.block.ShulkerBoxBlock.CONTENTS;
+
+public class CrateEbonyBlock extends Block implements EntityBlock {
 
     public static final ResourceLocation CONTENTS = new ResourceLocation("contents");
 
-    public CrateAlderBlock() {
+    public CrateEbonyBlock() {
         super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(2.5f, 12.5f).requiresCorrectToolForDrops());
     }
 
@@ -55,7 +67,7 @@ public class CrateAlderBlock extends Block implements EntityBlock {
     @Override
     public List<ItemStack> getDrops(BlockState p_56246_, LootContext.Builder p_56247_) {
         BlockEntity blockentity = p_56247_.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
-        if (blockentity instanceof CrateAlderBlockEntity shulkerboxblockentity) {
+        if (blockentity instanceof CrateEbonyBlockEntity shulkerboxblockentity) {
             p_56247_ = p_56247_.withDynamicDrop(CONTENTS, (p_56218_, p_56219_) -> {
                 for(int i = 0; i < shulkerboxblockentity.getContainerSize(); ++i) {
                     p_56219_.accept(shulkerboxblockentity.getItem(i));
@@ -67,11 +79,11 @@ public class CrateAlderBlock extends Block implements EntityBlock {
     }
 
     @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
-        if (stack.hasCustomHoverName()) {
-            BlockEntity blockentity = level.getBlockEntity(pos);
+    public void setPlacedBy(Level p_56206_, BlockPos p_56207_, BlockState p_56208_, LivingEntity p_56209_, ItemStack p_56210_) {
+        if (p_56210_.hasCustomHoverName()) {
+            BlockEntity blockentity = p_56206_.getBlockEntity(p_56207_);
             if (blockentity instanceof ShulkerBoxBlockEntity) {
-                ((ShulkerBoxBlockEntity)blockentity).setCustomName(stack.getHoverName());
+                ((ShulkerBoxBlockEntity)blockentity).setCustomName(p_56210_.getHoverName());
             }
         }
     }
@@ -84,8 +96,8 @@ public class CrateAlderBlock extends Block implements EntityBlock {
             return InteractionResult.CONSUME;
         } else {
             BlockEntity blockentity = world.getBlockEntity(pos);
-            if (blockentity instanceof CrateAlderBlockEntity) {
-                CrateAlderBlockEntity shulkerboxblockentity = (CrateAlderBlockEntity)blockentity;
+            if (blockentity instanceof CrateEbonyBlockEntity) {
+                CrateEbonyBlockEntity shulkerboxblockentity = (CrateEbonyBlockEntity)blockentity;
 //                if (canOpen(blockstate, world, pos, shulkerboxblockentity)) {
                 entity.openMenu(shulkerboxblockentity);
                 entity.awardStat(Stats.OPEN_SHULKER_BOX);
@@ -107,38 +119,38 @@ public class CrateAlderBlock extends Block implements EntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CrateAlderBlockEntity(pos, state);
+        return new CrateEbonyBlockEntity(pos, state);
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
-        ItemStack itemstack = super.getCloneItemStack(getter, pos, state);
-        getter.getBlockEntity(pos, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
+    public ItemStack getCloneItemStack(BlockGetter p_56202_, BlockPos p_56203_, BlockState p_56204_) {
+        ItemStack itemstack = super.getCloneItemStack(p_56202_, p_56203_, p_56204_);
+        p_56202_.getBlockEntity(p_56203_, BlockEntityType.SHULKER_BOX).ifPresent((p_187446_) -> {
             p_187446_.saveToItem(itemstack);
         });
         return itemstack;
     }
 
     @Override
-    public void playerWillDestroy(Level entity, BlockPos pos, BlockState state, Player player) {
-        BlockEntity blockentity = entity.getBlockEntity(pos);
-        if (blockentity instanceof CrateAlderBlockEntity shulkerboxblockentity) {
-            if (!entity.isClientSide && player.isCreative() && !shulkerboxblockentity.isEmpty()) {
-                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_ALDER.get());
+    public void playerWillDestroy(Level p_49852_, BlockPos p_49853_, BlockState p_49854_, Player p_49855_) {
+        BlockEntity blockentity = p_49852_.getBlockEntity(p_49853_);
+        if (blockentity instanceof CrateEbonyBlockEntity shulkerboxblockentity) {
+            if (!p_49852_.isClientSide && p_49855_.isCreative() && !shulkerboxblockentity.isEmpty()) {
+                ItemStack itemstack = new ItemStack(HexcraftBlocks.CRATE_EBONY.get());
                 blockentity.saveToItem(itemstack);
                 if (shulkerboxblockentity.hasCustomName()) {
                     itemstack.setHoverName(shulkerboxblockentity.getCustomName());
                 }
 
-                ItemEntity itementity = new ItemEntity(entity, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, itemstack);
+                ItemEntity itementity = new ItemEntity(p_49852_, (double)p_49853_.getX() + 0.5D, (double)p_49853_.getY() + 0.5D, (double)p_49853_.getZ() + 0.5D, itemstack);
                 itementity.setDefaultPickUpDelay();
-                entity.addFreshEntity(itementity);
+                p_49852_.addFreshEntity(itementity);
             } else {
-                shulkerboxblockentity.unpackLootTable(player);
+                shulkerboxblockentity.unpackLootTable(p_49855_);
             }
         }
 
-        super.playerWillDestroy(entity, pos, state, player);
+        super.playerWillDestroy(p_49852_, p_49853_, p_49854_, p_49855_);
     }
 
     @Override
@@ -152,7 +164,7 @@ public class CrateAlderBlock extends Block implements EntityBlock {
     public void onRemove(BlockState p_56234_, Level p_56235_, BlockPos p_56236_, BlockState p_56237_, boolean p_56238_) {
         if (!p_56234_.is(p_56237_.getBlock())) {
             BlockEntity blockentity = p_56235_.getBlockEntity(p_56236_);
-            if (blockentity instanceof CrateAlderBlockEntity) {
+            if (blockentity instanceof CrateEbonyBlockEntity) {
                 p_56235_.updateNeighbourForOutputSignal(p_56236_, p_56234_.getBlock());
             }
 
@@ -168,9 +180,10 @@ public class CrateAlderBlock extends Block implements EntityBlock {
     @Override
     public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
         BlockEntity tileentity = world.getBlockEntity(pos);
-        if (tileentity instanceof CrateAlderBlockEntity be)
+        if (tileentity instanceof CrateEbonyBlockEntity be)
             return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
         else
             return 0;
     }
+
 }

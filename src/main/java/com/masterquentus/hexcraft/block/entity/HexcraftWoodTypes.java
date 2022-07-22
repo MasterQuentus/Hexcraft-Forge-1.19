@@ -12,4 +12,10 @@ public class HexcraftWoodTypes {
     public static WoodType WILLOW = WoodType.create("willow");
     public static WoodType HAWTHORN = WoodType.create("hawthorn");
     public static WoodType CEDAR = WoodType.create("cedar");
+    public static WoodType DISTORTED = WoodType.create("distorted");
+    public static WoodType ELDER = WoodType.create("elder");
+    public static WoodType JUNIPER = WoodType.create("juniper");
+    public static WoodType ROWAN = WoodType.create("rowan");
+    public static WoodType TWISTED = WoodType.create("twisted");
+    public static WoodType WITCH_WOOD = WoodType.create("witch_wood");
 }
