@@ -11,4 +11,5 @@ public class HexcraftWoodTypes {
     public static WoodType WITCH_HAZEL = WoodType.create("witch_hazel");
     public static WoodType WILLOW = WoodType.create("willow");
     public static WoodType HAWTHORN = WoodType.create("hawthorn");
+    public static WoodType CEDAR = WoodType.create("cedar");
 }

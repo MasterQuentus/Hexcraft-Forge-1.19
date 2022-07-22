@@ -99,6 +99,14 @@ public class HexcraftFlammableRotatedPillarBlock extends RotatedPillarBlock {
                 return HexcraftBlocks.STRIPPED_HAWTHORN_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
+            if(state.is(HexcraftBlocks.CEDAR_LOG.get())) {
+                return HexcraftBlocks.STRIPPED_CEDAR_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
+            if(state.is(HexcraftBlocks.CEDAR_WOOD.get())) {
+                return HexcraftBlocks.STRIPPED_CEDAR_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);

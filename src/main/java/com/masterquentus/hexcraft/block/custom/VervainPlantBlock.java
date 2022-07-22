@@ -6,15 +6,15 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class GarlicPlantBlock extends CropBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
-    public GarlicPlantBlock(Properties properties) {
+public class VervainPlantBlock extends CropBlock {
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+    public VervainPlantBlock(Properties properties) {
         super(properties);
     }
 
     @Override
     public int getMaxAge() {
-        return 2;
+        return 3;
     }
 
     @Override

@@ -80,6 +80,7 @@ public class Hexcraft {
         event.enqueueWork(() -> {
             HexcraftVillagers.registerPOIs();
         });
+        //Put In Json Files Once Removed
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
@@ -100,12 +101,15 @@ public class Hexcraft {
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_DOOR.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_DOOR.get(), RenderType.cutout());
+
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_SAPLING.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES.get(), RenderType.cutout());
@@ -116,6 +120,7 @@ public class Hexcraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_LEAVES.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
@@ -125,6 +130,7 @@ public class Hexcraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_LEAVES_PILE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_LEAVES_PILE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_LEAVES_PILE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_LEAVES_PILE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOODY_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.POTTED_BLOODY_ROSE.get(), RenderType.cutout());
@@ -137,6 +143,7 @@ public class Hexcraft {
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.GARLIC_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.VERVAIN_FLOWER.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CINDER_PLANT.get(), RenderType.cutout());
 
@@ -172,6 +179,7 @@ public class Hexcraft {
         WoodType.register(HexcraftWoodTypes.WITCH_HAZEL);
         WoodType.register(HexcraftWoodTypes.WILLOW);
         WoodType.register(HexcraftWoodTypes.HAWTHORN);
+        WoodType.register(HexcraftWoodTypes.CEDAR);
 
         EntityRenderers.register(HexcraftEntityTypes.LILITH.get(), LilithRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.WENDIGO.get(), WendigoRenderer::new);
@@ -193,6 +201,7 @@ public class Hexcraft {
                 Sheets.addWoodType(HexcraftWoodTypes.WITCH_HAZEL);
                 Sheets.addWoodType(HexcraftWoodTypes.WILLOW);
                 Sheets.addWoodType(HexcraftWoodTypes.HAWTHORN);
+                Sheets.addWoodType(HexcraftWoodTypes.CEDAR);
 
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,

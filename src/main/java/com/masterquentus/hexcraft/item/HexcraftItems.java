@@ -76,6 +76,13 @@ public class HexcraftItems {
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new ItemNameBlockItem(HexcraftBlocks.GARLIC_PLANT.get(),
                     new Item.Properties().food(Foods.CARROT).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> VERVAIN_SEEDS = ITEMS.register("vervain_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.VERVAIN_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> VERVAIN = ITEMS.register("vervain",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CINDER_BERRY = ITEMS.register("cinder_berry",
             () -> new ItemNameBlockItem(HexcraftBlocks.CINDER_PLANT.get(),
                     new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -116,6 +123,10 @@ public class HexcraftItems {
     public static final RegistryObject<Item> HAWTHORN_SIGN = ITEMS.register("hawthorn_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.HAWTHORN_SIGN.get(), HexcraftBlocks.HAWTHORN_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> CEDAR_SIGN = ITEMS.register("cedar_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.CEDAR_SIGN.get(), HexcraftBlocks.CEDAR_WALL_SIGN.get()));
 
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
@@ -180,6 +191,9 @@ public class HexcraftItems {
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Item> CRATE_HAWTHORN = block(HexcraftBlocks.CRATE_HAWTHORN,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Item> CRATE_CEDAR = block(HexcraftBlocks.CRATE_CEDAR,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Chest
