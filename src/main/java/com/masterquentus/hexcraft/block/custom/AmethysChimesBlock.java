@@ -22,7 +22,6 @@ public class AmethysChimesBlock extends Block {
     public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
         return 15;
     }
-
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
         List<ItemStack> dropsOriginal = super.getDrops(state, builder);
