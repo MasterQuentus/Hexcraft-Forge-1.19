@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hexcraft:block/alder_planks",
+    "top": "hexcraft:block/alder_planks",
+    "side": "hexcraft:block/alder_planks"
+  }
+}

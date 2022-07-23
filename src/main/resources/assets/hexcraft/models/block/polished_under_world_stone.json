@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "hexcraft:block/polished_under_world_stone"
+  }
+}

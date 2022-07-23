@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:cedar_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:cedar_button",
+        "count": 1
+    }
+}

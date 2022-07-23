@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/H/",
+        "/H/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "H": {
+            "item": "hexcraft:willow_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:willow_fence_gate",
+        "count": 1
+    }
+}

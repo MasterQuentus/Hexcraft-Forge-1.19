@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:under_world_cobblestone"
+        }
+    },
+    "result": {
+        "item": "hexcraft:under_world_cobblestone_wall",
+        "count": 6
+    }
+}

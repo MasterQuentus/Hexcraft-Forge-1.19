@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "hexcraft:block/pearl_stone_bricks"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "BBB",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:twisted_planks"
+        },
+        "B": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {
+        "item": "hexcraft:twisted_bookshelf",
+        "count": 1
+    }
+}

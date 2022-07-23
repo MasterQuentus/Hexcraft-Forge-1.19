@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "hexcraft:block/blood_oak_planks",
+    "top": "hexcraft:block/blood_oak_planks",
+    "side": "hexcraft:block/blood_oak_planks"
+  }
+}

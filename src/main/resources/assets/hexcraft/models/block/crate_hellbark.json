@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/hellbark_crate",
+    "up": "hexcraft:block/hellbark_crate",
+    "north": "hexcraft:block/hellbark_crate",
+    "east": "hexcraft:block/hellbark_crate",
+    "south": "hexcraft:block/hellbark_crate",
+    "west": "hexcraft:block/hellbark_crate",
+    "particle": "hexcraft:block/hellbark_crate"
+  }
+}

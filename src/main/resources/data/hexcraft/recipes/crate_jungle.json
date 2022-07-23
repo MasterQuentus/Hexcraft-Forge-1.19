@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_/_",
+        "/C/",
+        "_/_"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:jungle_slab"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "C": {
+            "item": "minecraft:chest"
+        }
+    },
+    "result": {
+        "item": "hexcraft:crate_jungle",
+        "count": 1
+    }
+}

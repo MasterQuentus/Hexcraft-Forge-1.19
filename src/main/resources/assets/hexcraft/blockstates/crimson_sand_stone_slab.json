@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/crimson_sand_stone_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/crimson_sand_stone"
+    },
+    "type=top": {
+      "model": "hexcraft:block/crimson_sand_stone_slab_top"
+    }
+  }
+}

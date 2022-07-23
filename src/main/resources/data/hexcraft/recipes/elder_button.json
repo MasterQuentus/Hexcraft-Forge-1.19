@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:elder_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:elder_button",
+        "count": 1
+    }
+}

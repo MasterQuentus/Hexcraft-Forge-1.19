@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "H"
+    ],
+    "key": {
+        "_": {
+            "item": "hexcraft:under_world_stone_bricks_slab"
+        },
+        "H": {
+            "item": "hexcraft:under_world_stone_bricks_slab"
+        }
+    },
+    "result": {
+        "item": "hexcraft:chiseled_under_world_stone",
+        "count": 1
+    }
+}

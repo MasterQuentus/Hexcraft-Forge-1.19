@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:hawthorn_planks"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "hexcraft:hawthorn_sign",
+        "count": 3
+    }
+}

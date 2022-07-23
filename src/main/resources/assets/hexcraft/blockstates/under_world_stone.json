@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "hexcraft:block/under_world_stone"
+      },
+      {
+        "model": "hexcraft:block/under_world_stone_mirrored"
+      },
+      {
+        "model": "hexcraft:block/under_world_stone",
+        "y": 180
+      },
+      {
+        "model": "hexcraft:block/under_world_stone_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

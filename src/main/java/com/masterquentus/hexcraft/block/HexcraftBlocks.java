@@ -164,10 +164,9 @@ public class HexcraftBlocks {
                     .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST).lightLevel((state) -> 1)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> AMETHYST_CHIMES = registerBlock("amethyst_chimes",
-            () -> new AmethysChimesBlock(BlockBehaviour.Properties.of(Material.AMETHYST).noOcclusion()
-                    .randomTicks().strength(1.5F).requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
+            () -> new AmethysChimesBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .randomTicks().strength(1.7F).requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Stairs
     public static final RegistryObject<Block> PEARL_STONE_STAIRS = registerBlock("pearl_stone_stairs",
@@ -1856,6 +1855,13 @@ public class HexcraftBlocks {
             () -> new FlowerPotBlock(null, HexcraftBlocks.BLOODY_ROSE,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
+    public static final RegistryObject<Block> WILD_BRAMBLE = registerBlock("wild_bramble",
+            () -> new WildBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
+                    .instabreak().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Block> ENDER_BRAMBLE = registerBlock("ender_bramble",
+            //() -> new EnderBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
+                    //.instabreak().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> WITCHES_LADDER = BLOCKS.register("witches_ladder",
             () -> new WitchesLadderBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion().randomTicks()));

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:living_kelp_item"
+        }
+    },
+    "result": {
+        "item": "hexcraft:living_kelp_block",
+        "count": 1
+    }
+}

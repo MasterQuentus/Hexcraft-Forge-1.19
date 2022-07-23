@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:pearl_stone"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:pearl_stone_button",
+        "count": 1
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "hexcraft:block/pearl_stone",
+    "top": "hexcraft:block/pearl_stone",
+    "side": "hexcraft:block/pearl_stone"
+  }
+}

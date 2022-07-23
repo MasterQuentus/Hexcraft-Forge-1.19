@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hexcraft:block/rowan_planks",
+    "top": "hexcraft:block/rowan_planks",
+    "side": "hexcraft:block/rowan_planks"
+  }
+}

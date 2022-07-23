@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/ebony_crate",
+    "up": "hexcraft:block/ebony_crate",
+    "north": "hexcraft:block/ebony_crate",
+    "east": "hexcraft:block/ebony_crate",
+    "south": "hexcraft:block/ebony_crate",
+    "west": "hexcraft:block/ebony_crate",
+    "particle": "hexcraft:block/ebony_crate"
+  }
+}

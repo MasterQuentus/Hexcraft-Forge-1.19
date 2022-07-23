@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_/_",
+        "/C/",
+        "_/_"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:acacia_slab"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "C": {
+            "item": "minecraft:chest"
+        }
+    },
+    "result": {
+        "item": "hexcraft:crate_acacia",
+        "count": 1
+    }
+}

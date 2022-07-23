@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:under_world_stone_bricks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:polished_under_world_stone",
+        "count": 4
+    }
+}

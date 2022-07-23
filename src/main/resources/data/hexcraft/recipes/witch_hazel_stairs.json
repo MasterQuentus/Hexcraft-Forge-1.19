@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:witch_hazel_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:witch_hazel_stairs",
+        "count": 4
+    }
+}

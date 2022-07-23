@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/under_world_cobblestone_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/under_world_cobblestone"
+    },
+    "type=top": {
+      "model": "hexcraft:block/under_world_cobblestone_slab_top"
+    }
+  }
+}

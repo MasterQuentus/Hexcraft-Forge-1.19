@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hexcraft:block/cinder_plant_stage3"
+  }
+}

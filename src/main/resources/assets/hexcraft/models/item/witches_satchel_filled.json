@@ -1,0 +1,6 @@
+{
+    "parent": "item/bundle",
+    "textures": {
+        "layer0": "hexcraft:item/witches_satchel_filled"
+    }
+}

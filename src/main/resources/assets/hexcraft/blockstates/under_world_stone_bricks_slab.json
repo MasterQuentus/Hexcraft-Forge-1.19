@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/under_world_stone_bricks_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/under_world_stone_bricks"
+    },
+    "type=top": {
+      "model": "hexcraft:block/under_world_stone_bricks_slab_top"
+    }
+  }
+}

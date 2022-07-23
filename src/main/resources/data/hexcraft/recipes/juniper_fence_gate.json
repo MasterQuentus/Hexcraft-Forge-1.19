@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/H/",
+        "/H/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "H": {
+            "item": "hexcraft:juniper_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:juniper_fence_gate",
+        "count": 1
+    }
+}

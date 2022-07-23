@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/distorted_crate",
+    "up": "hexcraft:block/distorted_crate",
+    "north": "hexcraft:block/distorted_crate",
+    "east": "hexcraft:block/distorted_crate",
+    "south": "hexcraft:block/distorted_crate",
+    "west": "hexcraft:block/distorted_crate",
+    "particle": "hexcraft:block/distorted_crate"
+  }
+}

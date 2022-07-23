@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "hexcraft:block/pearl_stone"
+      },
+      {
+        "model": "hexcraft:block/pearl_stone_mirrored"
+      },
+      {
+        "model": "hexcraft:block/pearl_stone",
+        "y": 180
+      },
+      {
+        "model": "hexcraft:block/pearl_stone_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

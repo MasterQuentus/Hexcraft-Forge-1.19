@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/witch_hazel_crate",
+    "up": "hexcraft:block/witch_hazel_crate",
+    "north": "hexcraft:block/witch_hazel_crate",
+    "east": "hexcraft:block/witch_hazel_crate",
+    "south": "hexcraft:block/witch_hazel_crate",
+    "west": "hexcraft:block/witch_hazel_crate",
+    "particle": "hexcraft:block/witch_hazel_crate"
+  }
+}

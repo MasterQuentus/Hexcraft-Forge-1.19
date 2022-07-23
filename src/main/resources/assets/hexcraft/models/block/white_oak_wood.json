@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hexcraft:block/white_oak_log",
+    "side": "hexcraft:block/white_oak_log"
+  }
+}

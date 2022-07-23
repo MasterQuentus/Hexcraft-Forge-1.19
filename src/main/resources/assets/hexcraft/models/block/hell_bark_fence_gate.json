@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "hexcraft:block/hell_bark_planks"
+  }
+}

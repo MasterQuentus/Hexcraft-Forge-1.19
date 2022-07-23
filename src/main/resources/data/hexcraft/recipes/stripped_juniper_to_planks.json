@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:stripped_juniper_wood"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:juniper_planks",
+        "count": 4
+    }
+}

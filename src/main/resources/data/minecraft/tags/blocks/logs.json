@@ -1,0 +1,36 @@
+{
+  "replace": false,
+  "values": [
+    "hexcraft:ebony_log",
+    "hexcraft:ebony_wood",
+    "hexcraft:blood_oak_log",
+    "hexcraft:blood_oak_wood",
+	"hexcraft:hell_bark_log",
+    "hexcraft:hell_bark_wood",
+	"hexcraft:white_oak_log",
+    "hexcraft:white_oak_wood",
+	"hexcraft:alder_log",
+    "hexcraft:alder_wood",
+	"hexcraft:witch_hazel_log",
+    "hexcraft:witch_hazel_wood",
+	"hexcraft:willow_log",
+    "hexcraft:willow_wood",
+	"hexcraft:hawthorn_log",
+	"hexcraft:hawthorn_wood",
+	"hexcraft:cedar_log",
+	"hexcraft:cedar_wood",
+	"hexcraft:distorted_log",
+	"hexcraft:distorted_wood",
+	"hexcraft:elder_log",
+	"hexcraft:elder_wood",
+	"hexcraft:juniper_log",
+	"hexcraft:juniper_wood",
+	"hexcraft:rowan_log",
+	"hexcraft:rowan_wood",
+	"hexcraft:twisted_log",
+	"hexcraft:twisted_wood",
+	"hexcraft:witch_wood_log",
+	"hexcraft:witch_wood_wood"
+
+  ]
+}

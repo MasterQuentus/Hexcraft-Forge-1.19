@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:stripped_hell_bark_log"
+        }
+    },
+    "result": {
+        "item": "hexcraft:stripped_hell_bark_wood",
+        "count": 3
+    }
+}

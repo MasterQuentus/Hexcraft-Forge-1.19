@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:alder_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:alder_stairs",
+        "count": 4
+    }
+}

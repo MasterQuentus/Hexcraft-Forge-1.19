@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "hexcraft:block/witch_wood_planks"
+  }
+}

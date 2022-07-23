@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:hell_bark_log"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:hell_bark_planks",
+        "count": 4
+    }
+}

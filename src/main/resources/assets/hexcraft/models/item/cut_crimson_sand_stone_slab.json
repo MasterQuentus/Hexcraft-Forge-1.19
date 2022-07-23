@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hexcraft:block/cut_crimson_sand_stone",
+    "top": "hexcraft:block/cut_crimson_sand_stone",
+    "side": "hexcraft:block/cut_crimson_sand_stone"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:crimson_cobblestone"
+        }
+    },
+    "result": {
+        "item": "hexcraft:crimson_cobblestone_slab",
+        "count": 6
+    }
+}

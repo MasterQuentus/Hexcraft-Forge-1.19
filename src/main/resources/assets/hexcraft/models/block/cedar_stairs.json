@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "hexcraft:block/cedar_planks",
+    "top": "hexcraft:block/cedar_planks",
+    "side": "hexcraft:block/cedar_planks"
+  }
+}

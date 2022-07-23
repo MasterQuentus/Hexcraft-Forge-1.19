@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:white_oak_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:white_oak_button",
+        "count": 1
+    }
+}

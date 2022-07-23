@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "hexcraft:block/witch_wood_planks",
+    "top": "hexcraft:block/witch_wood_planks",
+    "side": "hexcraft:block/witch_wood_planks"
+  }
+}

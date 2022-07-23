@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:pearl_stone_bricks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:polished_pearl_stone",
+        "count": 4
+    }
+}

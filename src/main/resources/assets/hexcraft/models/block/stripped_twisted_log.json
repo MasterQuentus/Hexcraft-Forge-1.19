@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hexcraft:block/stripped_twisted_log_top",
+    "side": "hexcraft:block/stripped_twisted_log"
+  }
+}

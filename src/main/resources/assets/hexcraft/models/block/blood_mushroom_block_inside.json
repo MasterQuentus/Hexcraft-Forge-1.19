@@ -1,0 +1,7 @@
+{
+    "parent": "block/template_single_face",
+    "ambientocclusion": false,
+    "textures": {
+        "texture": "hexcraft:block/blood_mushroom_block_inside"
+    }
+}

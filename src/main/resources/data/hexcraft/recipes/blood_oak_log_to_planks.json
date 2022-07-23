@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:blood_oak_log"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:blood_oak_planks",
+        "count": 4
+    }
+}

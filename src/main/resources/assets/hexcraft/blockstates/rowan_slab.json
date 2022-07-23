@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/rowan_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/rowan_planks"
+    },
+    "type=top": {
+      "model": "hexcraft:block/rowan_slab_top"
+    }
+  }
+}

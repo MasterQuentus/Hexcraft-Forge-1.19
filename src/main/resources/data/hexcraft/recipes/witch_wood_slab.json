@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:witch_wood_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:witch_wood_slab",
+        "count": 6
+    }
+}

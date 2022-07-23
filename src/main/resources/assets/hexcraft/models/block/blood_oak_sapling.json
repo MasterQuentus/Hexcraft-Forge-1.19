@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hexcraft:block/blood_oak_sapling"
+  }
+}

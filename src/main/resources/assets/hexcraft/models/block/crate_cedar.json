@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/cedar_crate",
+    "up": "hexcraft:block/cedar_crate",
+    "north": "hexcraft:block/cedar_crate",
+    "east": "hexcraft:block/cedar_crate",
+    "south": "hexcraft:block/cedar_crate",
+    "west": "hexcraft:block/cedar_crate",
+    "particle": "hexcraft:block/cedar_crate"
+  }
+}

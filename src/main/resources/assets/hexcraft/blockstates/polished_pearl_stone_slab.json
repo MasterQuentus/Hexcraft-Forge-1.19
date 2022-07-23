@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/polished_pearl_stone_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/polished_pearl_stone"
+    },
+    "type=top": {
+      "model": "hexcraft:block/polished_pearl_stone_slab_top"
+    }
+  }
+}

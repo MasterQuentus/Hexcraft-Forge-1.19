@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/H/",
+        "/H/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "H": {
+            "item": "hexcraft:rowan_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:rowan_fence_gate",
+        "count": 1
+    }
+}

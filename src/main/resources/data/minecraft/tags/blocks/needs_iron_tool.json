@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"hexcraft:magic_crystal_block",
+	"hexcraft:budding_magic_crystal",
+	"hexcraft:magic_crystal_cluster",
+	"hexcraft:large_magic_crystal_bud",
+	"hexcraft:medium_magic_crystal_bud",
+	"hexcraft:small_magic_crystal_bud"
+  ]
+}

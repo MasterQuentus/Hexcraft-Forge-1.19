@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/juniper_crate",
+    "up": "hexcraft:block/juniper_crate",
+    "north": "hexcraft:block/juniper_crate",
+    "east": "hexcraft:block/juniper_crate",
+    "south": "hexcraft:block/juniper_crate",
+    "west": "hexcraft:block/juniper_crate",
+    "particle": "hexcraft:block/juniper_crate"
+  }
+}

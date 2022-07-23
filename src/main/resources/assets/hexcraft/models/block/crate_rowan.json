@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hexcraft:block/rowan_crate",
+    "up": "hexcraft:block/rowan_crate",
+    "north": "hexcraft:block/rowan_crate",
+    "east": "hexcraft:block/rowan_crate",
+    "south": "hexcraft:block/rowan_crate",
+    "west": "hexcraft:block/rowan_crate",
+    "particle": "hexcraft:block/rowan_crate"
+  }
+}

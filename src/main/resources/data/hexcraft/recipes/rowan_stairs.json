@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:rowan_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:rowan_stairs",
+        "count": 4
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "hexcraft:block/twisted_door_bottom",
+    "top": "hexcraft:block/twisted_door_top"
+  }
+}

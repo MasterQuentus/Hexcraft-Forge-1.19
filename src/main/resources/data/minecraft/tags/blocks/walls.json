@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "hexcraft:pearl_stone_wall",
+    "hexcraft:pearl_cobblestone_wall",
+    "hexcraft:pearl_stone_bricks_wall",
+    "hexcraft:polished_pearl_stone_wall",
+	"hexcraft:crimson_stone_wall",
+    "hexcraft:crimson_cobblestone_wall",
+    "hexcraft:crimson_stone_bricks_wall",
+    "hexcraft:polished_crimson_stone_wall",
+	"hexcraft:under_world_stone_wall",
+    "hexcraft:under_world_cobblestone_wall",
+    "hexcraft:under_world_stone_bricks_wall",
+    "hexcraft:polished_under_world_stone_wall",
+	"hexcraft:crimson_sand_stone_wall"
+
+  ]
+}

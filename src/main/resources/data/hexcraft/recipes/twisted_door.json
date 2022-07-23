@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:twisted_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:twisted_door",
+        "count": 3
+    }
+}

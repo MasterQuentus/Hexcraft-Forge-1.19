@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "L#L",
+        "L L"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:infused_fabric"
+        },
+        "L": {
+            "item": "minecraft:leather"
+        }
+    },
+    "result": {
+        "item": "hexcraft:witches_boots",
+        "count": 1
+    }
+}

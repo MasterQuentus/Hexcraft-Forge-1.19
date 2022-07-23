@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:stripped_witch_wood_log"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:witch_wood_planks",
+        "count": 4
+    }
+}

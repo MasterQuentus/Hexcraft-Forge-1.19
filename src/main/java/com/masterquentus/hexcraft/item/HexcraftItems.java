@@ -42,6 +42,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> ROPE = ITEMS.register("rope",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
+            () -> new WitchesSatchelItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire",
             () -> new FlintHellFireItem(new Item.Properties().durability(64).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 

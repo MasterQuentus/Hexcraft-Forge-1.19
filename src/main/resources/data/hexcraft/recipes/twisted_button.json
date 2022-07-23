@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:twisted_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:twisted_button",
+        "count": 1
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hexcraft:block/stripped_juniper_log",
+    "side": "hexcraft:block/stripped_juniper_log"
+  }
+}

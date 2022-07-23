@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "#L#",
+        "#L#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:feather"
+        },
+        "L": {
+            "item": "hexcraft:rope"
+        }
+    },
+    "result": {
+        "item": "hexcraft:witches_ladder_item",
+        "count": 3
+    }
+}

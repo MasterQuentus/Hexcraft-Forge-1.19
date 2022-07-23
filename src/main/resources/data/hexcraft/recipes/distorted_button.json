@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:distorted_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:distorted_button",
+        "count": 1
+    }
+}

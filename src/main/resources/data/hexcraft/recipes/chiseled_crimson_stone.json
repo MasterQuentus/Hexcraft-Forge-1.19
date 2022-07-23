@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "H"
+    ],
+    "key": {
+        "_": {
+            "item": "hexcraft:crimson_stone_bricks_slab"
+        },
+        "H": {
+            "item": "hexcraft:crimson_stone_bricks_slab"
+        }
+    },
+    "result": {
+        "item": "hexcraft:chiseled_crimson_stone",
+        "count": 1
+    }
+}

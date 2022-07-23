@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexcraft:block/cedar_slab"
+    },
+    "type=double": {
+      "model": "hexcraft:block/cedar_planks"
+    },
+    "type=top": {
+      "model": "hexcraft:block/cedar_slab_top"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:pearl_stone"
+        }
+    },
+    "result": {
+        "item": "hexcraft:pearl_stone_stairs",
+        "count": 4
+    }
+}

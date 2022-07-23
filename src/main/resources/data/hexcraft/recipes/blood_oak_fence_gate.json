@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/H/",
+        "/H/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "H": {
+            "item": "hexcraft:blood_oak_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:blood_oak_fence_gate",
+        "count": 1
+    }
+}
