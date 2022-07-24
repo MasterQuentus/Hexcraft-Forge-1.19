@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "hexcraft:ebony_leaves",
+	"hexcraft:blood_oak_leaves",
+	"hexcraft:hell_bark_leaves",
+	"hexcraft:white_oak_leaves",
+	"hexcraft:alder_leaves",
+	"hexcraft:witch_hazel_leaves",
+	"hexcraft:willow_leaves",
+	"hexcraft:hawthorn_leaves",
+	"hexcraft:cedar_leaves",
+	"hexcraft:distorted_leaves",
+	"hexcraft:elder_leaves",
+	"hexcraft:juniper_leaves",
+	"hexcraft:rowan_leaves",
+	"hexcraft:twisted_leaves",
+	"hexcraft:witch_wood_leaves"
+  ]
+}

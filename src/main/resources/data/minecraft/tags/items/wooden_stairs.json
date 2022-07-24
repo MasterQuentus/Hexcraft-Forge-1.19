@@ -1,0 +1,20 @@
+{
+ "replace": false,
+  "values": [
+    "hexcraft:ebony_stairs",
+    "hexcraft:blood_oak_stairs",
+    "hexcraft:hell_bark_stairs",
+    "hexcraft:white_oak_stairs",
+    "hexcraft:alder_stairs",
+    "hexcraft:witch_hazel_stairs",
+    "hexcraft:willow_stairs",
+    "hexcraft:hawthorn_stairs",
+    "hexcraft:cedar_stairs",
+    "hexcraft:distorted_stairs",
+	"hexcraft:elder_stairs",
+	"hexcraft:juniper_stairs",
+	"hexcraft:rowan_stairs",
+	"hexcraft:twisted_stairs",
+	"hexcraft:witch_wood_stairs"
+  ]
+}

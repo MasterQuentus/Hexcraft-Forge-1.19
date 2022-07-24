@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "hexcraft:ebony_sapling",
+    "hexcraft:blood_oak_sapling",
+    "hexcraft:hell_bark_sapling",
+    "hexcraft:white_oak_sapling",
+    "hexcraft:alder_sapling",
+    "hexcraft:witch_hazel_sapling",
+    "hexcraft:willow_sapling",
+    "hexcraft:hawthorn_sapling",
+    "hexcraft:cedar_sapling",
+    "hexcraft:distorted_sapling",
+	"hexcraft:elder_sapling",
+	"hexcraft:juniper_sapling",
+	"hexcraft:rowan_sapling",
+	"hexcraft:twisted_sapling",
+	"hexcraft:witch_wood_sapling"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+ "replace": false,
+  "values": [
+    "hexcraft:ebony_slab",
+    "hexcraft:blood_oak_slab",
+    "hexcraft:hell_bark_slab",
+    "hexcraft:white_oak_slab",
+    "hexcraft:alder_slab",
+    "hexcraft:witch_hazel_slab",
+    "hexcraft:willow_slab",
+    "hexcraft:hawthorn_slab",
+    "hexcraft:cedar_slab",
+    "hexcraft:distorted_slab",
+	"hexcraft:elder_slab",
+	"hexcraft:juniper_slab",
+	"hexcraft:rowan_slab",
+	"hexcraft:twisted_slab",
+	"hexcraft:witch_wood_slab"
+  ]
+}
