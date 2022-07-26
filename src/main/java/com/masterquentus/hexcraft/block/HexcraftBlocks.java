@@ -167,11 +167,9 @@ public class HexcraftBlocks {
             () -> new AmethysChimesBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
                     .strength(1.7F).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject <Block> FAIRY_HOUSE = registerBlock("fairy_house",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F).sound(SoundType.WOOD).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject <Block> PIXIE_HOUSE = registerBlock("pixie_house",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
                     .strength(2.0F).sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
