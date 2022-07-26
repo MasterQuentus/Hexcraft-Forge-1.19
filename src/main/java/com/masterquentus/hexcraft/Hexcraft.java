@@ -82,6 +82,7 @@ public class Hexcraft {
         });
         //Put In Json Files Once Removed
 
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_DOOR.get(), RenderType.cutout());
@@ -98,6 +99,7 @@ public class Hexcraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_TRAPDOOR.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_TRAPDOOR.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.JUNIPER_DOOR.get(), RenderType.cutout());
@@ -190,6 +192,9 @@ public class Hexcraft {
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.SMALL_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MEDIUM_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LARGE_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.FAIRY_HOUSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.PIXIE_HOUSE.get(), RenderType.cutout());
 
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.UNDERWORLD_PORTAL.get(), RenderType.translucent());
 
