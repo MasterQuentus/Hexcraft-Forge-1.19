@@ -24,9 +24,16 @@ public class HexcraftVillagers {
             () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
+    public static final RegistryObject<PoiType> CRIMSON_BLOCK_POI = POI_TYPES.register("crimson_block_poi",
+            () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.CRIMSON_SAND.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
     public static final RegistryObject<VillagerProfession> WITCH_PROFESSION = VILLAGER_PROFESSIONS.register("witch_profession",
             () -> new VillagerProfession("witch_profession", x -> x.get() == MAGIC_CRYSTAL_BLOCK_POI.get(),
                     x -> x.get() == MAGIC_CRYSTAL_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_ARMORER));
+    public static final RegistryObject<VillagerProfession> VAMPIRE_EXPERT = VILLAGER_PROFESSIONS.register("vampire_expert",
+            () -> new VillagerProfession("vampire_expert", x -> x.get() == CRIMSON_BLOCK_POI.get(),
+                    x -> x.get() == CRIMSON_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
     public static void registerPOIs() {

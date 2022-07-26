@@ -473,6 +473,7 @@
 
   //Entity's
   "entity.minecraft.villager.hexcraft.witch_profession": "Witch Profession",
+  "entity.minecraft.villager.hexcraft.vampire_expert": "Vampire Expert",
 
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"

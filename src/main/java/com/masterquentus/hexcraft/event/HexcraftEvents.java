@@ -19,9 +19,29 @@ import java.util.List;
 public class HexcraftEvents {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if (event.getType() == VillagerProfession.TOOLSMITH) {
+        if (event.getType() == VillagerProfession.FARMER) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(HexcraftItems.INFUSED_FABRIC.get(), 1);
+            ItemStack stack = new ItemStack(HexcraftItems.GARLIC.get(), 1);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 2),
+                    stack, 10, 8, 0.02F));
+        }
+
+        if (event.getType() == VillagerProfession.FARMER) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(HexcraftItems.VERVAIN_SEEDS.get(), 1);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 2),
+                    stack, 10, 8, 0.02F));
+        }
+
+        if (event.getType() == VillagerProfession.FARMER) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(HexcraftItems.VERVAIN.get(), 1);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
@@ -32,6 +52,16 @@ public class HexcraftEvents {
         if (event.getType() == HexcraftVillagers.WITCH_PROFESSION.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(HexcraftItems.MAGIC_CRYSTAL.get(), 6);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    stack, 10, 8, 0.02F));
+        }
+
+        if (event.getType() == HexcraftVillagers.VAMPIRE_EXPERT.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(HexcraftItems.GARLIC.get(), 6);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
