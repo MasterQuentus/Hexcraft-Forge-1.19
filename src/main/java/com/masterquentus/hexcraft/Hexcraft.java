@@ -6,6 +6,8 @@ import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
 import com.masterquentus.hexcraft.block.entity.client.FairyRenderer;
 import com.masterquentus.hexcraft.block.entity.client.LilithRenderer;
 import com.masterquentus.hexcraft.block.entity.client.WendigoRenderer;
+import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
+import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
@@ -30,7 +32,9 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -71,6 +75,10 @@ public class Hexcraft {
         //eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HexcraftClientConfigs.SPEC, "hexcraft-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HexcraftCommonConfigs.SPEC, "hexcraft-common.toml");
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);

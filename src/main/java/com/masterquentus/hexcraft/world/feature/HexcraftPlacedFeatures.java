@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.world.feature;
 
 import com.masterquentus.hexcraft.Hexcraft;
+import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;

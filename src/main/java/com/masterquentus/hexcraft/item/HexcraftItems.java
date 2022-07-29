@@ -21,30 +21,22 @@ public class HexcraftItems {
 
     public static final RegistryObject<Item> INFUSED_FABRIC = ITEMS.register("infused_fabric",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> BLOOD_BOTTLE = ITEMS.register("blood_bottle",
             () -> new BloodBottleItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16)));
-
     public static final RegistryObject<Item> LILITH_BLOOD_BOTTLE = ITEMS.register("lilith_blood_bottle",
             () -> new LilithBloodBottleItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16)));
-
     public static final RegistryObject<Item> LILITH_CONTRACT = ITEMS.register("lilith_contract",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> LILITH_SOUL = ITEMS.register("lilith_soul",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> MAGIC_CRYSTAL = ITEMS.register("magic_crystal",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> FAIRY_DUST = ITEMS.register("fairy_dust",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> ROPE = ITEMS.register("rope",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
             () -> new WitchesSatchelItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire",
             () -> new FlintHellFireItem(new Item.Properties().durability(64).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
@@ -70,7 +62,6 @@ public class HexcraftItems {
     public static final RegistryObject<Item> LIVING_KELP_ITEM = ITEMS.register("living_kelp_item",
             () -> new BlockItem(HexcraftBlocks.LIVING_KELP_PLANT.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> MANDRAKE_SEEDS = ITEMS.register("mandrake_seeds",
             () -> new ItemNameBlockItem(HexcraftBlocks.MANDRAKE_FLOWER.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -79,20 +70,16 @@ public class HexcraftItems {
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
             () -> new ItemNameBlockItem(HexcraftBlocks.GARLIC_PLANT.get(),
                     new Item.Properties().food(Foods.CARROT).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> VERVAIN_SEEDS = ITEMS.register("vervain_seeds",
             () -> new ItemNameBlockItem(HexcraftBlocks.VERVAIN_FLOWER.get(),
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> VERVAIN = ITEMS.register("vervain",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CINDER_BERRY = ITEMS.register("cinder_berry",
             () -> new ItemNameBlockItem(HexcraftBlocks.CINDER_PLANT.get(),
                     new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> BLOOD_APPLE = ITEMS.register("blood_apple",
             () -> new BloodAppleItem(new Item.Properties().food(Foods.APPLE).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berry",
             () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
@@ -101,59 +88,45 @@ public class HexcraftItems {
     public static final RegistryObject<Item> EBONY_SIGN = ITEMS.register("ebony_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.EBONY_SIGN.get(), HexcraftBlocks.EBONY_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> BLOOD_OAK_SIGN = ITEMS.register("blood_oak_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.BLOOD_OAK_SIGN.get(), HexcraftBlocks.BLOOD_OAK_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> HELL_BARK_SIGN = ITEMS.register("hell_bark_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.HELL_BARK_SIGN.get(), HexcraftBlocks.HELL_BARK_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> WHITE_OAK_SIGN = ITEMS.register("white_oak_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WHITE_OAK_SIGN.get(), HexcraftBlocks.WHITE_OAK_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> ALDER_SIGN = ITEMS.register("alder_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.ALDER_SIGN.get(), HexcraftBlocks.ALDER_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> WITCH_HAZEL_SIGN = ITEMS.register("witch_hazel_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WITCH_HAZEL_SIGN.get(), HexcraftBlocks.WITCH_HAZEL_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> WILLOW_SIGN = ITEMS.register("willow_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WILLOW_SIGN.get(), HexcraftBlocks.WILLOW_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> HAWTHORN_SIGN = ITEMS.register("hawthorn_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.HAWTHORN_SIGN.get(), HexcraftBlocks.HAWTHORN_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> CEDAR_SIGN = ITEMS.register("cedar_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.CEDAR_SIGN.get(), HexcraftBlocks.CEDAR_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> DISTORTED_SIGN = ITEMS.register("distorted_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.DISTORTED_SIGN.get(), HexcraftBlocks.DISTORTED_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> ELDER_SIGN = ITEMS.register("elder_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.ELDER_SIGN.get(), HexcraftBlocks.ELDER_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> JUNIPER_SIGN = ITEMS.register("juniper_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.JUNIPER_SIGN.get(), HexcraftBlocks.JUNIPER_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> ROWAN_SIGN = ITEMS.register("rowan_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.ROWAN_SIGN.get(), HexcraftBlocks.ROWAN_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> TWISTED_SIGN = ITEMS.register("twisted_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.TWISTED_SIGN.get(), HexcraftBlocks.TWISTED_WALL_SIGN.get()));
-
     public static final RegistryObject<Item> WITCH_WOOD_SIGN = ITEMS.register("witch_wood_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WITCH_WOOD_SIGN.get(), HexcraftBlocks.WITCH_WOOD_WALL_SIGN.get()));
@@ -161,13 +134,10 @@ public class HexcraftItems {
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> DEATH_PROTECTION_POPPET = ITEMS.register("death_protection_poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> FIRE_PROTECTION_POPPET = ITEMS.register("fire_protection_poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> WATER_PROTECTION_POPPET = ITEMS.register("water_protection_poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
@@ -181,15 +151,12 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCHES_HAT = ITEMS.register("witches_hat",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.HEAD,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> WITCHES_ROBES = ITEMS.register("witches_robes",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.CHEST,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> WITCHES_PANTS = ITEMS.register("witches_pants",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.LEGS,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> WITCHES_BOOTS = ITEMS.register("witches_boots",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
