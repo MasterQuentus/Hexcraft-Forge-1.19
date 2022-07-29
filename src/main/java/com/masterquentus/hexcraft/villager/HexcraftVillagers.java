@@ -20,16 +20,16 @@ public class HexcraftVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, Hexcraft.MOD_ID);
 
-    public static final RegistryObject<PoiType> MAGIC_CRYSTAL_BLOCK_POI = POI_TYPES.register("magic_crystal_poi",
-            () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get().getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> WITCHES_CAULDRON_BLOCK_POI = POI_TYPES.register("witches_cauldron_poi",
+            () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.WITCHES_CAULDRON.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
     public static final RegistryObject<PoiType> CRIMSON_BLOCK_POI = POI_TYPES.register("crimson_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.CRIMSON_SAND.get().getStateDefinition().getPossibleStates()),
                     1, 1));
     public static final RegistryObject<VillagerProfession> WITCH_PROFESSION = VILLAGER_PROFESSIONS.register("witch_profession",
-            () -> new VillagerProfession("witch_profession", x -> x.get() == MAGIC_CRYSTAL_BLOCK_POI.get(),
-                    x -> x.get() == MAGIC_CRYSTAL_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+            () -> new VillagerProfession("witch_profession", x -> x.get() == WITCHES_CAULDRON_BLOCK_POI.get(),
+                    x -> x.get() == WITCHES_CAULDRON_BLOCK_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
     public static final RegistryObject<VillagerProfession> VAMPIRE_EXPERT = VILLAGER_PROFESSIONS.register("vampire_expert",
             () -> new VillagerProfession("vampire_expert", x -> x.get() == CRIMSON_BLOCK_POI.get(),
@@ -39,7 +39,7 @@ public class HexcraftVillagers {
     public static void registerPOIs() {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
-                    "registerBlockStates", PoiType.class).invoke(null, MAGIC_CRYSTAL_BLOCK_POI.get());
+                    "registerBlockStates", PoiType.class).invoke(null, WITCHES_CAULDRON_BLOCK_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }

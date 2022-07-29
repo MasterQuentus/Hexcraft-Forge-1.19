@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "hexcraft:block/crate_oak",
-    "up": "hexcraft:block/crate_oak",
-    "north": "hexcraft:block/crate_oak",
-    "east": "hexcraft:block/crate_oak",
-    "south": "hexcraft:block/crate_oak",
-    "west": "hexcraft:block/crate_oak",
-    "particle": "hexcraft:block/crate_oak"
+    "down": "hexcraft:block/oak_crate",
+    "up": "hexcraft:block/oak_crate",
+    "north": "hexcraft:block/oak_crate",
+    "east": "hexcraft:block/oak_crate",
+    "south": "hexcraft:block/oak_crate",
+    "west": "hexcraft:block/oak_crate",
+    "particle": "hexcraft:block/oak_crate"
   }
 }

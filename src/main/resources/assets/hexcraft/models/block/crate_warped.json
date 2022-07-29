@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "hexcraft:block/crate_warped",
-    "up": "hexcraft:block/crate_warped",
-    "north": "hexcraft:block/crate_warped",
-    "east": "hexcraft:block/crate_warped",
-    "south": "hexcraft:block/crate_warped",
-    "west": "hexcraft:block/crate_warped",
-    "particle": "hexcraft:block/crate_warped"
+    "down": "hexcraft:block/warped_crate",
+    "up": "hexcraft:block/warped_crate",
+    "north": "hexcraft:block/warped_crate",
+    "east": "hexcraft:block/warped_crate",
+    "south": "hexcraft:block/warped_crate",
+    "west": "hexcraft:block/warped_crate",
+    "particle": "hexcraft:block/warped_crate"
   }
 }

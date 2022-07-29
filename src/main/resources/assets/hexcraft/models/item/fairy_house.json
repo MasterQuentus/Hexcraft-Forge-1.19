@@ -1,3 +1,6 @@
 {
-  "parent": "hexcraft:block/fairy_house"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hexcraft:item/fairy_house"
+  }
 }

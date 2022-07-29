@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "hexcraft:block/crate_mangrove",
-    "up": "hexcraft:block/crate_mangrove",
-    "north": "hexcraft:block/crate_mangrove",
-    "east": "hexcraft:block/crate_mangrove",
-    "south": "hexcraft:block/crate_mangrove",
-    "west": "hexcraft:block/crate_mangrove",
-    "particle": "hexcraft:block/crate_mangrove"
+    "down": "hexcraft:block/mangrove_crate",
+    "up": "hexcraft:block/mangrove_crate",
+    "north": "hexcraft:block/mangrove_crate",
+    "east": "hexcraft:block/mangrove_crate",
+    "south": "hexcraft:block/mangrove_crate",
+    "west": "hexcraft:block/mangrove_crate",
+    "particle": "hexcraft:block/mangrove_crate"
   }
 }

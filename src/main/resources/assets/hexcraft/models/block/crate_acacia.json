@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "hexcraft:block/crate_acacia",
-    "up": "hexcraft:block/crate_acacia",
-    "north": "hexcraft:block/crate_acacia",
-    "east": "hexcraft:block/crate_acacia",
-    "south": "hexcraft:block/crate_acacia",
-    "west": "hexcraft:block/crate_acacia",
-    "particle": "hexcraft:block/crate_acacia"
+    "down": "hexcraft:block/acacia_crate",
+    "up": "hexcraft:block/acacia_crate",
+    "north": "hexcraft:block/acacia_crate",
+    "east": "hexcraft:block/acacia_crate",
+    "south": "hexcraft:block/acacia_crate",
+    "west": "hexcraft:block/acacia_crate",
+    "particle": "hexcraft:block/acacia_crate"
   }
 }

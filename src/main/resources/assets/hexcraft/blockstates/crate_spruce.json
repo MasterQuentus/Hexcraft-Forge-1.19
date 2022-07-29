@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "hexcraft:block/crate_oak"
+      "model": "hexcraft:block/crate_spruce"
     }
   }
 }

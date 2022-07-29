@@ -169,10 +169,14 @@ public class HexcraftBlocks {
                     .sound(SoundType.AMETHYST).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> FAIRY_HOUSE = registerBlock("fairy_house",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(2.0F).sound(SoundType.WOOD).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-    public static final RegistryObject <Block> PIXIE_HOUSE = registerBlock("pixie_house",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
                     .strength(2.0F).sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> PIXIE_HOUSE = registerBlock("pixie_house",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.0F).sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> WITCHES_CAULDRON = registerBlock("witches_cauldron",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
+                    .requiresCorrectToolForDrops().strength(2.0F)
+                    .sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Stairs
     public static final RegistryObject<Block> PEARL_STONE_STAIRS = registerBlock("pearl_stone_stairs",
