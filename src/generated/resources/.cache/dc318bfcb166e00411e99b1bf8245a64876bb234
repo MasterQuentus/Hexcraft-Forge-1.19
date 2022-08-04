@@ -1,4 +1,4 @@
-// 1.19	2022-07-29T03:07:14.2015609	Item Models: hexcraft
+// 1.19	2022-08-03T23:07:09.0547877	Item Models: hexcraft
 b28f66ec97843ba9112d6646822ae8219b46deb5 assets/hexcraft/models/item/alder_sign.json
 e18ea84bfa0e7a61a8e9e4873bcd3ec7393b2fb0 assets/hexcraft/models/item/blood_apple.json
 8001e8893338efc5d5ac664949899c065251acbd assets/hexcraft/models/item/blood_bottle.json
@@ -24,6 +24,7 @@ b660602c79d689810cde672608b650a4d1a7bacb assets/hexcraft/models/item/lilith_soul
 cdf199ad08e2972a2462f08ed36777d6d0d8124f assets/hexcraft/models/item/magic_crystal.json
 f836e7933840242b1f2033a23f376c2d7583d3b8 assets/hexcraft/models/item/mandrake_root.json
 e43c012c685aad63ba3259369fa5f7d494302318 assets/hexcraft/models/item/mandrake_seeds.json
+9421f613b48ace7f3fa7a8e9c611074e640a7d9c assets/hexcraft/models/item/moonstone.json
 a172480e53fe49cd55e958815dd7d1ec4eebe0e4 assets/hexcraft/models/item/poppet.json
 0815b4723c5caea05e1a776ba42a33223f01b063 assets/hexcraft/models/item/rope.json
 a55bd8a3bd43e86d0f075938e1102898d274e1cb assets/hexcraft/models/item/rowan_sign.json

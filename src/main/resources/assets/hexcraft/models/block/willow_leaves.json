@@ -1,4 +1,5 @@
 {
+  "render_type": "cutout",
   "parent": "minecraft:block/leaves",
   "textures": {
     "all": "hexcraft:block/willow_leaves"

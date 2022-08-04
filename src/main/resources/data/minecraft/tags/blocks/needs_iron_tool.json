@@ -6,6 +6,11 @@
 	"hexcraft:magic_crystal_cluster",
 	"hexcraft:large_magic_crystal_bud",
 	"hexcraft:medium_magic_crystal_bud",
-	"hexcraft:small_magic_crystal_bud"
+	"hexcraft:small_magic_crystal_bud",
+	"hexcraft:moonstone_ore",
+	"hexcraft:end_moonstone_ore",
+	"hexcraft:nether_moonstone_ore",
+	"hexcraft:deepslate_moonstone_ore",
+	"hexcraft:moonstone_block"
   ]
 }

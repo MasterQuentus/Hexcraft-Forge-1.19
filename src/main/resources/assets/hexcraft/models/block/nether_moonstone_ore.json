@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "hexcraft:block/nether_moonstone_ore"
+  }
+}

@@ -21,6 +21,7 @@
   "item.hexcraft.flint_and_hellfire": "Flint And Hellfire",
   "item.hexcraft.fairy_dust": "Fairy Dust",
   "item.hexcraft.rope": "Rope",
+  "item.hexcraft.moonstone": "Moonstone",
   "item.hexcraft.witches_satchel": "Witches Satchel",
   "item.hexcraft.witches_satchel.fullness": "%s/%s",
   "item.hexcraft.lilith_spawn_egg": "Lilith Spawn Egg",
@@ -54,6 +55,11 @@
   "block.hexcraft.cut_crimson_sand_stone": "Cut Crimson Sandstone",
   "block.hexcraft.ember_moss_block": "Ember Moss",
   "block.hexcraft.ember_moss_carpet": "Ember Moss Carpet",
+  "block.hexcraft.moonstone_ore": "Moonstone Ore",
+  "block.hexcraft.end_moonstone_ore": "End Moonstone Ore",
+  "block.hexcraft.nether_moonstone_ore": "Nether Moonstone Ore",
+  "block.hexcraft.deepslate_moonstone_ore": "Deepslate Moonstone Ore",
+  "block.hexcraft.moonstone_block": "Moonstone Block",
   "block.hexcraft.crimson_glass": "Crimson Glass",
   "block.hexcraft.crimson_glass_pane": "Crimson Glass Pane",
   "block.hexcraft.crimson_ice": "Crimson Ice",
@@ -87,6 +93,9 @@
   "block.hexcraft.rowan_sign": "Rowan Sign",
   "block.hexcraft.twisted_sign": "Twisted Sign",
   "block.hexcraft.witch_wood_sign": "Witch Wood Sign",
+
+  //Trophies
+  "block.hexcraft.lilith_trophy": "Lilith Trophy",
 
   //Fluids
   "block.hexcraft.blood_flowing": "Blood",

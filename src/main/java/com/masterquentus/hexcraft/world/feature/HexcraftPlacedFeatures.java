@@ -30,6 +30,19 @@ public class HexcraftPlacedFeatures {
             () -> new PlacedFeature(HexcraftConfiguredFeatures.BLACK_OBSIDIAN.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
+    public static final RegistryObject<PlacedFeature> MOONSTONE_ORE_PLACED = PLACED_FEATURES.register("moonstone_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.MOONSTONE_ORE.getHolder().get(),
+                    commonOrePlacement(7, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> END_MOONSTONE_ORE_PLACED = PLACED_FEATURES.register("end_moonstone_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.END_MOONSTONE_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> NETHER_MOONSTONE_ORE_PLACED = PLACED_FEATURES.register("nether_moonstone_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_MOONSTONE_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
 
 
 

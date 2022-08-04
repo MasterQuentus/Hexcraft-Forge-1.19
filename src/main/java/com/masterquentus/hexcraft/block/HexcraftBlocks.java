@@ -6,7 +6,8 @@ import com.masterquentus.hexcraft.block.custom.crate.*;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.item.custom.HexcraftCreativeModeTab;
-import com.masterquentus.hexcraft.world.feature.tree.*;
+import com.masterquentus.hexcraft.world.feature.tree.BloodOakTreeGrower;
+import com.masterquentus.hexcraft.world.feature.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -42,6 +43,22 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> MOONSTONE_ORE = registerBlock("moonstone_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> END_MOONSTONE_ORE = registerBlock("end_moonstone_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> NETHER_MOONSTONE_ORE = registerBlock("nether_moonstone_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> DEEPSLATE_MOONSTONE_ORE = registerBlock("deepslate_moonstone_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> PEARL_STONE = registerBlock("pearl_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -168,11 +185,13 @@ public class HexcraftBlocks {
             () -> new AmethysChimesBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
                     .strength(1.7F).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> FAIRY_HOUSE = registerBlock("fairy_house",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
                     .strength(2.0F).sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> PIXIE_HOUSE = registerBlock("pixie_house",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
                     .strength(2.0F).sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> WITCHES_CAULDRON = registerBlock("witches_cauldron",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
@@ -474,62 +493,61 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
             () -> new SaplingBlock (new EbonyTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> BLOOD_OAK_SAPLING = registerBlock("blood_oak_sapling",
             () -> new SaplingBlock (new BloodOakTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> HELL_BARK_SAPLING = registerBlock("hell_bark_sapling",
-            () -> new SaplingBlock (new HellbarkTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> HELL_BARK_SAPLING = registerBlock("hell_bark_sapling",
+            //() -> new SaplingBlock (new HellbarkTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> WHITE_OAK_SAPLING = registerBlock("white_oak_sapling",
-             () -> new SaplingBlock (new WhiteOakTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> WHITE_OAK_SAPLING = registerBlock("white_oak_sapling",
+             //() -> new SaplingBlock (new WhiteOakTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> ALDER_SAPLING = registerBlock("alder_sapling",
-            () -> new SaplingBlock (new AlderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> ALDER_SAPLING = registerBlock("alder_sapling",
+            //() -> new SaplingBlock (new AlderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> WITCH_HAZEL_SAPLING = registerBlock("witch_hazel_sapling",
-            () -> new SaplingBlock (new WitchHazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> WITCH_HAZEL_SAPLING = registerBlock("witch_hazel_sapling",
+            //() -> new SaplingBlock (new WitchHazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling",
-            () -> new SaplingBlock (new WillowTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling",
+            //() -> new SaplingBlock (new WillowTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
-            () -> new SaplingBlock (new HawthornTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
+            //() -> new SaplingBlock (new HawthornTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> CEDAR_SAPLING = registerBlock("cedar_sapling",
-            () -> new SaplingBlock (new CedarTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> CEDAR_SAPLING = registerBlock("cedar_sapling",
+            //() -> new SaplingBlock (new CedarTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> DISTORTED_SAPLING = registerBlock("distorted_sapling",
-            () -> new SaplingBlock (new DistortedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> DISTORTED_SAPLING = registerBlock("distorted_sapling",
+            //() -> new SaplingBlock (new DistortedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> ELDER_SAPLING = registerBlock("elder_sapling",
-            () -> new SaplingBlock (new ElderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> ELDER_SAPLING = registerBlock("elder_sapling",
+            //() -> new SaplingBlock (new ElderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> JUNIPER_SAPLING = registerBlock("juniper_sapling",
-            () -> new SaplingBlock (new JuniperTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> JUNIPER_SAPLING = registerBlock("juniper_sapling",
+            //() -> new SaplingBlock (new JuniperTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> ROWAN_SAPLING = registerBlock("rowan_sapling",
-            () -> new SaplingBlock (new RowanTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> ROWAN_SAPLING = registerBlock("rowan_sapling",
+            //() -> new SaplingBlock (new RowanTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> TWISTED_SAPLING = registerBlock("twisted_sapling",
-            () -> new SaplingBlock (new TwistedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> TWISTED_SAPLING = registerBlock("twisted_sapling",
+            //() -> new SaplingBlock (new TwistedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> WITCH_WOOD_SAPLING = registerBlock("witch_wood_sapling",
-            () -> new SaplingBlock (new WitchWoodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject<Block> WITCH_WOOD_SAPLING = registerBlock("witch_wood_sapling",
+            //() -> new SaplingBlock (new WitchWoodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Stripped Wood
     public static final RegistryObject<Block> STRIPPED_EBONY_WOOD = registerBlock("stripped_ebony_wood",
@@ -1909,10 +1927,16 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_FIRE = BLOCKS.register("hell_fire",
             () -> new HellFireBlock(BlockBehaviour.Properties.of(Material.FIRE)
                     .instabreak().noOcclusion().randomTicks().lightLevel((state) -> 15)));
+
     public static final RegistryObject<Block> HELLFIRE_CAMP = registerBlock("hellfire_camp",
             () -> new HellfireCampfireBlock(true, 1, BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(2.0F).sound(SoundType.WOOD).noOcclusion().lightLevel((state) -> 15)),
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //Trophies
+    public static final RegistryObject <Block> LILITH_TROPHY = registerBlock("lilith_trophy",
+            () -> new LilithTrophyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.7F).sound(SoundType.STONE).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
 
 

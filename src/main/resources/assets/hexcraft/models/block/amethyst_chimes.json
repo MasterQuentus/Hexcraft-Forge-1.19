@@ -1,5 +1,6 @@
 {
 	"render_type": "cutout",
+	"render_type": "translucent",
 	"credit": "Made with Blockbench",
 	"parent": "hexcraft:item/amethyst_chimes",
 	"textures": {

@@ -88,43 +88,6 @@ public class Hexcraft {
         event.enqueueWork(() -> {
             HexcraftVillagers.registerPOIs();
         });
-        //Put In Json Files Once Removed
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_DOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_DOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.JUNIPER_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.JUNIPER_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.TWISTED_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.TWISTED_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_TRAPDOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_DOOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_DOOR.get(), RenderType.cutout());
-
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_SAPLING.get(), RenderType.cutout());
@@ -132,77 +95,9 @@ public class Hexcraft {
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_SAPLING.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.JUNIPER_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ROWAN_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.TWISTED_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_WOOD_LEAVES.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.EBONY_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOOD_OAK_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CEDAR_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.DISTORTED_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ELDER_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.JUNIPER_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ROWAN_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.TWISTED_LEAVES_PILE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_WOOD_LEAVES_PILE.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.BLOODY_ROSE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.POTTED_BLOODY_ROSE.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCHES_LADDER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCHES_LADDER_PLANT.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LIVING_KELP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LIVING_KELP_PLANT.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MANDRAKE_FLOWER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.GARLIC_PLANT.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.VERVAIN_FLOWER.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CINDER_PLANT.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILD_BRAMBLE.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELLFIRE_CAMP.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.FAIRY_LANTERN.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.AMETHYST_CHIMES.get(), RenderType.translucent());
-
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_BLOCK.get(), RenderType.translucent());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());
         //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLOWING.get(), RenderType.translucent());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CRIMSON_GLASS.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CRIMSON_GLASS_PANE.get(), RenderType.translucent());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.CRIMSON_ICE.get(), RenderType.translucent());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MAGIC_CRYSTAL_CLUSTER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.SMALL_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.MEDIUM_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.LARGE_MAGIC_CRYSTAL_BUD.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.FAIRY_HOUSE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.PIXIE_HOUSE.get(), RenderType.cutout());
 
         //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.UNDERWORLD_PORTAL.get(), RenderType.translucent());
 

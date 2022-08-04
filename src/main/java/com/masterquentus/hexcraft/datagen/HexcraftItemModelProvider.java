@@ -28,6 +28,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.MAGIC_CRYSTAL);
         simpleItem(HexcraftItems.FAIRY_DUST);
         simpleItem(HexcraftItems.ROPE);
+        simpleItem(HexcraftItems.MOONSTONE);
         simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);
         simpleItem(HexcraftItems.MANDRAKE_SEEDS);
