@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "i i",
+        "iii",
+        "iii"
+    ],
+    "key": {
+        "i": {
+            "item": "hexcraft:silver_ingot"
+        }
+    },
+    "result": {
+        "item": "hexcraft:silver_chestplate",
+        "count": 1
+    }
+}

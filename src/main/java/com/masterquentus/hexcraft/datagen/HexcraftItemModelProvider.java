@@ -65,6 +65,10 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.WITCHES_ROBES);
         simpleItem(HexcraftItems.WITCHES_PANTS);
         simpleItem(HexcraftItems.WITCHES_BOOTS);
+        simpleItem(HexcraftItems.SILVER_HELMET);
+        simpleItem(HexcraftItems.SILVER_CHESTPLATE);
+        simpleItem(HexcraftItems.SILVER_LEGGINGS);
+        simpleItem(HexcraftItems.SILVER_BOOTS);
 
     }
 

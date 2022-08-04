@@ -164,6 +164,18 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCHES_BOOTS = ITEMS.register("witches_boots",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
+            () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_CHESTPLATE = ITEMS.register("silver_chestplate",
+            () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_LEGGINGS = ITEMS.register("silver_leggings",
+            () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
+            () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //public static final RegistryObject<Item> GOGGLES_OF_REVEALING = ITEMS.register("goggles_of_revealing",
             //() -> new GoogglesOfRevealingItem(HexcraftArmorMaterials.GOOGLES, EquipmentSlot.HEAD,
@@ -246,11 +258,7 @@ public class HexcraftItems {
 
 
     //Brooms
-    //public static final RegistryObject<Item> EBONY_BROOM = ITEMS.register("ebony_broom",
-    //() -> new BroomItem(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
-    //public static final RegistryObject<Item> BLOOD_OAK_BROOM = ITEMS.register("blood_oak_broom",
-    //() -> new BroomItem(new Item.Properties().tab(ModCreativeModeTab.HEXCRAFT_TAB)));
 
     private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
         return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

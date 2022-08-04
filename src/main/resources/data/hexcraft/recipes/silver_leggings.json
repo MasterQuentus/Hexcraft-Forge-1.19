@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "i i",
+        "i i"
+    ],
+    "key": {
+        "i": {
+            "item": "hexcraft:silver_ingot"
+        }
+    },
+    "result": {
+        "item": "hexcraft:silver_leggings",
+        "count": 1
+    }
+}
