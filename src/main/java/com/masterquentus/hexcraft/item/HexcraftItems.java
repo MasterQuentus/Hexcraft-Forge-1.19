@@ -181,6 +181,23 @@ public class HexcraftItems {
             //() -> new GoogglesOfRevealingItem(HexcraftArmorMaterials.GOOGLES, EquipmentSlot.HEAD,
                     //new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    //Tools
+    public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register("silver_sword",
+            () -> new SwordItem(HexcraftTiers.SILVER, 2, 3f,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_PICKAXE = ITEMS.register("silver_pickaxe",
+            () -> new PickaxeItem(HexcraftTiers.SILVER, 1, 1f,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_SHOVEL = ITEMS.register("silver_shovel",
+            () -> new ShovelItem(HexcraftTiers.SILVER, 0, 1f,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_AXE = ITEMS.register("silver_axe",
+            () -> new AxeItem(HexcraftTiers.SILVER, 4, 0f,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_HOE = ITEMS.register("silver_hoe",
+            () -> new HoeItem(HexcraftTiers.SILVER, 0, 0f,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     //Crates
     public static final RegistryObject<Item> CRATE_EBONY = block(HexcraftBlocks.CRATE_EBONY,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);

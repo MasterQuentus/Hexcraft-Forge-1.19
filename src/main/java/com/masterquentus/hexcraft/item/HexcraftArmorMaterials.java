@@ -65,7 +65,7 @@ public enum HexcraftArmorMaterials implements ArmorMaterial {
     }
 
     public String getName() {
-        return Hexcraft.MOD_ID + ";" + this.name;
+        return Hexcraft.MOD_ID + ":" + this.name;
     }
 
     public float getToughness() {

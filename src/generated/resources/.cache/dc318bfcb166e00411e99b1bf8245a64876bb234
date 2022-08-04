@@ -1,4 +1,4 @@
-// 1.19	2022-08-04T03:06:13.4619724	Item Models: hexcraft
+// 1.19	2022-08-04T12:50:08.6844832	Item Models: hexcraft
 b28f66ec97843ba9112d6646822ae8219b46deb5 assets/hexcraft/models/item/alder_sign.json
 e18ea84bfa0e7a61a8e9e4873bcd3ec7393b2fb0 assets/hexcraft/models/item/blood_apple.json
 8001e8893338efc5d5ac664949899c065251acbd assets/hexcraft/models/item/blood_bottle.json
@@ -29,12 +29,17 @@ a172480e53fe49cd55e958815dd7d1ec4eebe0e4 assets/hexcraft/models/item/poppet.json
 3c31c457194a435344471025b96c6608bac76811 assets/hexcraft/models/item/raw_silver.json
 0815b4723c5caea05e1a776ba42a33223f01b063 assets/hexcraft/models/item/rope.json
 a55bd8a3bd43e86d0f075938e1102898d274e1cb assets/hexcraft/models/item/rowan_sign.json
+3aae41f6651c18d3dec0fd2f8524164a9c9201a3 assets/hexcraft/models/item/silver_axe.json
 093b543cb18dce3c6b1c568eab8bfdb06eb6c51b assets/hexcraft/models/item/silver_boots.json
 6fb452b687da0262b85a21d94482320d01ea8e53 assets/hexcraft/models/item/silver_chestplate.json
 3776488b1f049610db85b31de6d4fb61f56b93bd assets/hexcraft/models/item/silver_helmet.json
+3407a3d27f6c8b980d6c67ff7971cec8ad4b7206 assets/hexcraft/models/item/silver_hoe.json
 9f5f0aa494a28b91c05ccda68468cab235aa0519 assets/hexcraft/models/item/silver_ingot.json
 36a700fdf89eaefd8075c5561df124af533dc6e9 assets/hexcraft/models/item/silver_leggings.json
 fd33f31ac436aac1484b5ef532f55a593718cbcd assets/hexcraft/models/item/silver_nugget.json
+2fd0801233973456f871d3e675d2eaab00e377df assets/hexcraft/models/item/silver_pickaxe.json
+deea0135ab65b928979ff09d105abea28fc092aa assets/hexcraft/models/item/silver_shovel.json
+605d887ce80a5bc554a7bb479adae23a72d277c4 assets/hexcraft/models/item/silver_sword.json
 eedeeef64e3faf3ae20ff5a379850a1d09ed7735 assets/hexcraft/models/item/twisted_sign.json
 bebb3c3a95fb6dea0ddf2d3f898a70d47e9cc0ce assets/hexcraft/models/item/vervain.json
 ca0767b84578d5bac8f86e1e4224891979f9f34e assets/hexcraft/models/item/vervain_seeds.json

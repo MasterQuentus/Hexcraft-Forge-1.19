@@ -69,6 +69,11 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.SILVER_CHESTPLATE);
         simpleItem(HexcraftItems.SILVER_LEGGINGS);
         simpleItem(HexcraftItems.SILVER_BOOTS);
+        handheldItem(HexcraftItems.SILVER_SWORD);
+        handheldItem(HexcraftItems.SILVER_PICKAXE);
+        handheldItem(HexcraftItems.SILVER_SHOVEL);
+        handheldItem(HexcraftItems.SILVER_AXE);
+        handheldItem(HexcraftItems.SILVER_HOE);
 
     }
 
