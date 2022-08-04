@@ -132,6 +132,7 @@ public class Hexcraft {
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOODY_ROSE.getId(), HexcraftBlocks.POTTED_BLOODY_ROSE);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.VAMPIRE_ORCHID.getId(), HexcraftBlocks.POTTED_VAMPIRE_ORCHID);
                 Sheets.addWoodType(HexcraftWoodTypes.EBONY);
                 Sheets.addWoodType(HexcraftWoodTypes.BLOOD_OAK);
                 Sheets.addWoodType(HexcraftWoodTypes.HELL_BARK);

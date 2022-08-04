@@ -1883,6 +1883,14 @@ public class HexcraftBlocks {
             () -> new FlowerPotBlock(null, HexcraftBlocks.BLOODY_ROSE,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
+    public static final RegistryObject<Block> VAMPIRE_ORCHID = registerBlock("vampire_orchid",
+            () -> new FlowerBlock(MobEffects.DARKNESS, 2, BlockBehaviour.Properties.copy(Blocks.POPPY)
+                    .instabreak().noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject<Block> POTTED_VAMPIRE_ORCHID = registerBlockWithoutItem("potted_vampire_orchid",
+            () -> new FlowerPotBlock(null, HexcraftBlocks.VAMPIRE_ORCHID,
+                    BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                            .instabreak().noOcclusion()));
+
     public static final RegistryObject<Block> WILD_BRAMBLE = registerBlock("wild_bramble",
             () -> new WildBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
                     .instabreak().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
