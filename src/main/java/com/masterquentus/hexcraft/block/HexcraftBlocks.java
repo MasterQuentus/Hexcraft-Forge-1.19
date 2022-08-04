@@ -43,6 +43,10 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CURSED_SOIL = registerBlock("cursed_soil",
+            () -> new CursedSoilBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.6F).sound(SoundType.SCULK)),
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> MOONSTONE_ORE = registerBlock("moonstone_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -58,7 +62,23 @@ public class HexcraftBlocks {
 
     public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> SILVER_ORE = registerBlock("silver_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> END_SILVER_ORE = registerBlock("end_silver_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> NETHER_SILVER_ORE = registerBlock("nether_silver_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> SILVER_BLOCK = registerBlock("silver_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> PEARL_STONE = registerBlock("pearl_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);

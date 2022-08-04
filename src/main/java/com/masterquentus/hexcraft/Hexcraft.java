@@ -17,8 +17,6 @@ import com.masterquentus.hexcraft.world.HexcraftMenus;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;

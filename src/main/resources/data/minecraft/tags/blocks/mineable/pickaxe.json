@@ -86,7 +86,12 @@
 	"hexcraft:end_moonstone_ore",
 	"hexcraft:nether_moonstone_ore",
 	"hexcraft:deepslate_moonstone_ore",
-	"hexcraft:moonstone_block"
+	"hexcraft:moonstone_block",
+	"hexcraft:silver_ore",
+	"hexcraft:end_silver_ore",
+	"hexcraft:nether_silver_ore",
+	"hexcraft:deepslate_silver_ore",
+	"hexcraft:silver_block"
 
   ]
 }

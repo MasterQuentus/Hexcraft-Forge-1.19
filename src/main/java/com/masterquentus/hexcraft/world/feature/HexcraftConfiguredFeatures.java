@@ -163,6 +163,13 @@ public class HexcraftConfiguredFeatures {
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_MOONSTONE_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_MOONSTONE_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, HexcraftBlocks.NETHER_MOONSTONE_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SILVER_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.SILVER_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, HexcraftBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> END_SILVER_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_SILVER_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_SILVER_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, HexcraftBlocks.NETHER_SILVER_ORE.get().defaultBlockState())));
 
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",
@@ -177,6 +184,12 @@ public class HexcraftConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_MOONSTONE_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_MOONSTONE_ORE = CONFIGURED_FEATURES.register("nether_moonstone_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_MOONSTONE_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> SILVER_ORE = CONFIGURED_FEATURES.register("silver_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_SILVER_ORES.get(),7)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> END_SILVER_ORE = CONFIGURED_FEATURES.register("end_silver_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_SILVER_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_SILVER_ORE = CONFIGURED_FEATURES.register("nether_silver_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_SILVER_ORES.get(), 9)));
 
 
     public static void register(IEventBus eventBus) {

@@ -1,4 +1,4 @@
-// 1.19	2022-08-03T23:07:09.0547877	Item Models: hexcraft
+// 1.19	2022-08-04T02:35:36.6139378	Item Models: hexcraft
 b28f66ec97843ba9112d6646822ae8219b46deb5 assets/hexcraft/models/item/alder_sign.json
 e18ea84bfa0e7a61a8e9e4873bcd3ec7393b2fb0 assets/hexcraft/models/item/blood_apple.json
 8001e8893338efc5d5ac664949899c065251acbd assets/hexcraft/models/item/blood_bottle.json
@@ -26,8 +26,11 @@ f836e7933840242b1f2033a23f376c2d7583d3b8 assets/hexcraft/models/item/mandrake_ro
 e43c012c685aad63ba3259369fa5f7d494302318 assets/hexcraft/models/item/mandrake_seeds.json
 9421f613b48ace7f3fa7a8e9c611074e640a7d9c assets/hexcraft/models/item/moonstone.json
 a172480e53fe49cd55e958815dd7d1ec4eebe0e4 assets/hexcraft/models/item/poppet.json
+3c31c457194a435344471025b96c6608bac76811 assets/hexcraft/models/item/raw_silver.json
 0815b4723c5caea05e1a776ba42a33223f01b063 assets/hexcraft/models/item/rope.json
 a55bd8a3bd43e86d0f075938e1102898d274e1cb assets/hexcraft/models/item/rowan_sign.json
+9f5f0aa494a28b91c05ccda68468cab235aa0519 assets/hexcraft/models/item/silver_ingot.json
+fd33f31ac436aac1484b5ef532f55a593718cbcd assets/hexcraft/models/item/silver_nugget.json
 eedeeef64e3faf3ae20ff5a379850a1d09ed7735 assets/hexcraft/models/item/twisted_sign.json
 bebb3c3a95fb6dea0ddf2d3f898a70d47e9cc0ce assets/hexcraft/models/item/vervain.json
 ca0767b84578d5bac8f86e1e4224891979f9f34e assets/hexcraft/models/item/vervain_seeds.json

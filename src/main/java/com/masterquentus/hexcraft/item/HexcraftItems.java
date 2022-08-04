@@ -37,11 +37,16 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> MOONSTONE = ITEMS.register("moonstone",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
             () -> new WitchesSatchelItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire",
             () -> new FlintHellFireItem(new Item.Properties().durability(64).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
 
     //Spawn Eggs
     public static final RegistryObject<Item> LILITH_SPAWN_EGG = ITEMS.register("lilith_spawn_egg",
@@ -55,7 +60,6 @@ public class HexcraftItems {
     public static final RegistryObject<Item> FAIRY_SPAWN_EGG = ITEMS.register("fairy_spawn_egg",
             () -> new ForgeSpawnEggItem(HexcraftEntityTypes.FAIRY,0x16744959, 0x16122111,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
 
     //Plants
     public static final RegistryObject<Item> WITCHES_LADDER_ITEM = ITEMS.register("witches_ladder_item",
@@ -84,7 +88,6 @@ public class HexcraftItems {
             () -> new BloodAppleItem(new Item.Properties().food(Foods.APPLE).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> JUNIPER_BERRIES = ITEMS.register("juniper_berry",
             () -> new Item(new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
 
     //Signs
     public static final RegistryObject<Item> EBONY_SIGN = ITEMS.register("ebony_sign",
@@ -146,7 +149,6 @@ public class HexcraftItems {
     //public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
     //() -> new BucketItem(HexcraftFluids.BLOOD_FLUID,
     //new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1)));
-
 
 
     //Armor

@@ -2,7 +2,6 @@ package com.masterquentus.hexcraft.block.custom.crate;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.entity.CrateOakBlockEntity;
-import com.masterquentus.hexcraft.block.entity.CrateRowanBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;
