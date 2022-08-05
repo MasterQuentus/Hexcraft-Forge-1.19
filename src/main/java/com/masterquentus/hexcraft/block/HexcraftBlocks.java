@@ -6,6 +6,7 @@ import com.masterquentus.hexcraft.block.custom.crate.*;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.item.custom.HexcraftCreativeModeTab;
+import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.tree.BloodOakTreeGrower;
 import com.masterquentus.hexcraft.world.feature.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -568,6 +570,7 @@ public class HexcraftBlocks {
     //public static final RegistryObject<Block> WITCH_WOOD_SAPLING = registerBlock("witch_wood_sapling",
             //() -> new SaplingBlock (new WitchWoodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             //), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
 
     //Stripped Wood
     public static final RegistryObject<Block> STRIPPED_EBONY_WOOD = registerBlock("stripped_ebony_wood",
@@ -1792,8 +1795,8 @@ public class HexcraftBlocks {
 
 
     //Portal Blocks
-    //public static final RegistryObject<Block> UNDERWORLD_PORTAL = registerBlockWithoutBlockItem("underworld_portal",
-            //UnderworldPortalBlock::new);
+    public static final RegistryObject<Block> UNDERWORLD_PORTAL = registerBlockWithoutBlockItem("underworld_portal",
+            UnderworldPortalBlock::new);
 
     //Bookshelves
     public static final RegistryObject<Block> EBONY_BOOKSHELF = registerBlock("ebony_bookshelf",

@@ -12,8 +12,10 @@ import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
+import com.masterquentus.hexcraft.villager.HexcraftPOIs;
 import com.masterquentus.hexcraft.villager.HexcraftVillagers;
 import com.masterquentus.hexcraft.world.HexcraftMenus;
+import com.masterquentus.hexcraft.world.dimesnsion.HexcraftDimensions;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import com.mojang.logging.LogUtils;
@@ -61,14 +63,8 @@ public class Hexcraft {
 
         HexcraftEntityTypes.register(modEventBus);
         HexcraftMenus.register(modEventBus);
-
-        //UnderworldDimension.register();
-
-        //HexcraftPOIs.register(eventBus);
-
-        //HexcraftBiomeModifiers.register(eventBus);
-        //HexcraftPlacedFeatures.register(eventBus);
-
+        HexcraftDimensions.register();
+        HexcraftPOIs.register(modEventBus);
         //eventBus.addListener(this::setup);
         //eventBus.addListener(this::clientSetup);
 

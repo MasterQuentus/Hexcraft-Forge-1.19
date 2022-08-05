@@ -36,8 +36,6 @@ public class HexcraftEntityTypes {
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "fairy").toString()));
 
 
-
-
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

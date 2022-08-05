@@ -162,14 +162,14 @@ public class HexcraftConfiguredFeatures {
     public static final Supplier<List<OreConfiguration.TargetBlockState>> END_MOONSTONE_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_MOONSTONE_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_MOONSTONE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, HexcraftBlocks.NETHER_MOONSTONE_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_MOONSTONE_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_SILVER_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.SILVER_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, HexcraftBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> END_SILVER_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_SILVER_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_SILVER_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, HexcraftBlocks.NETHER_SILVER_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_SILVER_ORE.get().defaultBlockState())));
 
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",

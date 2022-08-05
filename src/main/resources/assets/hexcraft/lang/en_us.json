@@ -470,6 +470,13 @@
   "item.hexcraft.silver_leggings": "Silver Leggings",
   "item.hexcraft.silver_boots": "Silver Boots",
 
+  //Tools
+  "item.hexcraft.silver_sword": "Silver Sword",
+  "item.hexcraft.silver_pickaxe": "Silver Pickaxe",
+  "item.hexcraft.silver_shovel": "Silver Shovel",
+  "item.hexcraft.silver_axe": "Silver Axe",
+  "item.hexcraft.silver_hoe": "Silver Hoe",
+
   //Crates
   "block.hexcraft.crate_ebony": "Ebony Crate",
   "block.hexcraft.crate_blood_oak": "Blood Oak Crate",
