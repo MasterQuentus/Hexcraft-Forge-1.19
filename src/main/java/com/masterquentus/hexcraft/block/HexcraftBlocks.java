@@ -4,6 +4,7 @@ import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.custom.*;
 import com.masterquentus.hexcraft.block.custom.crate.*;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
+import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.item.custom.HexcraftCreativeModeTab;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
@@ -1897,6 +1898,11 @@ public class HexcraftBlocks {
             () -> new FairyLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //Fluids
+    public static final RegistryObject<LiquidBlock> BLOOD_BLOCK = BLOCKS.register("blood_block",
+            () -> new LiquidBlock(HexcraftFluids.SOURCE_BLOOD, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
 
     //Plants
     public static final RegistryObject<Block> BLOODY_ROSE = registerBlock("bloody_rose",

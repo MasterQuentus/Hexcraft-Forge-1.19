@@ -9,6 +9,8 @@ import com.masterquentus.hexcraft.block.entity.client.WendigoRenderer;
 import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
+import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
+import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
@@ -55,6 +57,8 @@ public class Hexcraft {
 
         HexcraftConfiguredFeatures.register(modEventBus);
         HexcraftPlacedFeatures.register(modEventBus);
+        HexcraftFluids.register(modEventBus);
+        HexcraftFluidTypes.register(modEventBus);
         HexcraftSounds.register(modEventBus);
 
         HexcraftBlockEntities.register(modEventBus);

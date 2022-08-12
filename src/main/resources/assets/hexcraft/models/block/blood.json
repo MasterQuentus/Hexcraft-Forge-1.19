@@ -1,6 +1,6 @@
 {
     "textures": {
-        "particle": "hexcraft:block/blood"
+        "particle": "hexcraft:block/blood_still"
     }
 }
 

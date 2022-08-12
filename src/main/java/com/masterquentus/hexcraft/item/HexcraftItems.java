@@ -3,6 +3,7 @@ package com.masterquentus.hexcraft.item;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
+import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.Foods;
@@ -59,6 +60,11 @@ public class HexcraftItems {
     public static final RegistryObject<Item> FAIRY_SPAWN_EGG = ITEMS.register("fairy_spawn_egg",
             () -> new ForgeSpawnEggItem(HexcraftEntityTypes.FAIRY,0x16744959, 0x16122111,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    //Buckets
+    public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
+            () -> new BucketItem(HexcraftFluids.SOURCE_BLOOD,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).craftRemainder(Items.BUCKET).stacksTo(1)));
 
     //Plants
     public static final RegistryObject<Item> WITCHES_LADDER_ITEM = ITEMS.register("witches_ladder_item",
