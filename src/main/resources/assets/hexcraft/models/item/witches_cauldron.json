@@ -1,3 +1,4 @@
+  
 {
-  "parent": "hexcraft:item/witches_cauldron"
+    "parent": "hexcraft:block/witches_cauldron"
 }

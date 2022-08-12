@@ -148,6 +148,14 @@ public class HexcraftConfiguredFeatures {
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> BLOOD_MUSHROOM = CONFIGURED_FEATURES.register("blood_mushroom", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.BLOOD_MUSHROOM_STEM.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.BLOOD_MUSHROOM_BLOCK.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
 
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PEARLSTONE = Suppliers.memoize(() -> List.of(
