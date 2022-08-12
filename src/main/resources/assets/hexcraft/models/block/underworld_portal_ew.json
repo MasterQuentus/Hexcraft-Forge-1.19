@@ -1,4 +1,5 @@
 {
+  "render_type": "translucent",
   "textures": {
     "particle": "hexcraft:block/underworld_portal",
     "portal": "hexcraft:block/underworld_portal"

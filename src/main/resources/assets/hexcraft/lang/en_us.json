@@ -504,6 +504,9 @@
   "block.hexcraft.crate_warped": "Warped Crate",
   "block.hexcraft.crate_mangrove": "Mangrove Crate",
 
+  //Fluids
+  "fluid_type.hexcraft.blood_fluid": "Blood",
+
   //Entity's
   "entity.minecraft.villager.hexcraft.witch_profession": "Witch Profession",
   "entity.minecraft.villager.hexcraft.vampire_expert": "Vampire Expert",

@@ -44,110 +44,110 @@ public class HexcraftConfiguredFeatures {
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> HELL_BARK_TREE = CONFIGURED_FEATURES.register("hell_bark_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LOG.get()),
-                            //new StraightTrunkPlacer(3,2,5),
-                            //BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(2, 1), UniformInt.of(0, 1),
-                                    //UniformInt.of(1, 1)),
-                            //new TwoLayersFeatureSize(1,0,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> WHITE_OAK_TREE = CONFIGURED_FEATURES.register("white_oak_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LOG.get()),
-                            //new StraightTrunkPlacer(2,4,6),
-                            //BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2),
-                                    //UniformInt.of(1, 1)),
-                            //new TwoLayersFeatureSize(1,0,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> ALDER_TREE = CONFIGURED_FEATURES.register("alder_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ALDER_LOG.get()),
-                            //new StraightTrunkPlacer(2,2,4),
-                            //BlockStateProvider.simple(HexcraftBlocks.ALDER_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(2, 0), UniformInt.of(0, 2),
-                                    //UniformInt.of(1, 1)),
-                            //new TwoLayersFeatureSize(1,0,2)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_HAZEL_TREE = CONFIGURED_FEATURES.register("witch_hazel_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LOG.get()),
-                            //new StraightTrunkPlacer(2,2,2),
-                            //BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 2), UniformInt.of(1, 3),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,2,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> WILLOW_TREE = CONFIGURED_FEATURES.register("willow_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WILLOW_LOG.get()),
-                            //new StraightTrunkPlacer(2,1,0),
-                            //BlockStateProvider.simple(HexcraftBlocks.WILLOW_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 1), UniformInt.of(1, 1),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,1,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> HAWTHORN_TREE = CONFIGURED_FEATURES.register("hawthorn_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LOG.get()),
-                            //new StraightTrunkPlacer(3,4,4),
-                            //BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 1), UniformInt.of(1, 1),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,1,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> CEDAR_TREE = CONFIGURED_FEATURES.register("cedar_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.CEDAR_LOG.get()),
-                            //new StraightTrunkPlacer(1,0,0),
-                            //BlockStateProvider.simple(HexcraftBlocks.CEDAR_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 0), UniformInt.of(1, 0),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,0,0)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> DISTORTED_TREE = CONFIGURED_FEATURES.register("distorted_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.DISTORTED_LOG.get()),
-                            //new StraightTrunkPlacer(1,1,1),
-                            //BlockStateProvider.simple(HexcraftBlocks.DISTORTED_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 1), UniformInt.of(1, 1),
-                                    //UniformInt.of(1, 1)),
-                            //new TwoLayersFeatureSize(1,1,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> ELDER_TREE = CONFIGURED_FEATURES.register("elder_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ELDER_LOG.get()),
-                            //new StraightTrunkPlacer(2,2,3),
-                            //BlockStateProvider.simple(HexcraftBlocks.ELDER_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 2), UniformInt.of(1, 3),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,2,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> JUNIPER_TREE = CONFIGURED_FEATURES.register("juniper_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.JUNIPER_LOG.get()),
-                            //new StraightTrunkPlacer(1,2,2),
-                            //BlockStateProvider.simple(HexcraftBlocks.JUNIPER_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 2), UniformInt.of(1, 2),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,0,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> ROWAN_TREE = CONFIGURED_FEATURES.register("rowan_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ROWAN_LOG.get()),
-                            //new StraightTrunkPlacer(0,1,1),
-                            //BlockStateProvider.simple(HexcraftBlocks.ROWAN_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 0), UniformInt.of(1, 0),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,0,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> TWISTED_TREE = CONFIGURED_FEATURES.register("twisted_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.TWISTED_LOG.get()),
-                            //new StraightTrunkPlacer(0,1,2),
-                            //BlockStateProvider.simple(HexcraftBlocks.TWISTED_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(1, 2), UniformInt.of(1, 1),
-                                    //UniformInt.of(0, 1)),
-                            //new TwoLayersFeatureSize(1,2,1)).ignoreVines().build()));
-    //public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_WOOD_TREE = CONFIGURED_FEATURES.register("witch-wood_tree", () ->
-            //new ConfiguredFeature<>(Feature.TREE,
-                    //new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LOG.get()),
-                            //new StraightTrunkPlacer(5,2,1),
-                            //BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LEAVES.get()),
-                            //new SpruceFoliagePlacer(UniformInt.of(2, 1), UniformInt.of(1, 0),
-                                    //UniformInt.of(1, 2)),
-                            //new TwoLayersFeatureSize(1,2,4)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> HELL_BARK_TREE = CONFIGURED_FEATURES.register("hell_bark_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> WHITE_OAK_TREE = CONFIGURED_FEATURES.register("white_oak_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> ALDER_TREE = CONFIGURED_FEATURES.register("alder_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ALDER_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.ALDER_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_HAZEL_TREE = CONFIGURED_FEATURES.register("witch_hazel_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> WILLOW_TREE = CONFIGURED_FEATURES.register("willow_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WILLOW_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.WILLOW_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> HAWTHORN_TREE = CONFIGURED_FEATURES.register("hawthorn_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> CEDAR_TREE = CONFIGURED_FEATURES.register("cedar_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.CEDAR_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.CEDAR_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> DISTORTED_TREE = CONFIGURED_FEATURES.register("distorted_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.DISTORTED_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.DISTORTED_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> ELDER_TREE = CONFIGURED_FEATURES.register("elder_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ELDER_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.ELDER_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> JUNIPER_TREE = CONFIGURED_FEATURES.register("juniper_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.JUNIPER_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.JUNIPER_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> ROWAN_TREE = CONFIGURED_FEATURES.register("rowan_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ROWAN_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.ROWAN_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> TWISTED_TREE = CONFIGURED_FEATURES.register("twisted_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.TWISTED_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.TWISTED_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_WOOD_TREE = CONFIGURED_FEATURES.register("witch_wood_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
 
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PEARLSTONE = Suppliers.memoize(() -> List.of(

@@ -86,19 +86,6 @@ public class Hexcraft {
         event.enqueueWork(() -> {
             HexcraftVillagers.registerPOIs();
         });
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HELL_BARK_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WHITE_OAK_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.ALDER_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WITCH_HAZEL_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.WILLOW_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.HAWTHORN_SAPLING.get(), RenderType.cutout());
-
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_BLOCK.get(), RenderType.translucent());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLUID.get(), RenderType.translucent());
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftFluids.BLOOD_FLOWING.get(), RenderType.translucent());
-
-        //ItemBlockRenderTypes.setRenderLayer(HexcraftBlocks.UNDERWORLD_PORTAL.get(), RenderType.translucent());
-
 
         BlockEntityRenderers.register(HexcraftBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
         WoodType.register(HexcraftWoodTypes.EBONY);
