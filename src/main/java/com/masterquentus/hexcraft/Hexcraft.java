@@ -54,23 +54,16 @@ public class Hexcraft {
         HexcraftBlocks.register(modEventBus);
         HexcraftVillagers.register(modEventBus);
         HexcraftPaintings.register(modEventBus);
-
         HexcraftConfiguredFeatures.register(modEventBus);
         HexcraftPlacedFeatures.register(modEventBus);
         HexcraftFluids.register(modEventBus);
         HexcraftFluidTypes.register(modEventBus);
         HexcraftSounds.register(modEventBus);
-
         HexcraftBlockEntities.register(modEventBus);
-
-        //HexcraftFluids.register(eventBus);
-
         HexcraftEntityTypes.register(modEventBus);
         HexcraftMenus.register(modEventBus);
         HexcraftDimensions.register();
         HexcraftPOIs.register(modEventBus);
-        //eventBus.addListener(this::setup);
-        //eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
 
@@ -118,6 +111,23 @@ public class Hexcraft {
             event.enqueueWork(() -> {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOODY_ROSE.getId(), HexcraftBlocks.POTTED_BLOODY_ROSE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.VAMPIRE_ORCHID.getId(), HexcraftBlocks.POTTED_VAMPIRE_ORCHID);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_MUSHROOM.getId(), HexcraftBlocks.POTTED_BLOOD_MUSHROOM);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.EBONY_SAPLING.getId(), HexcraftBlocks.POTTED_EBONY_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_OAK_SAPLING.getId(), HexcraftBlocks.POTTED_BLOOD_OAK_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.HELL_BARK_SAPLING.getId(), HexcraftBlocks.POTTED_HELL_BARK_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WHITE_OAK_SAPLING.getId(), HexcraftBlocks.POTTED_WHITE_OAK_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.ALDER_SAPLING.getId(), HexcraftBlocks.POTTED_ALDER_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WITCH_HAZEL_SAPLING.getId(), HexcraftBlocks.POTTED_WITCH_HAZEL_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WILLOW_SAPLING.getId(), HexcraftBlocks.POTTED_WILLOW_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.HAWTHORN_SAPLING.getId(), HexcraftBlocks.POTTED_HAWTHORN_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.CEDAR_SAPLING.getId(), HexcraftBlocks.POTTED_CEDAR_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.DISTORTED_SAPLING.getId(), HexcraftBlocks.POTTED_DISTORTED_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.ELDER_SAPLING.getId(), HexcraftBlocks.POTTED_ELDER_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.JUNIPER_SAPLING.getId(), HexcraftBlocks.POTTED_JUNIPER_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.ROWAN_SAPLING.getId(), HexcraftBlocks.POTTED_ROWAN_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.TWISTED_SAPLING.getId(), HexcraftBlocks.POTTED_TWISTED_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WITCH_WOOD_SAPLING.getId(), HexcraftBlocks.POTTED_WITCH_WOOD_SAPLING);
+
                 Sheets.addWoodType(HexcraftWoodTypes.EBONY);
                 Sheets.addWoodType(HexcraftWoodTypes.BLOOD_OAK);
                 Sheets.addWoodType(HexcraftWoodTypes.HELL_BARK);

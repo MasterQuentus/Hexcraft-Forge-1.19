@@ -56,6 +56,19 @@ public class HexcraftPlacedFeatures {
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_SILVER_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
+    public static final RegistryObject<PlacedFeature> VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("vampiric_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.VAMPIRIC_ORE.getHolder().get(),
+                    commonOrePlacement(7, // VeinsPerChunk
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> END_VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("end_vampiric_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.END_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> NETHER_VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("nether_vampiric_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
 
 
 

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "H"
+    ],
+    "key": {
+        "_": {
+            "item": "hexcraft:pixie_sand_stone_slab"
+        },
+        "H": {
+            "item": "hexcraft:pixie_sand_stone_slab"
+        }
+    },
+    "result": {
+        "item": "hexcraft:chiseled_pixie_sand_stone",
+        "count": 1
+    }
+}

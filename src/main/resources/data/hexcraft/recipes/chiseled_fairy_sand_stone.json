@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "H"
+    ],
+    "key": {
+        "_": {
+            "item": "hexcraft:fairy_sand_stone_slab"
+        },
+        "H": {
+            "item": "hexcraft:fairy_sand_stone_slab"
+        }
+    },
+    "result": {
+        "item": "hexcraft:chiseled_fairy_sand_stone",
+        "count": 1
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "hexcraft:block/pixie_glass_pane_top",
+    "pane": "hexcraft:block/pixie_glass"
+  }
+}

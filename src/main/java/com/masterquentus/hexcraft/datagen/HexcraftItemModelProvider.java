@@ -27,11 +27,13 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.LILITH_SOUL);
         simpleItem(HexcraftItems.MAGIC_CRYSTAL);
         simpleItem(HexcraftItems.FAIRY_DUST);
+        simpleItem(HexcraftItems.PIXIE_DUST);
         simpleItem(HexcraftItems.ROPE);
         simpleItem(HexcraftItems.MOONSTONE);
         simpleItem(HexcraftItems.RAW_SILVER);
         simpleItem(HexcraftItems.SILVER_INGOT);
         simpleItem(HexcraftItems.SILVER_NUGGET);
+        simpleItem(HexcraftItems.VAMPIRIC_GEM);
         simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);
         simpleItem(HexcraftItems.MANDRAKE_SEEDS);

@@ -1,0 +1,7 @@
+{
+    "name": "BOOK NAME",
+    "landing_text": "LANDING TEXT",
+    "version": 1
+	"model": "hexcraft:shadow_book",
+	"creative_tab": "hexcrafttab"
+}

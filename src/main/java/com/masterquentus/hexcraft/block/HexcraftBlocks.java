@@ -60,10 +60,6 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> DEEPSLATE_MOONSTONE_ORE = registerBlock("deepslate_moonstone_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
-                    .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> SILVER_ORE = registerBlock("silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -76,8 +72,28 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> VAMPIRIC_ORE = registerBlock("vampiric_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> END_VAMPIRIC_ORE = registerBlock("end_vampiric_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> NETHER_VAMPIRIC_ORE = registerBlock("nether_vampiric_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> DEEPSLATE_VAMPIRIC_ORE = registerBlock("deepslate_vampiric_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> SILVER_BLOCK = registerBlock("silver_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> VAMPIRIC_BLOCK = registerBlock("vampiric_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> PEARL_STONE = registerBlock("pearl_stone",
@@ -162,12 +178,71 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> CUT_CRIMSON_SAND_STONE = registerBlock("cut_crimson_sand_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> FAIRY_SAND = registerBlock("fairy_sand",
+            () -> new SandBlock(14406560,BlockBehaviour.Properties.of(Material.SAND)
+                    .strength(0.5F).sound(SoundType.SAND)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> FAIRY_SAND_STONE = registerBlock("fairy_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> SMOOTH_FAIRY_SAND_STONE = registerBlock("smooth_fairy_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CHISELED_FAIRY_SAND_STONE = registerBlock("chiseled_fairy_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CUT_FAIRY_SAND_STONE = registerBlock("cut_fairy_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> FAIRY_GLASS = registerBlock("fairy_glass",
+            () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> FAIRY_GLASS_PANE = registerBlock("fairy_glass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.RED, BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> PIXIE_SAND = registerBlock("pixie_sand",
+            () -> new SandBlock(14406560,BlockBehaviour.Properties.of(Material.SAND)
+                    .strength(0.5F).sound(SoundType.SAND)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> PIXIE_SAND_STONE = registerBlock("pixie_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> SMOOTH_PIXIE_SAND_STONE = registerBlock("smooth_pixie_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CHISELED_PIXIE_SAND_STONE = registerBlock("chiseled_pixie_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CUT_PIXIE_SAND_STONE = registerBlock("cut_pixie_sand_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> PIXIE_GLASS = registerBlock("pixie_glass",
+            () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> PIXIE_GLASS_PANE = registerBlock("pixie_glass_pane",
+            () -> new StainedGlassPaneBlock(DyeColor.RED, BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
+                    .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> CRIMSON_GLASS = registerBlock("crimson_glass",
             () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
                     .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> CRIMSON_GLASS_PANE = registerBlock("crimson_glass_pane",
             () -> new StainedGlassPaneBlock(DyeColor.RED, BlockBehaviour.Properties.of(Material.GLASS).requiresCorrectToolForDrops()
                     .strength(0.3F).sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> CRIMSON_ICE = registerBlock("crimson_ice",
             () -> new IceBlock(BlockBehaviour.Properties.of(Material.ICE).friction(0.98F).randomTicks().strength(0.5F)
                     .sound(SoundType.GLASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -179,6 +254,7 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> CRIMSON_MAGMA = registerBlock("crimson_magma",
             () -> new MagmaBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> MAGIC_CRYSTAL_BLOCK = registerBlock("magic_crystal_block",
             () -> new MagicalCrystalBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(1.5F).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -279,6 +355,22 @@ public class HexcraftBlocks {
 
     public static final RegistryObject<Block> SMOOTH_CRIMSON_SAND_STONE_STAIRS = registerBlock("smooth_crimson_sand_stone_stairs",
             () -> new StairBlock(() -> HexcraftBlocks.UNDER_WORLD_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> FAIRY_SAND_STONE_STAIRS = registerBlock("fairy_sand_stone_stairs",
+            () -> new StairBlock(() -> HexcraftBlocks.FAIRY_SAND_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> SMOOTH_FAIRY_SAND_STONE_STAIRS = registerBlock("smooth_fairy_sand_stone_stairs",
+            () -> new StairBlock(() -> HexcraftBlocks.SMOOTH_PIXIE_SAND_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> PIXIE_SAND_STONE_STAIRS = registerBlock("pixie_sand_stone_stairs",
+            () -> new StairBlock(() -> HexcraftBlocks.FAIRY_SAND_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> SMOOTH_PIXIE_SAND_STONE_STAIRS = registerBlock("smooth_pixie_sand_stone_stairs",
+            () -> new StairBlock(() -> HexcraftBlocks.SMOOTH_PIXIE_SAND_STONE.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> EBONY_STAIRS = registerBlock("ebony_stairs",
@@ -402,6 +494,30 @@ public class HexcraftBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> FAIRY_SAND_STONE_SLAB = registerBlock("fairy_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CUT_FAIRY_SAND_STONE_SLAB = registerBlock("cut_fairy_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> SMOOTH_FAIRY_SAND_STONE_SLAB = registerBlock("smooth_fairy_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> PIXIE_SAND_STONE_SLAB = registerBlock("pixie_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> CUT_PIXIE_SAND_STONE_SLAB = registerBlock("cut_pixie_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> SMOOTH_PIXIE_SAND_STONE_SLAB = registerBlock("smooth_pixie_sand_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject<Block> EBONY_SLAB = registerBlock("ebony_slab",
             () -> new SlabBlock (BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2.0F, 3.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -515,6 +631,14 @@ public class HexcraftBlocks {
             () -> new WallBlock (BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Block> FAIRY_SAND_STONE_WALL = registerBlock("fairy_sand_stone_wall",
+            () -> new WallBlock (BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> PIXIE_SAND_STONE_WALL = registerBlock("pixie_sand_stone_wall",
+            () -> new WallBlock (BlockBehaviour.Properties.of(Material.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Saplings
     public static final RegistryObject<Block> POTTED_EBONY_SAPLING = registerBlockWithoutItem("potted_ebony_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.EBONY_SAPLING,
@@ -523,7 +647,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
             () -> new SaplingBlock (new EbonyTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_BLOOD_OAK_SAPLING = registerBlockWithoutItem("potted_blood_oak_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.BLOOD_OAK_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -531,7 +654,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> BLOOD_OAK_SAPLING = registerBlock("blood_oak_sapling",
             () -> new SaplingBlock (new BloodOakTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_HELL_BARK_SAPLING = registerBlockWithoutItem("potted_hell_bark_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.HELL_BARK_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -539,7 +661,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HELL_BARK_SAPLING = registerBlock("hell_bark_sapling",
             () -> new SaplingBlock (new HellbarkTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_WHITE_OAK_SAPLING = registerBlockWithoutItem("potted_white_oak_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.WHITE_OAK_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -547,7 +668,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> WHITE_OAK_SAPLING = registerBlock("white_oak_sapling",
              () -> new SaplingBlock (new WhiteOakTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_ALDER_SAPLING = registerBlockWithoutItem("potted_alder_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.ALDER_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -555,7 +675,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> ALDER_SAPLING = registerBlock("alder_sapling",
             () -> new SaplingBlock (new AlderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_WITCH_HAZEL_SAPLING = registerBlockWithoutItem("potted_witch_hazel_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.WITCH_HAZEL_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -563,7 +682,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> WITCH_HAZEL_SAPLING = registerBlock("witch_hazel_sapling",
             () -> new SaplingBlock (new WitchHazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_WILLOW_SAPLING = registerBlockWithoutItem("potted_willow_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.WILLOW_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -571,7 +689,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> WILLOW_SAPLING = registerBlock("willow_sapling",
             () -> new SaplingBlock (new WillowTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_HAWTHORN_SAPLING = registerBlockWithoutItem("potted_hawthorn_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.HAWTHORN_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -579,7 +696,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> HAWTHORN_SAPLING = registerBlock("hawthorn_sapling",
             () -> new SaplingBlock (new HawthornTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_CEDAR_SAPLING = registerBlockWithoutItem("potted_cedar_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.CEDAR_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -587,7 +703,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> CEDAR_SAPLING = registerBlock("cedar_sapling",
             () -> new SaplingBlock (new CedarTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_DISTORTED_SAPLING = registerBlockWithoutItem("potted_distorted_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.DISTORTED_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -595,7 +710,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> DISTORTED_SAPLING = registerBlock("distorted_sapling",
             () -> new SaplingBlock (new DistortedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_ELDER_SAPLING = registerBlockWithoutItem("potted_elder_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.ELDER_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -603,7 +717,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> ELDER_SAPLING = registerBlock("elder_sapling",
             () -> new SaplingBlock (new ElderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_JUNIPER_SAPLING = registerBlockWithoutItem("potted_juniper_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.JUNIPER_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -611,7 +724,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> JUNIPER_SAPLING = registerBlock("juniper_sapling",
             () -> new SaplingBlock (new JuniperTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_ROWAN_SAPLING = registerBlockWithoutItem("potted_rowan_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.ROWAN_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -619,7 +731,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> ROWAN_SAPLING = registerBlock("rowan_sapling",
             () -> new SaplingBlock (new RowanTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_TWISTED_SAPLING = registerBlockWithoutItem("potted_twisted_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.TWISTED_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -627,7 +738,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> TWISTED_SAPLING = registerBlock("twisted_sapling",
             () -> new SaplingBlock (new TwistedTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
             ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> POTTED_WITCH_WOOD_SAPLING = registerBlockWithoutItem("potted_witch_wood_sapling",
             () -> new FlowerPotBlock(null, HexcraftBlocks.WITCH_WOOD_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
@@ -639,11 +749,11 @@ public class HexcraftBlocks {
     //Mushrooms
     public static final RegistryObject<Block> POTTED_BLOOD_MUSHROOM = registerBlockWithoutItem("potted_blood_mushroom",
             () -> new FlowerPotBlock(null, HexcraftBlocks.BLOOD_MUSHROOM,
-                    BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                    BlockBehaviour.Properties.copy(Blocks.BRICKS).lightLevel((state) -> 1)
                             .instabreak().noOcclusion()));
     public static final RegistryObject<Block> BLOOD_MUSHROOM = registerBlock("blood_mushroom",
             () -> new SaplingBlock (new BloodMushroomGrower(),BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
-            ), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .lightLevel((state) -> 1)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
 
 

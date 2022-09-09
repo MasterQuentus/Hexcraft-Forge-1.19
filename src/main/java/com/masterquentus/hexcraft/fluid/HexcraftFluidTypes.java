@@ -20,7 +20,8 @@ public class HexcraftFluidTypes {
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Hexcraft.MOD_ID);
 
     public static final RegistryObject<FluidType> BLOOD_FLUID_TYPE = register("blood_fluid",
-            FluidType.Properties.create().density(15).viscosity(5).sound(SoundAction.get("drink"),
+            FluidType.Properties.create().density(15).viscosity(5).canDrown(true).canPushEntity(true)
+                    .canSwim(true).supportsBoating(true).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK));
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {

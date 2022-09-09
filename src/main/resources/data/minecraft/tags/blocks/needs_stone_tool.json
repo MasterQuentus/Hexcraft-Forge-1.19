@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+	"hexcraft:vampiric_ore",
+	"hexcraft:end_vampiric_ore",
+	"hexcraft:nether_vampiric_ore",
+	"hexcraft:deepslate_vampiric_ore"
 
   ]
 }

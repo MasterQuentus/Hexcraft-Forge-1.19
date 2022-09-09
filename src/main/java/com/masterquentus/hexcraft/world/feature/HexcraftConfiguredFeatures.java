@@ -178,6 +178,13 @@ public class HexcraftConfiguredFeatures {
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_SILVER_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_SILVER_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_SILVER_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_VAMPIRIC_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.VAMPIRIC_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, HexcraftBlocks.DEEPSLATE_VAMPIRIC_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> END_VAMPIRIC_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_VAMPIRIC_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_VAMPIRIC_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_VAMPIRIC_ORE.get().defaultBlockState())));
 
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",
@@ -198,6 +205,12 @@ public class HexcraftConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_SILVER_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_SILVER_ORE = CONFIGURED_FEATURES.register("nether_silver_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_SILVER_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> VAMPIRIC_ORE = CONFIGURED_FEATURES.register("vampiric_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_VAMPIRIC_ORES.get(),7)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> END_VAMPIRIC_ORE = CONFIGURED_FEATURES.register("end_vampiric_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_VAMPIRIC_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_VAMPIRIC_ORE = CONFIGURED_FEATURES.register("nether_vampiric_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_VAMPIRIC_ORES.get(), 9)));
 
 
     public static void register(IEventBus eventBus) {
