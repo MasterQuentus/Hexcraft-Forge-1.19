@@ -286,6 +286,11 @@ public class HexcraftItems {
     //Boats
 
     //Brooms
+    //public static final RegistryObject<Item> EBONY_BROOM = ITEMS.register("ebony_broom",
+            //() -> new BroomItem(BroomEntity.Type.EBONY, new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1).fireResistant()));
+
+    //public static final RegistryObject<Item> BLOOD_OAK_BROOM = ITEMS.register("blood_oak_broom",
+            //() -> new BroomItem(BroomEntity.Type.BLOOD_OAK, new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1)));
 
 
     private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

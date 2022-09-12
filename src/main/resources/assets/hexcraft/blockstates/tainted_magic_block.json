@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "hexcraft:block/tainted_magic_block"
+      },
+      {
+        "model": "hexcraft:block/tainted_magic_block_mirrored"
+      },
+      {
+        "model": "hexcraft:block/tainted_magic_block",
+        "y": 180
+      },
+      {
+        "model": "hexcraft:block/tainted_magic_block_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

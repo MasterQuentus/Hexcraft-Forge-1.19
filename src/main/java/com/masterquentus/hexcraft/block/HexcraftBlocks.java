@@ -37,13 +37,21 @@ public class HexcraftBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
-            () -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
-            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject <Block> EMBER_MOSS_BLOCK = registerBlock("ember_moss_block",
+            //() -> new EmberMossBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
-            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
-            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    //public static final RegistryObject <Block> EMBER_MOSS_CARPET = registerBlock("ember_moss_carpet",
+            //() -> new CarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.1F).sound(SoundType.MOSS)),
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> TAINTED_MAGIC_BLOCK = registerBlock("tainted_magic_block",
+            () -> new TaintedMagicBlock(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
+                    .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> TAINTED_MAGIC_VEIN = registerBlock("tainted_magic_vein",
+            () -> new TaintedMagicVein(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
+                    .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> CURSED_SOIL = registerBlock("cursed_soil",
             () -> new CursedSoilBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.6F).sound(SoundType.SCULK)),
@@ -296,7 +304,7 @@ public class HexcraftBlocks {
                     .sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //public static final RegistryObject <Block> POPPET_SHELF = registerBlock("poppet_shelf",
-            //() -> new PoppetShelfBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
+            //() -> new PoppetShelfBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
                     //.requiresCorrectToolForDrops().strength(1.5F).dynamicShape()
                     //.sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
