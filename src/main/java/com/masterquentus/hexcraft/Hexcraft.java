@@ -3,9 +3,10 @@ package com.masterquentus.hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
-import com.masterquentus.hexcraft.block.entity.client.FairyRenderer;
-import com.masterquentus.hexcraft.block.entity.client.LilithRenderer;
-import com.masterquentus.hexcraft.block.entity.client.WendigoRenderer;
+import com.masterquentus.hexcraft.entity.client.FairyRenderer;
+import com.masterquentus.hexcraft.entity.client.LilithRenderer;
+import com.masterquentus.hexcraft.entity.client.VampirePiglinRenderer;
+import com.masterquentus.hexcraft.entity.client.WendigoRenderer;
 import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
@@ -101,6 +102,7 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.LILITH.get(), LilithRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.WENDIGO.get(), WendigoRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.FAIRY.get(), FairyRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinRenderer::new);
 
     }
 

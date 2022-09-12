@@ -66,6 +66,10 @@ public class HexcraftItems {
             () -> new ForgeSpawnEggItem(HexcraftEntityTypes.FAIRY,0x16744959, 0x16122111,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> VAMPIRE_PIGLIN_SPAWN_EGG = ITEMS.register("vampire_piglin_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.VAMPIRE_PIGLIN,0x770000, 0x000000,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     //Buckets
     public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
             () -> new BucketItem(HexcraftFluids.SOURCE_BLOOD,

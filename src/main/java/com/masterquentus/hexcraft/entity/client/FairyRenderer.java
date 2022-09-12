@@ -1,7 +1,7 @@
-package com.masterquentus.hexcraft.block.entity.client;
+package com.masterquentus.hexcraft.entity.client;
 
 import com.masterquentus.hexcraft.Hexcraft;
-import com.masterquentus.hexcraft.entity.custom.WendigoEntity;
+import com.masterquentus.hexcraft.entity.custom.FairyEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -10,19 +10,19 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
-public class WendigoRenderer extends GeoEntityRenderer<WendigoEntity> {
-    public WendigoRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new WendigoModel());
-        this.shadowRadius = 0.6f;
+public class FairyRenderer extends GeoEntityRenderer<FairyEntity> {
+    public FairyRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new FairyModel());
+        this.shadowRadius = 0.3f;
     }
 
     @Override
-    public ResourceLocation getTextureLocation(WendigoEntity instance) {
-        return new ResourceLocation(Hexcraft.MOD_ID, "textures/entity/wendigo/wendigo.png");
+    public ResourceLocation getTextureLocation(FairyEntity instance) {
+        return new ResourceLocation(Hexcraft.MOD_ID, "textures/entity/fairies/fairy.png");
     }
 
     @Override
-    public RenderType getRenderType(WendigoEntity animatable, float partialTicks, PoseStack stack,
+    public RenderType getRenderType(FairyEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
         stack.scale(0.8F, 0.8F, 0.8F);

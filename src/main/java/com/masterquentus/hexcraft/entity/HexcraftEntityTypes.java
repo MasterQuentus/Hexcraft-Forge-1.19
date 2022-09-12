@@ -3,6 +3,7 @@ package com.masterquentus.hexcraft.entity;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.FairyEntity;
 import com.masterquentus.hexcraft.entity.custom.LilithEntity;
+import com.masterquentus.hexcraft.entity.custom.VampirePiglinEntity;
 import com.masterquentus.hexcraft.entity.custom.WendigoEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -34,6 +35,12 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.of(FairyEntity::new, MobCategory.CREATURE)
                             .sized(0.8F, 0.80F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "fairy").toString()));
+
+    public static final RegistryObject<EntityType<VampirePiglinEntity>> VAMPIRE_PIGLIN =
+            ENTITY_TYPES.register("vampire_piglin",
+                    () -> EntityType.Builder.of(VampirePiglinEntity::new, MobCategory.MONSTER)
+                            .sized(0.8F, 0.80F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_piglin").toString()));
 
 
     public static void register(IEventBus eventBus) {
