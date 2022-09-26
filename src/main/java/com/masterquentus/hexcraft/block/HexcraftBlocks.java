@@ -44,7 +44,7 @@ public class HexcraftBlocks {
 
     public static final RegistryObject <Block> TAINTED_MAGIC_VEIN = registerBlock("tainted_magic_vein",
             () -> new TaintedMagicVein(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
-                    .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .sound(SoundType.SCULK).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> CURSED_SOIL = registerBlock("cursed_soil",
             () -> new CursedSoilBlock(BlockBehaviour.Properties.of(Material.MOSS).strength(0.6F).sound(SoundType.SCULK)),
