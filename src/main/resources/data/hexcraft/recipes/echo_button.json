@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:echo_wood_planks"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:echo_wood_button",
+        "count": 1
+    }
+}

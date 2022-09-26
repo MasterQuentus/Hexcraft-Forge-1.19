@@ -513,6 +513,8 @@
 
   //Lanterns
   "block.hexcraft.fairy_lantern": "Fairy Lantern",
+  "block.hexcraft.pixie_lantern": "Pixie Lantern",
+  "block.hexcraft.shroom_gleam": "Shroom Gleam",
 
   //Plants
   "block.hexcraft.bloody_rose": "Bloody Rose",

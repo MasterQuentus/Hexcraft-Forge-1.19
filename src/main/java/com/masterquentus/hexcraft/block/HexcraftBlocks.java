@@ -2211,10 +2211,20 @@ public class HexcraftBlocks {
     //Boats
 
 
-    //Lanterns
+    //Light Blocks
     public static final RegistryObject<Block> FAIRY_LANTERN = registerBlock("fairy_lantern",
             () -> new FairyLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
+                    .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> PIXIE_LANTERN = registerBlock("pixie_lantern",
+            () -> new PixieLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
+                    .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> SHROOM_GLEAM = registerBlock("shroom_gleam",
+            () -> new Block(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(1.0F).sound(SoundType.SHROOMLIGHT)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Fluids

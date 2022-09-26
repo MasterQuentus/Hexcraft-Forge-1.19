@@ -1,16 +1,15 @@
 {
-	"render_type": "cutout",
     "ambientocclusion": false,
     "textures": {
-        "particle": "hexcraft/tainted_magic_vein",
-        "sculk_vein": "hexcraft/tainted_magic_vein"
+        "particle": "hexcraft:block/tainted_magic_vein",
+        "sculk_vein": "hexcraft:block/tainted_magic_vein"
     },
     "elements": [
         {   "from": [ 0, 0, 0.1 ],
             "to": [ 16, 16, 0.1 ],
             "faces": {
-                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#tainted_magic_vein" },
-                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#tainted_magic_vein" }
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "hexcraft:block/tainted_magic_vein" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "hexcraft:block/tainted_magic_vein" }
             }
         }
     ]

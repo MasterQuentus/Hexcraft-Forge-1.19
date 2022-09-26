@@ -333,6 +333,9 @@ public class HexcraftItems {
     //public static final RegistryObject<Item> CHEST_WITCH_WOOD = block(HexcraftBlocks.CHEST_WITCH_WOOD,
             //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    //public static final RegistryObject<Item> CHEST_ECHO_WOOD = block(HexcraftBlocks.CHEST_ECHO_WOOD,
+    //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     //Boats
 
     //Brooms
