@@ -16,6 +16,7 @@
 	"hexcraft:rowan_log",
 	"hexcraft:twisted_log",
 	"hexcraft:witch_wood_log",
+	"hexcraft:echo_wood_log",
 	"hexcraft:stripped_ebony_log",
     "hexcraft:stripped_blood_oak_log",
     "hexcraft:stripped_hell_bark_log",
@@ -30,6 +31,7 @@
 	"hexcraft:stripped_juniper_log",
 	"hexcraft:stripped_rowan_log",
 	"hexcraft:stripped_twisted_log",
-	"hexcraft:stripped_witch_wood_log"
+	"hexcraft:stripped_witch_wood_log",
+	"hexcraft:stripped_echo_wood_log"
   ]
 }

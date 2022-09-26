@@ -149,6 +149,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCH_WOOD_SIGN = ITEMS.register("witch_wood_sign",
             () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
                     HexcraftBlocks.WITCH_WOOD_SIGN.get(), HexcraftBlocks.WITCH_WOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> ECHO_WOOD_SIGN = ITEMS.register("echo_wood_sign",
+            () -> new SignItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(16),
+                    HexcraftBlocks.ECHO_WOOD_SIGN.get(), HexcraftBlocks.ECHO_WOOD_WALL_SIGN.get()));
 
     //Poppets
     public static final RegistryObject<Item> POPPET = ITEMS.register("poppet",
@@ -159,10 +162,6 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WATER_PROTECTION_POPPET = ITEMS.register("water_protection_poppet",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
-    //public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
-    //() -> new BucketItem(HexcraftFluids.BLOOD_FLUID,
-    //new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1)));
 
 
     //Armor
@@ -258,6 +257,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> CRATE_WITCH_WOOD = block(HexcraftBlocks.CRATE_WITCH_WOOD,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject<Item> CRATE_ECHO_WOOD = block(HexcraftBlocks.CRATE_ECHO_WOOD,
+            HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject<Item> CRATE_OAK = block(HexcraftBlocks.CRATE_OAK,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
@@ -286,15 +288,55 @@ public class HexcraftItems {
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Chest
+    //public static final RegistryObject<Item> CHEST_EBONY = block(HexcraftBlocks.CHEST_EBONY,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_BLOOD_OAK = block(HexcraftBlocks.CHEST_BLOOD_OAK,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_HELLBARK = block(HexcraftBlocks.CHEST_HELLBARK,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public  static final RegistryObject<Item> CHEST_WHITE_OAK = block(HexcraftBlocks.CHEST_WHITE_OAK,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_ALDER = block(HexcraftBlocks.CHEST_ALDER,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_WITCH_HAZEL = block(HexcraftBlocks.CHEST_WITCH_HAZEL,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_WILLOW = block(HexcraftBlocks.CHEST_WILLOW,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_HAWTHORN = block(HexcraftBlocks.CHEST_HAWTHORN,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_CEDAR = block(HexcraftBlocks.CHEST_CEDAR,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_DISTORTED = block(HexcraftBlocks.CHEST_DISTORTED,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_ELDER = block(HexcraftBlocks.CHEST_ELDER,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_JUNIPER = block(HexcraftBlocks.CHEST_JUNIPER,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_ROWAN = block(HexcraftBlocks.CHEST_ROWAN,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_TWISTED = block(HexcraftBlocks.CHEST_TWISTED,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    //public static final RegistryObject<Item> CHEST_WITCH_WOOD = block(HexcraftBlocks.CHEST_WITCH_WOOD,
+            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Boats
 
     //Brooms
-    //public static final RegistryObject<Item> EBONY_BROOM = ITEMS.register("ebony_broom",
-            //() -> new BroomItem(BroomEntity.Type.EBONY, new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1).fireResistant()));
 
-    //public static final RegistryObject<Item> BLOOD_OAK_BROOM = ITEMS.register("blood_oak_broom",
-            //() -> new BroomItem(BroomEntity.Type.BLOOD_OAK, new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1)));
 
 
     private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

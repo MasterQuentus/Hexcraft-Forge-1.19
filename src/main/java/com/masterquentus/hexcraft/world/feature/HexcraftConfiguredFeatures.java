@@ -16,13 +16,15 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.GeodeBlockSettings;
+import net.minecraft.world.level.levelgen.GeodeCrackSettings;
+import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -74,14 +76,19 @@ public class HexcraftConfiguredFeatures {
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
-    public static final RegistryObject<ConfiguredFeature<?,?>> ALDER_TREE = CONFIGURED_FEATURES.register("alder_tree", () ->
-            new ConfiguredFeature<>(Feature.TREE,
-                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ALDER_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ALDER_TREE =
+            CONFIGURED_FEATURES.register("alder_tree", () ->
+                    new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                            BlockStateProvider.simple(HexcraftBlocks.ALDER_LOG.get()),
+                            new StraightTrunkPlacer(5, 6, 3),
                             BlockStateProvider.simple(HexcraftBlocks.ALDER_LEAVES.get()),
-                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
-                                    UniformInt.of(0, 0)),
-                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+                            new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                            new TwoLayersFeatureSize(1, 0, 2)).build()));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ALDER_SPAWN =
+            CONFIGURED_FEATURES.register("alder_spawn", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
+                            HexcraftPlacedFeatures.ALDER_CHECKED.getHolder().get(),
+                            0.5F)), HexcraftPlacedFeatures.ALDER_CHECKED.getHolder().get())));
     public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_HAZEL_TREE = CONFIGURED_FEATURES.register("witch_hazel_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LOG.get()),
@@ -162,6 +169,14 @@ public class HexcraftConfiguredFeatures {
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+    public static final RegistryObject<ConfiguredFeature<?,?>> ECHO_WOOD_TREE = CONFIGURED_FEATURES.register("echo_wood_tree", () ->
+            new ConfiguredFeature<>(Feature.TREE,
+                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ECHO_WOOD_LOG.get()),
+                            new StraightTrunkPlacer(2,3,3),
+                            BlockStateProvider.simple(HexcraftBlocks.ECHO_WOOD_LEAVES.get()),
+                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
+                                    UniformInt.of(0, 0)),
+                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> BLOOD_MUSHROOM = CONFIGURED_FEATURES.register("blood_mushroom", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.BLOOD_MUSHROOM_STEM.get()),
@@ -225,6 +240,21 @@ public class HexcraftConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_VAMPIRIC_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_VAMPIRIC_ORE = CONFIGURED_FEATURES.register("nether_vampiric_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_VAMPIRIC_ORES.get(), 9)));
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> MAGIC_CRYSTAL_GEODE = CONFIGURED_FEATURES.register("magic_crystal_geode",
+            () -> new ConfiguredFeature<>(Feature.GEODE,
+                    new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                            BlockStateProvider.simple(HexcraftBlocks.BUDDING_MAGIC_CRYSTAL.get()),
+                            BlockStateProvider.simple(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get()),
+                            BlockStateProvider.simple(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get()),
+                            BlockStateProvider.simple(Blocks.CALCITE),
+                            List.of(Blocks.SMOOTH_BASALT.defaultBlockState()),
+                            BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                            new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
+                            new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
+                            true, UniformInt.of(3, 8),
+                            UniformInt.of(2, 6), UniformInt.of(1, 2),
+                            -18, 18, 0.075D, 1)));
 
 
     public static void register(IEventBus eventBus) {

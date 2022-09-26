@@ -16,6 +16,7 @@
 	"hexcraft:rowan_wood",
 	"hexcraft:twisted_wood",
 	"hexcraft:witch_wood_wood",
+	"hexcraft:echo_wood_wood",
 	"hexcraft:stripped_ebony_wood",
     "hexcraft:stripped_blood_oak_wood",
     "hexcraft:stripped_hell_bark_wood",
@@ -30,6 +31,7 @@
 	"hexcraft:stripped_juniper_wood",
 	"hexcraft:stripped_rowan_wood",
 	"hexcraft:stripped_twisted_wood",
-	"hexcraft:stripped_witch_wood_wood"
+	"hexcraft:stripped_witch_wood_wood",
+	"hexcraft:stripped_echo_wood_wood"
   ]
 }

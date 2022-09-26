@@ -46,7 +46,9 @@ public class HexcraftBlockEntities {
                             HexcraftBlocks.TWISTED_WALL_SIGN.get(),
                             HexcraftBlocks.TWISTED_SIGN.get(),
                             HexcraftBlocks.WITCH_WOOD_WALL_SIGN.get(),
-                            HexcraftBlocks.WITCH_WOOD_SIGN.get()).build(null));
+                            HexcraftBlocks.WITCH_WOOD_SIGN.get(),
+                            HexcraftBlocks.ECHO_WOOD_WALL_SIGN.get(),
+                            HexcraftBlocks.ECHO_WOOD_SIGN.get()).build(null));
 
     //Crates
     public static final RegistryObject<BlockEntityType<?>> CRATE_EBONY = register("crate_ebony", HexcraftBlocks.CRATE_EBONY,
@@ -79,6 +81,8 @@ public class HexcraftBlockEntities {
             CrateTwistedBlockEntity::new);
     public static final RegistryObject<BlockEntityType<?>> CRATE_WITCH_WOOD = register("crate_witch_wood", HexcraftBlocks.CRATE_WITCH_WOOD,
             CrateWitchWoodBlockEntity::new);
+    public static final RegistryObject<BlockEntityType<?>> CRATE_ECHO_WOOD = register("crate_echo_wood", HexcraftBlocks.CRATE_ECHO_WOOD,
+            CrateEchoWoodBlockEntity::new);
     public static final RegistryObject<BlockEntityType<?>> CRATE_OAK = register("crate_oak", HexcraftBlocks.CRATE_OAK,
             CrateOakBlockEntity::new);
     public static final RegistryObject<BlockEntityType<?>> CRATE_SPRUCE = register("crate_spruce", HexcraftBlocks.CRATE_SPRUCE,

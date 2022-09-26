@@ -43,6 +43,8 @@ public class HexcraftMenus {
             () -> new MenuType<>((id, inv) -> new CrateTwistedGUIMenu(id, inv, null)));
     public static final RegistryObject<MenuType<CrateWitchWoodGUIMenu>> WITCH_WOOD_CRATE_GUI = REGISTRY.register("witch_wood_crate_gui",
             () -> new MenuType<>((id, inv) -> new CrateWitchWoodGUIMenu(id, inv, null)));
+    public static final RegistryObject<MenuType<CrateEchoWoodGUIMenu>> ECHO_WOOD_CRATE_GUI = REGISTRY.register("echo_wood_crate_gui",
+            () -> new MenuType<>((id, inv) -> new CrateEchoWoodGUIMenu(id, inv, null)));
     public static final RegistryObject<MenuType<CrateOakGUIMenu>> OAK_CRATE_GUI = REGISTRY.register("oak_crate_gui",
             () -> new MenuType<>((id, inv) -> new CrateOakGUIMenu(id, inv, null)));
     public static final RegistryObject<MenuType<CrateSpruceGUIMenu>> SPRUCE_CRATE_GUI = REGISTRY.register("spruce_crate_gui",

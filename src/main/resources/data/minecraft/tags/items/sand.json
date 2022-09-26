@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-	"hexcraft:fairy_sand"
+	"hexcraft:fairy_sand",
+	"hexcraft:pixie_sand"
   ]
 }

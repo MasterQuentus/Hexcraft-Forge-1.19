@@ -44,6 +44,8 @@ public class HexcraftScreens {
 
             MenuScreens.register(HexcraftMenus.WITCH_WOOD_CRATE_GUI.get(), CrateWitchWoodGUIScreen::new);
 
+            MenuScreens.register(HexcraftMenus.ECHO_WOOD_CRATE_GUI.get(), CrateEchoWoodGUIScreen::new);
+
             MenuScreens.register(HexcraftMenus.OAK_CRATE_GUI.get(), CrateOakGUIScreen::new);
 
             MenuScreens.register(HexcraftMenus.SPRUCE_CRATE_GUI.get(), CrateSpruceGUIScreen::new);

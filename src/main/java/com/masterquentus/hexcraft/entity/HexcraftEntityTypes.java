@@ -1,10 +1,7 @@
 package com.masterquentus.hexcraft.entity;
 
 import com.masterquentus.hexcraft.Hexcraft;
-import com.masterquentus.hexcraft.entity.custom.FairyEntity;
-import com.masterquentus.hexcraft.entity.custom.LilithEntity;
-import com.masterquentus.hexcraft.entity.custom.VampirePiglinEntity;
-import com.masterquentus.hexcraft.entity.custom.WendigoEntity;
+import com.masterquentus.hexcraft.entity.custom.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -21,7 +18,7 @@ public class HexcraftEntityTypes {
     public static final RegistryObject<EntityType<LilithEntity>> LILITH =
             ENTITY_TYPES.register("lilith",
                     () -> EntityType.Builder.of(LilithEntity::new, MobCategory.MONSTER)
-                            .sized(0.8F, 1.9F)
+                            .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "lilith").toString()));
 
     public static final RegistryObject<EntityType<WendigoEntity>> WENDIGO =
@@ -39,7 +36,7 @@ public class HexcraftEntityTypes {
     public static final RegistryObject<EntityType<VampirePiglinEntity>> VAMPIRE_PIGLIN =
             ENTITY_TYPES.register("vampire_piglin",
                     () -> EntityType.Builder.of(VampirePiglinEntity::new, MobCategory.MONSTER)
-                            .sized(0.8F, 0.80F)
+                            .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_piglin").toString()));
 
 

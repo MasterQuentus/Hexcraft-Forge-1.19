@@ -18,4 +18,5 @@ public class HexcraftWoodTypes {
     public static WoodType ROWAN = WoodType.create("rowan");
     public static WoodType TWISTED = WoodType.create("twisted");
     public static WoodType WITCH_WOOD = WoodType.create("witch_wood");
+    public static WoodType ECHO_WOOD = WoodType.create("echo_wood");
 }

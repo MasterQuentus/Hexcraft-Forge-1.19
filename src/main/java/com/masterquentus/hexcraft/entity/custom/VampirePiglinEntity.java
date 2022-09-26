@@ -5,12 +5,14 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,10 +33,10 @@ public class VampirePiglinEntity extends Monster implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 16.0D)
-                .add(Attributes.ATTACK_DAMAGE, 5.0F)
-                .add(Attributes.MOVEMENT_SPEED, 0.35F).build();
-
+                .add(Attributes.MAX_HEALTH, 20.0D)
+                .add(Attributes.ATTACK_DAMAGE, 2.0f)
+                .add(Attributes.ATTACK_SPEED, 2.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
 
     protected void registerGoals() {
@@ -45,6 +47,7 @@ public class VampirePiglinEntity extends Monster implements IAnimatable {
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, LivingEntity.class, true));
         this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
     }
 
@@ -78,7 +81,7 @@ public class VampirePiglinEntity extends Monster implements IAnimatable {
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.PIGLIN_AMBIENT;
+        return SoundEvents.PIGLIN_HURT;
     }
 
     protected SoundEvent getDeathSound() {

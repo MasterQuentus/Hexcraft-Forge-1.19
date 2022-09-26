@@ -1,8 +1,11 @@
 package com.masterquentus.hexcraft.world.feature;
 
 import com.masterquentus.hexcraft.Hexcraft;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import net.minecraft.core.Registry;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -68,6 +71,21 @@ public class HexcraftPlacedFeatures {
     public static final RegistryObject<PlacedFeature> NETHER_VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("nether_vampiric_ore_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    public static final RegistryObject<PlacedFeature> ALDER_CHECKED = PLACED_FEATURES.register("alder_checked",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(),
+                    List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.ALDER_SAPLING.get()))));
+
+    public static final RegistryObject<PlacedFeature> ALDER_PLACED = PLACED_FEATURES.register("alder_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
+                    PlacementUtils.countExtra(3, 0.1f, 2))));
+
+    public static final RegistryObject<PlacedFeature> MAGIC_CRYSTAL_GEODE_PLACED = PLACED_FEATURES.register("magic_crystal_geode_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.MAGIC_CRYSTAL_GEODE.getHolder().get(), List.of(
+                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+                    BiomeFilter.biome())));
+
+
 
 
 

@@ -59,6 +59,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.ROWAN_SIGN);
         simpleItem(HexcraftItems.TWISTED_SIGN);
         simpleItem(HexcraftItems.WITCH_WOOD_SIGN);
+        simpleItem(HexcraftItems.ECHO_WOOD_SIGN);
         simpleItem(HexcraftItems.POPPET);
         simpleItem(HexcraftItems.DEATH_PROTECTION_POPPET);
         simpleItem(HexcraftItems.FIRE_PROTECTION_POPPET);

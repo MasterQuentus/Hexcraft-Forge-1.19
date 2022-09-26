@@ -126,7 +126,8 @@
   "block.hexcraft.juniper_sign": "Juniper Sign",
   "block.hexcraft.rowan_sign": "Rowan Sign",
   "block.hexcraft.twisted_sign": "Twisted Sign",
-  "block.hexcraft.witch_wood_sign": "Witch Wood Sign",
+  "block.hexcraft.witch_wood_sign": "Witchwood Sign",
+  "block.hexcraft.echo_wood_sign": "Echo Sign",
 
   //Trophies
   "block.hexcraft.lilith_trophy": "Lilith Trophy",
@@ -169,7 +170,8 @@
   "block.hexcraft.juniper_stairs": "Juniper Stairs",
   "block.hexcraft.rowan_stairs": "Rowan Stairs",
   "block.hexcraft.twisted_stairs": "Twisted Stairs",
-  "block.hexcraft.witch_wood_stairs": "Witch Wood Stairs",
+  "block.hexcraft.witch_wood_stairs": "Witchwood Stairs",
+  "block.hexcraft.echo_wood_stairs": "Echo Stairs",
 
   //Slabs
   "block.hexcraft.pearl_stone_slab": "Pearlstone Slab",
@@ -207,7 +209,8 @@
   "block.hexcraft.juniper_slab": "Juniper Slab",
   "block.hexcraft.rowan_slab": "Rowan Slab",
   "block.hexcraft.twisted_slab": "Twisted Slab",
-  "block.hexcraft.witch_wood_slab": "Witch Wood Slab",
+  "block.hexcraft.witch_wood_slab": "Witchwood Slab",
+  "block.hexcraft.echo_wood_slab": "Echo Slab",
   
   //Walls
   "block.hexcraft.pearl_stone_wall": "Pearlstone Wall",
@@ -226,7 +229,7 @@
   "block.hexcraft.fairy_sand_stone_wall": "Fairy Sandstone Wall",
   "block.hexcraft.pixie_sand_stone_wall": "Pixie Sandstone Wall",
 
-  //Logs
+  //Logs/Woods
   "block.hexcraft.stripped_ebony_wood": "Stripped Ebony Wood",
   "block.hexcraft.stripped_ebony_log": "Stripped Ebony Log",
   "block.hexcraft.ebony_wood": "Ebony Wood",
@@ -283,10 +286,14 @@
   "block.hexcraft.stripped_twisted_log": "Stripped Twisted Log",
   "block.hexcraft.twisted_wood": "Twisted Wood",
   "block.hexcraft.twisted_log": "Twisted Log",
-  "block.hexcraft.stripped_witch_wood_wood": "Stripped Witch Wood Wood",
-  "block.hexcraft.stripped_witch_wood_log": "Stripped Witch Wood Log",
-  "block.hexcraft.witch_wood_wood": "Witch Wood Wood",
-  "block.hexcraft.witch_wood_log": "Witch Wood Log",
+  "block.hexcraft.stripped_witch_wood_wood": "Stripped Witchwood",
+  "block.hexcraft.stripped_witch_wood_log": "Stripped Witchwood Log",
+  "block.hexcraft.witch_wood_wood": "Witchwood",
+  "block.hexcraft.witch_wood_log": "Witchwood Log",
+  "block.hexcraft.stripped_echo_wood_wood": "Stripped Echo Wood",
+  "block.hexcraft.stripped_echo_wood_log": "Stripped Echo Log",
+  "block.hexcraft.echo_wood_wood": "Echo Wood",
+  "block.hexcraft.echo_wood_log": "Echo Log",
   
   //Planks
   "block.hexcraft.ebony_planks": "Ebony Planks",
@@ -303,7 +310,8 @@
   "block.hexcraft.juniper_planks": "Juniper Planks",
   "block.hexcraft.rowan_planks": "Rowan Planks",
   "block.hexcraft.twisted_planks": "Twisted Planks",
-  "block.hexcraft.witch_wood_planks": "Witch Wood Planks",
+  "block.hexcraft.witch_wood_planks": "Witchwood Planks",
+  "block.hexcraft.echo_wood_planks": "Echo Planks",
 
   //Pressure Plates
   "block.hexcraft.ebony_pressure_plate": "Ebony Pressure Plate",
@@ -320,7 +328,8 @@
   "block.hexcraft.juniper_pressure_plate": "Juniper Pressure Plate",
   "block.hexcraft.rowan_pressure_plate": "Rowan Pressure Plate",
   "block.hexcraft.twisted_pressure_plate": "Twisted Pressure Plate",
-  "block.hexcraft.witch_wood_pressure_plate": "Witch Wood Plate",
+  "block.hexcraft.witch_wood_pressure_plate": "Witchwood Pressure Plate",
+  "block.hexcraft.echo_wood_pressure_plate": "Echo Pressure Plate",
 
   //Saplings
   "block.hexcraft.potted_ebony_sapling": "Potted Ebony Sapling",
@@ -352,7 +361,8 @@
   "block.hexcraft.potted_twisted_sapling": "Potted Twisted Sapling",
   "block.hexcraft.twisted_sapling": "Twisted Sapling",
   "block.hexcraft.potted_witch_wood_sapling": "Potted Witch Wood Sapling",
-  "block.hexcraft.witch_wood_sapling": "Witch Wood Sapling",
+  "block.hexcraft.witch_wood_sapling": "Witchwood Sapling",
+  "block.hexcraft.echo_wood_sapling": "Echo Sapling",
 
   //Button
   "block.hexcraft.pearl_stone_button": "Pearlstone Button",
@@ -372,7 +382,8 @@
   "block.hexcraft.juniper_button": "Juniper Button",
   "block.hexcraft.rowan_button": "Rowan Button",
   "block.hexcraft.twisted_button": "Twisted Button",
-  "block.hexcraft.witch_wood_button": "Witch Wood Button",
+  "block.hexcraft.witch_wood_button": "Witchwood Button",
+  "block.hexcraft.echo_wood_button": "Echo Button",
 
   //Doors
   "block.hexcraft.ebony_door": "Ebony Door",
@@ -389,7 +400,8 @@
   "block.hexcraft.juniper_door": "Juniper Door",
   "block.hexcraft.rowan_door": "Rowan Door",
   "block.hexcraft.twisted_door": "Twisted Door",
-  "block.hexcraft.witch_wood_door": "Witch Wood Door",
+  "block.hexcraft.witch_wood_door": "Witchwood Door",
+  "block.hexcraft.echo_wood_door": "Echo Door",
 
   //Trapdoors
   "block.hexcraft.ebony_trapdoor": "Ebony Trapdoor",
@@ -406,7 +418,8 @@
   "block.hexcraft.juniper_trapdoor": "Juniper Trapdoor",
   "block.hexcraft.rowan_trapdoor": "Rowan Trapdoor",
   "block.hexcraft.twisted_trapdoor": "Twisted Trapdoor",
-  "block.hexcraft.witch_wood_trapdoor": "Witch Wood Trapdoor",
+  "block.hexcraft.witch_wood_trapdoor": "Witchwood Trapdoor",
+  "block.hexcraft.echo_wood_trapdoor": "Echo Trapdoor",
 
   //Leaves
   "block.hexcraft.ebony_leaves": "Ebony Leaves",
@@ -423,7 +436,8 @@
   "block.hexcraft.juniper_leaves": "Juniper Leaves",
   "block.hexcraft.rowan_leaves": "Rowan Leaves",
   "block.hexcraft.twisted_leaves": "Twisted Leaves",
-  "block.hexcraft.witch_wood_leaves": "Witch Wood Leaves",
+  "block.hexcraft.witch_wood_leaves": "Witchwood Leaves",
+  "block.hexcraft.echo_wood_leaves": "Echo Leaves",
   
   //Leaf Pile
   "block.hexcraft.ebony_leaves_pile": "Ebony Leaves",
@@ -440,7 +454,8 @@
   "block.hexcraft.juniper_leaves_pile": "Juniper Leaves",
   "block.hexcraft.rowan_leaves_pile": "Rowan Leaves",
   "block.hexcraft.twisted_leaves_pile": "Twisted Leaves",
-  "block.hexcraft.witch_wood_leaves_pile": "Witch Wood Leaves",
+  "block.hexcraft.witch_wood_leaves_pile": "Witchwood Leaves",
+  "block.hexcraft.echo_wood_leaves_pile": "Echo Leaves",
 
   //Bookshelfs
   "block.hexcraft.ebony_bookshelf": "Ebony Bookshelf",
@@ -457,7 +472,8 @@
   "block.hexcraft.juniper_bookshelf": "Juniper Bookshelf",
   "block.hexcraft.rowan_bookshelf": "Rowan Bookshelf",
   "block.hexcraft.twisted_bookshelf": "Twisted Bookshelf",
-  "block.hexcraft.witch_wood_bookshelf": "Witch Wood Bookshelf",
+  "block.hexcraft.witch_wood_bookshelf": "Witchwood Bookshelf",
+  "block.hexcraft.echo_wood_bookshelf": "Echo Bookshelf",
 
   //Fence
   "block.hexcraft.ebony_fence": "Ebony Fence",
@@ -474,7 +490,8 @@
   "block.hexcraft.juniper_fence": "Juniper Fence",
   "block.hexcraft.rowan_fence": "Rowan Fence",
   "block.hexcraft.twisted_fence": "Twisted Fence",
-  "block.hexcraft.witch_wood_fence": "Witch Wood Fence",
+  "block.hexcraft.witch_wood_fence": "Witchwood Fence",
+  "block.hexcraft.echo_wood_fence": "Echo Fence",
   
   //Fence Gate
   "block.hexcraft.ebony_fence_gate": "Ebony Fence Gate",
@@ -491,7 +508,8 @@
   "block.hexcraft.juniper_fence_gate": "Juniper Fence Gate",
   "block.hexcraft.rowan_fence_gate": "Rowan Fence Gate",
   "block.hexcraft.twisted_fence_gate": "Twisted Fence Gate",
-  "block.hexcraft.witch_wood_fence_gate": "Witch Wood Fence Gate",
+  "block.hexcraft.witch_wood_fence_gate": "Witchwood Fence Gate",
+  "block.hexcraft.echo_wood_fence_gate": "Echo Fence Gate",
 
   //Lanterns
   "block.hexcraft.fairy_lantern": "Fairy Lantern",
@@ -544,7 +562,8 @@
   "block.hexcraft.crate_juniper": "Juniper Crate",
   "block.hexcraft.crate_rowan": "Rowan Crate",
   "block.hexcraft.crate_twisted": "Twisted Crate",
-  "block.hexcraft.crate_witch_wood": "Witch Wood Crate",
+  "block.hexcraft.crate_witch_wood": "Witchwood Crate",
+  "block.hexcraft.crate_echo_wood": "Echo Crate",
   "block.hexcraft.crate_oak": "Oak Crate",
   "block.hexcraft.crate_spruce": "Spruce Crate",
   "block.hexcraft.crate_birch": "Birch Crate",

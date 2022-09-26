@@ -30,7 +30,9 @@
 	"hexcraft:twisted_log",
 	"hexcraft:twisted_wood",
 	"hexcraft:witch_wood_log",
-	"hexcraft:witch_wood_wood"
+	"hexcraft:witch_wood_wood",
+	"hexcraft:echo_wood_log",
+	"hexcraft:echo_wood_wood"
 
   ]
 }
