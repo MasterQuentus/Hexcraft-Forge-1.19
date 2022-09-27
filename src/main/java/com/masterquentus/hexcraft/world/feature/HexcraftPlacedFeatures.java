@@ -72,22 +72,18 @@ public class HexcraftPlacedFeatures {
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
     public static final RegistryObject<PlacedFeature> ALDER_CHECKED = PLACED_FEATURES.register("alder_checked",
-            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(),
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_TREE.getHolder().get(),
                     List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.ALDER_SAPLING.get()))));
 
     public static final RegistryObject<PlacedFeature> ALDER_PLACED = PLACED_FEATURES.register("alder_placed",
-            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
-                    PlacementUtils.countExtra(3, 0.1f, 2))));
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(), VegetationPlacements.treePlacement
+                    (RarityFilter.onAverageOnceEvery(55))));
 
     public static final RegistryObject<PlacedFeature> MAGIC_CRYSTAL_GEODE_PLACED = PLACED_FEATURES.register("magic_crystal_geode_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.MAGIC_CRYSTAL_GEODE.getHolder().get(), List.of(
                     RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
                     BiomeFilter.biome())));
-
-
-
-
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {

@@ -21,6 +21,7 @@ import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -29,6 +30,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliageP
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
@@ -55,23 +57,19 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?,?>> BLOOD_OAK_TREE = CONFIGURED_FEATURES.register("blood_oak_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.BLOOD_OAK_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
+                            new DarkOakTrunkPlacer(2,3,3),
                             BlockStateProvider.simple(HexcraftBlocks.BLOOD_OAK_LEAVES.get()),
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> HELL_BARK_TREE = CONFIGURED_FEATURES.register("hell_bark_tree", () ->
-            new ConfiguredFeature<>(Feature.TREE,
-                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
-                            BlockStateProvider.simple(HexcraftBlocks.HELL_BARK_LEAVES.get()),
-                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
-                                    UniformInt.of(0, 0)),
-                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+            new ConfiguredFeature<>(Feature.HUGE_FUNGUS,
+                    new HugeFungusConfiguration(Blocks.GRASS_BLOCK.defaultBlockState(), HexcraftBlocks.HELL_BARK_LOG.get().defaultBlockState(),
+                            HexcraftBlocks.HELL_BARK_LEAVES.get().defaultBlockState(), HexcraftBlocks.HELL_FUNGAL_LAMP.get().defaultBlockState(), true)));
     public static final RegistryObject<ConfiguredFeature<?,?>> WHITE_OAK_TREE = CONFIGURED_FEATURES.register("white_oak_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
+                            new DarkOakTrunkPlacer(2,3,3),
                             BlockStateProvider.simple(HexcraftBlocks.WHITE_OAK_LEAVES.get()),
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
@@ -80,9 +78,9 @@ public class HexcraftConfiguredFeatures {
             CONFIGURED_FEATURES.register("alder_tree", () ->
                     new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                             BlockStateProvider.simple(HexcraftBlocks.ALDER_LOG.get()),
-                            new StraightTrunkPlacer(5, 6, 3),
+                            new StraightTrunkPlacer(2, 3, 2),
                             BlockStateProvider.simple(HexcraftBlocks.ALDER_LEAVES.get()),
-                            new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                            new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                             new TwoLayersFeatureSize(1, 0, 2)).build()));
     public static final RegistryObject<ConfiguredFeature<?, ?>> ALDER_SPAWN =
             CONFIGURED_FEATURES.register("alder_spawn", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR,
@@ -170,13 +168,9 @@ public class HexcraftConfiguredFeatures {
                                     UniformInt.of(0, 0)),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> ECHO_WOOD_TREE = CONFIGURED_FEATURES.register("echo_wood_tree", () ->
-            new ConfiguredFeature<>(Feature.TREE,
-                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.ECHO_WOOD_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
-                            BlockStateProvider.simple(HexcraftBlocks.ECHO_WOOD_LEAVES.get()),
-                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
-                                    UniformInt.of(0, 0)),
-                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+            new ConfiguredFeature<>(Feature.HUGE_FUNGUS,
+                    new HugeFungusConfiguration(Blocks.GRASS_BLOCK.defaultBlockState(), HexcraftBlocks.ECHO_WOOD_LOG.get().defaultBlockState(),
+                            HexcraftBlocks.ECHO_WOOD_LEAVES.get().defaultBlockState(), HexcraftBlocks.ECHO_FUNGAL_LAMP.get().defaultBlockState(), true)));
     public static final RegistryObject<ConfiguredFeature<?,?>> BLOOD_MUSHROOM = CONFIGURED_FEATURES.register("blood_mushroom", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.BLOOD_MUSHROOM_STEM.get()),

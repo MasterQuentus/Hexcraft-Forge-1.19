@@ -2222,10 +2222,16 @@ public class HexcraftBlocks {
                     .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject<Block> SHROOM_GLEAM = registerBlock("shroom_gleam",
-            () -> new Block(BlockBehaviour.Properties.of(Material.GRASS)
-                    .strength(1.0F).sound(SoundType.SHROOMLIGHT)
+    public static final RegistryObject<Block> ECHO_FUNGAL_LAMP = registerBlock("echo_fungal_lamp",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.FROGLIGHT)
+                    .strength(1.0F).sound(SoundType.FROGLIGHT)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject<Block> HELL_FUNGAL_LAMP = registerBlock("hell_fungal_lamp",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.FROGLIGHT)
+                    .strength(1.0F).sound(SoundType.FROGLIGHT)
+                    .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
 
     //Fluids
     public static final RegistryObject<LiquidBlock> BLOOD_BLOCK = BLOCKS.register("blood_block",
