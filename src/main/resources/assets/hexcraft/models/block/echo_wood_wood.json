@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "hexcraft:block/echo_wood_wood_top",
+    "end": "hexcraft:block/echo_wood_wood",
     "side": "hexcraft:block/echo_wood_wood"
   }
 }
