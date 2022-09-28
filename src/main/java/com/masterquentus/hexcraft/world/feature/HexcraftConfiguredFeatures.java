@@ -25,13 +25,14 @@ import net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
+import net.minecraft.world.level.levelgen.feature.rootplacers.MangroveRootPlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.UpwardsBranchingTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,6 +40,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
+import java.util.Optional;
 
 import static net.minecraft.data.worldgen.features.CaveFeatures.MOSS_VEGETATION;
 
@@ -90,7 +92,7 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_HAZEL_TREE = CONFIGURED_FEATURES.register("witch_hazel_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
+                            new ForkingTrunkPlacer(2,3,3),
                             BlockStateProvider.simple(HexcraftBlocks.WITCH_HAZEL_LEAVES.get()),
                             new DarkOakFoliagePlacer (UniformInt.of(0, 0),
                                     UniformInt.of(0, 0)),
@@ -98,11 +100,10 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?,?>> WILLOW_TREE = CONFIGURED_FEATURES.register("willow_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WILLOW_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
+                            new StraightTrunkPlacer(4,4,6),
                             BlockStateProvider.simple(HexcraftBlocks.WILLOW_LEAVES.get()),
-                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
-                                    UniformInt.of(0, 0)),
-                            new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
+                            new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 70),
+                            new TwoLayersFeatureSize(3, 0, 2)).build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> HAWTHORN_TREE = CONFIGURED_FEATURES.register("hawthorn_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LOG.get()),
@@ -162,10 +163,10 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?,?>> WITCH_WOOD_TREE = CONFIGURED_FEATURES.register("witch_wood_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LOG.get()),
-                            new StraightTrunkPlacer(2,3,3),
-                            BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LEAVES.get()),
-                            new DarkOakFoliagePlacer (UniformInt.of(0, 0),
-                                    UniformInt.of(0, 0)),
+                            new UpwardsBranchingTrunkPlacer(2, 1, 4,
+                                    UniformInt.of(1, 4), 0.5F, UniformInt.of(0, 1),
+                                    Registry.BLOCK.getOrCreateTag(BlockTags.MANGROVE_LOGS_CAN_GROW_THROUGH)), BlockStateProvider.simple(HexcraftBlocks.WITCH_WOOD_LEAVES.get()),
+                            new RandomSpreadFoliagePlacer (ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 70),
                             new TwoLayersFeatureSize(1,1,0)).ignoreVines().build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> ECHO_WOOD_TREE = CONFIGURED_FEATURES.register("echo_wood_tree", () ->
             new ConfiguredFeature<>(Feature.HUGE_FUNGUS,

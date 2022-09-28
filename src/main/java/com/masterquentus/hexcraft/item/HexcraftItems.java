@@ -46,7 +46,6 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> SILVER_NUGGET = ITEMS.register("silver_nugget",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-
     public static final RegistryObject<Item> VAMPIRIC_GEM = ITEMS.register("vampiric_gem",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
