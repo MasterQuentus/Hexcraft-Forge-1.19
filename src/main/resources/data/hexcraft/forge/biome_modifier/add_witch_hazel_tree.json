@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_forest",
-  "features": "hexcraft:alder_placed",
+  "features": "hexcraft:witch_hazel_placed",
   "step": "vegetal_decoration"
 }

@@ -3,6 +3,7 @@ package com.masterquentus.hexcraft.world.feature;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
+import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
@@ -71,16 +72,36 @@ public class HexcraftPlacedFeatures {
     public static final RegistryObject<PlacedFeature> NETHER_VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("nether_vampiric_ore_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    public static final RegistryObject<PlacedFeature> EBONY_CHECKED = PLACED_FEATURES.register("ebony_checked",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.EBONY_TREE.getHolder().get(),
+                    List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.EBONY_SAPLING.get()))));
+
+    public static final RegistryObject<PlacedFeature> EBONY_PLACED = PLACED_FEATURES.register("ebony_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.EBONY_SPAWN.getHolder().get(), VegetationPlacements.treePlacement
+                    (RarityFilter.onAverageOnceEvery(70))));
     public static final RegistryObject<PlacedFeature> ALDER_CHECKED = PLACED_FEATURES.register("alder_checked",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_TREE.getHolder().get(),
                     List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.ALDER_SAPLING.get()))));
 
     public static final RegistryObject<PlacedFeature> ALDER_PLACED = PLACED_FEATURES.register("alder_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.ALDER_SPAWN.getHolder().get(), VegetationPlacements.treePlacement
-                    (RarityFilter.onAverageOnceEvery(55))));
+                    (RarityFilter.onAverageOnceEvery(70))));
+    public static final RegistryObject<PlacedFeature> WITCH_HAZEL_CHECKED = PLACED_FEATURES.register("witch_hazel_checked",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.WITCH_HAZEL_TREE.getHolder().get(),
+                    List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.WITCH_WOOD_SAPLING.get()))));
+
+    public static final RegistryObject<PlacedFeature> WITCH_HAZEL_PLACED = PLACED_FEATURES.register("witch_hazel_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.WITCH_HAZEL_SPAWN.getHolder().get(), VegetationPlacements.treePlacement
+                    (RarityFilter.onAverageOnceEvery(70))));
 
     public static final RegistryObject<PlacedFeature> MAGIC_CRYSTAL_GEODE_PLACED = PLACED_FEATURES.register("magic_crystal_geode_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.MAGIC_CRYSTAL_GEODE.getHolder().get(), List.of(
+                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+                    BiomeFilter.biome())));
+
+    public static final RegistryObject<PlacedFeature> TAINTED_MAGIC_PLACED = PLACED_FEATURES.register("tainted_magic_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.TAINTED_MAGIC_PATCH.getHolder().get(), List.of(
                     RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
                     BiomeFilter.biome())));
