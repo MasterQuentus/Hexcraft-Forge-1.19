@@ -130,6 +130,7 @@ public class Hexcraft {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.ROWAN_SAPLING.getId(), HexcraftBlocks.POTTED_ROWAN_SAPLING);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.TWISTED_SAPLING.getId(), HexcraftBlocks.POTTED_TWISTED_SAPLING);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WITCH_WOOD_SAPLING.getId(), HexcraftBlocks.POTTED_WITCH_WOOD_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.ECHO_WOOD_SAPLING.getId(), HexcraftBlocks.POTTED_ECHO_WOOD_SAPLING);
 
                 Sheets.addWoodType(HexcraftWoodTypes.EBONY);
                 Sheets.addWoodType(HexcraftWoodTypes.BLOOD_OAK);

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "hexcraft:block/hunters_table_frount",
+    "side": "hexcraft:block/hunters_table_side",
+    "top": "hexcraft:block/hunters_table_top",
+	"down": "hexcraft:block/hunters_table_bottom"
+  }
+}

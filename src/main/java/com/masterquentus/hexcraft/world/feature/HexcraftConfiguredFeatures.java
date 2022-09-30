@@ -236,7 +236,7 @@ public class HexcraftConfiguredFeatures {
                     new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                             BlockStateProvider.simple(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get()),
                             BlockStateProvider.simple(HexcraftBlocks.BUDDING_MAGIC_CRYSTAL.get()),
-                            BlockStateProvider.simple(Blocks.CALCITE),
+                            BlockStateProvider.simple(HexcraftBlocks.MAGIC_CRYSTAL_BLOCK.get()),
                             BlockStateProvider.simple(Blocks.BASALT),
                             List.of(HexcraftBlocks.MAGIC_CRYSTAL_CLUSTER.get().defaultBlockState()),
                             BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
@@ -248,8 +248,6 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> TAINTED_MAGIC_PATCH = CONFIGURED_FEATURES.register("tainted_magic_patch",
             () -> new ConfiguredFeature<>(Feature.SCULK_PATCH, new SculkPatchConfiguration(10, 32, 64, 0, 1,
                     ConstantInt.of(0), 0.5F)));
-
-    private static final MultifaceBlock TAINTED_VEIN_BLOCK = (MultifaceBlock)HexcraftBlocks.TAINTED_MAGIC_VEIN.get();
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);

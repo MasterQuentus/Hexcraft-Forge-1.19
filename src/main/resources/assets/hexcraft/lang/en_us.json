@@ -110,6 +110,7 @@
   "block.hexcraft.pixie_house": "Pixie House",
   "block.hexcraft.witches_cauldron": "Witches Cauldron",
   "block.hexcraft.black_obsidian": "Black Obsidian",
+  "block.hexcraft.hunters_table": "Hunters Table",
   "block.hexcraft.hellfire_camp": "Hellfire Camp",
   "block.hexcraft.living_kelp_block": "Living Kelp Block",
   "block.hexcraft.ebony_sign": "Ebony Sign",
@@ -583,6 +584,11 @@
   //Entity's
   "entity.minecraft.villager.hexcraft.witch_profession": "Witch Profession",
   "entity.minecraft.villager.hexcraft.vampire_expert": "Vampire Expert",
+  "entity.hexcraft.lilith": "Lilith",
+  "entity.hexcraft.wendigo": "Wendigo",
+  "entity.hexcraft.vampire_piglin": "Vampire Piglin",
+  "entity.hexcraft.fairy": "Fairy",
+
 
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"

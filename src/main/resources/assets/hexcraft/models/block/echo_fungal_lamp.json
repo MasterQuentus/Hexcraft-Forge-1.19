@@ -1,7 +1,8 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "hexcraft:block/echo_fungal_lamp_top",
-    "side": "hexcraft:block/echo_fungal_lamp_side"
+    "up": "hexcraft:block/echo_fungal_lamp_top",
+    "side": "hexcraft:block/echo_fungal_lamp_side",
+	"down": "hexcraft:block/echo_fungal_lamp_bottom"
   }
 }

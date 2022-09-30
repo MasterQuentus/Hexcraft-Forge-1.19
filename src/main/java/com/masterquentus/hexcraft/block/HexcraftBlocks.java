@@ -37,6 +37,9 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> BLACK_OBSIDIAN = registerBlock("black_obsidian",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(50.0F, 1200.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject <Block> HUNTERS_TABLE = registerBlock("hunters_table",
+            () -> new HuntersTableBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2.5F, 2.5F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> TAINTED_MAGIC_BLOCK = registerBlock("tainted_magic_block",
             () -> new TaintedMagicBlock(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)

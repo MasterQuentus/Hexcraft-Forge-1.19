@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "hexcraft:block/stripped_echo_wood_log_top",
-    "side": "hexcraft:block/stripped_echo_wood_log"
-  }
-}
