@@ -19,6 +19,6 @@ public class VervainPlantBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return HexcraftItems.GARLIC.get();
+        return HexcraftItems.VERVAIN_SEEDS.get();
     }
 }

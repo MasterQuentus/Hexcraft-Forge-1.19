@@ -96,7 +96,7 @@ public class HexcraftPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> MAGIC_CRYSTAL_GEODE_PLACED = PLACED_FEATURES.register("magic_crystal_geode_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.MAGIC_CRYSTAL_GEODE.getHolder().get(), List.of(
-                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                    RarityFilter.onAverageOnceEvery(70), InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
                     BiomeFilter.biome())));
 

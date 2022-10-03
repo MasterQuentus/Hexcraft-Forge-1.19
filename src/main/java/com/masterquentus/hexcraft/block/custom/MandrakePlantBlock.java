@@ -19,6 +19,6 @@ public class MandrakePlantBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return HexcraftItems.MANDRAKE_ROOT.get();
+        return HexcraftItems.MANDRAKE_SEEDS.get();
     }
 }

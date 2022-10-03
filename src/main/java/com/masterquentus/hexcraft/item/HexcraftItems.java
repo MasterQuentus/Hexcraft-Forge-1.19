@@ -94,6 +94,66 @@ public class HexcraftItems {
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> VERVAIN = ITEMS.register("vervain",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WOLFSBANE_SEEDS = ITEMS.register("wolfsbane_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.WOLFSBANE_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WOLFSBANE = ITEMS.register("wolfsbane",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> IRENIAL_SEEDS = ITEMS.register("irenial_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.IRENIAL_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> IRENIAL = ITEMS.register("irenial",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> MIRA_SEEDS = ITEMS.register("mira_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.MIRA_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> MIRA = ITEMS.register("mira",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> XERIFAE_SEEDS = ITEMS.register("xerifae_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.XERIFAE_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> XERIFAE = ITEMS.register("xerifae",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SENIA_SEEDS = ITEMS.register("senia_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.SENIA_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SENIA = ITEMS.register("senia",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> AERPINE_SEEDS = ITEMS.register("aerpine_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.AERPINE_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> AERPINE = ITEMS.register("aerpine",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> PERENNIA_SEEDS = ITEMS.register("perennia_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.PERENNIA_FLOWER.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> PERENNIA = ITEMS.register("perennia",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> BELLADONNA_SEEDS = ITEMS.register("belladonna_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.BELLADONNA_PLANT.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> BELLADONNA = ITEMS.register("belladonna",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> HELLEBORE_SEEDS = ITEMS.register("hellebore_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.HELLEBORE_PLANT.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> HELLEBORE = ITEMS.register("hellebore",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SAGE_SEEDS = ITEMS.register("sage_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.SAGE_PLANT.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> SAGE = ITEMS.register("sage",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WORMWOOD_SEEDS = ITEMS.register("wormwood_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.WORMWOOD_PLANT.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WORMWOOD = ITEMS.register("wormwood",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WATER_ARTICHOKE_SEEDS = ITEMS.register("water_artichoke_seeds",
+            () -> new ItemNameBlockItem(HexcraftBlocks.WATER_ARTICHOKE_PLANT.get(),
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WATER_ARTICHOKE = ITEMS.register("water_artichoke",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CINDER_BERRY = ITEMS.register("cinder_berry",
             () -> new ItemNameBlockItem(HexcraftBlocks.CINDER_PLANT.get(),
                     new Item.Properties().food(Foods.SWEET_BERRIES).tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
