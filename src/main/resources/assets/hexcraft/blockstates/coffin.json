@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hexcraft:block/coffin",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hexcraft:block/coffin"
+    },
+    "facing=south": {
+      "model": "hexcraft:block/coffin",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hexcraft:block/coffin",
+      "y": 270
+    }
+  }
+}

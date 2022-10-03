@@ -155,9 +155,8 @@ public class Hexcraft {
                         Monster::checkAnyLightMonsterSpawnRules);
 
                 SpawnPlacements.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(),
-                        SpawnPlacements.Type.ON_GROUND,
-                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                        Monster::checkAnyLightMonsterSpawnRules);
+                        SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkMonsterSpawnRules);
             });
         }
     }

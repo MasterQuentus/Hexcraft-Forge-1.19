@@ -2,7 +2,6 @@ package com.masterquentus.hexcraft.block;
 
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.custom.*;
-import com.masterquentus.hexcraft.block.custom.chest.ChestEbonyBlock;
 import com.masterquentus.hexcraft.block.custom.crate.*;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
@@ -298,6 +297,11 @@ public class HexcraftBlocks {
             () -> new WitchesCauldronBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
                     .requiresCorrectToolForDrops().strength(2.0F).dynamicShape()
                     .sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> COFFIN = registerBlock("coffin",
+            () -> new CoffinBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
+                    .strength(2.0F).dynamicShape()
+                    .sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //public static final RegistryObject <Block> POPPET_SHELF = registerBlock("poppet_shelf",
             //() -> new PoppetShelfBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()
@@ -2256,14 +2260,13 @@ public class HexcraftBlocks {
             () -> new FlowerPotBlock(null, HexcraftBlocks.VAMPIRE_ORCHID,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
-
     public static final RegistryObject<Block> WILD_BRAMBLE = registerBlock("wild_bramble",
             () -> new WildBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
-                    .instabreak().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .instabreak().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    //public static final RegistryObject<Block> ENDER_BRAMBLE = registerBlock("ender_bramble",
-            //() -> new EnderBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
-                    //.instabreak().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject<Block> ENDER_BRAMBLE = registerBlock("ender_bramble",
+            () -> new EnderBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
+                    .instabreak().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> WITCHES_LADDER = BLOCKS.register("witches_ladder",
             () -> new WitchesLadderBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion().randomTicks()));

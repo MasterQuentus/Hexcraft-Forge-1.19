@@ -7,6 +7,7 @@ import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -176,7 +177,6 @@ public class HexcraftConfiguredFeatures {
                             (HexcraftBlocks.BLOOD_MUSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.valueOf(false)).setValue
                                     (HugeMushroomBlock.DOWN, Boolean.valueOf(false))), 3)));
 
-
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PEARLSTONE = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.PEARL_STONE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_CRIMSON_STONE = Suppliers.memoize(() -> List.of(
@@ -205,7 +205,6 @@ public class HexcraftConfiguredFeatures {
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_VAMPIRIC_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_VAMPIRIC_ORE.get().defaultBlockState())));
 
-
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_PEARLSTONE.get(),40)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> CRIMSON_STONE = CONFIGURED_FEATURES.register("crimson_stone",
@@ -230,7 +229,6 @@ public class HexcraftConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_VAMPIRIC_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_VAMPIRIC_ORE = CONFIGURED_FEATURES.register("nether_vampiric_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_VAMPIRIC_ORES.get(), 9)));
-
     public static final RegistryObject<ConfiguredFeature<?, ?>> MAGIC_CRYSTAL_GEODE = CONFIGURED_FEATURES.register("magic_crystal_geode",
             () -> new ConfiguredFeature<>(Feature.GEODE,
                     new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),

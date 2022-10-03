@@ -3,10 +3,13 @@ package com.masterquentus.hexcraft.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -23,15 +26,19 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
+import org.apache.logging.log4j.core.jmx.Server;
+import software.bernie.shadowed.eliotlash.mclib.utils.MathHelper;
 
-public class WildBrambleBlock extends Block implements net.minecraftforge.common.IPlantable {
+import java.util.Random;
+
+public class EnderBrambleBlock extends Block implements net.minecraftforge.common.IPlantable {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_15;
     public static final int MAX_AGE = 15;
     protected static final int AABB_OFFSET = 1;
     protected static final VoxelShape COLLISION_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);
     protected static final VoxelShape OUTLINE_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
-    public WildBrambleBlock(BlockBehaviour.Properties p_51136_) {
+    public EnderBrambleBlock(BlockBehaviour.Properties p_51136_) {
         super(p_51136_);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
     }
@@ -97,10 +104,6 @@ public class WildBrambleBlock extends Block implements net.minecraftforge.common
         return blockstate1.canSustainPlant(p_51154_, p_51155_, Direction.UP, this) && !p_51154_.getBlockState(p_51155_.above()).getMaterial().isLiquid();
     }
 
-    public void entityInside(BlockState p_51148_, Level p_51149_, BlockPos p_51150_, Entity p_51151_) {
-        p_51151_.hurt(DamageSource.CACTUS, 1.0F);
-    }
-
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_51164_) {
         p_51164_.add(AGE);
     }
@@ -111,7 +114,7 @@ public class WildBrambleBlock extends Block implements net.minecraftforge.common
 
     @Override
     public net.minecraftforge.common.PlantType getPlantType(BlockGetter world, BlockPos pos) {
-        return PlantType.DESERT;
+        return PlantType.PLAINS;
     }
 
     @Override

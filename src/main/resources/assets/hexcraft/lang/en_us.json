@@ -109,6 +109,7 @@
   "block.hexcraft.fairy_house": "Fairy House",
   "block.hexcraft.pixie_house": "Pixie House",
   "block.hexcraft.witches_cauldron": "Witches Cauldron",
+  "block.hexcraft.coffin": "Coffin",
   "block.hexcraft.black_obsidian": "Black Obsidian",
   "block.hexcraft.hunters_table": "Hunters Table",
   "block.hexcraft.hellfire_camp": "Hellfire Camp",
@@ -533,6 +534,7 @@
   "block.hexcraft.blood_mushroom_block": "Blood Mushroom Block",
   "block.hexcraft.blood_mushroom_stem": "Blood Mushroom Stem",
   "block.hexcraft.wild_bramble": "Wild Bramble",
+  "block.hexcraft.ender_bramble": "Ender Bramble",
 
   //Armor
   "item.hexcraft.witches_hat": "Witches Hat",
