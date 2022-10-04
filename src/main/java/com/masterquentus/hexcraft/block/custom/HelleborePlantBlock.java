@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class HelleborePlantBlock extends CropBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public HelleborePlantBlock(Properties properties) {
         super(properties);
     }

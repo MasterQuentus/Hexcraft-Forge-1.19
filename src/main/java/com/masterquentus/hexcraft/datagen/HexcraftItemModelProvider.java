@@ -28,6 +28,19 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.MAGIC_CRYSTAL);
         simpleItem(HexcraftItems.FAIRY_DUST);
         simpleItem(HexcraftItems.PIXIE_DUST);
+        simpleItem(HexcraftItems.BLANK_RUNE);
+        simpleItem(HexcraftItems.AIR_RUNE);
+        simpleItem(HexcraftItems.EARTH_RUNE);
+        simpleItem(HexcraftItems.FIRE_RUNE);
+        simpleItem(HexcraftItems.WATER_RUNE);
+        simpleItem(HexcraftItems.RED_RUNE);
+        simpleItem(HexcraftItems.BLACK_RUNE);
+        simpleItem(HexcraftItems.BLUE_RUNE);
+        simpleItem(HexcraftItems.GREEN_RUNE);
+        simpleItem(HexcraftItems.ORANGE_RUNE);
+        simpleItem(HexcraftItems.PURPLE_RUNE);
+        simpleItem(HexcraftItems.WHITE_RUNE);
+        simpleItem(HexcraftItems.YELLOW_RUNE);
         simpleItem(HexcraftItems.ROPE);
         simpleItem(HexcraftItems.MOONSTONE);
         simpleItem(HexcraftItems.RAW_SILVER);
@@ -36,6 +49,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.VAMPIRIC_GEM);
         simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);
+        simpleItem(HexcraftItems.VAMPIRIC_STAFF);
         simpleItem(HexcraftItems.MANDRAKE_SEEDS);
         simpleItem(HexcraftItems.MANDRAKE_ROOT);
         simpleItem(HexcraftItems.GARLIC);

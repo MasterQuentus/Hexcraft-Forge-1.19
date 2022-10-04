@@ -13,6 +13,7 @@ import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
+import com.masterquentus.hexcraft.loot.HexcraftLootModifiers;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import com.masterquentus.hexcraft.villager.HexcraftPOIs;
@@ -62,6 +63,7 @@ public class Hexcraft {
         HexcraftSounds.register(modEventBus);
         HexcraftBlockEntities.register(modEventBus);
         HexcraftEntityTypes.register(modEventBus);
+        HexcraftLootModifiers.register(modEventBus);
         HexcraftMenus.register(modEventBus);
         HexcraftDimensions.register();
         HexcraftPOIs.register(modEventBus);

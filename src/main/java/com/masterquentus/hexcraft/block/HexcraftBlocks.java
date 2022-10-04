@@ -2260,13 +2260,14 @@ public class HexcraftBlocks {
             () -> new FlowerPotBlock(null, HexcraftBlocks.VAMPIRE_ORCHID,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
+
     public static final RegistryObject<Block> WILD_BRAMBLE = registerBlock("wild_bramble",
             () -> new WildBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
-                    .instabreak().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .instabreak()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> ENDER_BRAMBLE = registerBlock("ender_bramble",
             () -> new EnderBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)
-                    .instabreak().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+                    .instabreak()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject<Block> WITCHES_LADDER = BLOCKS.register("witches_ladder",
             () -> new WitchesLadderBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)
                     .instabreak().noOcclusion().randomTicks()));
