@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.block.custom;
 
 import com.google.common.collect.ImmutableMap;
+import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.Util;
@@ -98,16 +99,16 @@ public class HellFireBlock extends BaseFireBlock {
         return this.getStateForPlacement(p_53427_.getLevel(), p_53427_.getClickedPos());
     }
 
-    protected BlockState getStateForPlacement(BlockGetter p_53471_, BlockPos p_53472_) {
-        BlockPos blockpos = p_53472_.below();
-        BlockState blockstate = p_53471_.getBlockState(blockpos);
-        if (!this.canCatchFire(p_53471_, p_53472_, Direction.UP) && !blockstate.isFaceSturdy(p_53471_, blockpos, Direction.UP)) {
+    protected BlockState getStateForPlacement(BlockGetter pLevel, BlockPos pPos) {
+        BlockPos blockpos = pPos.below();
+        BlockState blockstate = pLevel.getBlockState(blockpos);
+        if (!this.canCatchFire(pLevel, pPos, Direction.UP) && !blockstate.isFaceSturdy(pLevel, blockpos, Direction.UP)) {
             BlockState blockstate1 = this.defaultBlockState();
 
             for(Direction direction : Direction.values()) {
                 BooleanProperty booleanproperty = PROPERTY_BY_DIRECTION.get(direction);
                 if (booleanproperty != null) {
-                    blockstate1 = blockstate1.setValue(booleanproperty, Boolean.valueOf(this.canCatchFire(p_53471_, p_53472_.relative(direction), direction.getOpposite())));
+                    blockstate1 = blockstate1.setValue(booleanproperty, Boolean.valueOf(this.canCatchFire(pLevel, pPos.relative(direction), direction.getOpposite())));
                 }
             }
 
@@ -115,6 +116,16 @@ public class HellFireBlock extends BaseFireBlock {
         } else {
             return this.defaultBlockState();
         }
+    }
+
+
+
+
+    public static BlockState getState(BlockGetter pReader, BlockPos pPos) {
+        BlockPos blockpos = pPos.below();
+        BlockState blockstate = pReader.getBlockState(blockpos);
+        /**Check this for SoulFireBlock change it to w/e you need it to be**/
+        return SoulFireBlock.canSurviveOnBlock(blockstate) ? Blocks.SOUL_FIRE.defaultBlockState() : ((HellFireBlock) HexcraftBlocks.HELL_FIRE.get()).getStateForPlacement(pReader, pPos);
     }
 
     public boolean canSurvive(BlockState p_53454_, LevelReader p_53455_, BlockPos p_53456_) {

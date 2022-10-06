@@ -40,6 +40,10 @@ public class HexcraftBlocks {
             () -> new HuntersTableBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2.5F, 2.5F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> POPPET_TABLE = registerBlock("poppet_table",
+            () -> new PoppetTableBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2.0F, 2.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> TAINTED_MAGIC_BLOCK = registerBlock("tainted_magic_block",
             () -> new TaintedMagicBlock(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
                     .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);

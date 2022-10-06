@@ -74,11 +74,17 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> VAMPIRIC_GEM = ITEMS.register("vampiric_gem",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> WHITE_OAK_ASH = ITEMS.register("white_oak_ash",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
             () -> new WitchesSatchelItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire", FlintHellFireItem::new);
+
     public static final RegistryObject<Item> VAMPIRIC_STAFF = ITEMS.register("vampiric_staff",
             () -> new VampiricStaffItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WHITE_OAK_ASH_DAGGER = ITEMS.register("white_oak_ash_dagger",
+            () -> new WhiteOakAshDaggerItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //Spawn Eggs
     public static final RegistryObject<Item> LILITH_SPAWN_EGG = ITEMS.register("lilith_spawn_egg",

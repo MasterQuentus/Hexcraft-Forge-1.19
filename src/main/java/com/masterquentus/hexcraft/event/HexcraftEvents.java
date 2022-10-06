@@ -41,7 +41,7 @@ public class HexcraftEvents {
 
         if (event.getType() == VillagerProfession.FARMER) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(HexcraftItems.VERVAIN.get(), 1);
+            ItemStack stack = new ItemStack(HexcraftItems.VERVAIN_SEEDS.get(), 2);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
@@ -51,7 +51,7 @@ public class HexcraftEvents {
 
         if (event.getType() == HexcraftVillagers.WITCH_PROFESSION.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(HexcraftItems.MAGIC_CRYSTAL.get(), 6);
+            ItemStack stack = new ItemStack(HexcraftItems.MAGIC_CRYSTAL.get(), 1);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
