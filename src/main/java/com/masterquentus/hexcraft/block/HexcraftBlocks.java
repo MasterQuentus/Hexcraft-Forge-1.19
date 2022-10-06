@@ -40,6 +40,10 @@ public class HexcraftBlocks {
             () -> new HuntersTableBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2.5F, 2.5F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> POPPET_TABLE = registerBlock("poppet_table",
+            () -> new PoppetTableBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2.0F, 2.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> TAINTED_MAGIC_BLOCK = registerBlock("tainted_magic_block",
             () -> new TaintedMagicBlock(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
                     .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -2099,7 +2103,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> ECHO_WOOD_SIGN = registerBlockWithoutBlockItem("echo_wood_sign",
             () -> new HexcraftStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), HexcraftWoodTypes.ECHO_WOOD));
 
-
     //Portal Blocks
     public static final RegistryObject<Block> UNDERWORLD_PORTAL = registerBlockWithoutBlockItem("underworld_portal",
             UnderworldPortalBlock::new);
@@ -2217,7 +2220,6 @@ public class HexcraftBlocks {
 
     //Boats
 
-
     //Light Blocks
     public static final RegistryObject<Block> FAIRY_LANTERN = registerBlock("fairy_lantern",
             () -> new FairyLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
@@ -2228,22 +2230,18 @@ public class HexcraftBlocks {
             () -> new PixieLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> ECHO_FUNGAL_LAMP = registerBlock("echo_fungal_lamp",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.FROGLIGHT)
                     .strength(1.0F).sound(SoundType.FROGLIGHT)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> HELL_FUNGAL_LAMP = registerBlock("hell_fungal_lamp",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.FROGLIGHT)
                     .strength(1.0F).sound(SoundType.FROGLIGHT)
                     .lightLevel((state) -> 15)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-
     //Fluids
     public static final RegistryObject<LiquidBlock> BLOOD_BLOCK = BLOCKS.register("blood_block",
             () -> new LiquidBlock(HexcraftFluids.SOURCE_BLOOD, BlockBehaviour.Properties.copy(Blocks.WATER)));
-
 
     //Plants
     public static final RegistryObject<Block> BLOODY_ROSE = registerBlock("bloody_rose",
@@ -2323,7 +2321,6 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> BLOOD_MUSHROOM_STEM = registerBlock("blood_mushroom_stem",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.2F, 0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> HELL_FIRE = BLOCKS.register("hell_fire",
             () -> new HellFireBlock(BlockBehaviour.Properties.of(Material.FIRE)
                     .instabreak().noOcclusion().randomTicks().lightLevel((state) -> 15)));

@@ -47,9 +47,9 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.SILVER_INGOT);
         simpleItem(HexcraftItems.SILVER_NUGGET);
         simpleItem(HexcraftItems.VAMPIRIC_GEM);
+        simpleItem(HexcraftItems.WHITE_OAK_ASH);
         simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);
-        simpleItem(HexcraftItems.VAMPIRIC_STAFF);
         simpleItem(HexcraftItems.MANDRAKE_SEEDS);
         simpleItem(HexcraftItems.MANDRAKE_ROOT);
         simpleItem(HexcraftItems.GARLIC);

@@ -10,6 +10,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 public class HexcraftDimensions {
     public static final ResourceKey<Level> UNDERWORLD_DIMENSION_KEY = ResourceKey.create(Registry.DIMENSION_REGISTRY,
             new ResourceLocation(Hexcraft.MOD_ID, "underworld"));
+
     public static final ResourceKey<DimensionType> UNDERWORLD_TYPE =
             ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY,
                     new ResourceLocation(Hexcraft.MOD_ID, "underworld"));

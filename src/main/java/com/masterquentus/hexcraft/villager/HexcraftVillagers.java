@@ -19,11 +19,9 @@ public class HexcraftVillagers {
             DeferredRegister.create(ForgeRegistries.POI_TYPES, Hexcraft.MOD_ID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, Hexcraft.MOD_ID);
-
     public static final RegistryObject<PoiType> WITCHES_CAULDRON_BLOCK_POI = POI_TYPES.register("witches_cauldron_poi",
             () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.WITCHES_CAULDRON.get().getStateDefinition().getPossibleStates()),
                     1, 1));
-
     public static final RegistryObject<PoiType> HUNTERS_TABLE_BLOCK_POI = POI_TYPES.register("hunters_table_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(HexcraftBlocks.HUNTERS_TABLE.get().getStateDefinition().getPossibleStates()),
                     1, 1));
