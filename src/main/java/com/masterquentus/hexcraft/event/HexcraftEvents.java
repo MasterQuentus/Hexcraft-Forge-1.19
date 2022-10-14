@@ -71,9 +71,8 @@ public class HexcraftEvents {
                     stack, 10, 8, 0.02F));
         }
     }
-
     @SubscribeEvent
-    public static void giveBloodBottleItem(PlayerInteractEvent.LeftClickBlock event) {
+    public static void giveBloodBottleItem(PlayerInteractEvent.RightClickBlock event) {
         if (!event.getLevel().getBlockState(event.getPos()).is(HexcraftBlocks.BLOOD_BLOCK.get())) {
             return;
         }
