@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.event;
 
 import com.masterquentus.hexcraft.Hexcraft;
+import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
 import com.masterquentus.hexcraft.entity.client.armor.GogglesOfRevealingRenderer;
 import com.masterquentus.hexcraft.entity.client.armor.WitchesArmorRenderer;
 import com.masterquentus.hexcraft.item.custom.GoogglesOfRevealingItem;

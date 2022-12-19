@@ -13,7 +13,7 @@ import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
-import com.masterquentus.hexcraft.loot.HexcraftLootModifiers;
+import com.masterquentus.hexcraft.loot.modifier.HexcraftLootModifiers;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import com.masterquentus.hexcraft.villager.HexcraftPOIs;
@@ -67,6 +67,7 @@ public class Hexcraft {
         HexcraftMenus.register(modEventBus);
         HexcraftDimensions.register();
         HexcraftPOIs.register(modEventBus);
+
 
         GeckoLib.initialize();
 

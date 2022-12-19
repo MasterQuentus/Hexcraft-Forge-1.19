@@ -1,7 +1,7 @@
 package com.masterquentus.hexcraft.block.custom.crate;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
-import com.masterquentus.hexcraft.block.entity.CrateDistortedBlockEntity;
+import com.masterquentus.hexcraft.block.entity.custom.CrateDistortedBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;

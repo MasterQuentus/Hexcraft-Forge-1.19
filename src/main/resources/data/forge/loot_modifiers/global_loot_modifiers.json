@@ -1,20 +1,20 @@
 {
   "replace": false,
   "entries": [
-    "hexcraft:aerpine_seeds_from_grass",
-	"hexcraft:belladonna_seeds_from_grass",
+    "hexcraft:mandrake_seeds_from_grass",
 	"hexcraft:garlic_from_grass",
-	"hexcraft:hellebore_seeds_from_grass",
-	"hexcraft:irenial_seeds_from_grass",
-	"hexcraft:mandrake_seeds_from_grass",
-	"hexcraft:mira_seeds_from_grass",
-	"hexcraft:perennia_seeds_from_grass",
-	"hexcraft:sage_seeds_from_grass",
-	"hexcraft:senia_seeds_from_grass",
 	"hexcraft:vervain_seeds_from_grass",
-	"hexcraft:water_artichoke_seeds_from_grass",
 	"hexcraft:wolfsbane_seeds_from_grass",
+	"hexcraft:irenial_seeds_from_grass",
+	"hexcraft:mira_seeds_from_grass",
+	"hexcraft:xerifae_seeds_from_grass",
+	"hexcraft:senia_seeds_from_grass",
+	"hexcraft:aerpine_seeds_from_grass",
+	"hexcraft:perennia_seeds_from_grass",
+	"hexcraft:belladonna_seeds_from_grass",
+	"hexcraft:hellebore_seeds_from_grass",
+	"hexcraft:sage_seeds_from_grass",
 	"hexcraft:wormwood_seeds_from_grass",
-	"hexcraft:xerifae_seeds_from_grass"
+	"hexcraft:water_artichoke_seeds_from_grass"
   ]
 }

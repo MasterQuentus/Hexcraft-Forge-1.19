@@ -3,6 +3,7 @@ package com.masterquentus.hexcraft.block.entity;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.custom.HexcraftSignBlockEntity;
+import com.masterquentus.hexcraft.block.entity.custom.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
