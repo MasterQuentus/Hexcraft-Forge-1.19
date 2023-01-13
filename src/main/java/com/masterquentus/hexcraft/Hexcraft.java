@@ -1,5 +1,6 @@
 package com.masterquentus.hexcraft;
 
+import com.masterquentus.hexcraft.world.biomes.HexcraftBiomes;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
@@ -67,7 +68,8 @@ public class Hexcraft {
         HexcraftMenus.register(modEventBus);
         HexcraftDimensions.register();
         HexcraftPOIs.register(modEventBus);
-
+        HexcraftBiomes.BIOME_REGISTER.register(modEventBus);
+        HexcraftBiomes.registerBiomes();
 
         GeckoLib.initialize();
 

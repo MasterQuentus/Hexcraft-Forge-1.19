@@ -244,6 +244,10 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> TAINTED_MAGIC_PATCH = CONFIGURED_FEATURES.register("tainted_magic_patch",
             () -> new ConfiguredFeature<>(Feature.SCULK_PATCH, new SculkPatchConfiguration(10, 32, 64, 0, 1,
                     ConstantInt.of(0), 0.5F)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> VAMPIRE_ORCHID = CONFIGURED_FEATURES.register("vampire_orchid",
+            () -> new ConfiguredFeature<>(Feature.FLOWER,
+                    new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockConfiguration(BlockStateProvider.simple(HexcraftBlocks.VAMPIRE_ORCHID.get()))))));
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);

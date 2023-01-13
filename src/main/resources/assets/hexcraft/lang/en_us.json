@@ -632,6 +632,13 @@
   "entity.hexcraft.vampire_piglin": "Vampire Piglin",
   "entity.hexcraft.fairy": "Fairy",
 
+  //Biomes
+  "biome.hexcraft.vampire_forest": "Vampire Forest",
+  "biome.hexcraft.whispering_forest": "Whispering Forest",
+  "biome.hexcraft.hell_fungle_forest": "Hell Fungle Forest",
+  "biome.hexcraft.echo_fungle_forest": "Echo Fungle Forest",
+  "biome.hexcraft.crimson_desert": "Crimson Desert",
+
 
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"

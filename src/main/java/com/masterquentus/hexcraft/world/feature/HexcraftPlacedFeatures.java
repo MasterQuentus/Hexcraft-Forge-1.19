@@ -106,6 +106,10 @@ public class HexcraftPlacedFeatures {
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
                     BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> JASMINE_PLACED = PLACED_FEATURES.register("vampire_orchid_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.VAMPIRE_ORCHID.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(16),
+                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
