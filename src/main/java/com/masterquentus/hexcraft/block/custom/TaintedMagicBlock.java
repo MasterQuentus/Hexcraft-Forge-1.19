@@ -1,19 +1,32 @@
 package com.masterquentus.hexcraft.block.custom;
 
+import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 
-public class TaintedMagicBlock extends SculkBlock implements SculkBehaviour {
-    public TaintedMagicBlock(Properties p_151999_) {
-        super(p_151999_);
+public class TaintedMagicBlock extends SculkBlock implements BonemealableBlock, SculkBehaviour {
+    public TaintedMagicBlock(Properties pProperties) {
+        super(pProperties);
     }
 
-    private static int getDecayPenalty(SculkSpreader p_222080_, BlockPos p_222081_, BlockPos p_222082_, int p_222083_) {
-        int i = p_222080_.noGrowthRadius();
-        float f = Mth.square((float)Math.sqrt(p_222081_.distSqr(p_222082_)) - (float)i);
-        int j = Mth.square(24 - i);
-        float f1 = Math.min(1.0F, f / (float)j);
-        return Math.max(1, (int)((float)p_222083_ * f1 * 0.5F));
+    @Override
+    public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
+        return pLevel.getBlockState(pPos.above()).isAir();
+    }
+
+    @Override
+    public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+        return true;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+
     }
 }

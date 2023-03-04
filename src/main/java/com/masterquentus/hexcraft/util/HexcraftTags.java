@@ -13,6 +13,9 @@ public class HexcraftTags {
         public static final TagKey<Block> PORTAL_FRAME_BLOCKS
                 = tag("portal_frame_blocks");
 
+        public static final TagKey<Block> TAINTED_MAGIC_REPLACEABLE
+                = tag("tainted_magic_replaceable");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Hexcraft.MOD_ID, name));
         }

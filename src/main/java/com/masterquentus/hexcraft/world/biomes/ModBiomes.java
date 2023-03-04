@@ -13,6 +13,7 @@ public class ModBiomes
     public static final ResourceKey<Biome> HELL_FUNGLE_FOREST = register("hell_fungle_forest");
     public static final ResourceKey<Biome> ECHO_FUNGLE_FOREST = register("echo_fungle_forest");
     public static final ResourceKey<Biome> CRIMSON_DESERT = register("crimson_desert");
+    public static final ResourceKey<Biome> FAIRY_FOREST = register("fairy_forest");
 
     private static ResourceKey<Biome> register(String name)
     {

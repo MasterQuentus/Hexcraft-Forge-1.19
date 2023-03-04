@@ -100,12 +100,6 @@ public class HexcraftPlacedFeatures {
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
                     BiomeFilter.biome())));
 
-    public static final RegistryObject<PlacedFeature> TAINTED_MAGIC_PLACED = PLACED_FEATURES.register("tainted_magic_placed",
-            () -> new PlacedFeature(HexcraftConfiguredFeatures.TAINTED_MAGIC_PATCH.getHolder().get(), List.of(
-                    RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
-                    BiomeFilter.biome())));
-
     public static final RegistryObject<PlacedFeature> JASMINE_PLACED = PLACED_FEATURES.register("vampire_orchid_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.VAMPIRE_ORCHID.getHolder().get(), List.of(RarityFilter.onAverageOnceEvery(16),
                     InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));

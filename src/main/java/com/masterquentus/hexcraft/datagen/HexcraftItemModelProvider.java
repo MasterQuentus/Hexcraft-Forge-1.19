@@ -1,6 +1,5 @@
 package com.masterquentus.hexcraft.datagen;
 
-
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.data.DataGenerator;

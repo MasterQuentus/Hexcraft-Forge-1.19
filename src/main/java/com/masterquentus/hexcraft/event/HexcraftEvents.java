@@ -3,13 +3,20 @@ package com.masterquentus.hexcraft.event;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.item.HexcraftItems;
+import com.masterquentus.hexcraft.networking.HexcraftMessages;
+import com.masterquentus.hexcraft.networking.packet.ThirstDataSyncS2CPacket;
+import com.masterquentus.hexcraft.thirst.PlayerThirst;
+import com.masterquentus.hexcraft.thirst.PlayerThirstProvider;
 import com.masterquentus.hexcraft.villager.HexcraftVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
@@ -22,9 +29,15 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
@@ -83,6 +96,56 @@ public class HexcraftEvents {
                     stack, 10, 8, 0.02F));
         }
     }
+
+    @SubscribeEvent
+    public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
+        if(event.getObject() instanceof Player) {
+            if(!event.getObject().getCapability(PlayerThirstProvider.PLAYER_THIRST).isPresent()) {
+                event.addCapability(new ResourceLocation(Hexcraft.MOD_ID, "properties"), new PlayerThirstProvider());
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerCloned(PlayerEvent.Clone event) {
+        if(event.isWasDeath()) {
+            event.getOriginal().getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(oldStore -> {
+                event.getOriginal().getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(newStore -> {
+                    newStore.copyFrom(oldStore);
+                });
+            });
+        }
+    }
+
+    @SubscribeEvent
+    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
+        event.register(PlayerThirst.class);
+    }
+
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if(event.side == LogicalSide.SERVER) {
+            event.player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
+                if(thirst.getThirst() > 0 && event.player.getRandom().nextFloat() < 0.005f) { // Once Every 10 Seconds on Avg
+                    thirst.subThirst(1);
+                    HexcraftMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), ((ServerPlayer) event.player));
+                }
+            });
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerJoinWorld(EntityJoinLevelEvent event) {
+        if(!event.getLevel().isClientSide()) {
+            if(event.getEntity() instanceof ServerPlayer player) {
+                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
+                    HexcraftMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
+                });
+            }
+        }
+    }
+
+
     protected static BlockHitResult getPlayerPOVHitResult(Level pLevel, Player pPlayer, ClipContext.Fluid pFluidMode) {
         float f = pPlayer.getXRot();
         float f1 = pPlayer.getYRot();

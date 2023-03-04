@@ -639,6 +639,13 @@
   "biome.hexcraft.echo_fungle_forest": "Echo Fungle Forest",
   "biome.hexcraft.crimson_desert": "Crimson Desert",
 
+  //KeyBinds
+  "key.category.hexcraft.hexcraft": "Hexcraft",
+  "key.hexcraft.drink_blood": "Drink Blood",
+
+  //Messgaes
+  "message.hexcraft.drink_blood": "Drinking Blood",
+  "message.hexcraft.no_blood": "No blood nearby",
 
   //CreativeTab
    "itemGroup.hexcrafttab": "Hexcraft"

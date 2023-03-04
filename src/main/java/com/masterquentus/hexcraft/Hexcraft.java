@@ -1,5 +1,6 @@
 package com.masterquentus.hexcraft;
 
+import com.masterquentus.hexcraft.networking.HexcraftMessages;
 import com.masterquentus.hexcraft.world.biomes.HexcraftBiomes;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
@@ -85,6 +86,8 @@ public class Hexcraft {
         event.enqueueWork(() -> {
             HexcraftVillagers.registerPOIs();
         });
+
+        HexcraftMessages.register();
 
         BlockEntityRenderers.register(HexcraftBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
         WoodType.register(HexcraftWoodTypes.EBONY);

@@ -4,6 +4,8 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.util.HexcraftTags;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -30,6 +32,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlace
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.UpwardsBranchingTrunkPlacer;
+import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -241,9 +244,7 @@ public class HexcraftConfiguredFeatures {
                             true, UniformInt.of(3, 8),
                             UniformInt.of(2, 6), UniformInt.of(1, 2),
                             -18, 18, 0.075D, 1)));
-    public static final RegistryObject<ConfiguredFeature<?, ?>> TAINTED_MAGIC_PATCH = CONFIGURED_FEATURES.register("tainted_magic_patch",
-            () -> new ConfiguredFeature<>(Feature.SCULK_PATCH, new SculkPatchConfiguration(10, 32, 64, 0, 1,
-                    ConstantInt.of(0), 0.5F)));
+
     public static final RegistryObject<ConfiguredFeature<?, ?>> VAMPIRE_ORCHID = CONFIGURED_FEATURES.register("vampire_orchid",
             () -> new ConfiguredFeature<>(Feature.FLOWER,
                     new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

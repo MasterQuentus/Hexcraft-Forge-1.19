@@ -122,4 +122,20 @@ public class HexcraftOverworldBiomes
         BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
         return biome(Biome.Precipitation.RAIN, 2.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
+
+    public static Biome fairyforest()
+    {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        BiomeDefaultFeatures.desertSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
+        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+        globalOverworldGeneration(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        return biome(Biome.Precipitation.RAIN, 2.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    }
 }

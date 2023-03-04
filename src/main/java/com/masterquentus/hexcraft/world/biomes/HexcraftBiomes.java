@@ -23,6 +23,7 @@ public class HexcraftBiomes
         register(ModBiomes.HELL_FUNGLE_FOREST, HexcraftOverworldBiomes::hellfungleforest);
         register(ModBiomes.ECHO_FUNGLE_FOREST, HexcraftOverworldBiomes::echofungleforest);
         register(ModBiomes.CRIMSON_DESERT, HexcraftOverworldBiomes::crimsondesert);
+        register(ModBiomes.FAIRY_FOREST, HexcraftOverworldBiomes::fairyforest);
     }
 
     public static RegistryObject<Biome> register(ResourceKey<Biome> key, Supplier<Biome> biomeSupplier)
