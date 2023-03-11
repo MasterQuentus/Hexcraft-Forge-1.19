@@ -38,7 +38,9 @@ public class LilithEntity extends Monster implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 600.0D)
                 .add(Attributes.ATTACK_DAMAGE, 20.0F)
                 .add(Attributes.ATTACK_SPEED, 5.0F)
-                .add(Attributes.MOVEMENT_SPEED, 0.3F).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3F)
+                .add(Attributes.ARMOR_TOUGHNESS, 10D)
+                .add(Attributes.FOLLOW_RANGE, 35).build();
     }
 
     protected void registerGoals() {

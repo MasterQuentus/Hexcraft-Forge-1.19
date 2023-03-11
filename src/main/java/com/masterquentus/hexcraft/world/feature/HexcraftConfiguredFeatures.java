@@ -206,6 +206,13 @@ public class HexcraftConfiguredFeatures {
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.END_VAMPIRIC_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_VAMPIRIC_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NETHER_VAMPIRIC_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> NYKIUM_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.NETHERRACK, HexcraftBlocks.NYKIUM_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> TRENOGEN_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.TRENOGEN_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, HexcraftBlocks.DEEPSLATE_TRENOGEN_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> JORMUIM_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), HexcraftBlocks.JORMUIM_ORE.get().defaultBlockState())));
     public static final RegistryObject<ConfiguredFeature<?, ?>> PEARL_STONE = CONFIGURED_FEATURES.register("pearl_stone",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_PEARLSTONE.get(),40)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> CRIMSON_STONE = CONFIGURED_FEATURES.register("crimson_stone",
@@ -230,6 +237,12 @@ public class HexcraftConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(END_VAMPIRIC_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> NETHER_VAMPIRIC_ORE = CONFIGURED_FEATURES.register("nether_vampiric_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NETHER_VAMPIRIC_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> NYKIUM_ORE = CONFIGURED_FEATURES.register("nykium_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(NYKIUM_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> TRENOGEN_ORE = CONFIGURED_FEATURES.register("trenogen_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(TRENOGEN_ORES.get(), 9)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> JORMUIM_ORE = CONFIGURED_FEATURES.register("jormuim_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(JORMUIM_ORES.get(), 9)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> MAGIC_CRYSTAL_GEODE = CONFIGURED_FEATURES.register("magic_crystal_geode",
             () -> new ConfiguredFeature<>(Feature.GEODE,
                     new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),

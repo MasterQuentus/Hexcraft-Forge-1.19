@@ -72,6 +72,18 @@ public class HexcraftPlacedFeatures {
     public static final RegistryObject<PlacedFeature> NETHER_VAMPIRIC_ORE_PLACED = PLACED_FEATURES.register("nether_vampiric_ore_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> NYKIUM_ORE_PLACED = PLACED_FEATURES.register("nykiumc_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.NYKIUM_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> TRENOGEN_ORE_PLACED = PLACED_FEATURES.register("trenogen_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.TRENOGEN_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+
+    public static final RegistryObject<PlacedFeature> JORMUIM_ORE_PLACED = PLACED_FEATURES.register("jormuim_ore_placed",
+            () -> new PlacedFeature(HexcraftConfiguredFeatures.JORMUIM_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
     public static final RegistryObject<PlacedFeature> EBONY_CHECKED = PLACED_FEATURES.register("ebony_checked",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.EBONY_TREE.getHolder().get(),
                     List.of(PlacementUtils.filteredByBlockSurvival(HexcraftBlocks.EBONY_SAPLING.get()))));

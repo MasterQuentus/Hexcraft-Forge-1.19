@@ -5,8 +5,6 @@ import com.masterquentus.hexcraft.client.ThirstHudOverlay;
 import com.masterquentus.hexcraft.networking.HexcraftMessages;
 import com.masterquentus.hexcraft.networking.packet.DrinkBloodC2SPacket;
 import com.masterquentus.hexcraft.util.KeyBinding;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;

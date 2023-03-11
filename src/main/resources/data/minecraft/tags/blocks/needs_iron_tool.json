@@ -27,7 +27,11 @@
 	"hexcraft:end_silver_ore",
 	"hexcraft:nether_silver_ore",
 	"hexcraft:deepslate_silver_ore",
-	"hexcraft:silver_block"
+	"hexcraft:silver_block",
+	"hexcraft:nykium_ore",
+	"hexcraft:trenogen_ore",
+	"hexcraft:deepslate_trenogen_ore",
+	"hexcraft:jormuim_ore"
 	
   ]
 }

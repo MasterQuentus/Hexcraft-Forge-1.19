@@ -1,6 +1,5 @@
-package com.masterquentus.hexcraft.item.custom;
+package com.masterquentus.hexcraft.item;
 
-import com.masterquentus.hexcraft.item.HexcraftItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
