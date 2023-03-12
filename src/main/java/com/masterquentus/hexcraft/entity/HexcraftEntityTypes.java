@@ -39,6 +39,12 @@ public class HexcraftEntityTypes {
                             .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_piglin").toString()));
 
+    public static final RegistryObject<EntityType<HexcraftBoatEntity>> BOAT =
+            ENTITY_TYPES.register("boat",
+                    () -> EntityType.Builder.<HexcraftBoatEntity>of(HexcraftBoatEntity::new, MobCategory.MISC)
+                            .sized(1.375F, 0.625F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID,"boat").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

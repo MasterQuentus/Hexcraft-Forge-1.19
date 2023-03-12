@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "hexcraft:elder_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:elder_boat",
+        "count": 1
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "hexcraft:distorted_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:distorted_boat",
+        "count": 1
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "hexcraft:juniper_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:juniper_boat",
+        "count": 1
+    }
+}
