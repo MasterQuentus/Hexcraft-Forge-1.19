@@ -1,0 +1,14 @@
+{
+  "type": "hexcraft:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.125
+    },
+    {
+      "condition": "minecraft:block_state_property",
+      "block": "hexcraft:cursed_soil"
+    }
+  ],
+  "item": "hexcraft:xerifae_seeds"
+}

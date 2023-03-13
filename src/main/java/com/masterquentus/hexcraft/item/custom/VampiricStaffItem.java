@@ -9,6 +9,7 @@ public class VampiricStaffItem extends Item {
     public VampiricStaffItem(Properties pProperties) {
         super(pProperties);
     }
+
     @Override
     public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
         return super.onItemUseFirst(stack, context);

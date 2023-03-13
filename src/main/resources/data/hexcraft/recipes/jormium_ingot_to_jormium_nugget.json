@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:jormium_ingot"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:jormium_nugget",
+        "count": 9
+    }
+}
