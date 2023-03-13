@@ -3,6 +3,8 @@ package com.masterquentus.hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
+import com.masterquentus.hexcraft.client.model.HexcraftBoatModel;
+import com.masterquentus.hexcraft.client.renderer.HexcraftBoatRenderer;
 import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
@@ -10,6 +12,7 @@ import com.masterquentus.hexcraft.entity.client.FairyRenderer;
 import com.masterquentus.hexcraft.entity.client.LilithRenderer;
 import com.masterquentus.hexcraft.entity.client.VampirePiglinRenderer;
 import com.masterquentus.hexcraft.entity.client.WendigoRenderer;
+import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
@@ -25,16 +28,19 @@ import com.masterquentus.hexcraft.world.dimesnsion.HexcraftDimensions;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -112,6 +118,7 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.WENDIGO.get(), WendigoRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.FAIRY.get(), FairyRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
 
     }
 
@@ -166,6 +173,14 @@ public class Hexcraft {
                         SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                         Monster::checkMonsterSpawnRules);
             });
+        }
+
+        @SubscribeEvent
+        public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            for (HexcraftBoatEntity.Type type : HexcraftBoatEntity.Type.values()) {
+                event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(Hexcraft.MOD_ID, type.getModelLocation()), "main"),
+                        HexcraftBoatModel::createBodyLayer);
+            }
         }
     }
 }

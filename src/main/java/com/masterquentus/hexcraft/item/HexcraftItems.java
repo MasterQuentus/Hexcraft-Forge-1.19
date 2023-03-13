@@ -3,6 +3,7 @@ package com.masterquentus.hexcraft.item;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
+import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -462,6 +463,47 @@ public class HexcraftItems {
     //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Boats
+    public static final RegistryObject<Item> ALDER_BOAT = ITEMS.register("alder_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.ALDER));
+
+    public static final RegistryObject<Item> BLOOD_OAK_BOAT = ITEMS.register("blood_oak_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.BLOOD_OAK));
+
+    public static final RegistryObject<Item> CEDAR_BOAT = ITEMS.register("cedar_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.CEDAR));
+
+    public static final RegistryObject<Item> DISTORTED_BOAT = ITEMS.register("distorted_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.DISTORTED));
+
+    public static final RegistryObject<Item> ELDER_BOAT = ITEMS.register("elder_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.ELDER));
+
+    public static final RegistryObject<Item> HAWTHORN_BOAT = ITEMS.register("hawthorn_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.HAWTHORN));
+
+    public static final RegistryObject<Item> HELL_BARK_BOAT = ITEMS.register("hell_bark_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.HELL_BARK));
+
+    public static final RegistryObject<Item> JUNIPER_BOAT = ITEMS.register("juniper_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.JUNIPER));
+
+    public static final RegistryObject<Item> ROWAN_BOAT = ITEMS.register("rowan_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.ROWAN));
+
+    public static final RegistryObject<Item> TWISTED_BOAT = ITEMS.register("twisted_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.TWISTED));
+
+    public static final RegistryObject<Item> WHITE_OAK_BOAT = ITEMS.register("white_oak_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.WHITE_OAK));
+
+    public static final RegistryObject<Item> WILLOW_BOAT = ITEMS.register("willow_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.WILLOW));
+
+    public static final RegistryObject<Item> WITCH_HAZEL_BOAT = ITEMS.register("witch_hazel_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.WITCH_HAZEL));
+
+    public static final RegistryObject<Item> WITCH_WOOD_BOAT = ITEMS.register("witch_wood_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.WITCH_WOOD));
 
     //Brooms
 

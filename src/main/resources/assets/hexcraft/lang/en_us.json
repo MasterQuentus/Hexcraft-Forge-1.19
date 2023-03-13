@@ -90,7 +90,20 @@
   "item.hexcraft.fairy_spawn_egg": "Fairy Spawn Egg",
   "item.hexcraft.vampire_piglin_spawn_egg": "Vampire Piglin Spawn Egg",
   "item.hexcraft.blood_bucket": "Blood Bucket",
-
+  "item.hexcraft.alder_boat": "Alder Boat",
+  "item.hexcraft.blood_oak_boat": "Blood Oak Boat",
+  "item.hexcraft.cedar_boat": "Cedar Boat",
+  "item.hexcraft.distorted_boat": "Distorted Boat",
+  "item.hexcraft.elder_boat": "Elder Boat",
+  "item.hexcraft.hawthorn_boat": "Hawthorn Boat",
+  "item.hexcraft.hell_bark_boat": "Hell Bark Boat",
+  "item.hexcraft.juniper_boat": "Juniper Boat",
+  "item.hexcraft.rowan_boat": "Rowan Boat",
+  "item.hexcraft.twisted_boat": "Twisted Boat",
+  "item.hexcraft.white_oak_boat": "White Oak Boat",
+  "item.hexcraft.willow_boat": "Willow Boat",
+  "item.hexcraft.witch_hazel_boat": "Witch Hazel Boat",
+  "item.hexcraft.witch_wood_boat": "Witch Wood Boat",
 
   //Blocks
   "block.hexcraft.pearl_stone": "Pearlstone",
