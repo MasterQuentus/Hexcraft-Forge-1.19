@@ -46,8 +46,10 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.SILVER_INGOT);
         simpleItem(HexcraftItems.SILVER_NUGGET);
         simpleItem(HexcraftItems.VAMPIRIC_GEM);
+        simpleItem(HexcraftItems.CORRUPTED_NETHER_STAR);
         simpleItem(HexcraftItems.CORRUPTED_STEEL);
         simpleItem(HexcraftItems.CORRUPTED_STEEL_NUGGET);
+        simpleItem(HexcraftItems.DARK_CRYSTAL_SHARDS);
         simpleItem(HexcraftItems.DARK_STEEL);
         simpleItem(HexcraftItems.DARK_STEEL_NUGGET);
         simpleItem(HexcraftItems.RAW_BLOODY_NYKIUM);
@@ -62,6 +64,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.JORMIUM_NUGGET);
         simpleItem(HexcraftItems.STEEL_POWDER);
         simpleItem(HexcraftItems.STEEL_INGOT);
+        simpleItem(HexcraftItems.HELLFIRE_COAL);
         simpleItem(HexcraftItems.WHITE_OAK_ASH);
         simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);

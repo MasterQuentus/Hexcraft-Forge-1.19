@@ -79,6 +79,7 @@ public class HexcraftBoatEntity extends Boat {
     @Override
     public Item getDropItem() {
         return switch (this.getWoodType()) {
+            case "ebony" -> HexcraftItems.EBONY_BOAT.get();
             case "alder" -> HexcraftItems.ALDER_BOAT.get();
             case "blood_oak" -> HexcraftItems.BLOOD_OAK_BOAT.get();
             case "cedar" -> HexcraftItems.CEDAR_BOAT.get();
@@ -93,11 +94,13 @@ public class HexcraftBoatEntity extends Boat {
             case "willow" -> HexcraftItems.WILLOW_BOAT.get();
             case "witch_hazel" -> HexcraftItems.WITCH_HAZEL_BOAT.get();
             case "witch_wood" -> HexcraftItems.WITCH_WOOD_BOAT.get();
+            case "echo_wood" -> HexcraftItems.ECHO_WOOD_BOAT.get();
             default -> Items.OAK_BOAT;
         };
     }
 
     public enum Type {
+        EBONY(HexcraftBlocks.EBONY_PLANKS.get(), "ebony"),
         ALDER(HexcraftBlocks.ALDER_PLANKS.get(), "alder"),
         BLOOD_OAK(HexcraftBlocks.BLOOD_OAK_PLANKS.get(), "blood_oak"),
         CEDAR(HexcraftBlocks.CEDAR_PLANKS.get(), "cedar"),
@@ -111,7 +114,8 @@ public class HexcraftBoatEntity extends Boat {
         WHITE_OAK(HexcraftBlocks.WHITE_OAK_PLANKS.get(), "white_oak"),
         WILLOW(HexcraftBlocks.WILLOW_PLANKS.get(), "willow"),
         WITCH_HAZEL(HexcraftBlocks.WITCH_HAZEL_PLANKS.get(), "witch_hazel"),
-        WITCH_WOOD(HexcraftBlocks.WITCH_WOOD_PLANKS.get(), "witch_wood");
+        WITCH_WOOD(HexcraftBlocks.WITCH_WOOD_PLANKS.get(), "witch_wood"),
+        ECHO_WOOD(HexcraftBlocks.ECHO_WOOD_PLANKS.get(), "echo_wood");
 
         private final String name;
         private final Block planks;

@@ -75,9 +75,13 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> VAMPIRIC_GEM = ITEMS.register("vampiric_gem",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> CORRUPTED_NETHER_STAR = ITEMS.register("corrupted_nether_star",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CORRUPTED_STEEL = ITEMS.register("corrupted_steel",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> CORRUPTED_STEEL_NUGGET = ITEMS.register("corrupted_steel_nugget",
+            () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> DARK_CRYSTAL_SHARDS = ITEMS.register("dark_crystal_shards",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> DARK_STEEL = ITEMS.register("dark_steel",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -107,6 +111,8 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> HELLFIRE_COAL = ITEMS.register("hellfire_coal",
+            () -> new HellFireCoalItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WHITE_OAK_ASH = ITEMS.register("white_oak_ash",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
@@ -463,6 +469,8 @@ public class HexcraftItems {
     //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Boats
+    public static final RegistryObject<Item> EBONY_BOAT = ITEMS.register("ebony_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.EBONY));
     public static final RegistryObject<Item> ALDER_BOAT = ITEMS.register("alder_boat",
             () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.ALDER));
 
@@ -504,6 +512,8 @@ public class HexcraftItems {
 
     public static final RegistryObject<Item> WITCH_WOOD_BOAT = ITEMS.register("witch_wood_boat",
             () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.WITCH_WOOD));
+    public static final RegistryObject<Item> ECHO_WOOD_BOAT = ITEMS.register("echo_wood_boat",
+            () -> new HexcraftBoatItem(HexcraftBoatEntity.Type.ECHO_WOOD));
 
     //Brooms
 
