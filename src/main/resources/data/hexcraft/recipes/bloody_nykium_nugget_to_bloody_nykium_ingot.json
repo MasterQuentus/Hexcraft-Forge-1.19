@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:bloody_nykium_nugget"
+        }
+    },
+    "result": {
+        "item": "hexcraft:bloody_nykium",
+        "count": 1
+    }
+}

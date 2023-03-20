@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "hexcraft:dark_steel"
+        }
+    ],
+    "result": {
+        "item": "hexcraft:dark_steel_nugget",
+        "count": 9
+    }
+}

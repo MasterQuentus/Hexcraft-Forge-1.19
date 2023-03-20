@@ -120,6 +120,10 @@ public class HexcraftBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> HELLFIRE_COAL_ORE = registerBlock("hellfire_coal_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -2240,8 +2244,6 @@ public class HexcraftBlocks {
     //public static final RegistryObject<Block> CHEST_WITCH_WOOD = BLOCKS.register("chest_witch_wood", () -> new ChestWitchWoodBlock());
     //public static final RegistryObject<Block> CHEST_ECHO_WOOD = BLOCKS.register("chest_echo_wood", () -> new ChestEchoWoodBlock());
 
-
-    //Boats
 
     //Fluids
     public static final RegistryObject<LiquidBlock> BLOOD_BLOCK = BLOCKS.register("blood_block",

@@ -21,6 +21,12 @@ public enum HexcraftArmorMaterials implements ArmorMaterial {
 
     SILVER("silver", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.of(HexcraftItems.SILVER_INGOT.get());
+    }),
+
+    STEEL("steel", 4, new int[]{2, 4, 5, 2}, 15, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+        return Ingredient.of(HexcraftItems.STEEL_INGOT.get());
+
+
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "hexcraft:echo_wood_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:echo_wood_boat",
+        "count": 1
+    }
+}
