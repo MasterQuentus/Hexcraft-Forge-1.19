@@ -1,0 +1,6 @@
+{
+  "parent": "item/chest",
+  "textures": {
+    "particle": "hexcraft:block/witch_wood_planks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hexcraft:ebony_planks"
+    }
+  },
+  "result": {
+    "item": "hexcraft:chest_ebony",
+    "count": 1
+  }
+}

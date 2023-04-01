@@ -5,6 +5,7 @@ import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.client.model.HexcraftBoatModel;
 import com.masterquentus.hexcraft.client.renderer.HexcraftBoatRenderer;
+import com.masterquentus.hexcraft.client.renderer.HexcraftChestRenderer;
 import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
@@ -33,14 +34,18 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -57,6 +62,10 @@ import software.bernie.geckolib3.GeckoLib;
 public class Hexcraft {
     public static final String MOD_ID = "hexcraft";
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final ModelLayerLocation LAYER_CHEST = new ModelLayerLocation(new ResourceLocation(MOD_ID, "chest"),"main");
+    public static final ModelLayerLocation LAYER_DOUBLE_CHEST_LEFT = new ModelLayerLocation(new ResourceLocation(MOD_ID, "double_chest_left"),"main");
+    public static final ModelLayerLocation LAYER_DOUBLE_CHEST_RIGHT = new ModelLayerLocation(new ResourceLocation(MOD_ID, "double_chest_right"),"main");
 
     public Hexcraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -119,7 +128,6 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.FAIRY.get(), FairyRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
-
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -164,6 +172,8 @@ public class Hexcraft {
                 Sheets.addWoodType(HexcraftWoodTypes.WITCH_WOOD);
                 Sheets.addWoodType(HexcraftWoodTypes.ECHO_WOOD);
 
+                BlockEntityRenderers.register(HexcraftBlockEntities.CHEST.get(), HexcraftChestRenderer::new);
+
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,
                         Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
@@ -178,9 +188,25 @@ public class Hexcraft {
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             for (HexcraftBoatEntity.Type type : HexcraftBoatEntity.Type.values()) {
-                event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(Hexcraft.MOD_ID, type.getModelLocation()), "main"),
+                event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(MOD_ID, type.getModelLocation()), "main"),
                         HexcraftBoatModel::createBodyLayer);
             }
+
+            // Chest Layers
+            event.registerLayerDefinition(LAYER_CHEST, HexcraftChestRenderer::createSingleBodyLayer);
+            event.registerLayerDefinition(LAYER_DOUBLE_CHEST_LEFT, HexcraftChestRenderer::createDoubleBodyLeftLayer);
+            event.registerLayerDefinition(LAYER_DOUBLE_CHEST_RIGHT, HexcraftChestRenderer::createDoubleBodyRightLayer);
+        }
+
+        @SubscribeEvent
+        public static void textureStitchPre(TextureStitchEvent.Pre event) {
+            TextureAtlas map = event.getAtlas();
+
+            if (Sheets.CHEST_SHEET.equals(map.location()))
+                HexcraftChestRenderer.MATERIALS.values().stream()
+                        .flatMap(e -> e.values().stream())
+                        .map(Material::texture)
+                        .forEach(event::addSprite);
         }
     }
 }

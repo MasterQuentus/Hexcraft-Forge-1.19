@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hexcraft:hell_bark_planks"
+    }
+  },
+  "result": {
+    "item": "hexcraft:chest_hell_bark",
+    "count": 1
+  }
+}
