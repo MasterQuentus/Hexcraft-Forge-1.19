@@ -1,0 +1,6 @@
+{
+  "parent": "item/chest",
+  "textures": {
+    "particle": "hexcraft:block/hell_bark_planks"
+  }
+}

@@ -665,6 +665,24 @@
   "block.hexcraft.crate_warped": "Warped Crate",
   "block.hexcraft.crate_mangrove": "Mangrove Crate",
 
+  //Chests
+  "block.hexcraft.chest_alder": "Alder Chest",
+  "block.hexcraft.chest_blood_oak": "Blood Oak Chest",
+  "block.hexcraft.chest_cedar": "Cedar Chest",
+  "block.hexcraft.chest_distorted": "Distorted Chest",
+  "block.hexcraft.chest_ebony": "Ebony Chest",
+  "block.hexcraft.chest_echo_wood": "Echo Chest",
+  "block.hexcraft.chest_elder": "Elder Chest",
+  "block.hexcraft.chest_hawthorn": "Hawthorn Chest",
+  "block.hexcraft.chest_hell_bark": "Hell Bark Chest",
+  "block.hexcraft.chest_juniper": "Juniper Chest",
+  "block.hexcraft.chest_rowan": "Rowan Chest",
+  "block.hexcraft.chest_twisted": "Twisted Chest",
+  "block.hexcraft.chest_white_oak": "White Oak Chest",
+  "block.hexcraft.chest_willow": "Willow Chest",
+  "block.hexcraft.chest_witch_wood": "Witch Wood Chest",
+  "block.hexcraft.chest_witch_hazel": "Witch Hazel Chest",
+  
   //Fluids
   "fluid_type.hexcraft.blood_fluid": "Blood",
 
