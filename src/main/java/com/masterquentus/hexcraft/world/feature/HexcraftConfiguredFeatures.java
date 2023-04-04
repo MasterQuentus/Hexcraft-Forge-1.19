@@ -2,11 +2,9 @@ package com.masterquentus.hexcraft.world.feature;
 
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
+import com.google.common.collect.ImmutableList;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
-import com.masterquentus.hexcraft.util.HexcraftTags;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -16,7 +14,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HugeMushroomBlock;
-import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
@@ -26,13 +23,16 @@ import net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.UpwardsBranchingTrunkPlacer;
-import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -105,11 +105,8 @@ public class HexcraftConfiguredFeatures {
                             0.5F)), HexcraftPlacedFeatures.WITCH_HAZEL_CHECKED.getHolder().get())));
     public static final RegistryObject<ConfiguredFeature<?,?>> WILLOW_TREE = CONFIGURED_FEATURES.register("willow_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
-                    new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.WILLOW_LOG.get()),
-                            new StraightTrunkPlacer(4,4,6),
-                            BlockStateProvider.simple(HexcraftBlocks.WILLOW_LEAVES.get()),
-                            new RandomSpreadFoliagePlacer(ConstantInt.of(5), ConstantInt.of(3), ConstantInt.of(4), 70),
-                            new TwoLayersFeatureSize(4, 1, 3)).build()));
+                    createStraightBlobTree(HexcraftBlocks.WILLOW_LOG.get(), HexcraftBlocks.WILLOW_LEAVES.get(), 5, 3, 0, 3)
+                            .decorators(ImmutableList.of(new LeaveVineDecorator(0.35F))).build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> HAWTHORN_TREE = CONFIGURED_FEATURES.register("hawthorn_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LOG.get()),
@@ -266,4 +263,9 @@ public class HexcraftConfiguredFeatures {
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURES.register(eventBus);
     }
+
+    private static TreeConfiguration.TreeConfigurationBuilder createStraightBlobTree(Block p_195147_, Block p_195148_, int pBaseHeight, int pHeightRandA, int pHeightRandB, int p_195152_) {
+        return new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(p_195147_), new StraightTrunkPlacer(pBaseHeight, pHeightRandA, pHeightRandB), BlockStateProvider.simple(p_195148_), new BlobFoliagePlacer(ConstantInt.of(p_195152_), ConstantInt.of(0), 3), new TwoLayersFeatureSize(1, 0, 1));
+    }
+
 }
