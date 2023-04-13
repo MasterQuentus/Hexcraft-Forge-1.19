@@ -17,6 +17,7 @@ import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftItems;
+import com.masterquentus.hexcraft.item.custom.WitchesSatchelItem;
 import com.masterquentus.hexcraft.loot.modifier.HexcraftLootModifiers;
 import com.masterquentus.hexcraft.networking.HexcraftMessages;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
@@ -34,12 +35,12 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -173,6 +174,9 @@ public class Hexcraft {
                 Sheets.addWoodType(HexcraftWoodTypes.ECHO_WOOD);
 
                 BlockEntityRenderers.register(HexcraftBlockEntities.CHEST.get(), HexcraftChestRenderer::new);
+
+                ItemProperties.register(HexcraftItems.WITCHES_SATCHEL.get(), new ResourceLocation(MOD_ID, "filled"),
+                        (pStack, pLevel, pEntity, pSeed) -> WitchesSatchelItem.getFullnessDisplay(pStack));
 
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,
