@@ -27,6 +27,13 @@ public class HexcraftTags {
 
     public static class Items {
 
+        public static final TagKey<Item> FIT_IN_WITCHES_SATCHEL =
+                tag("fit_in_witches_satchel");
+
+        private static TagKey<Item> tag(String name) {
+            return ItemTags.create(new ResourceLocation(Hexcraft.MOD_ID, name));
+        }
+
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }

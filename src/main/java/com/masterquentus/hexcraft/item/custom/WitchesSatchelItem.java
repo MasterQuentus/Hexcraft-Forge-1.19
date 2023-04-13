@@ -1,15 +1,14 @@
 package com.masterquentus.hexcraft.item.custom;
 
+import com.masterquentus.hexcraft.util.HexcraftTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
@@ -28,34 +27,32 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 public class WitchesSatchelItem extends Item {
-    private static final String TAG_ITEMS = "Items";
-    public static final int MAX_WEIGHT = 64;
-    private static final int BUNDLE_IN_BUNDLE_WEIGHT = 4;
-    private static final int BAR_COLOR = Mth.color(0.4F, 0.4F, 1.0F);
+    public static final int MAX_WEIGHT = 576;
 
     public WitchesSatchelItem(Item.Properties p_150726_) {
         super(p_150726_);
     }
 
-    public static float getFullnessDisplay(ItemStack p_150767_) {
-        return (float)getContentWeight(p_150767_) / 64.0F;
+    public static float hasContent(ItemStack p_150767_) {
+        return (getContentWeight(p_150767_) > 0) ? 1.0f : 0.0f;
     }
 
-    public boolean overrideStackedOnOther(ItemStack p_150733_, Slot p_150734_, ClickAction p_150735_, Player p_150736_) {
-        if (p_150735_ != ClickAction.SECONDARY) {
+    public boolean overrideStackedOnOther(ItemStack itemStack, Slot slot, ClickAction clickAction, Player player) {
+        if (clickAction != ClickAction.SECONDARY) {
             return false;
         } else {
-            ItemStack itemstack = p_150734_.getItem();
-            if (itemstack.isEmpty()) {
-                this.playRemoveOneSound(p_150736_);
-                removeOne(p_150733_).ifPresent((p_150740_) -> {
-                    add(p_150733_, p_150734_.safeInsert(p_150740_));
+            ItemStack itemStackToAdd = slot.getItem();
+            if (itemStackToAdd.isEmpty()) {
+                removeOne(itemStack).ifPresent((p_150740_) -> {
+                    add(itemStack, slot.safeInsert(p_150740_));
+                    this.playRemoveOneSound(player);
                 });
-            } else if (itemstack.getItem().canFitInsideContainerItems()) {
-                int i = (64 - getContentWeight(p_150733_)) / getWeight(itemstack);
-                int j = add(p_150733_, p_150734_.safeTake(itemstack.getCount(), i, p_150736_));
+            } else if (itemStackToAdd.getItem().canFitInsideContainerItems() && itemStackToAdd.is(HexcraftTags.Items.FIT_IN_WITCHES_SATCHEL)) {
+                int i = (MAX_WEIGHT - getContentWeight(itemStack)) / getWeight(itemStackToAdd);
+                int j = add(itemStack, itemStackToAdd);
                 if (j > 0) {
-                    this.playInsertSound(p_150736_);
+                    slot.safeTake(itemStackToAdd.getCount(), i, player);
+                    this.playInsertSound(player);
                 }
             }
 
@@ -63,18 +60,18 @@ public class WitchesSatchelItem extends Item {
         }
     }
 
-    public boolean overrideOtherStackedOnMe(ItemStack p_150742_, ItemStack p_150743_, Slot p_150744_, ClickAction p_150745_, Player p_150746_, SlotAccess p_150747_) {
-        if (p_150745_ == ClickAction.SECONDARY && p_150744_.allowModification(p_150746_)) {
-            if (p_150743_.isEmpty()) {
-                removeOne(p_150742_).ifPresent((p_186347_) -> {
-                    this.playRemoveOneSound(p_150746_);
-                    p_150747_.set(p_186347_);
+    public boolean overrideOtherStackedOnMe(ItemStack itemStack, ItemStack itemStackAdd, Slot slot, ClickAction clickAction, Player player, SlotAccess slotAccess) {
+        if (clickAction == ClickAction.SECONDARY && slot.allowModification(player)) {
+            if (itemStackAdd.isEmpty()) {
+                removeOne(itemStack).ifPresent((itemStack1) -> {
+                    this.playRemoveOneSound(player);
+                    slotAccess.set(itemStack1);
                 });
             } else {
-                int i = add(p_150742_, p_150743_);
+                int i = add(itemStack, itemStackAdd);
                 if (i > 0) {
-                    this.playInsertSound(p_150746_);
-                    p_150743_.shrink(i);
+                    this.playInsertSound(player);
+                    itemStackAdd.shrink(i);
                 }
             }
 
@@ -84,60 +81,58 @@ public class WitchesSatchelItem extends Item {
         }
     }
 
-    public InteractionResultHolder<ItemStack> use(Level p_150760_, Player p_150761_, InteractionHand p_150762_) {
-        ItemStack itemstack = p_150761_.getItemInHand(p_150762_);
-        if (dropContents(itemstack, p_150761_)) {
-            this.playDropContentsSound(p_150761_);
-            p_150761_.awardStat(Stats.ITEM_USED.get(this));
-            return InteractionResultHolder.sidedSuccess(itemstack, p_150760_.isClientSide());
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if (dropContents(itemstack, player)) {
+            this.playDropContentsSound(player);
+            player.awardStat(Stats.ITEM_USED.get(this));
+            return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
         } else {
             return InteractionResultHolder.fail(itemstack);
         }
     }
 
-    public boolean isBarVisible(ItemStack p_150769_) {
-        return getContentWeight(p_150769_) > 0;
-    }
-
-    public int getBarWidth(ItemStack p_150771_) {
-        return Math.min(1 + 12 * getContentWeight(p_150771_) / 64, 13);
-    }
-
-    public int getBarColor(ItemStack p_150773_) {
-        return BAR_COLOR;
-    }
-
-    private static int add(ItemStack p_150764_, ItemStack p_150765_) {
-        if (!p_150765_.isEmpty() && p_150765_.getItem().canFitInsideContainerItems()) {
-            CompoundTag compoundtag = p_150764_.getOrCreateTag();
+    private static int add(ItemStack stack, ItemStack stackToAdd) {
+        if (!stackToAdd.isEmpty() && stackToAdd.getItem().canFitInsideContainerItems()
+                && stackToAdd.is(HexcraftTags.Items.FIT_IN_WITCHES_SATCHEL)) {
+            CompoundTag compoundtag = stack.getOrCreateTag();
             if (!compoundtag.contains("Items")) {
                 compoundtag.put("Items", new ListTag());
             }
 
-            int i = getContentWeight(p_150764_);
-            int j = getWeight(p_150765_);
-            int k = Math.min(p_150765_.getCount(), (64 - i) / j);
-            if (k == 0) {
+            int contentWeight = getContentWeight(stack);
+            int weight = getWeight(stackToAdd);
+            int maxCountAddable = Math.min(stackToAdd.getCount(), (MAX_WEIGHT - contentWeight) / weight);
+            if (maxCountAddable == 0) {
                 return 0;
             } else {
                 ListTag listtag = compoundtag.getList("Items", 10);
-                Optional<CompoundTag> optional = getMatchingItem(p_150765_, listtag);
+                Optional<CompoundTag> optional = getMatchingItem(stackToAdd, listtag);
+                System.out.println("optional.isPresent() = " + optional.isPresent());
                 if (optional.isPresent()) {
-                    CompoundTag compoundtag1 = optional.get();
-                    ItemStack itemstack = ItemStack.of(compoundtag1);
-                    itemstack.grow(k);
-                    itemstack.save(compoundtag1);
-                    listtag.remove(compoundtag1);
-                    listtag.add(0, (Tag)compoundtag1);
+                    byte optionalCount = optional.get().getByte("Count");
+                    System.out.println("optionalCount = " + optionalCount);
+                    if (optionalCount < 64) {
+                        maxCountAddable = Math.min(stackToAdd.getCount(), 64 - optionalCount);
+                        System.out.println("maxCountAddable = " + maxCountAddable);
+                        CompoundTag compoundtag1 = optional.get();
+                        ItemStack itemstack = ItemStack.of(compoundtag1);
+                        itemstack.grow(maxCountAddable);
+                        itemstack.save(compoundtag1);
+                        listtag.remove(compoundtag1);
+                        listtag.add(0, compoundtag1);
+                    } else {
+                        return 0;
+                    }
                 } else {
-                    ItemStack itemstack1 = p_150765_.copy();
-                    itemstack1.setCount(k);
+                    ItemStack itemstack1 = stackToAdd.copy();
+                    itemstack1.setCount(maxCountAddable);
                     CompoundTag compoundtag2 = new CompoundTag();
                     itemstack1.save(compoundtag2);
-                    listtag.add(0, (Tag)compoundtag2);
+                    listtag.add(0, compoundtag2);
                 }
 
-                return k;
+                return maxCountAddable;
             }
         } else {
             return 0;
@@ -151,18 +146,14 @@ public class WitchesSatchelItem extends Item {
     }
 
     private static int getWeight(ItemStack p_150777_) {
-        if (p_150777_.is(Items.BUNDLE)) {
-            return 4 + getContentWeight(p_150777_);
-        } else {
-            if ((p_150777_.is(Items.BEEHIVE) || p_150777_.is(Items.BEE_NEST)) && p_150777_.hasTag()) {
-                CompoundTag compoundtag = BlockItem.getBlockEntityData(p_150777_);
-                if (compoundtag != null && !compoundtag.getList("Bees", 10).isEmpty()) {
-                    return 64;
-                }
+        if ((p_150777_.is(Items.BEEHIVE) || p_150777_.is(Items.BEE_NEST)) && p_150777_.hasTag()) {
+            CompoundTag compoundtag = BlockItem.getBlockEntityData(p_150777_);
+            if (compoundtag != null && !compoundtag.getList("Bees", 10).isEmpty()) {
+                return 64;
             }
-
-            return 64 / p_150777_.getMaxStackSize();
         }
+
+        return 64 / p_150777_.getMaxStackSize();
     }
 
     private static int getContentWeight(ItemStack p_150779_) {
@@ -226,11 +217,11 @@ public class WitchesSatchelItem extends Item {
     public Optional<TooltipComponent> getTooltipImage(ItemStack p_150775_) {
         NonNullList<ItemStack> nonnulllist = NonNullList.create();
         getContents(p_150775_).forEach(nonnulllist::add);
-        return Optional.of(new BundleTooltip(nonnulllist, getContentWeight(p_150775_)));
+        return Optional.of(new BundleTooltip(nonnulllist, 0));
     }
 
     public void appendHoverText(ItemStack p_150749_, Level p_150750_, List<Component> p_150751_, TooltipFlag p_150752_) {
-        p_150751_.add(Component.translatable("item.hexcraft.witches_satchel.fullness", getContentWeight(p_150749_), 64).withStyle(ChatFormatting.GRAY));
+        p_150751_.add(Component.translatable("item.hexcraft.witches_satchel.description").withStyle(ChatFormatting.GRAY));
     }
 
     public void onDestroyed(ItemEntity p_150728_) {
