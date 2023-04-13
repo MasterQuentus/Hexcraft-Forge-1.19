@@ -87,7 +87,7 @@
   "item.hexcraft.steel_powder": "Steel Powder",
   "item.hexcraft.steel_ingot": "Steel Ingot",
   "item.hexcraft.witches_satchel": "Witches Satchel",
-  "item.hexcraft.witches_satchel.fullness": "%s/%s",
+  "item.hexcraft.witches_satchel.description": "Holds multiple stacks of flowers, herbs, and spices.\nDoes not hold multiple stacks of the same item.",
   "item.hexcraft.lilith_spawn_egg": "Lilith Spawn Egg",
   "item.hexcraft.wendigo_spawn_egg": "Wendigo Spawn Egg",
   "item.hexcraft.fairy_spawn_egg": "Fairy Spawn Egg",

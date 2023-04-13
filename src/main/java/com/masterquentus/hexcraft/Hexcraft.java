@@ -176,7 +176,7 @@ public class Hexcraft {
                 BlockEntityRenderers.register(HexcraftBlockEntities.CHEST.get(), HexcraftChestRenderer::new);
 
                 ItemProperties.register(HexcraftItems.WITCHES_SATCHEL.get(), new ResourceLocation(MOD_ID, "filled"),
-                        (pStack, pLevel, pEntity, pSeed) -> WitchesSatchelItem.getFullnessDisplay(pStack));
+                        (pStack, pLevel, pEntity, pSeed) -> WitchesSatchelItem.hasContent(pStack));
 
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,
