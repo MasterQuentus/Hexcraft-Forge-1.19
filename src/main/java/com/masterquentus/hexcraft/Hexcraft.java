@@ -29,6 +29,7 @@ import com.masterquentus.hexcraft.world.biomes.HexcraftBiomes;
 import com.masterquentus.hexcraft.world.dimesnsion.HexcraftDimensions;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
+import com.masterquentus.hexcraft.world.feature.HexcraftTreeFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.Sheets;
@@ -74,6 +75,7 @@ public class Hexcraft {
         HexcraftBlocks.register(modEventBus);
         HexcraftVillagers.register(modEventBus);
         HexcraftPaintings.register(modEventBus);
+        HexcraftTreeFeatures.register(modEventBus);
         HexcraftConfiguredFeatures.register(modEventBus);
         HexcraftPlacedFeatures.register(modEventBus);
         HexcraftFluids.register(modEventBus);

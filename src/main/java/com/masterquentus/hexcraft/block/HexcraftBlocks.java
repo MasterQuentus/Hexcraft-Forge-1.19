@@ -3,7 +3,6 @@ package com.masterquentus.hexcraft.block;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.custom.*;
 import com.masterquentus.hexcraft.block.custom.crate.*;
-import com.masterquentus.hexcraft.block.entity.HexcraftBlockEntities;
 import com.masterquentus.hexcraft.block.entity.HexcraftWoodTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.HexcraftCreativeModeTab;
@@ -602,22 +601,7 @@ public class HexcraftBlocks {
                     .sound(SoundType.GRASS).noLootTable().noOcclusion().noCollission()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return false;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 60;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 30;
-                }
-            }, HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new WillowLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> WILLOW_LEAVES_PILE = registerBlock("willow_leaves_pile",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.1F)
