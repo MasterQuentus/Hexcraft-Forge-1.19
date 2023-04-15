@@ -111,8 +111,8 @@ public class HexcraftItems {
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-    public static final RegistryObject<Item> HELLFIRE_COAL = ITEMS.register("hellfire_coal",
-            () -> new HellFireCoalItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //public static final RegistryObject<Item> HELLFIRE_COAL = ITEMS.register("hellfire_coal",
+            //() -> new HellFireCoalItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WHITE_OAK_ASH = ITEMS.register("white_oak_ash",
             () -> new Item(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> WITCHES_SATCHEL = ITEMS.register("witches_satchel",
