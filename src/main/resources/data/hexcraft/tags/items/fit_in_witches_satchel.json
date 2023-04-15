@@ -2,7 +2,10 @@
   "values": [
     "#minecraft:flowers",
     "#minecraft:saplings",
+    "minecraft:sugar_cane",
     "#forge:seeds",
+    "hexcraft:bloody_rose",
+    "hexcraft:vampire_orchid",
     "hexcraft:mandrake_seeds",
     "hexcraft:mandrake_root",
     "hexcraft:garlic",
@@ -30,6 +33,7 @@
     "hexcraft:wormwood_seeds",
     "hexcraft:wormwood",
     "hexcraft:water_artichoke_seeds",
-    "hexcraft:water_artichoke"
+    "hexcraft:water_artichoke",
+    "hexcraft:living_kelp_item"
   ]
 }

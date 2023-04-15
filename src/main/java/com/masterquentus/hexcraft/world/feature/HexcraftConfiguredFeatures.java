@@ -5,6 +5,7 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableList;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
+import com.masterquentus.hexcraft.world.feature.treedecorator.WillowVineLeaveDecorator;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -28,7 +29,6 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliageP
 import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
@@ -106,7 +106,7 @@ public class HexcraftConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?,?>> WILLOW_TREE = CONFIGURED_FEATURES.register("willow_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     createStraightBlobTree(HexcraftBlocks.WILLOW_LOG.get(), HexcraftBlocks.WILLOW_LEAVES.get(), 5, 3, 0, 3)
-                            .decorators(ImmutableList.of(new LeaveVineDecorator(0.35F))).build()));
+                            .decorators(ImmutableList.of(new WillowVineLeaveDecorator(0.35F))).build()));
     public static final RegistryObject<ConfiguredFeature<?,?>> HAWTHORN_TREE = CONFIGURED_FEATURES.register("hawthorn_tree", () ->
             new ConfiguredFeature<>(Feature.TREE,
                     new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(HexcraftBlocks.HAWTHORN_LOG.get()),
