@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hexcraft:echo_wood_planks"
+    }
+  },
+  "result": {
+    "item": "hexcraft:chest_echo_wood",
+    "count": 1
+  }
+}

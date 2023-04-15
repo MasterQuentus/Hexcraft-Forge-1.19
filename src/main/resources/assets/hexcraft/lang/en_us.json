@@ -87,7 +87,7 @@
   "item.hexcraft.steel_powder": "Steel Powder",
   "item.hexcraft.steel_ingot": "Steel Ingot",
   "item.hexcraft.witches_satchel": "Witches Satchel",
-  "item.hexcraft.witches_satchel.fullness": "%s/%s",
+  "item.hexcraft.witches_satchel.description": "Holds multiple stacks of flowers, herbs, and spices.\nDoes not hold multiple stacks of the same item.",
   "item.hexcraft.lilith_spawn_egg": "Lilith Spawn Egg",
   "item.hexcraft.wendigo_spawn_egg": "Wendigo Spawn Egg",
   "item.hexcraft.fairy_spawn_egg": "Fairy Spawn Egg",
@@ -665,6 +665,24 @@
   "block.hexcraft.crate_warped": "Warped Crate",
   "block.hexcraft.crate_mangrove": "Mangrove Crate",
 
+  //Chests
+  "block.hexcraft.chest_alder": "Alder Chest",
+  "block.hexcraft.chest_blood_oak": "Blood Oak Chest",
+  "block.hexcraft.chest_cedar": "Cedar Chest",
+  "block.hexcraft.chest_distorted": "Distorted Chest",
+  "block.hexcraft.chest_ebony": "Ebony Chest",
+  "block.hexcraft.chest_echo_wood": "Echo Chest",
+  "block.hexcraft.chest_elder": "Elder Chest",
+  "block.hexcraft.chest_hawthorn": "Hawthorn Chest",
+  "block.hexcraft.chest_hell_bark": "Hell Bark Chest",
+  "block.hexcraft.chest_juniper": "Juniper Chest",
+  "block.hexcraft.chest_rowan": "Rowan Chest",
+  "block.hexcraft.chest_twisted": "Twisted Chest",
+  "block.hexcraft.chest_white_oak": "White Oak Chest",
+  "block.hexcraft.chest_willow": "Willow Chest",
+  "block.hexcraft.chest_witch_wood": "Witch Wood Chest",
+  "block.hexcraft.chest_witch_hazel": "Witch Hazel Chest",
+  
   //Fluids
   "fluid_type.hexcraft.blood_fluid": "Blood",
 

@@ -72,11 +72,6 @@ public class HexcraftBoatEntity extends Boat {
     }
 
     @Override
-    protected int getMaxPassengers() {
-        return 1;
-    }
-
-    @Override
     public Item getDropItem() {
         return switch (this.getWoodType()) {
             case "ebony" -> HexcraftItems.EBONY_BOAT.get();
