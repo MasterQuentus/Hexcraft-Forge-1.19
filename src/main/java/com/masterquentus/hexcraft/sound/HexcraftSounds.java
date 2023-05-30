@@ -13,9 +13,9 @@ public class HexcraftSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Hexcraft.MOD_ID);
 
 
-    public static RegistryObject<SoundEvent> WENDIGO_HURT = registerSoundEvent("wendigo_hurt");
-    public static RegistryObject<SoundEvent> WENDIGO_AMBIENT = registerSoundEvent("wendigo_ambient");
-    public static RegistryObject<SoundEvent> WENDIGO_DEATH = registerSoundEvent("wendigo_death");
+    public static final RegistryObject<SoundEvent> WENDIGO_HURT = registerSoundEvent("wendigo_hurt");
+    public static final RegistryObject<SoundEvent> WENDIGO_AMBIENT = registerSoundEvent("wendigo_ambient");
+    public static final RegistryObject<SoundEvent> WENDIGO_DEATH = registerSoundEvent("wendigo_death");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {

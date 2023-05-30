@@ -2,9 +2,7 @@ package com.masterquentus.hexcraft.event;
 
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
-import com.masterquentus.hexcraft.entity.custom.LilithEntity;
-import com.masterquentus.hexcraft.entity.custom.VampirePiglinEntity;
-import com.masterquentus.hexcraft.entity.custom.WendigoEntity;
+import com.masterquentus.hexcraft.entity.custom.*;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +16,8 @@ public class HexcraftEventBusEvents {
         event.put(HexcraftEntityTypes.WENDIGO.get(), WendigoEntity.setAttributes());
         event.put(HexcraftEntityTypes.FAIRY.get(), WendigoEntity.setAttributes());
         event.put(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinEntity.setAttributes());
+        event.put(HexcraftEntityTypes.SIREN.get(), SirenEntity.setAttributes());
+        event.put(HexcraftEntityTypes.MERMAID.get(), MermaidEntity.setAttributes());
 
     }
 }

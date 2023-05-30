@@ -9,10 +9,7 @@ import com.masterquentus.hexcraft.client.renderer.HexcraftChestRenderer;
 import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
-import com.masterquentus.hexcraft.entity.client.FairyRenderer;
-import com.masterquentus.hexcraft.entity.client.LilithRenderer;
-import com.masterquentus.hexcraft.entity.client.VampirePiglinRenderer;
-import com.masterquentus.hexcraft.entity.client.WendigoRenderer;
+import com.masterquentus.hexcraft.entity.client.*;
 import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
@@ -40,7 +37,11 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.FlyingAnimal;
+import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -130,6 +131,8 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.WENDIGO.get(), WendigoRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.FAIRY.get(), FairyRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.SIREN.get(), SirenRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.MERMAID.get(), MermaidRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
     }
 
@@ -180,6 +183,11 @@ public class Hexcraft {
                 ItemProperties.register(HexcraftItems.WITCHES_SATCHEL.get(), new ResourceLocation(MOD_ID, "filled"),
                         (pStack, pLevel, pEntity, pSeed) -> WitchesSatchelItem.hasContent(pStack));
 
+                SpawnPlacements.register(HexcraftEntityTypes.FAIRY.get(),
+                        SpawnPlacements.Type.NO_RESTRICTIONS,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        FlyingMob::checkMobSpawnRules);
+
                 SpawnPlacements.register(HexcraftEntityTypes.WENDIGO.get(),
                         SpawnPlacements.Type.ON_GROUND,
                         Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
@@ -188,6 +196,16 @@ public class Hexcraft {
                 SpawnPlacements.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(),
                         SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                         Monster::checkMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.SIREN.get(),
+                        SpawnPlacements.Type.IN_WATER,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.MERMAID.get(),
+                        SpawnPlacements.Type.IN_WATER,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
             });
         }
 

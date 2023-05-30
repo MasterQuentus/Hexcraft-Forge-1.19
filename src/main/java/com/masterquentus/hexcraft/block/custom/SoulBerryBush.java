@@ -18,11 +18,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -33,19 +31,18 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CinderBerryBush extends SweetBerryBushBlock implements BonemealableBlock {
+public class SoulBerryBush extends SweetBerryBushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
     private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-
-    public CinderBerryBush(BlockBehaviour.Properties properties) {
+    public SoulBerryBush(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
     }
 
     public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
-        return new ItemStack(HexcraftItems.CINDER_BERRY.get());
+        return new ItemStack(HexcraftItems.SOUL_BERRY.get());
     }
 
     public VoxelShape getShape(BlockState shape, BlockGetter getter, BlockPos pos, CollisionContext context) {
@@ -77,8 +74,8 @@ public class CinderBerryBush extends SweetBerryBushBlock implements Bonemealable
             return InteractionResult.PASS;
         } else if (i > 1) {
             int j = 1 + p_57276_.random.nextInt(2);
-            popResource(p_57276_, p_57277_, new ItemStack(HexcraftItems.CINDER_BERRY.get(), j + (flag ? 1 : 0)));
-            p_57276_.playSound((Player) null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
+            popResource(p_57276_, p_57277_, new ItemStack(HexcraftItems.SOUL_BERRY.get(), j + (flag ? 1 : 0)));
+            p_57276_.playSound((Player)null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
             BlockState blockstate = p_57275_.setValue(AGE, Integer.valueOf(1));
             p_57276_.setBlock(p_57277_, blockstate, 2);
             p_57276_.gameEvent(GameEvent.BLOCK_CHANGE, p_57277_, GameEvent.Context.of(p_57278_, blockstate));
@@ -87,13 +84,12 @@ public class CinderBerryBush extends SweetBerryBushBlock implements Bonemealable
             return super.use(p_57275_, p_57276_, p_57277_, p_57278_, p_57279_, p_57280_);
         }
     }
-
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         if (!pLevel.isClientSide && pLevel.getDifficulty() != Difficulty.PEACEFUL) {
             if (pEntity instanceof LivingEntity) {
                 LivingEntity livingentity = (LivingEntity) pEntity;
                 if (!livingentity.isInvulnerableTo(DamageSource.IN_FIRE)) {
-                    livingentity.addEffect(new MobEffectInstance(MobEffects.HARM, 40));
+                    livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }
         }

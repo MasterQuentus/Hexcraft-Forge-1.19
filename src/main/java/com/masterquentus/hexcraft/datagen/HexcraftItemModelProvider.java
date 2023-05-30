@@ -20,6 +20,10 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(HexcraftItems.INFUSED_FABRIC);
+        simpleItem(HexcraftItems.BOUND_LEATHER);
+        simpleItem(HexcraftItems.TANNED_LEATHER);
+        simpleItem(HexcraftItems.UNFIRED_CLAY_POT);
+        simpleItem(HexcraftItems.CLAY_POT);
         simpleItem(HexcraftItems.BLOOD_BOTTLE);
         simpleItem(HexcraftItems.LILITH_BLOOD_BOTTLE);
         simpleItem(HexcraftItems.LILITH_CONTRACT);
@@ -64,8 +68,11 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.JORMIUM_NUGGET);
         simpleItem(HexcraftItems.STEEL_POWDER);
         simpleItem(HexcraftItems.STEEL_INGOT);
-        simpleItem(HexcraftItems.HELLFIRE_COAL);
         simpleItem(HexcraftItems.WHITE_OAK_ASH);
+        simpleItem(HexcraftItems.SALT);
+        simpleItem(HexcraftItems.NECROMANTIC_STONE);
+        simpleItem(HexcraftItems.ATTUNED_STONE);
+        simpleItem(HexcraftItems.ATTUNED_STONE_CHARGED);
         //simpleItem(HexcraftItems.WITCHES_SATCHEL);
         simpleItem(HexcraftItems.FLINT_AND_HELLFIRE);
         simpleItem(HexcraftItems.MANDRAKE_SEEDS);
@@ -98,6 +105,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.WATER_ARTICHOKE_SEEDS);
         simpleItem(HexcraftItems.WATER_ARTICHOKE);
         simpleItem(HexcraftItems.CINDER_BERRY);
+        simpleItem(HexcraftItems.SOUL_BERRY);
         simpleItem(HexcraftItems.BLOOD_APPLE);
         simpleItem(HexcraftItems.JUNIPER_BERRIES);
         simpleItem(HexcraftItems.EBONY_SIGN);
@@ -120,6 +128,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.DEATH_PROTECTION_POPPET);
         simpleItem(HexcraftItems.FIRE_PROTECTION_POPPET);
         simpleItem(HexcraftItems.WATER_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.WITHER_PROTECTION_POPPET);
         simpleItem(HexcraftItems.WITCHES_HAT);
         simpleItem(HexcraftItems.WITCHES_ROBES);
         simpleItem(HexcraftItems.WITCHES_PANTS);

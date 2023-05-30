@@ -120,10 +120,6 @@ public class HexcraftBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
-    public static final RegistryObject <Block> HELLFIRE_COAL_ORE = registerBlock("hellfire_coal_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -2322,6 +2318,8 @@ public class HexcraftBlocks {
             () -> new WaterArtichokePlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().randomTicks()));
     public static final RegistryObject<Block> CINDER_PLANT = registerBlockWithoutBlockItem("cinder_plant",
             () -> new CinderBerryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().randomTicks()));
+    public static final RegistryObject<Block> SOUL_BERRY_BUSH = registerBlockWithoutBlockItem("soul_berry_bush",
+            () -> new SoulBerryBush(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().randomTicks()));
     public static final RegistryObject<Block> BLOOD_MUSHROOM_BLOCK = registerBlock("blood_mushroom_block",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.2F, 0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
