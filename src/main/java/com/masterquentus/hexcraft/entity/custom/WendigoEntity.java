@@ -89,7 +89,7 @@ public class WendigoEntity extends Monster implements IAnimatable {
         return this.factory;
     }
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.AMETHYST_BLOCK_BREAK, 0.15F, 1.0F);
+        this.playSound(SoundEvents.ZOMBIE_STEP, 0.15F, 1.0F);
     }
 
     protected SoundEvent getAmbientSound() {
