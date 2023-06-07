@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "i i",
+        "iii",
+        "iii"
+    ],
+    "key": {
+        "i": {
+            "item": "hexcraft:vampiric_gem"
+        }
+    },
+    "result": {
+        "item": "hexcraft:vampiric_chestplate",
+        "count": 1
+    }
+}
