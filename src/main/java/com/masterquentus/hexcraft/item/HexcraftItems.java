@@ -337,6 +337,7 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCHES_BOOTS = ITEMS.register("witches_boots",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
    //public static final RegistryObject<Item> HUNTERS_HAT = ITEMS.register("hunters_hat",
    //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.HEAD,
    //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
