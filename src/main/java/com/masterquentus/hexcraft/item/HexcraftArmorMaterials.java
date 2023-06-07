@@ -29,11 +29,6 @@ public enum HexcraftArmorMaterials implements ArmorMaterial {
 
     VAMPIRIC("vampiric", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.of(HexcraftItems.VAMPIRIC_GEM.get());
-    }),
-
-    STEEL("steel", 4, new int[]{2, 4, 5, 2}, 15, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-        return Ingredient.of(HexcraftItems.STEEL_INGOT.get());
-
 
     });
 

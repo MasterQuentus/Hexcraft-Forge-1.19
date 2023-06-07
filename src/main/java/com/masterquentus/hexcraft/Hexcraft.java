@@ -10,6 +10,9 @@ import com.masterquentus.hexcraft.config.HexcraftClientConfigs;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.entity.client.*;
+import com.masterquentus.hexcraft.entity.client.vampire.VampireEvokerRenderer;
+import com.masterquentus.hexcraft.entity.client.vampire.VampirePiglinRenderer;
+import com.masterquentus.hexcraft.entity.client.vampire.VampireVindicatorRenderer;
 import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
@@ -39,8 +42,6 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.FlyingAnimal;
 import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.block.Blocks;
@@ -133,6 +134,8 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_PIGLIN.get(), VampirePiglinRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.SIREN.get(), SirenRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.MERMAID.get(), MermaidRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_VINDICATOR.get(), VampireVindicatorRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_EVOKER.get(), VampireEvokerRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
     }
 
@@ -206,6 +209,16 @@ public class Hexcraft {
                         SpawnPlacements.Type.IN_WATER,
                         Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                         WaterAnimal::checkSurfaceWaterAnimalSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.VAMPIRE_VINDICATOR.get(),
+                        SpawnPlacements.Type.ON_GROUND,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.VAMPIRE_EVOKER.get(),
+                        SpawnPlacements.Type.ON_GROUND,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
             });
         }
 

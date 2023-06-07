@@ -165,6 +165,14 @@ public class HexcraftItems {
             () -> new ForgeSpawnEggItem(HexcraftEntityTypes.MERMAID,0x35651, 0x4229955,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> VAMPIRE_VINDICATOR_SPAWN_EGG = ITEMS.register("vampire_vindicator_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.VAMPIRE_VINDICATOR,0x770000, 0x878787,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
+    public static final RegistryObject<Item> VAMPIRE_EVOKER_SPAWN_EGG = ITEMS.register("vampire_evoker_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.VAMPIRE_EVOKER,0x770000, 0x634C47,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     //Buckets
     public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
             () -> new BucketItem(HexcraftFluids.SOURCE_BLOOD,
@@ -373,18 +381,6 @@ public class HexcraftItems {
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> VAMPIRIC_BOOTS = ITEMS.register("vampiric_boots",
             () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.FEET,
-                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-    public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet",
-            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-    public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate",
-            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-    public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings",
-            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-    public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots",
-            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //public static final RegistryObject<Item> GOGGLES_OF_REVEALING = ITEMS.register("goggles_of_revealing",

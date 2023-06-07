@@ -105,6 +105,8 @@
   "item.hexcraft.vampire_piglin_spawn_egg": "Vampire Piglin Spawn Egg",
   "item.hexcraft.siren_spawn_egg": "Siren Spawn Egg",
   "item.hexcraft.mermaid_spawn_egg": "Mermaid Spawn Egg",
+  "item.hexcraft.vampire_vindicator_spawn_egg": "Vampire Vindicator Spawn Egg",
+  "item.hexcraft.vampire_evoker_spawn_egg": "Vampire Evoker Spawn Egg",
   "item.hexcraft.blood_bucket": "Blood Bucket",
   "item.hexcraft.ebony_boat": "Ebony Boat",
   "item.hexcraft.alder_boat": "Alder Boat",
@@ -644,6 +646,10 @@
   "item.hexcraft.silver_chestplate": "Silver Chestplate",
   "item.hexcraft.silver_leggings": "Silver Leggings",
   "item.hexcraft.silver_boots": "Silver Boots",
+  "item.hexcraft.vampiric_helmet": "Vampiric Helmet",
+  "item.hexcraft.vampiric_chestplate": "Vampiric Chestplate",
+  "item.hexcraft.vampiric_leggings": "Vampiric Leggings",
+  "item.hexcraft.vampiric_boots": "Vampiric Boots",
 
   //Tools
   "item.hexcraft.silver_sword": "Silver Sword",

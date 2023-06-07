@@ -2,6 +2,8 @@ package com.masterquentus.hexcraft.entity;
 
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.*;
+import com.masterquentus.hexcraft.entity.custom.vampire.VampireEvokerEntity;
+import com.masterquentus.hexcraft.entity.custom.vampire.VampireVindicatorEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -47,6 +49,16 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.of(MermaidEntity::new, MobCategory.WATER_CREATURE)
                             .sized(0.9F, 0.6F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "mermaid").toString()));
+    public static final RegistryObject<EntityType<VampireVindicatorEntity>> VAMPIRE_VINDICATOR =
+            ENTITY_TYPES.register("vampire_vindicator",
+                    () -> EntityType.Builder.of(VampireVindicatorEntity::new, MobCategory.MONSTER)
+                            .sized(0.8F, 1.7F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_vindicator").toString()));
+    public static final RegistryObject<EntityType<VampireEvokerEntity>> VAMPIRE_EVOKER =
+            ENTITY_TYPES.register("vampire_evoker",
+                    () -> EntityType.Builder.of(VampireEvokerEntity::new, MobCategory.MONSTER)
+                            .sized(0.8F, 1.7F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_evoker").toString()));
     public static final RegistryObject<EntityType<HexcraftBoatEntity>> BOAT =
             ENTITY_TYPES.register("boat",
                     () -> EntityType.Builder.<HexcraftBoatEntity>of(HexcraftBoatEntity::new, MobCategory.MISC)

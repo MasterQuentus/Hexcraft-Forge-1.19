@@ -1,4 +1,4 @@
-package com.masterquentus.hexcraft.entity.client;
+package com.masterquentus.hexcraft.entity.client.vampire;
 
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.VampirePiglinEntity;

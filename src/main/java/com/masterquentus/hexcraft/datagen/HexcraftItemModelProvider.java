@@ -145,10 +145,6 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.VAMPIRIC_CHESTPLATE);
         simpleItem(HexcraftItems.VAMPIRIC_LEGGINGS);
         simpleItem(HexcraftItems.VAMPIRIC_BOOTS);
-        simpleItem(HexcraftItems.STEEL_HELMET);
-        simpleItem(HexcraftItems.STEEL_CHESTPLATE);
-        simpleItem(HexcraftItems.STEEL_LEGGINGS);
-        simpleItem(HexcraftItems.STEEL_BOOTS);
         handheldItem(HexcraftItems.SILVER_SWORD);
         handheldItem(HexcraftItems.SILVER_PICKAXE);
         handheldItem(HexcraftItems.SILVER_SHOVEL);
