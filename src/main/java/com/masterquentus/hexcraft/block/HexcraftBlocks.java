@@ -1761,6 +1761,7 @@ public class HexcraftBlocks {
     public static final RegistryObject<Block> ROWAN_DOOR = registerBlock("rowan_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    
     public static final RegistryObject<Block> TWISTED_DOOR = registerBlock("twisted_door",
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(3.0F).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);

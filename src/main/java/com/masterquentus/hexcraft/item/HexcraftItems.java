@@ -337,6 +337,18 @@ public class HexcraftItems {
     public static final RegistryObject<Item> WITCHES_BOOTS = ITEMS.register("witches_boots",
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+   //public static final RegistryObject<Item> HUNTERS_HAT = ITEMS.register("hunters_hat",
+   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.HEAD,
+   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+   //public static final RegistryObject<Item> HUNTERS_ROBES = ITEMS.register("hunters_robes",
+   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.CHEST,
+   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+   //public static final RegistryObject<Item> HUNTERS_PANTS = ITEMS.register("hunters_pants",
+   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.LEGS,
+   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+   //public static final RegistryObject<Item> HUNTERS_BOOTS = ITEMS.register("hunters_boots",
+   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.FEET,
+   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.HEAD,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -348,6 +360,30 @@ public class HexcraftItems {
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> VAMPIRIC_HELMET = ITEMS.register("vampiric_helmet",
+            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> VAMPIRIC_CHESTPLATE = ITEMS.register("vampiric_chestplate",
+            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> VAMPIRIC_LEGGINGS = ITEMS.register("vampiric_leggings",
+            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> VAMPIRIC_BOOTS = ITEMS.register("vampiric_boots",
+            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.FEET,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet",
+            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate",
+            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings",
+            () -> new ArmorItem(HexcraftArmorMaterials.VAMPIRIC, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots",
+            () -> new ArmorItem(HexcraftArmorMaterials.STEEL, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //public static final RegistryObject<Item> GOGGLES_OF_REVEALING = ITEMS.register("goggles_of_revealing",
@@ -446,55 +482,6 @@ public class HexcraftItems {
 
     public static final RegistryObject<Item> CRATE_MANGROVE = block(HexcraftBlocks.CRATE_MANGROVE,
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //Chest
-    //public static final RegistryObject<Item> CHEST_EBONY = block(HexcraftBlocks.CHEST_EBONY,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_BLOOD_OAK = block(HexcraftBlocks.CHEST_BLOOD_OAK,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_HELLBARK = block(HexcraftBlocks.CHEST_HELLBARK,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public  static final RegistryObject<Item> CHEST_WHITE_OAK = block(HexcraftBlocks.CHEST_WHITE_OAK,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_ALDER = block(HexcraftBlocks.CHEST_ALDER,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_WITCH_HAZEL = block(HexcraftBlocks.CHEST_WITCH_HAZEL,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_WILLOW = block(HexcraftBlocks.CHEST_WILLOW,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_HAWTHORN = block(HexcraftBlocks.CHEST_HAWTHORN,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_CEDAR = block(HexcraftBlocks.CHEST_CEDAR,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_DISTORTED = block(HexcraftBlocks.CHEST_DISTORTED,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_ELDER = block(HexcraftBlocks.CHEST_ELDER,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_JUNIPER = block(HexcraftBlocks.CHEST_JUNIPER,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_ROWAN = block(HexcraftBlocks.CHEST_ROWAN,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_TWISTED = block(HexcraftBlocks.CHEST_TWISTED,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_WITCH_WOOD = block(HexcraftBlocks.CHEST_WITCH_WOOD,
-            //HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
-    //public static final RegistryObject<Item> CHEST_ECHO_WOOD = block(HexcraftBlocks.CHEST_ECHO_WOOD,
-    //HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     //Boats
     public static final RegistryObject<Item> EBONY_BOAT = ITEMS.register("ebony_boat",
