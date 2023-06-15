@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "SBS",
+        "#S#"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:attuned_stone"
+        },
+        "S": {
+            "item": "minecraft:spruce_planks"
+        },
+        "B": {
+            "item": "minecraft:brown_concrete"
+        }
+    },
+    "result": {
+        "item": "hexcraft:poppet_table",
+        "count": 1
+    }
+}

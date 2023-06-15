@@ -1,6 +1,7 @@
 package com.masterquentus.hexcraft.item;
 
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 
@@ -28,4 +29,7 @@ public class HexcraftTiers {
     public static final ForgeTier JORMUIM = new ForgeTier(2, 1400, 1.5f,
             2f, 22, BlockTags.NEEDS_IRON_TOOL,
             () -> Ingredient.of(HexcraftItems.JORMIUM_INGOT.get()));
+    public static final ForgeTier ATHAME = new ForgeTier(1, 1400, 1.5f,
+            1f, 30, BlockTags.NEEDS_IRON_TOOL,
+            () -> Ingredient.of(Items.EMERALD));
 }

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "ODO",
+        "OOO"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stone"
+        },
+        "O": {
+            "item": "minecraft:obsidian"
+        },
+        "D": {
+            "item": "hexcraft:attuned_stone_charged"
+        }
+    },
+    "result": {
+        "item": "hexcraft:soul_forge",
+        "count": 1
+    }
+}

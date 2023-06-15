@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#i#",
+        "iii",
+        "gDg"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:clay_pot"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "D": {
+            "item": "hexcraft:attuned_stone"
+        }
+    },
+    "result": {
+        "item": "hexcraft:distillery",
+        "count": 1
+    }
+}

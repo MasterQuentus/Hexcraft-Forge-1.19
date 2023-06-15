@@ -59,6 +59,16 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.of(VampireEvokerEntity::new, MobCategory.MONSTER)
                             .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "vampire_evoker").toString()));
+    public static final RegistryObject<EntityType<BansheeEntity>> BANSHEE =
+            ENTITY_TYPES.register("banshee",
+                    () -> EntityType.Builder.of(BansheeEntity::new, MobCategory.MONSTER)
+                            .sized(0.8F, 1.7F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "banshee").toString()));
+    public static final RegistryObject<EntityType<WerewolfEntity>> WEREWOLF =
+            ENTITY_TYPES.register("werewolf",
+                    () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.MONSTER)
+                            .sized(0.8F, 1.7F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "werewolf").toString()));
     public static final RegistryObject<EntityType<HexcraftBoatEntity>> BOAT =
             ENTITY_TYPES.register("boat",
                     () -> EntityType.Builder.<HexcraftBoatEntity>of(HexcraftBoatEntity::new, MobCategory.MISC)

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "iDi",
+        " i "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:chain"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "D": {
+            "item": "hexcraft:attuned_stone"
+        }
+    },
+    "result": {
+        "item": "hexcraft:candelabra",
+        "count": 1
+    }
+}

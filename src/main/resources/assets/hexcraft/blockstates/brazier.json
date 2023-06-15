@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "hexcraft:block/brazier"
+    },
+    "lit=true": {
+      "model": "hexcraft:block/brazier"
+    }
+  }
+}

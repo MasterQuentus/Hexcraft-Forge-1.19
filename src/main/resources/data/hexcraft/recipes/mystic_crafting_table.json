@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "## ",
+        "SS ",
+        "SS "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purple_carpet"
+        },
+        "S": {
+            "item": "minecraft:spruce_planks"
+        }
+    },
+    "result": {
+        "item": "hexcraft:mystic_crafting_table",
+        "count": 1
+    }
+}

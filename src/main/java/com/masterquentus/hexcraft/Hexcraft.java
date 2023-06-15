@@ -21,7 +21,9 @@ import com.masterquentus.hexcraft.item.custom.WitchesSatchelItem;
 import com.masterquentus.hexcraft.loot.modifier.HexcraftLootModifiers;
 import com.masterquentus.hexcraft.networking.HexcraftMessages;
 import com.masterquentus.hexcraft.painting.HexcraftPaintings;
+import com.masterquentus.hexcraft.potion.HexcraftPotions;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
+import com.masterquentus.hexcraft.util.HexcraftBrewingRecipe;
 import com.masterquentus.hexcraft.villager.HexcraftPOIs;
 import com.masterquentus.hexcraft.villager.HexcraftVillagers;
 import com.masterquentus.hexcraft.world.HexcraftMenus;
@@ -44,6 +46,7 @@ import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -51,6 +54,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -91,7 +95,7 @@ public class Hexcraft {
         HexcraftPOIs.register(modEventBus);
         HexcraftBiomes.BIOME_REGISTER.register(modEventBus);
         HexcraftBiomes.registerBiomes();
-
+        HexcraftPotions.register(modEventBus);
         GeckoLib.initialize();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HexcraftClientConfigs.SPEC, "hexcraft-client.toml");
@@ -136,6 +140,8 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.MERMAID.get(), MermaidRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_VINDICATOR.get(), VampireVindicatorRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_EVOKER.get(), VampireEvokerRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.BANSHEE.get(), BansheeRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.WEREWOLF.get(), WerewolfRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
     }
 
@@ -181,6 +187,9 @@ public class Hexcraft {
                 Sheets.addWoodType(HexcraftWoodTypes.WITCH_WOOD);
                 Sheets.addWoodType(HexcraftWoodTypes.ECHO_WOOD);
 
+                BrewingRecipeRegistry.addRecipe(new HexcraftBrewingRecipe(Potions.AWKWARD,
+                                HexcraftItems.VERVAIN.get(), HexcraftPotions.VERVAIN_POTION.get()));
+
                 BlockEntityRenderers.register(HexcraftBlockEntities.CHEST.get(), HexcraftChestRenderer::new);
 
                 ItemProperties.register(HexcraftItems.WITCHES_SATCHEL.get(), new ResourceLocation(MOD_ID, "filled"),
@@ -216,6 +225,16 @@ public class Hexcraft {
                         Monster::checkAnyLightMonsterSpawnRules);
 
                 SpawnPlacements.register(HexcraftEntityTypes.VAMPIRE_EVOKER.get(),
+                        SpawnPlacements.Type.ON_GROUND,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.BANSHEE.get(),
+                        SpawnPlacements.Type.ON_GROUND,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.WEREWOLF.get(),
                         SpawnPlacements.Type.ON_GROUND,
                         Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                         Monster::checkAnyLightMonsterSpawnRules);

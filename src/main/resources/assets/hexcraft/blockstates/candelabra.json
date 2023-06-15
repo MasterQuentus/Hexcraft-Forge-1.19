@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hexcraft:block/candelabra",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hexcraft:block/candelabra"
+    },
+    "facing=south": {
+      "model": "hexcraft:block/candelabra",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hexcraft:block/candelabra",
+      "y": 270
+    }
+  }
+}

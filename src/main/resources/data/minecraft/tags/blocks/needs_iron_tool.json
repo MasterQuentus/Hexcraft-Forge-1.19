@@ -31,6 +31,11 @@
 	"hexcraft:nykium_ore",
 	"hexcraft:trenogen_ore",
 	"hexcraft:deepslate_trenogen_ore",
-	"hexcraft:jormuim_ore"
+	"hexcraft:jormuim_ore",
+	"hexcraft:candelabra",
+	"hexcraft:witches_oven",
+	"hexcraft:kettle",
+	"hexcraft:brazier",
+	"hexcraft:distillery"
   ]
 }

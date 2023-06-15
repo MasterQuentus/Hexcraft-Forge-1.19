@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "iCi",
+        "iii"
+    ],
+    "key": {
+        "#": {
+            "item": "hexcraft:attuned_stone"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "C": {
+            "item": "minecraft:cauldron"
+        }
+    },
+    "result": {
+        "item": "hexcraft:witches_cauldron",
+        "count": 1
+    }
+}

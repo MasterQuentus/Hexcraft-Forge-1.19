@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "hexcraft:block/mystic_crafting_table_frount",
+    "side": "hexcraft:block/mystic_crafting_table_frount",
+    "top": "hexcraft:block/mystic_crafting_table_top",
+	"down": "minecraft:block/spruce_planks"
+  }
+}

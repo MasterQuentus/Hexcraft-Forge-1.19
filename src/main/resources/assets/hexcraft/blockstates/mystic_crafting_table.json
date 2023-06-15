@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hexcraft:block/mystic_crafting_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hexcraft:block/mystic_crafting_table"
+    },
+    "facing=south": {
+      "model": "hexcraft:block/mystic_crafting_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hexcraft:block/mystic_crafting_table",
+      "y": 270
+    }
+  }
+}

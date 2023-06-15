@@ -22,6 +22,8 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.INFUSED_FABRIC);
         simpleItem(HexcraftItems.BOUND_LEATHER);
         simpleItem(HexcraftItems.TANNED_LEATHER);
+        simpleItem(HexcraftItems.BONE_NEEDLE);
+        simpleItem(HexcraftItems.TAGLOCK_KIT);
         simpleItem(HexcraftItems.UNFIRED_CLAY_POT);
         simpleItem(HexcraftItems.CLAY_POT);
         simpleItem(HexcraftItems.BLOOD_BOTTLE);
@@ -125,6 +127,16 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         simpleItem(HexcraftItems.WITCH_WOOD_SIGN);
         simpleItem(HexcraftItems.ECHO_WOOD_SIGN);
         simpleItem(HexcraftItems.POPPET);
+        simpleItem(HexcraftItems.VOODOO_POPPET);
+        simpleItem(HexcraftItems.VOODOO_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.FALL_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.EXPLOSION_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.PROJECTILE_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.HUNGER_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.POTION_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.VOID_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.CURSE_PROTECTION_POPPET);
+        simpleItem(HexcraftItems.VAMPIRIC_POPPET);
         simpleItem(HexcraftItems.DEATH_PROTECTION_POPPET);
         simpleItem(HexcraftItems.FIRE_PROTECTION_POPPET);
         simpleItem(HexcraftItems.WATER_PROTECTION_POPPET);
@@ -150,6 +162,7 @@ public class HexcraftItemModelProvider extends ItemModelProvider {
         handheldItem(HexcraftItems.SILVER_SHOVEL);
         handheldItem(HexcraftItems.SILVER_AXE);
         handheldItem(HexcraftItems.SILVER_HOE);
+        handheldItem(HexcraftItems.ATHAME);
 
     }
 

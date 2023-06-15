@@ -52,6 +52,10 @@ public class HexcraftBlocks {
             () -> new SummingAltarBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2.5F, 2.5F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> DEMON_HEART = registerBlock("demon_heart",
+            () -> new DemonHeartBlock(BlockBehaviour.Properties.of(Material.SCULK)
+                    .strength(0.5F).sound(SoundType.WET_GRASS).noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> TAINTED_MAGIC_BLOCK = registerBlock("tainted_magic_block",
             () -> new TaintedMagicBlock(BlockBehaviour.Properties.of(Material.SCULK).strength(0.2F)
                     .sound(SoundType.SCULK)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -197,11 +201,9 @@ public class HexcraftBlocks {
     public static final RegistryObject <Block> CRIMSON_SAND = registerBlock("crimson_sand",
             () -> new SandBlock(14406560,BlockBehaviour.Properties.of(Material.SAND)
                     .strength(0.5F).sound(SoundType.SAND)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject <Block> CRIMSON_SAND_STONE = registerBlock("crimson_sand_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(0.8F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject <Block> SMOOTH_CRIMSON_SAND_STONE = registerBlock("smooth_crimson_sand_stone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
@@ -324,10 +326,39 @@ public class HexcraftBlocks {
                     .requiresCorrectToolForDrops().strength(2.0F).dynamicShape()
                     .sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
+    public static final RegistryObject <Block> WITCHES_OVEN = registerBlock("witches_oven",
+            () -> new WitchesOvenBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> KETTLE = registerBlock("kettle",
+            () -> new KettleBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> BRAZIER = registerBlock("brazier",
+            () -> new BrazierBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> DISTILLERY = registerBlock("distillery",
+            () -> new DistilleryBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CHALICE = registerBlock("chalice",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CHALICE_FILLED = registerBlock("chalice_filled",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2.5F, 2.5F).sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
     public static final RegistryObject <Block> COFFIN = registerBlock("coffin",
             () -> new CoffinBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()
                     .strength(2.0F).dynamicShape()
                     .sound(SoundType.WOOD)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+
+    public static final RegistryObject <Block> CANDELABRA = registerBlock("candelabra",
+            () -> new WitchesCauldronBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()
+                    .requiresCorrectToolForDrops().strength(2.0F).dynamicShape()
+                    .sound(SoundType.METAL)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> MYSTIC_CRAFT_TABLE = registerBlock("mystic_crafting_table",
             () -> new MysticCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)

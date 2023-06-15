@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#V#",
+        "BVS",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:white_wool"
+        },
+        "V": {
+            "item": "minecraft:vine"
+        },
+        "B": {
+            "item": "hexcraft:bone_needle"
+        },
+        "S": {
+            "item": "minecraft:string"
+        }
+    },
+    "result": {
+        "item": "hexcraft:poppet",
+        "count": 1
+    }
+}
