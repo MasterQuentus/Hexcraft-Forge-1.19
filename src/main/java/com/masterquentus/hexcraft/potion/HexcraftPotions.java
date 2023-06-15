@@ -16,6 +16,8 @@ public class HexcraftPotions {
 
     public static final RegistryObject<Potion> VERVAIN_POTION = POTIONS.register("vervain_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.POISON, 200, 0)));
+    public static final RegistryObject<Potion> WOLFSBANE_POTION = POTIONS.register("wolfsbane_potion",
+            () -> new Potion(new MobEffectInstance(MobEffects.POISON, 200, 0)));
 
     public static void register(IEventBus eventBus){
         POTIONS.register(eventBus);

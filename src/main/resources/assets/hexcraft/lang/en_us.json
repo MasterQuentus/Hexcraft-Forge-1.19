@@ -143,6 +143,9 @@
   "item.minecraft.potion.effect.vervain_potion": "Vervain Potion",
   "item.minecraft.splash_potion.effect.vervain_potion": "Vervain Splash Potion",
   "item.minecraft.lingering_potion.effect.vervain_potion": "Vervain Lingering Potion",
+  "item.minecraft.potion.effect.wolfsbane_potion": "Wolfsbane Potion",
+  "item.minecraft.splash_potion.effect.wolfsbane_potion": "Wolfsbane Splash Potion",
+  "item.minecraft.lingering_potion.effect.wolfsbane_potion": "Wolfsbane Lingering Potion",
 
   //Blocks
   "block.hexcraft.pearl_stone": "Pearlstone",

@@ -76,53 +76,53 @@ public class HexcraftBlocks {
             () -> new FertilizedDirtBlock(BlockBehaviour.Properties.of(Material.DIRT).strength(0.6F).sound(SoundType.SCULK)),
             HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> MOONSTONE_ORE = registerBlock("moonstone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> END_MOONSTONE_ORE = registerBlock("end_moonstone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> NETHER_MOONSTONE_ORE = registerBlock("nether_moonstone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> DEEPSLATE_MOONSTONE_ORE = registerBlock("deepslate_moonstone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> SILVER_ORE = registerBlock("silver_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> END_SILVER_ORE = registerBlock("end_silver_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> NETHER_SILVER_ORE = registerBlock("nether_silver_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> VAMPIRIC_ORE = registerBlock("vampiric_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> END_VAMPIRIC_ORE = registerBlock("end_vampiric_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> NETHER_VAMPIRIC_ORE = registerBlock("nether_vampiric_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> DEEPSLATE_VAMPIRIC_ORE = registerBlock("deepslate_vampiric_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> NYKIUM_ORE = registerBlock("nykium_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> TRENOGEN_ORE = registerBlock("trenogen_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> DEEPSLATE_TRENOGEN_ORE = registerBlock("deepslate_trenogen_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
     public static final RegistryObject <Block> JORMUIM_ORE = registerBlock("jormuim_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
-                    .strength(3.0F, 3.0F).sound(SoundType.STONE)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F).sound(SoundType.STONE), UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
 
     public static final RegistryObject <Block> MOONSTONE_BLOCK = registerBlock("moonstone_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops()

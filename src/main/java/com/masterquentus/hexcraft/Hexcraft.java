@@ -190,6 +190,9 @@ public class Hexcraft {
                 BrewingRecipeRegistry.addRecipe(new HexcraftBrewingRecipe(Potions.AWKWARD,
                                 HexcraftItems.VERVAIN.get(), HexcraftPotions.VERVAIN_POTION.get()));
 
+                BrewingRecipeRegistry.addRecipe(new HexcraftBrewingRecipe(Potions.AWKWARD,
+                        HexcraftItems.WOLFSBANE.get(), HexcraftPotions.WOLFSBANE_POTION.get()));
+
                 BlockEntityRenderers.register(HexcraftBlockEntities.CHEST.get(), HexcraftChestRenderer::new);
 
                 ItemProperties.register(HexcraftItems.WITCHES_SATCHEL.get(), new ResourceLocation(MOD_ID, "filled"),
