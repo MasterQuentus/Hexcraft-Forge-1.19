@@ -112,6 +112,9 @@ public class HexcraftBlockEntities {
                     HexcraftBlocks.CHEST_WHITE_OAK.get(), HexcraftBlocks.CHEST_WILLOW.get(), HexcraftBlocks.CHEST_WITCH_HAZEL.get(),
                     HexcraftBlocks.CHEST_WITCH_WOOD.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FairyLanternBlockEntity>> FAIRY_LANTERN = BLOCK_ENTITIES.register("fairy_lantern",
+            () -> BlockEntityType.Builder.of(FairyLanternBlockEntity::new, HexcraftBlocks.FAIRY_LANTERN.get()).build(null));
+
     private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
                                                                BlockEntityType.BlockEntitySupplier<?> supplier) {
         return BLOCK_ENTITIES.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
