@@ -38,6 +38,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.Material;
@@ -143,6 +144,7 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.BANSHEE.get(), BansheeRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.WEREWOLF.get(), WerewolfRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.VAMPIRIC_STAFF_PROJECTILE.get(), ThrownItemRenderer::new);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
