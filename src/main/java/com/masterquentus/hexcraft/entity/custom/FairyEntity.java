@@ -1,6 +1,5 @@
 package com.masterquentus.hexcraft.entity.custom;
 
-import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.ai.FairyMoveControl;
 import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import net.minecraft.core.BlockPos;
@@ -33,7 +32,6 @@ import java.util.EnumSet;
 
 public class FairyEntity extends FlyingMob implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
-    private BlockPos lanternPos;
 
     public FairyEntity(EntityType<? extends FlyingMob> entityType, Level level) {
 
@@ -96,14 +94,6 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
         return this.factory;
     }
 
-    public BlockPos getLanternPos() {
-        return this.lanternPos;
-    }
-
-    public void setLanternPos(BlockPos lanternPos) {
-        this.lanternPos = lanternPos;
-    }
-
     static class FairyMoveAroundGoal extends MoveControl {
         protected final FairyEntity fairy;
         public final double speedModifier;
@@ -146,6 +136,7 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
         }
     }
 
+
     static class fairyMoveAroundGoal extends Goal {
         private final FairyEntity fairyEntity;
 
@@ -186,21 +177,7 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
             double d0 = this.fairyEntity.getX() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
             double d1 = this.fairyEntity.getY() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
             double d2 = this.fairyEntity.getZ() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
-
-            if (this.fairyEntity.lanternPos != null) {
-                boolean lanternExists = this.fairyEntity.level.getBlockState(fairyEntity.lanternPos).getBlock()
-                        .equals(HexcraftBlocks.FAIRY_LANTERN.get());
-
-                if (lanternExists && fairyEntity.distanceToSqr(fairyEntity.lanternPos.getX() + 0.5,
-                        fairyEntity.lanternPos.getY() + 0.5, fairyEntity.lanternPos.getZ() + 0.5) > 8.0) {
-                    this.fairyEntity.getMoveControl().setWantedPosition(fairyEntity.lanternPos.getX() + 0.5,
-                            fairyEntity.lanternPos.getY()  + 0.5, fairyEntity.lanternPos.getZ()  + 0.5, 1.0D);
-                } else {
-                    this.fairyEntity.lanternPos = null;
-                }
-            } else {
-                this.fairyEntity.getMoveControl().setWantedPosition(d0, d1, d2, 1.0D);
-            }
+            this.fairyEntity.getMoveControl().setWantedPosition(d0, d1, d2, 1.0D);
         }
     }
 }

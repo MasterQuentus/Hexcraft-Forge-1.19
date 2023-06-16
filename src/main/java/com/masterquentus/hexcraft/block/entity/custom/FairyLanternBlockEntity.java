@@ -29,4 +29,8 @@ public class FairyLanternBlockEntity extends BlockEntity {
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6dbd2e1ad6e427cc80801a6b37368020464611a0
