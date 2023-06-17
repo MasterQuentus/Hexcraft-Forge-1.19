@@ -6,9 +6,7 @@ import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
@@ -57,6 +55,9 @@ public class VampiricStaffProjectileEntity extends ThrowableItemProjectile {
     protected void onHitEntity(EntityHitResult pResult) {
         super.onHitEntity(pResult);
         Entity entity = pResult.getEntity();
+        if (entity instanceof LivingEntity living && living.getMobType() == MobType.UNDEAD)
+            return;
+
         boolean entityHurt = entity.hurt(DamageSource.thrown(this, this.getOwner()), 3);
         if (entityHurt && this.getOwner() instanceof LivingEntity) {
             ((LivingEntity) this.getOwner()).heal(3);
