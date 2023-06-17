@@ -2,6 +2,7 @@ package com.masterquentus.hexcraft.entity;
 
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.*;
+import com.masterquentus.hexcraft.entity.custom.projectile.VampiricStaffProjectileEntity;
 import com.masterquentus.hexcraft.entity.custom.vampire.VampireEvokerEntity;
 import com.masterquentus.hexcraft.entity.custom.vampire.VampireVindicatorEntity;
 import net.minecraft.resources.ResourceLocation;
@@ -74,6 +75,11 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.<HexcraftBoatEntity>of(HexcraftBoatEntity::new, MobCategory.MISC)
                             .sized(1.375F, 0.625F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID,"boat").toString()));
+    public static final RegistryObject<EntityType<VampiricStaffProjectileEntity>> VAMPIRIC_STAFF_PROJECTILE =
+            ENTITY_TYPES.register("vampiric_staff_projectile",
+                    () -> EntityType.Builder.<VampiricStaffProjectileEntity>of(VampiricStaffProjectileEntity::new, MobCategory.AMBIENT)
+                            .sized(0.25f, 0.25f)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "vampiric_staff_projectile").toString()));
 
 
     public static void register(IEventBus eventBus) {

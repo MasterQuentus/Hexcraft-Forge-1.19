@@ -139,7 +139,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire", FlintHellFireItem::new);
 
     public static final RegistryObject<Item> VAMPIRIC_STAFF = ITEMS.register("vampiric_staff",
-            () -> new VampiricStaffItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+            () -> new VampiricStaffItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).durability(324)));
+    public static final RegistryObject<Item> VAMPIRIC_STAFF_PROJECTILE = ITEMS.register("vampiric_staff_projectile",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WHITE_OAK_ASH_DAGGER = ITEMS.register("white_oak_ash_dagger",
             () -> new WhiteOakAshDaggerItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
