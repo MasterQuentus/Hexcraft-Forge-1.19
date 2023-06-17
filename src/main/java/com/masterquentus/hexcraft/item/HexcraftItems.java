@@ -6,7 +6,6 @@ import com.masterquentus.hexcraft.entity.HexcraftEntityTypes;
 import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
 import com.masterquentus.hexcraft.item.custom.*;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
@@ -139,7 +138,9 @@ public class HexcraftItems {
     public static final RegistryObject<Item> FLINT_AND_HELLFIRE = ITEMS.register("flint_and_hellfire", FlintHellFireItem::new);
 
     public static final RegistryObject<Item> VAMPIRIC_STAFF = ITEMS.register("vampiric_staff",
-            () -> new VampiricStaffItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+            () -> new VampiricStaffItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).durability(324)));
+    public static final RegistryObject<Item> VAMPIRIC_STAFF_PROJECTILE = ITEMS.register("vampiric_staff_projectile",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WHITE_OAK_ASH_DAGGER = ITEMS.register("white_oak_ash_dagger",
             () -> new WhiteOakAshDaggerItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -378,18 +379,18 @@ public class HexcraftItems {
             () -> new WitchesArmorItem(HexcraftArmorMaterials.WITCH, EquipmentSlot.FEET,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
-   //public static final RegistryObject<Item> HUNTERS_HAT = ITEMS.register("hunters_hat",
-   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.HEAD,
-   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-   //public static final RegistryObject<Item> HUNTERS_ROBES = ITEMS.register("hunters_robes",
-   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.CHEST,
-   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-   //public static final RegistryObject<Item> HUNTERS_PANTS = ITEMS.register("hunters_pants",
-   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.LEGS,
-   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
-   //public static final RegistryObject<Item> HUNTERS_BOOTS = ITEMS.register("hunters_boots",
-   //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.FEET,
-   //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //public static final RegistryObject<Item> HUNTERS_HAT = ITEMS.register("hunters_hat",
+    //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.HEAD,
+    //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //public static final RegistryObject<Item> HUNTERS_ROBES = ITEMS.register("hunters_robes",
+    //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.CHEST,
+    //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //public static final RegistryObject<Item> HUNTERS_PANTS = ITEMS.register("hunters_pants",
+    //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.LEGS,
+    //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //public static final RegistryObject<Item> HUNTERS_BOOTS = ITEMS.register("hunters_boots",
+    //        () -> new WitchesArmorItem(HexcraftArmorMaterials.HUNTER, EquipmentSlot.FEET,
+    //                new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
     public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
             () -> new ArmorItem(HexcraftArmorMaterials.SILVER, EquipmentSlot.HEAD,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
@@ -416,8 +417,8 @@ public class HexcraftItems {
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //public static final RegistryObject<Item> GOGGLES_OF_REVEALING = ITEMS.register("goggles_of_revealing",
-            //() -> new GoogglesOfRevealingItem(HexcraftArmorMaterials.GOOGLES, EquipmentSlot.HEAD,
-                    //new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+    //() -> new GoogglesOfRevealingItem(HexcraftArmorMaterials.GOOGLES, EquipmentSlot.HEAD,
+    //new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
     //Tools
     public static final RegistryObject<Item> SILVER_SWORD = ITEMS.register("silver_sword",
