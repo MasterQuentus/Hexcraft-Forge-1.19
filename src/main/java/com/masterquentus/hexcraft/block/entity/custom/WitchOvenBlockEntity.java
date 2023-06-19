@@ -18,3 +18,4 @@ public class WitchOvenBlockEntity extends Block implements EntityBlock {
         return null;
     }
 }
+
