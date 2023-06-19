@@ -2292,6 +2292,13 @@ public class HexcraftBlocks {
             () -> new FlowerPotBlock(null, HexcraftBlocks.VAMPIRE_ORCHID,
                     BlockBehaviour.Properties.copy(Blocks.BRICKS)
                             .instabreak().noOcclusion()));
+    public static final RegistryObject<Block> WISPY_COTTON = registerBlock("wispy_cotton",
+            () -> new FlowerBlock(MobEffects.JUMP, 2, BlockBehaviour.Properties.copy(Blocks.POPPY)
+                    .instabreak().noOcclusion()), HexcraftCreativeModeTab.HEXCRAFT_TAB);
+    public static final RegistryObject<Block> POTTED_WISPY_COTTON= registerBlockWithoutItem("potted_wispy_cotton",
+            () -> new FlowerPotBlock(null, HexcraftBlocks.WISPY_COTTON,
+                    BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                            .instabreak().noOcclusion()));
 
     public static final RegistryObject<Block> WILD_BRAMBLE = registerBlock("wild_bramble",
             () -> new WildBrambleBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE)

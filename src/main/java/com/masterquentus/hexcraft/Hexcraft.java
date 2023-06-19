@@ -154,6 +154,7 @@ public class Hexcraft {
             event.enqueueWork(() -> {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOODY_ROSE.getId(), HexcraftBlocks.POTTED_BLOODY_ROSE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.VAMPIRE_ORCHID.getId(), HexcraftBlocks.POTTED_VAMPIRE_ORCHID);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WISPY_COTTON.getId(), HexcraftBlocks.POTTED_WISPY_COTTON);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_MUSHROOM.getId(), HexcraftBlocks.POTTED_BLOOD_MUSHROOM);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.EBONY_SAPLING.getId(), HexcraftBlocks.POTTED_EBONY_SAPLING);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_OAK_SAPLING.getId(), HexcraftBlocks.POTTED_BLOOD_OAK_SAPLING);

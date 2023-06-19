@@ -2,7 +2,6 @@ package com.masterquentus.hexcraft.entity.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.ai.FairyMoveControl;
-import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -14,7 +13,9 @@ import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -50,6 +51,7 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
     }
 
     protected void registerGoals() {
+        this.goalSelector.addGoal(1, new FairyMoveToLanternGoal(this));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(5, new fairyMoveAroundGoal(this));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
@@ -187,20 +189,38 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
             double d1 = this.fairyEntity.getY() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
             double d2 = this.fairyEntity.getZ() + (double)((randomsource.nextFloat() * 2.0F - 1.0F) * 16.0F);
 
-            if (this.fairyEntity.lanternPos != null) {
-                boolean lanternExists = this.fairyEntity.level.getBlockState(fairyEntity.lanternPos).getBlock()
-                        .equals(HexcraftBlocks.FAIRY_LANTERN.get());
+            this.fairyEntity.getMoveControl().setWantedPosition(d0, d1, d2, 1.0D);
+        }
+    }
 
-                if (lanternExists && fairyEntity.distanceToSqr(fairyEntity.lanternPos.getX() + 0.5,
-                        fairyEntity.lanternPos.getY() + 0.5, fairyEntity.lanternPos.getZ() + 0.5) > 8.0) {
-                    this.fairyEntity.getMoveControl().setWantedPosition(fairyEntity.lanternPos.getX() + 0.5,
-                            fairyEntity.lanternPos.getY()  + 0.5, fairyEntity.lanternPos.getZ()  + 0.5, 1.0D);
-                } else {
-                    this.fairyEntity.lanternPos = null;
-                }
+    static class FairyMoveToLanternGoal extends Goal {
+        private final FairyEntity fairyEntity;
+
+        public FairyMoveToLanternGoal(FairyEntity pFairy) {
+            this.fairyEntity = pFairy;
+            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+        }
+
+        @Override
+        public void start() {
+            boolean lanternExists = this.fairyEntity.level.getBlockState(fairyEntity.lanternPos).getBlock()
+                    .equals(HexcraftBlocks.FAIRY_LANTERN.get());
+
+            if (lanternExists && fairyEntity.distanceToSqr(fairyEntity.lanternPos.getX() + 0.5,
+                    fairyEntity.lanternPos.getY() + 0.5, fairyEntity.lanternPos.getZ() + 0.5) > 2.0) {
+                this.fairyEntity.getMoveControl().setWantedPosition(fairyEntity.lanternPos.getX() + 0.5,
+                        fairyEntity.lanternPos.getY()  + 0.5, fairyEntity.lanternPos.getZ()  + 0.5, 1.0D);
             } else {
-                this.fairyEntity.getMoveControl().setWantedPosition(d0, d1, d2, 1.0D);
+                this.fairyEntity.lanternPos = null;
             }
+        }
+
+        public boolean canUse() {
+            return this.fairyEntity.lanternPos != null;
+        }
+
+        public boolean canContinueToUse() {
+            return false;
         }
     }
 }
