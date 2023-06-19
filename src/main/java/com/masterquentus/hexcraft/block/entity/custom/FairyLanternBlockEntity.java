@@ -23,8 +23,8 @@ public class FairyLanternBlockEntity extends BlockEntity {
         BlockPos centeredPos = pos.offset(0.5, 0.5, 0.5);
 
         for (FairyEntity fairy : fairies) {
-            if (fairy.getLanternPos() == null || fairy.distanceToSqr(centeredPos.getX(),centeredPos.getY(),centeredPos.getZ())
-                    > fairy.distanceToSqr(fairy.getLanternPos().getX(),fairy.getLanternPos().getY(),fairy.getLanternPos().getZ())) {
+            if (fairy.getLanternPos() == null || fairy.distanceToSqr(centeredPos.getX(), centeredPos.getY(), centeredPos.getZ())
+                    > fairy.distanceToSqr(fairy.getLanternPos().getX(), fairy.getLanternPos().getY(), fairy.getLanternPos().getZ())) {
                 fairy.setLanternPos(pos.offset(0.5, 0.5, 0.5));
             }
         }

@@ -159,7 +159,6 @@ public class HexcraftBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.5F, 6.0F).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
-
     public static final RegistryObject<Block> CRIMSON_COBBLESTONE = registerBlock("crimson_cobblestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F)), HexcraftCreativeModeTab.HEXCRAFT_TAB);
