@@ -6,6 +6,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -17,6 +19,7 @@ import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -25,6 +28,23 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class SirenEntity extends Monster implements IAnimatable {
+
+
+    public boolean canBreatheUnderwater() {
+        return true;
+    }
+
+    public MobType getMobType() {
+        return MobType.WATER;
+    }
+
+    public boolean isPushedByFluid() {
+        return false;
+    }
+
+    public boolean canBeLeashed(Player pPlayer) {
+        return false;
+    }
     private AnimationFactory factory = new AnimationFactory(this);
 
     public SirenEntity(EntityType<? extends Monster> entityType, Level level) {
@@ -35,7 +55,7 @@ public class SirenEntity extends Monster implements IAnimatable {
         return Monster.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 10.0D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0D)
-                .add(Attributes.MOVEMENT_SPEED, 1.2F).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3F).build();
     }
 
     protected void registerGoals() {

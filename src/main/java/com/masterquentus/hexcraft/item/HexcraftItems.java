@@ -143,6 +143,12 @@ public class HexcraftItems {
     public static final RegistryObject<Item> VAMPIRIC_STAFF_PROJECTILE = ITEMS.register("vampiric_staff_projectile",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> DAYLIGHT_RING = ITEMS.register("daylight_ring",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BLESSED_DAYLIGHT_RING = ITEMS.register("blessed_daylight_ring",
+            () -> new BlessedDaylightRingItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     public static final RegistryObject<Item> WHITE_OAK_ASH_DAGGER = ITEMS.register("white_oak_ash_dagger",
             () -> new WhiteOakAshDaggerItem(new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
