@@ -58,6 +58,7 @@ public class SirenEntity extends Monster implements IAnimatable {
                 .add(Attributes.MOVEMENT_SPEED, 0.3F).build();
     }
 
+
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1.0D, 10));
