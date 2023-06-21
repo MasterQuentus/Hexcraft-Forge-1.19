@@ -43,7 +43,7 @@ public class HexcraftEntityTypes {
     public static final RegistryObject<EntityType<SirenEntity>> SIREN =
             ENTITY_TYPES.register("siren",
                     () -> EntityType.Builder.of(SirenEntity::new, MobCategory.MONSTER)
-                            .sized(0.8F, 1.6F)
+                            .sized(0.9F, 1.5F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "siren").toString()));
     public static final RegistryObject<EntityType<MermaidEntity>> MERMAID =
             ENTITY_TYPES.register("mermaid",
@@ -80,7 +80,6 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.<VampiricStaffProjectileEntity>of(VampiricStaffProjectileEntity::new, MobCategory.AMBIENT)
                             .sized(0.25f, 0.25f)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "vampiric_staff_projectile").toString()));
-
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

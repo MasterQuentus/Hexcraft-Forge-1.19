@@ -14,6 +14,8 @@ public class VampiricStaffItem extends Item {
     public VampiricStaffItem(Properties pProperties) {
         super(pProperties);
     }
+
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
