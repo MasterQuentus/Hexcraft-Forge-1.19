@@ -1,0 +1,20 @@
+{
+  "wendigo_hurt": {
+    "subtitle": "sounds.hexcraft.wendigo_hurt",
+    "sounds": [
+      "hexcraft:wendigo_hurt"
+    ]
+  },
+  "wendigo_ambient": {
+    "subtitle": "sounds.hexcraft.wendigo_ambient",
+    "sounds": [
+      "hexcraft:wendigo_ambient"
+    ]
+  },
+  "wendigo_death": {
+    "subtitle": "sounds.hexcraft.wendigo_death",
+    "sounds": [
+      "hexcraft:wendigo_death"
+    ]
+  }
+}

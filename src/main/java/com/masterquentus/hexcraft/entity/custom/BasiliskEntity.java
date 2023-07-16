@@ -1,16 +1,20 @@
 package com.masterquentus.hexcraft.entity.custom;
 
+import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -24,10 +28,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class BansheeEntity extends Monster implements IAnimatable {
+public class BasiliskEntity extends Monster implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public BansheeEntity(EntityType<? extends Monster> entityType, Level level) {
+    public BasiliskEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -53,18 +57,18 @@ public class BansheeEntity extends Monster implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.banshee.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.basilisk.walk", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.banshee.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.basilisk.idle", true));
         return PlayState.CONTINUE;
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.banshee.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.basilisk.attack", false));
             this.swinging = false;
         }
 
@@ -85,19 +89,19 @@ public class BansheeEntity extends Monster implements IAnimatable {
         return this.factory;
     }
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.GHAST_WARN, 0.15F, 1.0F);
+        this.playSound(SoundEvents.ZOMBIE_STEP, 0.15F, 1.0F);
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.GHAST_AMBIENT;
+        return HexcraftSounds.WENDIGO_AMBIENT.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.GHAST_HURT;
+        return HexcraftSounds.WENDIGO_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.GHAST_DEATH;
+        return HexcraftSounds.WENDIGO_DEATH.get();
     }
 
     protected float getSoundVolume() {

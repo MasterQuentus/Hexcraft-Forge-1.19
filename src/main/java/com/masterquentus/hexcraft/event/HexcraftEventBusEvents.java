@@ -24,6 +24,7 @@ public class HexcraftEventBusEvents {
         event.put(HexcraftEntityTypes.VAMPIRE_EVOKER.get(), VampireEvokerEntity.setAttributes());
         event.put(HexcraftEntityTypes.BANSHEE.get(), BansheeEntity.setAttributes());
         event.put(HexcraftEntityTypes.WEREWOLF.get(), WerewolfEntity.setAttributes());
+        event.put(HexcraftEntityTypes.BASILISK.get(), BasiliskEntity.setAttributes());
 
     }
 }

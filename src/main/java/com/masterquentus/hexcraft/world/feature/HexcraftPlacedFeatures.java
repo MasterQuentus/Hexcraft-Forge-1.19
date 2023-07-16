@@ -4,10 +4,21 @@ import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.config.HexcraftCommonConfigs;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +40,7 @@ public class HexcraftPlacedFeatures {
             () -> new PlacedFeature(HexcraftConfiguredFeatures.CRIMSON_STONE.getHolder().get(),
                     commonOrePlacement(7, // VeinsPerChunk
                             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(100)))));
+
 
     public static final RegistryObject<PlacedFeature> BLACK_OBSIDIAN_PLACED = PLACED_FEATURES.register("black_obsidian_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.BLACK_OBSIDIAN.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
@@ -73,7 +85,7 @@ public class HexcraftPlacedFeatures {
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NETHER_VAMPIRIC_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
-    public static final RegistryObject<PlacedFeature> NYKIUM_ORE_PLACED = PLACED_FEATURES.register("nykiumc_ore_placed",
+    public static final RegistryObject<PlacedFeature> NYKIUM_ORE_PLACED = PLACED_FEATURES.register("nykium_ore_placed",
             () -> new PlacedFeature(HexcraftConfiguredFeatures.NYKIUM_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
                     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 

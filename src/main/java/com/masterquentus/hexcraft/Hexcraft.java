@@ -143,6 +143,7 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRE_EVOKER.get(), VampireEvokerRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BANSHEE.get(), BansheeRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.WEREWOLF.get(), WerewolfRenderer::new);
+        EntityRenderers.register(HexcraftEntityTypes.BASILISK.get(), BasiliskRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.BOAT.get(), HexcraftBoatRenderer::new);
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRIC_STAFF_PROJECTILE.get(), ThrownItemRenderer::new);
     }
@@ -241,6 +242,11 @@ public class Hexcraft {
                         Monster::checkAnyLightMonsterSpawnRules);
 
                 SpawnPlacements.register(HexcraftEntityTypes.WEREWOLF.get(),
+                        SpawnPlacements.Type.ON_GROUND,
+                        Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                        Monster::checkAnyLightMonsterSpawnRules);
+
+                SpawnPlacements.register(HexcraftEntityTypes.BASILISK.get(),
                         SpawnPlacements.Type.ON_GROUND,
                         Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                         Monster::checkAnyLightMonsterSpawnRules);

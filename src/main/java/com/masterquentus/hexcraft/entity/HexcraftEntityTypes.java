@@ -17,19 +17,16 @@ public class HexcraftEntityTypes {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Hexcraft.MOD_ID);
-
     public static final RegistryObject<EntityType<LilithEntity>> LILITH =
             ENTITY_TYPES.register("lilith",
                     () -> EntityType.Builder.of(LilithEntity::new, MobCategory.MONSTER)
                             .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "lilith").toString()));
-
     public static final RegistryObject<EntityType<WendigoEntity>> WENDIGO =
             ENTITY_TYPES.register("wendigo",
                     () -> EntityType.Builder.of(WendigoEntity::new, MobCategory.MONSTER)
                             .sized(0.8F, 2.0F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "wendigo").toString()));
-
     public static final RegistryObject<EntityType<FairyEntity>> FAIRY =
             ENTITY_TYPES.register("fairy",
                     () -> EntityType.Builder.of(FairyEntity::new, MobCategory.CREATURE)
@@ -43,7 +40,7 @@ public class HexcraftEntityTypes {
     public static final RegistryObject<EntityType<SirenEntity>> SIREN =
             ENTITY_TYPES.register("siren",
                     () -> EntityType.Builder.of(SirenEntity::new, MobCategory.MONSTER)
-                            .sized(0.9F, 1.5F)
+                            .sized(0.9F, 1.4F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "siren").toString()));
     public static final RegistryObject<EntityType<MermaidEntity>> MERMAID =
             ENTITY_TYPES.register("mermaid",
@@ -70,6 +67,11 @@ public class HexcraftEntityTypes {
                     () -> EntityType.Builder.of(WerewolfEntity::new, MobCategory.MONSTER)
                             .sized(0.8F, 1.7F)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "werewolf").toString()));
+    public static final RegistryObject<EntityType<BasiliskEntity>> BASILISK =
+            ENTITY_TYPES.register("basilisk",
+                    () -> EntityType.Builder.of(BasiliskEntity::new, MobCategory.MONSTER)
+                            .sized(1.2F, 1.3F)
+                            .build(new ResourceLocation(Hexcraft.MOD_ID, "basilisk").toString()));
     public static final RegistryObject<EntityType<HexcraftBoatEntity>> BOAT =
             ENTITY_TYPES.register("boat",
                     () -> EntityType.Builder.<HexcraftBoatEntity>of(HexcraftBoatEntity::new, MobCategory.MISC)

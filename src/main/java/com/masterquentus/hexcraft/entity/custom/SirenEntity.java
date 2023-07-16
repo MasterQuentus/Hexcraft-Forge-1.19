@@ -27,7 +27,11 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import java.util.EnumSet;
+
 public class SirenEntity extends Monster implements IAnimatable {
+
+    protected RandomStrollGoal randomStrollGoal;
 
 
     public boolean canBreatheUnderwater() {
@@ -59,15 +63,18 @@ public class SirenEntity extends Monster implements IAnimatable {
     }
 
     protected void registerGoals() {
+        this.randomStrollGoal = new RandomStrollGoal(this, 1.0D, 80);
         this.goalSelector.addGoal(0, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1.0D, 10));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(6, new MeleeAttackGoal(this, (double)1.2F, true));
+        this.goalSelector.addGoal(7, this.randomStrollGoal);
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, WaterAnimal.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Villager.class, true));
         this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+        this.randomStrollGoal.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
@@ -91,22 +98,25 @@ public class SirenEntity extends Monster implements IAnimatable {
         return this.factory;
     }
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.AMETHYST_BLOCK_BREAK, 0.15F, 1.0F);
+        this.playSound(SoundEvents.PLAYER_SWIM, 0.15F, 1.0F);
     }
 
     protected SoundEvent getAmbientSound() {
-        return HexcraftSounds.WENDIGO_AMBIENT.get();
+        return SoundEvents.TROPICAL_FISH_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return HexcraftSounds.WENDIGO_HURT.get();
+        return SoundEvents.TROPICAL_FISH_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return HexcraftSounds.WENDIGO_DEATH.get();
+        return SoundEvents.TROPICAL_FISH_DEATH;
     }
 
     protected float getSoundVolume() {
         return 0.2F;
     }
+
+
+
 }

@@ -13,6 +13,10 @@
     "hexcraft:under_world_cobblestone_wall",
     "hexcraft:under_world_stone_bricks_wall",
     "hexcraft:polished_under_world_stone_wall",
+	"hexcraft:charstone_wall",
+    "hexcraft:charstone_cobblestone_wall",
+    "hexcraft:charstone_bricks_wall",
+    "hexcraft:polished_charstone_wall",
 	"hexcraft:crimson_sand_stone_wall",
 	"hexcraft:fairy_sand_stone_wall",
 	"hexcraft:pixie_sand_stone_wall"

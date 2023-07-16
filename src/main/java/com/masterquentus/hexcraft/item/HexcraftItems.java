@@ -192,6 +192,10 @@ public class HexcraftItems {
             () -> new ForgeSpawnEggItem(HexcraftEntityTypes.WEREWOLF,0x00FFBD, 0x000000,
                     new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
 
+    public static final RegistryObject<Item> BASILISK_SPAWN_EGG = ITEMS.register("basilisk_spawn_egg",
+            () -> new ForgeSpawnEggItem(HexcraftEntityTypes.BASILISK,0x000000, 0x003D00,
+                    new Item.Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)));
+
     //Buckets
     public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
             () -> new BucketItem(HexcraftFluids.SOURCE_BLOOD,

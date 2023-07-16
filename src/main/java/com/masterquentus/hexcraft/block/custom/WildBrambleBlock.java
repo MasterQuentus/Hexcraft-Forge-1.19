@@ -83,7 +83,7 @@ public class WildBrambleBlock extends Block implements net.minecraftforge.common
 
     @Override
     public net.minecraftforge.common.PlantType getPlantType(BlockGetter world, BlockPos pos) {
-        return PlantType.DESERT;
+        return PlantType.PLAINS;
     }
 
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
