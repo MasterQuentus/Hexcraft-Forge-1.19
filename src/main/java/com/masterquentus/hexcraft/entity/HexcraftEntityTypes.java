@@ -1,10 +1,12 @@
 package com.masterquentus.hexcraft.entity;
 
 import com.masterquentus.hexcraft.Hexcraft;
+///import com.masterquentus.hexcraft.block.entity.broom.EbonyBroomEntity;
 import com.masterquentus.hexcraft.entity.custom.*;
 import com.masterquentus.hexcraft.entity.custom.projectile.VampiricStaffProjectileEntity;
 import com.masterquentus.hexcraft.entity.custom.vampire.VampireEvokerEntity;
 import com.masterquentus.hexcraft.entity.custom.vampire.VampireVindicatorEntity;
+///import com.masterquentus.hexcraft.item.custom.broom.EbonyBroomItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -83,6 +85,12 @@ public class HexcraftEntityTypes {
                             .sized(0.25f, 0.25f)
                             .build(new ResourceLocation(Hexcraft.MOD_ID, "vampiric_staff_projectile").toString()));
 
+    //Brooms
+    ///public static final RegistryObject<EntityType<EbonyBroomEntity>> EBONY_BROOM_ENTITY =
+            ///ENTITY_TYPES.register("ebony_broom_entity",
+                    ///() -> EntityType.Builder.<EbonyBroomEntity>of(EbonyBroomEntity::new, MobCategory.MISC)
+                            ///.sized(1.0f, 1.0f)
+                            ///.build(new ResourceLocation(Hexcraft.MOD_ID, "ebony_broom_entity").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

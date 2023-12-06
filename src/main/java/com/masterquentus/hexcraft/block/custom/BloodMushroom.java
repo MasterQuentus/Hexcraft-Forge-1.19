@@ -9,8 +9,8 @@ import java.util.function.Supplier;
 
 public class BloodMushroom extends MushroomBlock {
 
-    public BloodMushroom(Properties pProperties, Supplier<Holder<? extends ConfiguredFeature<?, ?>>> pFeatureSupplier) {
-        super(pProperties, pFeatureSupplier);
+    public BloodMushroom(Properties pProperties, ResourceKey<ConfiguredFeature<?, ?>> pFeature) {
+        super(pProperties, pFeature);
     }
 }
 

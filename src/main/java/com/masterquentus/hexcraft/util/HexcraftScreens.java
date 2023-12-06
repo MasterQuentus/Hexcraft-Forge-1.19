@@ -1,4 +1,4 @@
-package com.masterquentus.hexcraft.entity.client;
+package com.masterquentus.hexcraft.util;
 
 import com.masterquentus.hexcraft.entity.client.gui.*;
 import com.masterquentus.hexcraft.world.HexcraftMenus;

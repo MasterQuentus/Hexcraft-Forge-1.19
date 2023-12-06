@@ -2,6 +2,7 @@ package com.masterquentus.hexcraft.entity.custom;
 
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.entity.ai.FairyMoveControl;
+import com.masterquentus.hexcraft.sound.HexcraftSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -22,18 +23,16 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
 
 import java.util.EnumSet;
 
-public class FairyEntity extends FlyingMob implements IAnimatable {
-    private AnimationFactory factory = new AnimationFactory(this);
+public class FairyEntity extends FlyingMob implements GeoEntity {
+    private AnimatableInstanceCache factory = new SingletonAnimatableInstanceCache(this);
     private BlockPos lanternPos;
 
     public FairyEntity(EntityType<? extends FlyingMob> entityType, Level level) {
@@ -57,19 +56,20 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
 
-    private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.fairy.fly", true));
+    private PlayState predicate(AnimationState animationState) {
+        if(animationState.isMoving()) {
+            animationState.getController().setAnimation(RawAnimation.begin().then("animation.fairy.fly", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
+
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.fairy.idle", true));
+        animationState.getController().setAnimation(RawAnimation.begin().then("animation.fairy.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
     @Override
-    public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController(this, "controller",
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController(this, "controller",
                 0, this::predicate));
 
     }
@@ -77,7 +77,7 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
         this.playSound(SoundEvents.AMETHYST_BLOCK_STEP, 0.15F, 1.0F);
     }
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.AMETHYST_BLOCK_CHIME;
+        return HexcraftSounds.FAIRY_AMBIENT.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
@@ -94,8 +94,8 @@ public class FairyEntity extends FlyingMob implements IAnimatable {
 
 
     @Override
-    public AnimationFactory getFactory() {
-        return this.factory;
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return factory;
     }
 
     public BlockPos getLanternPos() {

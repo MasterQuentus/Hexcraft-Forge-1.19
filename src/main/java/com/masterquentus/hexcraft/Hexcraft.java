@@ -16,6 +16,7 @@ import com.masterquentus.hexcraft.entity.client.vampire.VampireVindicatorRendere
 import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
 import com.masterquentus.hexcraft.fluid.HexcraftFluidTypes;
 import com.masterquentus.hexcraft.fluid.HexcraftFluids;
+import com.masterquentus.hexcraft.item.HexcraftCreativeModeTab;
 import com.masterquentus.hexcraft.item.HexcraftItems;
 import com.masterquentus.hexcraft.item.custom.WitchesSatchelItem;
 import com.masterquentus.hexcraft.loot.modifier.HexcraftLootModifiers;
@@ -27,7 +28,6 @@ import com.masterquentus.hexcraft.util.HexcraftBrewingRecipe;
 import com.masterquentus.hexcraft.villager.HexcraftPOIs;
 import com.masterquentus.hexcraft.villager.HexcraftVillagers;
 import com.masterquentus.hexcraft.world.HexcraftMenus;
-import com.masterquentus.hexcraft.world.biomes.HexcraftBiomes;
 import com.masterquentus.hexcraft.world.dimesnsion.HexcraftDimensions;
 import com.masterquentus.hexcraft.world.feature.HexcraftConfiguredFeatures;
 import com.masterquentus.hexcraft.world.feature.HexcraftPlacedFeatures;
@@ -47,6 +47,9 @@ import net.minecraft.world.entity.FlyingMob;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -56,6 +59,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -65,7 +69,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import software.bernie.geckolib3.GeckoLib;
+import software.bernie.geckolib.GeckoLib;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(Hexcraft.MOD_ID)
 public class Hexcraft {
@@ -94,8 +100,8 @@ public class Hexcraft {
         HexcraftMenus.register(modEventBus);
         HexcraftDimensions.register();
         HexcraftPOIs.register(modEventBus);
-        HexcraftBiomes.BIOME_REGISTER.register(modEventBus);
-        HexcraftBiomes.registerBiomes();
+        //HexcraftBiomes.BIOME_REGISTER.register(modEventBus);
+        //HexcraftBiomes.registerBiomes();
         HexcraftPotions.register(modEventBus);
         GeckoLib.initialize();
 
@@ -105,12 +111,17 @@ public class Hexcraft {
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
+        event.enqueueWork(() ->
+        {
+
             HexcraftVillagers.registerPOIs();
         });
+
 
         HexcraftMessages.register();
 
@@ -148,6 +159,15 @@ public class Hexcraft {
         EntityRenderers.register(HexcraftEntityTypes.VAMPIRIC_STAFF_PROJECTILE.get(), ThrownItemRenderer::new);
     }
 
+    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == HexcraftCreativeModeTab.HEXCRAFT_TAB) {
+            event.accept(HexcraftItems.INFUSED_FABRIC);
+        }
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(HexcraftItems.INFUSED_FABRIC);
+        }
+    }
+
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
@@ -156,7 +176,10 @@ public class Hexcraft {
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOODY_ROSE.getId(), HexcraftBlocks.POTTED_BLOODY_ROSE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.VAMPIRE_ORCHID.getId(), HexcraftBlocks.POTTED_VAMPIRE_ORCHID);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.WISPY_COTTON.getId(), HexcraftBlocks.POTTED_WISPY_COTTON);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.SOUL_FLOWER.getId(), HexcraftBlocks.POTTED_SOUL_FLOWER);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_MUSHROOM.getId(), HexcraftBlocks.POTTED_BLOOD_MUSHROOM);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.VILESHROOM.getId(), HexcraftBlocks.POTTED_VILESHROOM);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.GHOSTSHROOM.getId(), HexcraftBlocks.POTTED_GHOSTSHROOM);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.EBONY_SAPLING.getId(), HexcraftBlocks.POTTED_EBONY_SAPLING);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.BLOOD_OAK_SAPLING.getId(), HexcraftBlocks.POTTED_BLOOD_OAK_SAPLING);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(HexcraftBlocks.HELL_BARK_SAPLING.getId(), HexcraftBlocks.POTTED_HELL_BARK_SAPLING);

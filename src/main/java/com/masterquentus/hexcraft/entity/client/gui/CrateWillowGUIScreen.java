@@ -68,16 +68,4 @@ public class CrateWillowGUIScreen extends AbstractContainerScreen<CrateWillowGUI
         this.font.draw(poseStack, "Inventory", 7, 72, -12829636);
         this.font.draw(poseStack, "Willow Crate", 7, 5, -12829636);
     }
-
-    @Override
-    public void onClose() {
-        super.onClose();
-        Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-    }
-
-    @Override
-    public void init() {
-        super.init();
-        this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-    }
 }

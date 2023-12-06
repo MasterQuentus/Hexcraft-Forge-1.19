@@ -69,15 +69,4 @@ public class CrateAlderGUIScreen extends AbstractContainerScreen<CrateAlderGUIMe
         this.font.draw(poseStack, "Alder Crate", 7, 5, -12829636);
     }
 
-    @Override
-    public void onClose() {
-        super.onClose();
-        Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-    }
-
-    @Override
-    public void init() {
-        super.init();
-        this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-    }
 }

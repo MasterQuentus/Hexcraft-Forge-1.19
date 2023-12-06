@@ -3,9 +3,9 @@ package com.masterquentus.hexcraft.entity.client.vampire;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.vampire.VampireEvokerEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class VampireEvokerModel extends AnimatedGeoModel<VampireEvokerEntity> {
+public class VampireEvokerModel extends GeoModel<VampireEvokerEntity> {
     @Override
     public ResourceLocation getModelResource(VampireEvokerEntity object) {
         return new ResourceLocation(Hexcraft.MOD_ID, "geo/vampire_evoker.geo.json");

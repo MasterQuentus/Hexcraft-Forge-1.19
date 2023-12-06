@@ -19,17 +19,15 @@ import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
 
 import java.util.EnumSet;
 
-public class SirenEntity extends Monster implements IAnimatable {
+public class SirenEntity extends Monster implements GeoEntity {
 
     protected RandomStrollGoal randomStrollGoal;
 
@@ -49,7 +47,8 @@ public class SirenEntity extends Monster implements IAnimatable {
     public boolean canBeLeashed(Player pPlayer) {
         return false;
     }
-    private AnimationFactory factory = new AnimationFactory(this);
+
+    private AnimatableInstanceCache factory = new SingletonAnimatableInstanceCache(this);
 
     public SirenEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
@@ -68,7 +67,7 @@ public class SirenEntity extends Monster implements IAnimatable {
         this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1.0D, 10));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(6, new MeleeAttackGoal(this, (double)1.2F, true));
+        this.goalSelector.addGoal(6, new MeleeAttackGoal(this, (double) 1.2F, true));
         this.goalSelector.addGoal(7, this.randomStrollGoal);
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, WaterAnimal.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
@@ -77,26 +76,24 @@ public class SirenEntity extends Monster implements IAnimatable {
         this.randomStrollGoal.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
     }
 
-    private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.siren.swim", true));
+    private PlayState predicate(AnimationState animationState) {
+        if (animationState.isMoving()) {
+            animationState.getController().setAnimation(RawAnimation.begin().then("animation.model.walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
+
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.siren.idle", true));
+        animationState.getController().setAnimation(RawAnimation.begin().then("animation.model.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
-
     @Override
-    public void registerControllers(AnimationData data) {
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController(this, "controller",
+                0, this::predicate));
 
     }
 
-    @Override
-    public AnimationFactory getFactory() {
-        return this.factory;
-    }
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.PLAYER_SWIM, 0.15F, 1.0F);
     }
@@ -110,7 +107,7 @@ public class SirenEntity extends Monster implements IAnimatable {
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.TROPICAL_FISH_DEATH;
+        return SoundEvents.AMETHYST_CLUSTER_BREAK;
     }
 
     protected float getSoundVolume() {
@@ -118,5 +115,9 @@ public class SirenEntity extends Monster implements IAnimatable {
     }
 
 
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return factory;
+    }
 
 }

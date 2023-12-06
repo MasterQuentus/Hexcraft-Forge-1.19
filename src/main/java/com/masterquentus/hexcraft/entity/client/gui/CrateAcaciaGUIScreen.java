@@ -69,15 +69,4 @@ public class CrateAcaciaGUIScreen extends AbstractContainerScreen<CrateAcaciaGUI
         this.font.draw(poseStack, "Acacia Crate", 7, 6, -12829636);
     }
 
-    @Override
-    public void onClose() {
-        super.onClose();
-        Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-    }
-
-    @Override
-    public void init() {
-        super.init();
-        this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-    }
 }

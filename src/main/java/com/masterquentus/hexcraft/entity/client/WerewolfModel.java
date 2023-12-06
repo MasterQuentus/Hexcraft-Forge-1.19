@@ -3,9 +3,9 @@ package com.masterquentus.hexcraft.entity.client;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.WerewolfEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class WerewolfModel extends AnimatedGeoModel<WerewolfEntity> {
+public class WerewolfModel extends GeoModel<WerewolfEntity> {
     @Override
     public ResourceLocation getModelResource(WerewolfEntity object) {
         return new ResourceLocation(Hexcraft.MOD_ID, "geo/werewolf.geo.json");

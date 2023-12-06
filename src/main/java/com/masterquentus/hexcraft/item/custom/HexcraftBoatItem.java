@@ -1,7 +1,7 @@
 package com.masterquentus.hexcraft.item.custom;
 
+import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.HexcraftBoatEntity;
-import com.masterquentus.hexcraft.item.HexcraftCreativeModeTab;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -26,7 +26,7 @@ public class HexcraftBoatItem extends Item {
     private final HexcraftBoatEntity.Type type;
 
     public HexcraftBoatItem(HexcraftBoatEntity.Type type) {
-        super(new Properties().tab(HexcraftCreativeModeTab.HEXCRAFT_TAB).stacksTo(1));
+        super(new Properties().stacksTo(1));
         this.type = type;
     }
 

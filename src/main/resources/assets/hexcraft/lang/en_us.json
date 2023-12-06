@@ -125,6 +125,7 @@
   "item.hexcraft.werewolf_spawn_egg": "Werewolf Spawn Egg",
   "item.hexcraft.basilisk_spawn_egg": "Basilisk Spawn Egg",
   "item.hexcraft.blood_bucket": "Blood Bucket",
+  "item.hexcraft.soul_water_bucket": "Soul Water Bucket",
   "item.hexcraft.ebony_boat": "Ebony Boat",
   "item.hexcraft.alder_boat": "Alder Boat",
   "item.hexcraft.blood_oak_boat": "Blood Oak Boat",
@@ -241,6 +242,8 @@
   "block.hexcraft.candelabra": "Candelabra",
   "block.hexcraft.mystic_crafting_table": "Mystic Crafting Table",
   "block.hexcraft.black_obsidian": "Black Obsidian",
+  "block.hexcraft.vile_grass_block": "Vile Grass Block",
+  "block.hexcraft.vile_dirt": "Vile Dirt",
   "block.hexcraft.hunters_table": "Hunters Table",
   "block.hexcraft.poppet_table": "Poppet Table",
   "block.hexcraft.soul_forge": "Soul Forge",
@@ -670,6 +673,8 @@
   "block.hexcraft.pixie_lantern": "Pixie Lantern",
   "block.hexcraft.echo_fungal_lamp": "Echo Fungal Lamp",
   "block.hexcraft.hell_fungal_lamp": "Hell Fungal Lamp",
+  "block.hexcraft.vileshroom_lamp": "Vileshroom Lamp",
+  "block.hexcraft.ghostshroom_lamp": "Ghostshroom Lamp",
 
   //Plants
   "block.hexcraft.bloody_rose": "Bloody Rose",
@@ -678,9 +683,13 @@
   "block.hexcraft.potted_vampire_orchid": "Potted Vampire Orchid",
   "block.hexcraft.wispy_cotton": "Wispy Cotton",
   "block.hexcraft.potted_wispy_cotton": "Potted Wispy Cotton",
+  "block.hexcraft.soul_flower": "Soul Flower",
+  "block.hexcraft.potted_soul_flower": "Potted Soul Flower",
   "item.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder": "Witches Ladder",
   "block.hexcraft.witches_ladder_plant": "Witches Ladder",
+  "item.hexcraft.vilevine": "Vilevine",
+  "block.hexcraft.vilevine": "Vilevine",
   "block.hexcraft.living_kelp": "Living Kelp",
   "block.hexcraft.living_kelp_plant": "Living Kelp",
   "block.hexcraft.cinder_plant": "Cinder Berry Plant",
@@ -688,6 +697,12 @@
   "block.hexcraft.blood_mushroom": "Blood Mushroom",
   "block.hexcraft.blood_mushroom_block": "Blood Mushroom Block",
   "block.hexcraft.blood_mushroom_stem": "Blood Mushroom Stem",
+  "block.hexcraft.vileshroom": "Vileshroom",
+  "block.hexcraft.vileshroom_block": "Vileshroom Block",
+  "block.hexcraft.vileshroom_stem": "Vileshroom Stem",
+  "block.hexcraft.ghostshroom": "Ghostshroom",
+  "block.hexcraft.ghostshroom_block": "Ghostshroom Block",
+  "block.hexcraft.ghostshroom_stem": "Ghostshroom Stem",
   "block.hexcraft.wild_bramble": "Wild Bramble",
   "block.hexcraft.ender_bramble": "Ender Bramble",
 
@@ -760,6 +775,7 @@
   
   //Fluids
   "fluid_type.hexcraft.blood_fluid": "Blood",
+  "fluid_type.hexcraft.soul_water_fluid": "Soul Water",
 
   //Entity's
   "entity.minecraft.villager.hexcraft.witch_profession": "Witch Profession",
@@ -777,6 +793,21 @@
   "biome.hexcraft.hell_fungle_forest": "Hell Fungle Forest",
   "biome.hexcraft.echo_fungle_forest": "Echo Fungle Forest",
   "biome.hexcraft.crimson_desert": "Crimson Desert",
+  "biome.hexcraft.soul_forest": "Soul Forest",
+  "biome.hexcraft.underground_forest": "Underground Forest",
+  "biome.hexcraft.drippy_farelands": "Drippy Farelands",
+  "biome.hexcraft.farelands": "Farelands",
+  "biome.hexcraft.foul_desert": "Foul Desert",
+  "biome.hexcraft.decay_mountains": "Decay Mountains",
+  "biome.hexcraft.vile_forest": "Vile Forest",
+  "biome.hexcraft.verdant": "Verdant",
+  "biome.hexcraft.bloodweed_jungle": "Bloodweed Jungle",
+  "biome.hexcraft.graveyard": "Graveyard",
+  "biome.hexcraft.defiled_lands": "Defiled Lands",
+  "biome.hexcraft.lush_farelands": "Lush Farelands",
+  "biome.hexcraft.ashy_mountains": "Ashy Mountains",
+  "biome.hexcraft.crimson_spikes": "Crimson Spikes",
+
 
   //KeyBinds
   "key.category.hexcraft.hexcraft": "Hexcraft",
@@ -784,8 +815,8 @@
 
   //Messgaes
   "message.hexcraft.drink_blood": "Drinking Blood",
-  "message.hexcraft.no_blood": "No blood nearby",
+  "message.hexcraft.no_blood": "No Blood Nearby",
 
   //CreativeTab
-   "itemGroup.hexcrafttab": "Hexcraft"
+   "itemGroup.hexcraft": "Hexcraft"
 }

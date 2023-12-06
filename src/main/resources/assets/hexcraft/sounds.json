@@ -16,5 +16,11 @@
     "sounds": [
       "hexcraft:wendigo_death"
     ]
+  },
+  "fairy_ambient": {
+    "subtitle": "sounds.hexcraft.fairy_ambient",
+    "sounds": [
+      "hexcraft:fairy_ambient"
+    ]
   }
 }

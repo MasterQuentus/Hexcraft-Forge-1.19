@@ -1,7 +1,6 @@
 package com.masterquentus.hexcraft.fluid;
 
 import com.masterquentus.hexcraft.Hexcraft;
-import com.mojang.math.Vector3f;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.common.SoundAction;
@@ -10,11 +9,15 @@ import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.joml.Vector3f;
 
 public class HexcraftFluidTypes {
     public static final ResourceLocation BLOOD_STILL_RL = new ResourceLocation(Hexcraft.MOD_ID,"block/blood_still");
     public static final ResourceLocation BLOOD_FLOWING_RL = new ResourceLocation(Hexcraft.MOD_ID,"block/blood_flow");
     public static final ResourceLocation BLOOD_OVERLAY_RL = new ResourceLocation(Hexcraft.MOD_ID, "misc/in_blood");
+    public static final ResourceLocation SOUL_WATER_STILL_RL = new ResourceLocation(Hexcraft.MOD_ID,"block/soul_water_still");
+    public static final ResourceLocation SOUL_WATER_FLOWING_RL = new ResourceLocation(Hexcraft.MOD_ID,"block/soul_water_flow");
+    public static final ResourceLocation SOUL_WATER_OVERLAY_RL = new ResourceLocation(Hexcraft.MOD_ID, "misc/in_soul_water");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Hexcraft.MOD_ID);
@@ -23,10 +26,16 @@ public class HexcraftFluidTypes {
             FluidType.Properties.create().density(15).viscosity(5).canDrown(true).canPushEntity(true)
                     .canSwim(true).supportsBoating(true).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK));
+    public static final RegistryObject<FluidType> SOUL_WATER_FLUID_TYPE = register("soul_water_fluid",
+            FluidType.Properties.create().density(15).viscosity(5).canDrown(true).canPushEntity(true)
+                    .canSwim(true).supportsBoating(true).sound(SoundAction.get("drink"),
+                            SoundEvents.HONEY_DRINK));
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(BLOOD_STILL_RL, BLOOD_FLOWING_RL, BLOOD_OVERLAY_RL,
                 0x0, new Vector3f(0f / 0f, 0f / 0f, 0f / 0f), properties));
+
+
     }
 
     public static void register(IEventBus eventBus) {

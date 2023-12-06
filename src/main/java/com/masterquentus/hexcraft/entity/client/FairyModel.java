@@ -3,9 +3,9 @@ package com.masterquentus.hexcraft.entity.client;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.FairyEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class FairyModel extends AnimatedGeoModel<FairyEntity> {
+public class FairyModel extends GeoModel<FairyEntity> {
     @Override
     public ResourceLocation getModelResource(FairyEntity object) {
         return new ResourceLocation(Hexcraft.MOD_ID, "geo/fairy.geo.json");

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:overworld",
+  "type": "minecraft:overworld_caves",
   "generator": {
     "type": "minecraft:noise",
     "settings": {
@@ -7,12 +7,12 @@
       "disable_mob_generation": false,
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
-      "legacy_random_source": true,
+      "legacy_random_source": false,
       "default_block": {
         "Name": "hexcraft:under_world_stone"
       },
       "default_fluid": {
-        "Name": "minecraft:water",
+        "Name": "hexcraft:blood_fluid",
         "Properties": {
           "level": "0"
         }
@@ -24,11 +24,11 @@
         "size_vertical": 2
       },
       "noise_router": {
-        "barrier": "minecraft:overworld/caves/pillars",
+        "barrier": 0,
         "fluid_level_floodedness": 0,
         "fluid_level_spread": 0,
         "lava": 0,
-        "temperature": "minecraft:overworld/caves/pillars",
+        "temperature": 0,
         "vegetation": 0,
         "continents": 0,
         "erosion": 0,
@@ -50,8 +50,33 @@
       }
     },
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:lush_caves",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "minecraft:dripstone_caves",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
     }
   }
 }

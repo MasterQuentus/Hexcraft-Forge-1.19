@@ -3,9 +3,9 @@ package com.masterquentus.hexcraft.entity.client;
 import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.entity.custom.LilithEntity;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class LilithModel extends AnimatedGeoModel<LilithEntity> {
+public class LilithModel extends GeoModel<LilithEntity> {
     @Override
     public ResourceLocation getModelResource(LilithEntity object) {
         return new ResourceLocation(Hexcraft.MOD_ID, "geo/lilith.geo.json");

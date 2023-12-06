@@ -178,6 +178,14 @@ public class HexcraftConfiguredFeatures {
                             Boolean.valueOf(true)).setValue(HugeMushroomBlock.DOWN, Boolean.valueOf(false))), BlockStateProvider.simple
                             (HexcraftBlocks.BLOOD_MUSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.valueOf(false)).setValue
                                     (HugeMushroomBlock.DOWN, Boolean.valueOf(false))), 3)));
+    public static final RegistryObject<ConfiguredFeature<?,?>> VILESHROOM = CONFIGURED_FEATURES.register("vileshroom", () ->
+            new ConfiguredFeature<>(Feature.HUGE_FUNGUS,
+                    new HugeFungusConfiguration(Blocks.GRASS_BLOCK.defaultBlockState(), HexcraftBlocks.VILESHROOM_STEM.get().defaultBlockState(),
+                            HexcraftBlocks.VILESHROOM_BLOCK.get().defaultBlockState(), HexcraftBlocks.VILESHROOM_LAMP.get().defaultBlockState(), true)));
+    public static final RegistryObject<ConfiguredFeature<?,?>> GHOSTSHROOM = CONFIGURED_FEATURES.register("ghostshroom", () ->
+            new ConfiguredFeature<>(Feature.HUGE_FUNGUS,
+                    new HugeFungusConfiguration(Blocks.GRASS_BLOCK.defaultBlockState(), HexcraftBlocks.GHOSTSHROOM_STEM.get().defaultBlockState(),
+                            HexcraftBlocks.GHOSTSHROOM_BLOCK.get().defaultBlockState(), HexcraftBlocks.GHOSTSHROOM_LAMP.get().defaultBlockState(), true)));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_PEARLSTONE = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, HexcraftBlocks.PEARL_STONE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_CRIMSON_STONE = Suppliers.memoize(() -> List.of(

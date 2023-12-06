@@ -1,9 +1,9 @@
 package com.masterquentus.hexcraft.item.custom;
 
+import com.masterquentus.hexcraft.Hexcraft;
 import com.masterquentus.hexcraft.block.HexcraftBlocks;
 import com.masterquentus.hexcraft.block.custom.HellFireBlock;
 import com.masterquentus.hexcraft.block.custom.UnderworldPortalBlock;
-import com.masterquentus.hexcraft.item.HexcraftCreativeModeTab;
 import com.masterquentus.hexcraft.util.HexcraftTags;
 import com.masterquentus.hexcraft.world.dimesnsion.HexcraftDimensions;
 import com.mojang.logging.LogUtils;
@@ -30,7 +30,6 @@ public class FlintHellFireItem extends Item {
 
     public FlintHellFireItem() {
         super(new Properties()
-                .tab(HexcraftCreativeModeTab.HEXCRAFT_TAB)
                 .stacksTo(1)
                 .rarity(Rarity.RARE)
                 .durability(64)
